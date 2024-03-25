@@ -1,0 +1,164 @@
+#|
+File        : colemak-dh-ansi-keeb-utils.kbd
+Description : KMonad keyboard layout configuration file
+Copyright   : (c) 2024, Gergely Szabo
+License     : MIT
+
+Colemak-DH is an improvement over the standard Colemak keyboard layout by
+replacing the D and H keys thus reducing lateral movement of the index
+fingers.
+
+Colemak Authorship:
+Shai Coleman
+https://colemak.com
+
+Colemak-DH Authorship:
+stevep99
+https://colemakmods.github.io/mod-dh/
+
+This configuration file contains my modifications done to Colemak-DH and other
+keyboard layers.
+|#
+
+;; ----------------------------------------------------------------------------
+;; KMONAD CONFIGURATION
+
+(defcfg
+  ;; OS Input
+
+  ;; Linux
+  input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
+  output (uinput-sink "KMonad output")
+
+  ;; Windows
+  ;;input  (low-level-hook)
+  ;;output (send-event-sink)
+
+  ;; macOS
+  ;;input  (iokit-name "my-keyboard-product-string")
+  ;;output (kext)
+
+  ;; Other Settings
+
+  ;; Enable/disable emitting unhandled events. For example: Passing input from
+  ;; the source layer to other alphanumeric layers.
+  ;; (default true)
+  fallthrough true
+
+  ;; Enable/disable command execution.
+  ;; (default true)
+  allow-cmd false
+)
+
+;; Source layer (US QWERTY)
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; ----------------------------------------------------------------------------
+;; KEYBOARD LAYOUTS AND LAYERS
+;;
+;; The order of keyboard layouts is important: The first 'deflayer' statement
+;; in will be the layer that is active when KMonad starts up.
+;;
+;; Key Formatting:
+;; - Literal chars need escaping: '\', '(', ')', '_'
+;; - @name evaluates to an alias lookup.
+;; - _ defines no event for the key. See 'fallthrough'.
+;; - XX ignores the key event.
+
+;; Keyboard layouts
+(deflayer colemak-dh
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
+  @utl a    r    s    t    g    m    n    e    i    o    '    ret
+  lsft x    c    d    v    z    k    h    ,    .    /    rsft
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
+)
+
+(deflayer qwerty
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; Extra layers
+(deflayer utility
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+  tab  @sav @bck @fnd @fwd ins  pgup home up   end  @prt caps slck nlck
+  @utl @all lalt lsft lctl tab  pgdn left down rght bspc ssrq ret
+  lsft @cut @cpy @rdo @pst @udo @rep del  XX   XX   esc  rsft
+  lctl lmet lalt           ret            ralt rmet cmp  rctl
+)
+
+(deflayer symbols
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  %    ^    &    *    XX   XX   [    ]    \_   :    ¡    XX   XX
+  XX   «    »    “    ”    XX   XX   \(   \)   -    =    ¿    ret
+  @ssm §    „    –    {    `    }    !    @    #    $    rsft
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
+)
+
+(deflayer shift-symbols
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  €    £    ¥    ¢    XX   XX   7    8    9    -    XX   XX   XX
+  XX   ‹    ›    ‘    ’    XX   XX   4    5    6    +    XX   ret
+  @ssm °    ‚    —    /    ~    \\   0    1    2    3    rsft
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
+)
+
+(deflayer select-layout
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _    @sel
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  tab  @qwe _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _
+  lsft _    _    @cmk _    _    _    _    _    _    _    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; ----------------------------------------------------------------------------
+;; ALIAS DEFINITIONS
+
+;; Layouts & layers
+(defalias
+  ;; Layers
+  utl (layer-toggle utility)
+  sym (layer-toggle symbols)
+  ssm (layer-toggle shift-symbols)
+  sel (layer-toggle select-layout)
+
+  ;; Layouts
+  cmk (layer-switch colemak-dh)
+  qwe (layer-switch qwerty)
+)
+
+;; Shorthands
+(defalias
+  ;; Ctrl shortcuts
+  all C-a
+  cpy C-c
+  cut C-x
+  fnd C-f
+  prt C-p
+  pst C-v
+  rep C-h
+  rdo C-y
+  sav C-s
+  udo C-z
+
+  ;; Misc.
+  bck A-left
+  fwd A-right
+)
