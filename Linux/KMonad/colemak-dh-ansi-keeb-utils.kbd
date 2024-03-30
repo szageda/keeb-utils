@@ -77,7 +77,7 @@ keyboard layers.
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   grv  1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
-  @utl a    r    s    t    g    m    n    e    i    o    '    ret
+  @uti a    r    s    t    g    m    n    e    i    o    '    ret
   lsft x    c    d    v    z    k    h    ,    .    /    rsft
   lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
@@ -96,7 +96,7 @@ keyboard layers.
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
   tab  @sav @bck @fnd @fwd ins  pgup home up   end  @prt caps slck nlck
-  @utl @all lalt lsft lctl tab  pgdn left down rght bspc ssrq ret
+  @uti @all lalt lsft lctl tab  pgdn left down rght bspc ssrq ret
   lsft @cut @cpy @rdo @pst @udo @rep del  XX   XX   esc  rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
@@ -134,7 +134,7 @@ keyboard layers.
 ;; Layouts & layers
 (defalias
   ;; Layers
-  utl (layer-toggle utility)
+  uti (layer-toggle utility)
   sym (layer-toggle symbols)
   ssm (layer-toggle shift-symbols)
   sel (layer-toggle select-layout)
