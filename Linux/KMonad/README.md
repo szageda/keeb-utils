@@ -1,21 +1,23 @@
-# Table of Content
+<div align="center">
+<h1>KEEB UTILS - KMonad README</h1>
+</div>
 
-[1 KMonad](#1-kmonad)  
+## Table of Contents
+
+[1 About](#1-about)  
 . . [1.1 Installation](#11-installation)  
 . . [1.2 Configuration](#12-configuration)  
 [2 Windows](#2-windows)  
 . . [2.1 Installation](#21-installation)  
 . . [2.2 Configuration](#22-configuration)
 
-# 1 KMonad
+## 1 About
 
 > *KMonad offers advanced customization features such as layers, multi-tap, tap-hold, and much more. These features are usually available at the hardware level on the QMK-firmware enabled keyboards. However, KMonad allows you to enjoy such features in virtually any keyboard by low-level system manipulations.*
 
 — *README.md*, KMonad, [link](https://github.com/kmonad/kmonad)
 
-## 1.1 Installation
-
-Follow these steps to **install Keeb Utils for use with KMonad:**
+### 1.1 Installation
 
 1. Make sure you have already downloaded/installed KMonad.
 
@@ -28,11 +30,11 @@ Follow these steps to **install Keeb Utils for use with KMonad:**
 **Caveats:**
 
 - KMonad must be run as administrator (sudo) if you didn't follow the instructions from KMonad to [configure the uinput permissions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-get-uinput-permissions).
-- If KMonad isn't in your root user's path (relevant on Debian), use absolute paths to run KMonad and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /path/to/keeb-utils/Linux/KMonad/colemak-dh-ansi-keeb-utils.kbd`)
+- If KMonad isn't in your root user's path (relevant on Debian), use absolute paths to run KMonad and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /path/to/keeb-utils/Linux/KMonad/colemak-dh-ansi-keeb-utils.kbd`).
 - You must manually configure your keyboard device in the configuration file – see [1.2 Configuration](#12-configuration).
 - In contrast to the AutoHotkey Utility layer (Windows) implementation, the KMonad configuration file lacks the mouse wheel scroll functions on the <kbd>,</kbd> and <kbd>.</kbd> keys.
 
-## 1.2 Configuration
+### 1.2 Configuration
 
 You must edit the keyboard configuration file to **configure your keyboard:**
 
@@ -46,15 +48,13 @@ You must edit the keyboard configuration file to **configure your keyboard:**
 
 5. Start/restart KMonad.
 
-# 2 Windows
+## 2 Windows
 
 KMonad is also compatible with Windows; however, I consider it to be a ‘Linux first’ solution, therefore, I do not run Keeb Utils via KMonad on Windows unless I need to test something. Also, AutoHotkey has demonstrated high-level compatibility with Windows versions.
 
-## 2.1 Installation
+### 2.1 Installation
 
-Follow these steps to **install Keeb Utils for use with KMonad on Windows:**
-
-1. Make sure you have already downloaded/installed the Windows version of KMonad.
+1. Make sure you have already downloaded/installed the **Windows version** of KMonad.
 
 2. Download or clone the contents of this repository to your computer.
 
@@ -71,9 +71,9 @@ Follow these steps to **install Keeb Utils for use with KMonad on Windows:**
   - The mouse wheel scroll functions on the <kbd>,</kbd> and <kbd>.</kbd> keys.
   - Mouse scroll wheel to change the sound volume.
 
-## 2.2 Configuration
+### 2.2 Configuration
 
-You must edit the keyboard configuration file to **configure your operating system input:**
+#### Configure your operating system input
 
 1. Navigate to `keeb-utils\Linux\KMonad\`.
 

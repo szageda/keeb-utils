@@ -1,13 +1,13 @@
-# Table of Content
+## Table of Contents
 
 [1 XKB](#1-xkb)  
 . . [1.1 Installation](#11-installation)
 
-# 1 XKB
+## 1 XKB
 
 I've created very barebones XKB configuration files. They only contain the Colemak-DH base layout, but no additional layers.
 
-## 1.1 Installation
+### 1.1 Installation
 
 Follow these steps to **install the Colemak-DH base layout XKB configuration files:**
 
