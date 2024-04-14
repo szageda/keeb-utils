@@ -235,14 +235,14 @@ F23 & SC033::               ; QWERTY ,<
     else
         Send "{Raw}@"
 }
-F23 & SC034::              	; QWERTY .>
+F23 & SC034::               ; QWERTY .>
 {
 	if GetKeyState("Shift")
 		Send "{Raw}2"
 	else
 		Send "{Raw}#"
 }
-F23 & SC035::             	; QWERTY /?
+F23 & SC035::               ; QWERTY /?
 {
 	if GetKeyState("Shift")
 		Send "{Raw}3"
