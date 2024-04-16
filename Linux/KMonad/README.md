@@ -38,7 +38,7 @@
 
 You must edit the keyboard configuration file to **configure your keyboard:**
 
-1. Navigate to `keeb-utils\Linux\KMonad\`.
+1. Navigate to `keeb-utils/Linux/KMonad/`.
 
 2. Open `colemak-dh-ansi-keeb-utils.kbd` in a text editor.
 
