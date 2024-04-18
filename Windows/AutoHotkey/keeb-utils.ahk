@@ -21,7 +21,7 @@
 ;; allowed, it is not recommended because it would prevent new hotkeys from
 ;; launching whenever the script is displaying a message box or other dialog.
 ;; (default 10)
-#MaxThreads 20
+#MaxThreads 32
 
 ;; Set the maximum number of simultaneous threads per hotkey or hotstring. This
 ;; setting is used to control how many "instances" of a given hotkey or
@@ -33,12 +33,32 @@
 ;; has been reached. The main use for this directive is to increase the
 ;; responsiveness of the keyboard's auto-repeat feature.
 ;; (default True)
-#MaxThreadsBuffer True
+#MaxThreadsBuffer False
+
+;; Set the interval in seconds before a warning dialog is triggered by
+;; consecutive hotkey execution, i.e. key spamming. 'A_MaxHotkeysPerInterval'
+;; is not affected, if 'A_HotkeyInterval' is 0.
+;;
+;; IMPORTANT: Care should be taken not to make the setting too lenient because
+;; if you ever inadvertently introduce an infinite loop of keystrokes (via a
+;; 'Send' function that accidentally triggers other hotkeys), your computer
+;; could become unresponsive due to the rapid flood of keyboard events.
+;; (default 2000)
+A_HotkeyInterval := 0
+;; (default 70)
+A_MaxHotkeysPerInterval := 300
 
 ;; Keep scripts running in the background, they will stay running after startup
 ;; completes and all other threads have exited.
 ;; (default True)
 Persistent True
+
+;; Install the keyboard hook. The keyboard hook monitors keystrokes for the
+;; purpose of activating hotstrings and any keyboard hotkeys not supported by
+;; RegisterHotkey (which is a function built into the operating system). It
+;; also supports a few other features such as the 'InputHook' function.
+;; (default True, False)
+InstallKeybdHook True, True
 
 ;; Set AutoHotkey's process priority level. This setting can also be applied to
 ;; individual scripts. The value is visible in Task Manager.
