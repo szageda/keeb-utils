@@ -3,7 +3,8 @@
 
 ![Project avatar](Assets/Images/Meta/avatar-256.png)
 
-<a href="https://www.flaticon.com/free-icons/gaming" title="gaming icons">Gaming icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/computer-hardware" title="computer hardware icons">Computer hardware icons created by Rian Maulana - Flaticon</a>  
+<a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a>
 </div>
 
 ## Table of Contents
@@ -112,7 +113,7 @@ I've primarily created software solutions for GNU/Linux and Windows operating sy
 
 ## 6 License
 
-All files under the `Assets` directory are Public Domain, the rest are licensed under the MIT license – refer to `LICENSE` in the root directory.
+All files under the `Assets` directory without a specified license are Public Domain, the rest are licensed under the MIT license – refer to `LICENSE` in the root directory.
 
 You may change and/or distribute all files contained in this repository under their license requirements.
 
