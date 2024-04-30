@@ -48,6 +48,11 @@ A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 300
 
+;; Set the default icon tip (text on mouse hover) on AutoHotkey startup.
+;; If blank, the script's name is used instead.
+;; (default "")
+A_IconTip := "Keeb Utils is active"
+
 ;; Keep scripts running in the background, they will stay running after startup
 ;; completes and all other threads have exited.
 ;; (default True)
@@ -67,11 +72,18 @@ ProcessSetPriority "High"
 
 ;; Default command sending mode, makes 'Send' synonymous with 'SendEvent' or
 ;; 'SendPlay'. Since 'SendMode' also changes the mode of 'Click', 'MouseMove',
-;; 'MouseClick' and 'MouseClickDrag', there may be times when you wish to use a
-;; different mode for a particular mouse event. If 'SendMode' is 'Input' (the
-;; default), Windows might ignore remapped keys if CPU speed is too slow.
+;; 'MouseClick' and 'MouseClickDrag', there may be times when you wish to use
+;; a different mode for a particular mouse event. If 'SendMode' is 'Input'
+;; (the default), Windows might ignore remapped keys if CPU speed is too slow.
 ;; (default Input)
 SendMode "Event"
+
+;; Set the tray icon on AutoHotkey startup. Changing the tray icon also
+;; changes the icon displayed by InputBox and subsequently-created GUI windows.
+;; Compiled scripts are also affected even if a custom icon was specified at
+;; the time of compiling.
+;; (default ())
+TraySetIcon("Icons\active.ico",, false)
 
 ;; ----------------------------------------------------------------------------
 ;; AUTOHOTKEY BENCHMARKING / DEBUGGING / TROUBLESHOOTING SETTINGS
@@ -111,8 +123,34 @@ SetControlDelay -1
 SetWinDelay -1
 
 ;; ----------------------------------------------------------------------------
-;; KEEB UTILS TO LOAD
+;; GLOBAL HOTKEYS
+;;
+;; Hotkeys that must be available regardless of the loaded keyboard layout and
+;; layers. All functions must be included between '#SuspendExempt' and
+;; '#SuspendExempt False' sections.
 
+;; Suspend hotkey allows all scripts (keyboard layouts and layers) to be
+;; disabled by a single key combination without having to right click on the
+;; AutoHotkey tray icon and selecting 'Suspend Hotkeys'. Switching between
+;; states also changes the tray icon to indicate AutoHotkey's status.
+#SuspendExempt
+ScrollLock & SC010::    ;; Scroll Lock + Q
+{
+    Suspend -1
+
+    if (A_IsSuspended = 1) {
+        A_IconTip := "Keeb Utils is disabled"
+        TraySetIcon("Icons\suspended.ico",, true)
+    } else {
+        A_IconTip := "Keeb Utils is active"
+        TraySetIcon("Icons\active.ico",, false)
+    }
+}
+#SuspendExempt False
+
+;; ----------------------------------------------------------------------------
+;; KEEB UTILS TO LOAD
+;;
 ;; Enable/disable features. Comment/uncomment the lines.
 
 ;; Keyboard layouts
