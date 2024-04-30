@@ -26,7 +26,7 @@ Keeb Utils (‘Keyboard Utilities’) is a personal project aimed at sharing key
 
 The repository contains my keyboard function customisations tailored for efficiency and comfort. Keeb Utils may provide a valuable resource for keyboard enthusiasts looking to enhance their typing experience. It may also serve as a starting point for people starting to get into keyboard programming.
 
-Following my journey through alternative keyboard layouts and other layers implementing functions on the alphanumeric keys, I decided to create my own. Keeb Utils was inspired by other people – refer to [5. Credits and Inspiration](#5-credits-and-inspiration).
+Following my journey through alternative keyboard layouts and other layers implementing functions on the alphanumeric keys, I decided to create my own. Keeb Utils was inspired by other people – refer to [5 Credits and Inspiration](#5-credits-and-inspiration).
 
 Keeb Utils follows these rules:
 
