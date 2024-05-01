@@ -126,8 +126,7 @@ SetWinDelay -1
 ;; GLOBAL HOTKEYS
 ;;
 ;; Hotkeys that must be available regardless of the loaded keyboard layout and
-;; layers. All functions must be included between '#SuspendExempt' and
-;; '#SuspendExempt False' sections.
+;; layers.
 
 ;; Suspend hotkey allows all scripts (keyboard layouts and layers) to be
 ;; disabled by a single key combination without having to right click on the
