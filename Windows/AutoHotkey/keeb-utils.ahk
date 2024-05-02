@@ -137,12 +137,13 @@ ScrollLock & SC010::    ;; Scroll Lock + Q
 {
     Suspend -1
 
-    if (A_IsSuspended = 1)
+    if (A_IsSuspended = 1) {
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
-    else
+    } else {
         A_IconTip := "Keeb Utils is active"
         TraySetIcon("Icons\active.ico",, false)
+    }
 }
 #SuspendExempt False
 
