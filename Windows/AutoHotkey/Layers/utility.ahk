@@ -63,7 +63,7 @@ F24 & SC015::Send "{Blind}{PgUp}"           ; QWERTY yY
 F24 & SC016::Send "{Blind}{Home}"           ; QWERTY uU
 F24 & SC017::Send "{Blind}{Up}"             ; QWERTY iI
 F24 & SC018::Send "{Bind}{End}"             ; QWERTY oO
-F24 & SC019::Send                           ; QWERTY pP
+F24 & SC019::                               ; QWERTY pP
 {
     SetCapsLockState GetKeyState('CapsLock', 'T')
     ? 'AlwaysOff'
