@@ -95,9 +95,9 @@ keyboard layers.
 (deflayer utility
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  @sav @bck @fnd @fwd ins  pgup home up   end  @prt caps slck nlck
-  @uti @all lalt lsft lctl tab  pgdn left down rght bspc ssrq ret
-  lsft @cut @cpy @rdo @pst @udo @rep del  XX   XX   esc  rsft
+  tab  @cls @bck @fnd @fwd @opn pgup home up   end  caps slck nlck XX
+  @uti @all lalt lsft lctl @sav pgdn left down rght bspc ssrq ret
+  lsft @cut @cpy @rdo @pst @udo @rep del  tab  ins  esc  rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
@@ -148,9 +148,11 @@ keyboard layers.
 (defalias
   ;; Ctrl shortcuts
   all C-a
+  cls C-w
   cpy C-c
   cut C-x
   fnd C-f
+  opn C-o
   prt C-p
   pst C-v
   rep C-h
