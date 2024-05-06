@@ -123,31 +123,6 @@ SetControlDelay -1
 SetWinDelay -1
 
 ;; ----------------------------------------------------------------------------
-;; GLOBAL HOTKEYS
-;;
-;; Hotkeys that must be available regardless of the loaded keyboard layout and
-;; layers.
-
-;; Suspend hotkey allows all scripts (keyboard layouts and layers) to be
-;; disabled by a single key combination without having to right click on the
-;; AutoHotkey tray icon and selecting 'Suspend Hotkeys'. Switching between
-;; states also changes the tray icon to indicate AutoHotkey's status.
-#SuspendExempt
-ScrollLock & SC010::    ;; Scroll Lock + Q
-{
-    Suspend -1
-
-    if (A_IsSuspended = 1) {
-        A_IconTip := "Keeb Utils is disabled"
-        TraySetIcon("Icons\suspended.ico",, true)
-    } else {
-        A_IconTip := "Keeb Utils is active"
-        TraySetIcon("Icons\active.ico",, false)
-    }
-}
-#SuspendExempt False
-
-;; ----------------------------------------------------------------------------
 ;; KEEB UTILS TO LOAD
 ;;
 ;; Enable/disable features. Comment/uncomment the lines.
@@ -161,3 +136,4 @@ ScrollLock & SC010::    ;; Scroll Lock + Q
 
 ;; Custom tray menu
 #Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
+#Include %A_ScriptDir%\Modules\keeb-utils-toggle.ahk
