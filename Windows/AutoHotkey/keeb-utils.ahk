@@ -158,3 +158,6 @@ ScrollLock & SC010::    ;; Scroll Lock + Q
 ;; Extra layers
 #Include %A_ScriptDir%\Layers\utility.ahk
 #Include %A_ScriptDir%\Layers\symbols.ahk
+
+;; Custom tray menu
+#Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
