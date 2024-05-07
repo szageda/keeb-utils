@@ -134,6 +134,6 @@ SetWinDelay -1
 #Include %A_ScriptDir%\Layers\utility.ahk
 #Include %A_ScriptDir%\Layers\symbols.ahk
 
-;; Custom tray menu
+;; Modules
 #Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
 #Include %A_ScriptDir%\Modules\keeb-utils-toggle.ahk
