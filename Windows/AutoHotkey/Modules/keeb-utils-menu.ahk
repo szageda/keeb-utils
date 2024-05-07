@@ -24,6 +24,7 @@ ChangeStatus(*)
 {
     static OldName := "", NewName := ""
     if NewName != "Disabled" {
+        Suspend 1
         OldName := "Active"
         NewName := "Disabled"
 
@@ -31,6 +32,7 @@ ChangeStatus(*)
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
     } else {
+        Suspend 0
         OldName := "Disabled"
         NewName := "Active"
 
