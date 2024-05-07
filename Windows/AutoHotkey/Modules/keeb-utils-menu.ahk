@@ -11,9 +11,8 @@
 ;; Add the menu items
 Tray := A_TrayMenu                  ; for convenience
 Tray.Delete()                       ; delete the standard menu times
-Tray.Add("")                        ; separator
 Tray.Add("Active", ChangeStatus)
-Tray.Add("")
+Tray.Add("")                        ; separator
 Tray.Add("Key History", OpenHistory)
 Tray.Add("Help", OpenHelp)
 Tray.Add("")
