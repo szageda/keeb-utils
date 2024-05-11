@@ -14,9 +14,9 @@ Tray.Delete()                       ; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
 Tray.Add("")                        ; separator
 Tray.Add("Key History", OpenHistory)
-Tray.Add("Help", OpenHelp)
-Tray.Add("")
 Tray.Add("Reload", ReloadScripts)
+Tray.Add("")
+Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
 ;; Configure the menu items
@@ -48,6 +48,11 @@ OpenHistory(*)
     KeyHistory
 }
 
+ReloadScripts(*)
+{
+    Reload
+}
+
 OpenHelp(*)
 {
     if DirExist("C:\Users\" . A_Username  . "\AppData\Local\Programs\AutoHotkey") {
@@ -55,11 +60,6 @@ OpenHelp(*)
     } else {
         Run 'hh.exe "C:\Program Files\AutoHotkey\v2\AutoHotkey.chm" href'
     }
-}
-
-ReloadScripts(*)
-{
-    Reload
 }
 
 CloseAHK(*)
