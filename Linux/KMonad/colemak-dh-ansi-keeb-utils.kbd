@@ -24,21 +24,25 @@ keyboard layers.
 ;; KMONAD CONFIGURATION
 
 (defcfg
+  ;;
   ;; OS Input
+  ;;
 
-  ;; Linux
+  ;; --- Linux ---------
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
 
-  ;; Windows
+  ;; --- Windows -------
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
-  ;; macOS
+  ;; --- macOS ---------
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
+  ;;
   ;; Other Settings
+  ;;
 
   ;; Enable/disable emitting unhandled events. For example: Passing input from
   ;; the source layer to other alphanumeric layers.
@@ -133,15 +137,15 @@ keyboard layers.
 
 ;; Layouts & layers
 (defalias
+  ;; Layouts
+  cmk (layer-switch colemak-dh)
+  qwe (layer-switch qwerty)
+
   ;; Layers
   uti (layer-toggle utility)
   sym (layer-toggle symbols)
   ssm (layer-toggle shift-symbols)
   sel (layer-toggle select-layout)
-
-  ;; Layouts
-  cmk (layer-switch colemak-dh)
-  qwe (layer-switch qwerty)
 )
 
 ;; Shorthands
@@ -156,7 +160,7 @@ keyboard layers.
   prt C-p
   pst C-v
   rep C-h
-  rdo C-y
+  rdo C-y ;; Linux: C-S-z in some desktop environments
   sav C-s
   udo C-z
 
