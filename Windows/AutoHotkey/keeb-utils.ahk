@@ -104,11 +104,6 @@ ListLines 0
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;; Set the delay that will occur after each windowing function, such as
-;; 'WinActivate'.
-;; (default 100)
-SetWinDelay -1
-
 ;; ----------------------------------------------------------------------------
 ;; KEEB UTILS TO LOAD
 ;;
