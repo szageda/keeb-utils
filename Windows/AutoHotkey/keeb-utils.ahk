@@ -99,19 +99,10 @@ KeyHistory 0
 ;; (default 1)
 ListLines 0
 
-;; Set the mouse speed that will be used if unspecified in 'Click',
-;; 'MouseMove', 'MouseClick', and 'MouseClickDrag'.
-;; (default 2)
-SetDefaultMouseSpeed 0
-
 ;; Set the delay that will occur after each keystroke sent by 'Send' or
 ;; 'ControlSend'.
 ;; (default 10)
 SetKeyDelay -1, -1
-
-;; Set the delay that will occur after each mouse movement or click.
-;; (default 10)
-SetMouseDelay -1
 
 ;; Set the delay that will occur after each control-modifying function.
 ;; (default 20)
