@@ -86,23 +86,14 @@ SendMode "Event"
 TraySetIcon("Icons\active.ico",, false)
 
 ;; ----------------------------------------------------------------------------
-;; AUTOHOTKEY BENCHMARKING / DEBUGGING / TROUBLESHOOTING SETTINGS
+;; DEBUGGING & TROUBLESHOOTING
 ;;
 ;; These settings don't have an effect if 'SendMode' is 'Input' with the
 ;; exception of 'KeyHistory' and 'ListLines'.
 
-;; Enable key history and how many items to display.
-;; (default 40)
-KeyHistory 0
-
-;; Enable or disable line logging.
-;; (default 1)
-ListLines 0
-
-;; Set the delay that will occur after each keystroke sent by 'Send' or
-;; 'ControlSend'.
-;; (default 10)
-SetKeyDelay -1, -1
+KeyHistory 0        ;; key history (default 40)
+ListLines 0         ;; line logging (default 1)
+SetKeyDelay -1, -1  ;; delay after each keystroke (default 10)
 
 ;; ----------------------------------------------------------------------------
 ;; KEEB UTILS TO LOAD
