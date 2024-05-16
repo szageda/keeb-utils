@@ -104,10 +104,6 @@ ListLines 0
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;; Set the delay that will occur after each control-modifying function.
-;; (default 20)
-SetControlDelay -1
-
 ;; Set the delay that will occur after each windowing function, such as
 ;; 'WinActivate'.
 ;; (default 100)
