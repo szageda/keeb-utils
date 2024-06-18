@@ -124,12 +124,12 @@ keyboard layers.
 )
 
 (deflayer select-layout
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _    @sel
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  tab  @qwe _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _
-  lsft _    _    @cmk _    _    _    _    _    _    _    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   ret
+  lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
 
 ;; ----------------------------------------------------------------------------
