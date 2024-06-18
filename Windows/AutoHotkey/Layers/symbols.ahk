@@ -18,13 +18,13 @@
  * │   │   │   │   │   │   │ │   │   │   │   │ │   │   │   │   │
  * └───┘   └───┴───┴───┴───┘ └───┴───┴───┴───┘ └───┴───┴───┴───┘
  * ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────┐
- * │   │   │   │   │   │   │   │   │   │   │   │   │   │Backspc│
+ * │   │ ¡‽│ ¿⸘│ ≠§│ €£│ ¢¥│ ‚„│ ‘“│ ’”│ «‹│ »›│   │   │Backspc│
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │ Tab │ %€│ ^£│ &¥│ *¢│   │   │ [7│ ]8│ _9│ :-│ ¡ │   │     │
+ * │ Tab │ '¼│ ?½│ *¾│ ;°│ ^ˇ│ |*│ [7│ ]8│ @9│ !+│   │   │     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
- * │ Caps │ «‹│ »›│ “‘│ ”’│   │   │ (4│ )5│ -6│ =+│ ¿ │  Enter │
+ * │ Caps │ \¦│ =…│ +–│ /—│ `·│ :/│ (4│ )5│ &6│ $-│   │  Enter │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
- * │  Shift │ §°│ „‚│ –—│ {/│ `~│ }\│ !0│ @1│ #2│ $3│   Shift  │
+ * │  Shift │ %¶│ "©│ _™│ <®│ ~¬│ >=│ {0│ }1│ -2│ #3│   Shift  │
  * ├────┬───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬────┤
  * │Ctrl│ Win│ Alt│                        │RAlt│ Fn │Menu│RCtl│
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
@@ -41,16 +41,76 @@ LAlt::F23   ; Maps LAlt to F23 VirtualKey which activates the layer
 
 ;; Numeric Row
 F23 & SC001::Return         ; QWERTY `~
-F23 & SC002::Return         ; QWERTY 1!
-F23 & SC003::Return         ; QWERTY 2@
-F23 & SC004::Return         ; QWERTY 3#
-F23 & SC005::Return         ; QWERTY 4$
-F23 & SC006::Return         ; QWERTY 5%
-F23 & SC007::Return         ; QWERTY 6^
-F23 & SC008::Return         ; QWERTY 7&
-F23 & SC009::Return         ; QWERTY 8*
-F23 & SC00a::Return         ; QWERTY 9(
-F23 & SC00b::Return         ; QWERTY 0)
+F23 & SC002::               ; QWERTY 1!
+{
+    if GetKeyState("Shift")
+        Send "{Raw}‽"
+    else
+        Send "{Raw}¡"
+}
+F23 & SC003::               ; QWERTY 2@
+{
+    if GetKeyState("Shift")
+        Send "{Raw}⸘"
+    else
+        Send "{Raw}¿"
+}
+F23 & SC004::               ; QWERTY 3#
+{
+    if GetKeyState("Shift")
+        Send "{Raw}§"
+    else
+        Send "{Raw}≠"
+}
+F23 & SC005::               ; QWERTY 4$
+{
+    if GetKeyState("Shift")
+        Send "{Raw}£"
+    else
+        Send "{Raw}€"
+}
+F23 & SC006::               ; QWERTY 5%
+{
+    if GetKeyState("Shift")
+        Send "{Raw}¥"
+    else
+        Send "{Raw}¢"
+}
+F23 & SC007::               ; QWERTY 6^
+{
+    if GetKeyState("Shift")
+        Send "{Raw}„"
+    else
+        Send "{Raw}‚"
+}
+F23 & SC008::               ; QWERTY 7&
+{
+    if GetKeyState("Shift")
+        Send "{Raw}“"
+    else
+        Send "{Raw}‘"
+}
+F23 & SC009::               ; QWERTY 8*
+{
+    if GetKeyState("Shift")
+        Send "{Raw}”"
+    else
+        Send "{Raw}’"
+}
+F23 & SC00a::               ; QWERTY 9(
+{
+        if GetKeyState("Shift")
+            Send "{Raw}‹"
+        else
+            Send "{Raw}«"
+}
+F23 & SC00b::               ; QWERTY 0)
+{
+    if GetKeyState("Shift")
+        Send "{Raw}›"
+    else
+        Send "{Raw}»"
+}
 F23 & SC00c::Return         ; QWERTY -_
 F23 & SC00d::Return         ; QWERTY =+
 
@@ -58,33 +118,45 @@ F23 & SC00d::Return         ; QWERTY =+
 F23 & SC010::               ; QWERTY qQ
 {
     if GetKeyState("Shift")
-        Send "{Raw}€"
+        Send "{Raw}¼"
     else
-        Send "{Raw}%"
+        Send "{Raw}'"
 }
 F23 & SC011::               ; QWERTY wW
 {
     if GetKeyState("Shift")
-        Send "{Raw}£"
+        Send "{Raw}½"
     else
-        Send "{Raw}^"
+        Send "{Raw}?"
 }
 F23 & SC012::               ; QWERTY eE
 {
     if GetKeyState("Shift")
-        Send "{Raw}¥"
+        Send "{Raw}¾"
     else
-        Send "{Raw}&"
+        Send "{Raw}*"
 }
 F23 & SC013::               ; QWERTY rR
 {
     if GetKeyState("Shift")
-        Send "{Raw}¢"
+        Send "{Raw}°"
     else
-        Send "{Raw}*"
+        Send "{Raw};"
 }
-F23 & SC014::Return         ; QWERTY tT
-F23 & SC015::Return         ; QWERTY yY
+F23 & SC014::               ; QWERTY tT
+{
+    if GetKeyState("Shift")
+        Send "{Raw}ˇ"
+    else
+        Send "{Raw}^"
+}
+F23 & SC015::               ; QWERTY yY
+{
+    if GetKeyState("Shift")
+        Send "{Raw}*"
+    else
+        Send "{Raw}|"
+}
 F23 & SC016::               ; QWERTY uU
 {
     if GetKeyState("Shift")
@@ -104,16 +176,16 @@ F23 & SC018::               ; QWERTY oO
     if GetKeyState("Shift")
         Send "{Raw}9"
     else
-        Send "{Raw}_"
+        Send "{Raw}@"
 }
 F23 & SC019::               ; QWERTY pP
 {
     if GetKeyState("Shift")
-        Send "{Raw}-"
+        Send "{Raw}+"
     else
-        Send "{Raw}:"
+        Send "{Raw}!"
 }
-F23 & SC01a::Send "{Raw}¡"  ; QWERTY [{
+F23 & SC01a::Return         ; QWERTY [{
 F23 & SC01b::Return         ; QWERTY ]}
 F23 & SC02b::Return         ; QWERTY \|
 
@@ -121,33 +193,45 @@ F23 & SC02b::Return         ; QWERTY \|
 F23 & SC01e::               ; QWERTY aA
 {
     if GetKeyState("Shift")
-        Send "{Raw}‹"
+        Send "{Raw}¦"
     else
-        Send "{Raw}«"
+        Send "{Raw}\"
 }
 F23 & SC01f::               ; QWERTY sS
 {
     if GetKeyState("Shift")
-        Send "{Raw}›"
+        Send "{Raw}…"
     else
-        Send "{Raw}»"
+        Send "{Raw}="
 }
 F23 & SC020::               ; QWERTY dD
 {
     if GetKeyState("Shift")
-        Send "{Raw}‘"
+        Send "{Raw}–"
     else
-        Send "{Raw}“"
+        Send "{Raw}+"
 }
 F23 & SC021::               ; QWERTY fF
 {
     if GetKeyState("Shift")
-        Send "{Raw}’"
+        Send "{Raw}—"
     else
-        Send "{Raw}”"
+        Send "{Raw}/"
 }
-F23 & SC022::Return         ; QWERTY gG
-F23 & SC023::Return         ; QWERTY hH
+F23 & SC022::               ; QWERTY gG
+{
+    if GetKeyState("Shift")
+        Send "{Raw}·"
+    else
+        Send "{Raw}``"
+}
+F23 & SC023::               ; QWERTY hH
+{
+    if GetKeyState("Shift")
+        Send "{Raw}/"
+    else
+        Send "{Raw}:"
+}
 F23 & SC024::               ; QWERTY jJ
 {
     if GetKeyState("Shift")
@@ -167,85 +251,85 @@ F23 & SC026::               ; QWERTY lL
     if GetKeyState("Shift")
         Send "{Raw}6"
     else
-        Send "{Raw}-"
+        Send "{Raw}&"
 }
 F23 & SC027::               ; QWERTY ;:
 {
     if GetKeyState("Shift")
-        Send "{Raw}+"
+        Send "{Raw}-"
     else
-        Send "{Raw}="
+        Send "{Raw}$"
 }
-F23 & SC028::Send "{Raw}¿"  ; QWERTY '"
+F23 & SC028::Return         ; QWERTY '"
 
 ;; Bottom Row
 F23 & SC02c::               ; QWERTY zZ
 {
     if GetKeyState("Shift")
-        Send "{Raw}°"
+        Send "{Raw}¶"
     else
-        Send "{Raw}§"
+        Send "{Raw}%"
 }
 F23 & SC02d::               ; QWERTY xX
 {
     if GetKeyState("Shift")
-        Send "{Raw}‚"
+        Send "{Raw}©"
     else
-        Send "{Raw}„"
+        Send "{Raw}`""
 }
 F23 & SC02e::               ; QWERTY cC
 {
     if GetKeyState("Shift")
-        Send "{Raw}—"
+        Send "{Raw}™"
     else
-        Send "{Raw}–"
+        Send "{Raw}_"
 }
 F23 & SC02f::               ; QWERTY vV
 {
     if GetKeyState("Shift")
-        Send "{Raw}/"
+        Send "{Raw}®"
     else
-        Send "{Raw}{"
+        Send "{Raw}<"
 }
 F23 & SC030::               ; QWERTY bB
 {
-        if GetKeyState("Shift")
-            Send "{Raw}~"
-        else
-            Send "{Raw}``"
+    if GetKeyState("Shift")
+        Send "{Raw}¬"
+    else
+        Send "{Raw}~"
 }
 F23 & SC031::               ; QWERTY nN
 {
     if GetKeyState("Shift")
-        Send "{Raw}\"
+        Send "{Raw}="
     else
-        Send "{Raw}}"
+        Send "{Raw}>"
 }
 F23 & SC032::               ; QWERTY mM
 {
     if GetKeyState("Shift")
         Send "{Raw}0"
     else
-        Send "{Raw}!"
+        Send "{Raw}{"
 }
 F23 & SC033::               ; QWERTY ,<
 {
     if GetKeyState("Shift")
         Send "{Raw}1"
     else
-        Send "{Raw}@"
+        Send "{Raw}}"
 }
 F23 & SC034::               ; QWERTY .>
 {
 	if GetKeyState("Shift")
 		Send "{Raw}2"
 	else
-		Send "{Raw}#"
+		Send "{Raw}-"
 }
 F23 & SC035::               ; QWERTY /?
 {
 	if GetKeyState("Shift")
 		Send "{Raw}3"
 	else
-		Send "{Raw}$"
+		Send "{Raw}#"
 }
