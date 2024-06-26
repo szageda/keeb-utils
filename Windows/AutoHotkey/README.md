@@ -4,17 +4,17 @@
 
 ## Table of Contents
 
-[1 About](#1-about)  
-. . [1.1 Installation](#11-installation)  
-. . [1.2 Configuration](#12-configuration)
+[1. About](#1-about)  
+. . [1.1. Installation](#11-installation)  
+. . [1.2. Configuration](#12-configuration)
 
-## 1 About
+# 1. About
 
 > *AutoHotkey is a free, open-source scripting language for Windows that allows users to easily create small to complex scripts for all kinds of tasks such as: form fillers, auto-clicking, macros, etc. Define hotkeys for the mouse and keyboard, remap keys or buttons and autocorrect-like replacements.*
 
 — *www.autohotkey.com*, AutoHotkey, [link](https://www.autohotkey.com/)
 
-### 1.1 Installation
+## 1.1. Installation
 
 1. Make sure you have already downloaded/installed AutoHotkey.
 
@@ -28,7 +28,7 @@
 
 An alternative solution to AutoHotkey on Windows is KMonad – see `keeb-utils\Linux\KMonad`.
 
-### 1.2 Configuration
+## 1.2. Configuration
 
 #### Start Keeb Utils automatically on Windows login
 

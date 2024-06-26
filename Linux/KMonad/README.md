@@ -4,20 +4,20 @@
 
 ## Table of Contents
 
-[1 About](#1-about)  
-. . [1.1 Installation](#11-installation)  
-. . [1.2 Configuration](#12-configuration)  
-[2 Windows](#2-windows)  
-. . [2.1 Installation](#21-installation)  
-. . [2.2 Configuration](#22-configuration)
+[1. About](#1-about)  
+. . [1.1. Installation](#11-installation)  
+. . [1.2. Configuration](#12-configuration)  
+[2. Windows](#2-windows)  
+. . [2.1. Installation](#21-installation)  
+. . [2.2. Configuration](#22-configuration)
 
-## 1 About
+## 1. About
 
 > *KMonad offers advanced customization features such as layers, multi-tap, tap-hold, and much more. These features are usually available at the hardware level on the QMK-firmware enabled keyboards. However, KMonad allows you to enjoy such features in virtually any keyboard by low-level system manipulations.*
 
 — *README.md*, KMonad, [link](https://github.com/kmonad/kmonad)
 
-### 1.1 Installation
+### 1.1. Installation
 
 1. Make sure you have already downloaded/installed KMonad.
 
@@ -34,7 +34,7 @@
 - You must manually configure your keyboard device in the configuration file – see [1.2 Configuration](#12-configuration).
 - In contrast to the AutoHotkey Utility layer (Windows) implementation, the KMonad configuration file lacks the mouse wheel scroll functions on the <kbd>,</kbd> and <kbd>.</kbd> keys.
 
-### 1.2 Configuration
+### 1.2. Configuration
 
 You must edit the keyboard configuration file to **configure your keyboard:**
 
@@ -48,11 +48,11 @@ You must edit the keyboard configuration file to **configure your keyboard:**
 
 5. Start/restart KMonad.
 
-## 2 Windows
+## 2. Windows
 
 KMonad is also compatible with Windows; however, I consider it to be a ‘Linux first’ solution, therefore, I do not run Keeb Utils via KMonad on Windows unless I need to test something. Also, AutoHotkey has demonstrated high-level compatibility with Windows versions.
 
-### 2.1 Installation
+### 2.1. Installation
 
 1. Make sure you have already downloaded/installed the **Windows version** of KMonad.
 
@@ -71,7 +71,7 @@ KMonad is also compatible with Windows; however, I consider it to be a ‘Linux 
   - The mouse wheel scroll functions on the <kbd>,</kbd> and <kbd>.</kbd> keys.
   - Mouse scroll wheel to change the sound volume.
 
-### 2.2 Configuration
+### 2.2. Configuration
 
 #### Configure your operating system input
 
