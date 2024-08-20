@@ -32,7 +32,7 @@
 
 ;; Define the Symbols layer key
 #InputLevel 1
-LAlt::F23   ; Maps LAlt to F23 VirtualKey which activates the layer
+LAlt::F23   ;; Maps LAlt to F23 VirtualKey which activates the layer
 #InputLevel 0
 
 ;; Note: Where function is 'Return' are unassigned.

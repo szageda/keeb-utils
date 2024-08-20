@@ -28,7 +28,7 @@
 
 ;; Define the Utility key
 #InputLevel 1
-CapsLock::F24   ; Maps Caps Lock to F24 VirtualKey which activates the layer
+CapsLock::F24   ;; Maps Caps Lock to F24 VirtualKey which activates the layer
 #InputLevel 0
 
 ;; Turn off Caps Lock states

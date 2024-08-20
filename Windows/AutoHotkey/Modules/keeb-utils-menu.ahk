@@ -9,10 +9,10 @@
  */
 
 ;; Add the menu items
-Tray := A_TrayMenu                  ; for convenience
-Tray.Delete()                       ; delete the standard menu times
+Tray := A_TrayMenu                  ;; for convenience
+Tray.Delete()                       ;; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
-Tray.Add("")                        ; separator
+Tray.Add("")                        ;; separator
 Tray.Add("Key History", OpenHistory)
 Tray.Add("Reload", ReloadScripts)
 Tray.Add("")

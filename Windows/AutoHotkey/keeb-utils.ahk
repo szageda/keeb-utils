@@ -78,8 +78,8 @@ ProcessSetPriority "High"
 ;; (default Input)
 SendMode "Event"
 
-;; Set the tray icon on AutoHotkey startup. Changing the tray icon also
-;; changes the icon displayed by InputBox and subsequently-created GUI windows.
+;; Set the tray icon on AutoHotkey startup. Changing the tray icon also changes
+;; the icon displayed by 'InputBox' and subsequently-created GUI windows.
 ;; Compiled scripts are also affected even if a custom icon was specified at
 ;; the time of compiling.
 ;; (default ())
