@@ -55,7 +55,7 @@ ReloadScripts(*)
 
 OpenHelp(*)
 {
-    if DirExist("C:\Users\" . A_Username  . "\AppData\Local\Programs\AutoHotkey") {
+    if DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey") {
         Run 'hh.exe "C:\Users\' A_Username '\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey.chm" href'
     } else {
         Run 'hh.exe "C:\Program Files\AutoHotkey\v2\AutoHotkey.chm" href'
