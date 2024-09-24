@@ -95,13 +95,23 @@ keyboard layers.
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
+;; ;; Extra layers
+;; (deflayer utility
+;;   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+;;   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+;;   tab  @sav @bck @fnd @fwd volu pgup home up   end  caps slck nlck XX
+;;   @uti @all lalt lsft lctl vold pgdn left down rght bspc ssrq ret
+;;   lsft @cut @cpy @rdo @pst @udo @rep del  tab  ins  esc  rsft
+;;   lctl lmet lalt           ret            ralt rmet cmp  rctl
+;; )
+
 ;; Extra layers
 (deflayer utility
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  @cls @bck @fnd @fwd @opn pgup home up   end  caps slck nlck XX
-  @uti @all lalt lsft lctl @sav pgdn left down rght bspc ssrq ret
-  lsft @cut @cpy @rdo @pst @udo @rep del  tab  ins  esc  rsft
+  tab  @sav @bck @fnd @fwd volu pgup home up   end  caps slck nlck XX
+  @uti @all lalt tab  lctl vold pgdn left down rght lsft ssrq ret
+  lsft @cut @cpy @rdo @pst @udo @rep bspc del  ins  esc  rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
