@@ -59,12 +59,14 @@ I employ several tweaks or functions on additional layers to better accommodate 
 
 <div align="center">
 
-![Utility layer](Assets/Images/Keyboard%20Layers/colemak-dh-ansi-utility-layer.png)  
+![Utility layer](Assets/Images/Keyboard%20Layers/utility-layer.png)  
 *Utility layer function map for ANSI 101/104-key keyboards*
 
 </div>
 
 ## 3.2. Symbols Layer
+
+**Symbols Layer is currently disabled in the configuration files, because I'm planning a rework on it.**
 
 ‘Symbols’ is a keymap layer implemented for typing efficiency by more comfortable access to digits and other symbols. It also contains characters that are not accessible on traditional keyboard layouts (such as ‘non-[dumb](https://en.wikipedia.org/wiki/Typographic_approximation)’ quotation marks). Like Utility, this layer is activated by a dedicated key (I generally use <kbd>Alt</kbd>).
 

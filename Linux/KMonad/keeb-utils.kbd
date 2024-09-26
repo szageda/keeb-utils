@@ -1,0 +1,161 @@
+#|
+File        : keeb-utils.kbd
+Description : KMonad keyboard layout configuration file
+Copyright   : (c) 2024, Gergely Szabo
+License     : MIT
+|#
+
+;; ----------------------------------------------------------------------------
+;; KMONAD CONFIGURATION
+;;
+;; General configuration of KMonad goes here. This block must at least contain
+;; one input and output.
+
+(defcfg
+  ;; Linux Input
+  input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
+  output (uinput-sink "KMonad output")
+
+  ;; Windows Input
+  ;;input  (low-level-hook)
+  ;;output (send-event-sink)
+
+  ;; macOS Input
+  ;;input  (iokit-name "my-keyboard-product-string")
+  ;;output (kext)
+
+  ;; Enable/disable emitting unhandled events. For example: Passing input from
+  ;; the source layer to other alphanumeric layers.
+  ;; (default true)
+  fallthrough true
+
+  ;; Enable/disable command execution.
+  ;; (default true)
+  allow-cmd false
+)
+
+;; ----------------------------------------------------------------------------
+;; SOURCE LAYOUT
+;;
+;; Keymap of the host OS goes here. It's advised to keep it US QWERTY, unless
+;; you have a good reason to use another layout, because the output may produce
+;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
+
+;; US QWERTY
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
+  `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; ----------------------------------------------------------------------------
+;; KEYBOARD LAYOUTS
+;;
+;; Custom layout keymaps go here. The first layout in the list is loaded when
+;; KMonad starts.
+
+;; Colemak-DH
+;; © Shai Coleman -- https://colemak.com
+;; © stevep99 -- https://colemakmods.github.io/mod-dh
+(deflayer colemak-dh-ansi
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
+  @uti a    r    s    t    g    m    n    e    i    o    '    ret
+  lsft x    c    d    v    z    k    h    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; US QWERTY -- in case somebody needs to use my PC
+(deflayer qwerty
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; ----------------------------------------------------------------------------
+;; EXTRA LAYERS
+;;
+;; Custom layer keymaps go here. They can be made available using aliases ('@')
+;; assigned to keys on the custom layouts.
+
+;; Utility
+(deflayer utility
+  XX   pp   vold volu mute prev next XX   XX   XX   XX   XX   XX   XX   XX
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+  tab  @sav @bck @fnd @fwd caps pgup home up   end  slck nlck XX   XX
+  @uti @all lalt lctl tab  lmet pgdn left down rght lsft ssrq ret
+  lsft @udo @cut @cpy @pst @rdo del  bspc @rep ins  esc  rsft
+  lctl lmet lalt           ret            ralt rmet cmp  rctl
+)
+
+;; Keyboad Layout Selection
+(deflayer select-layout
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   ret
+  lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; Symbols -- needs refactoring
+;;(deflayer symbols
+;;  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+;;  XX   ¡    ¿    ≠    €    ¢    ‚    ‘    ’    «    »    XX   XX   bspc
+;;  tab  '    ?    *    ;    ^    |    [    ]    @    !    XX   XX   XX
+;;  XX   \\   =    +    /    `    :    \(   \)   &    $    XX   ret
+;;  @ssm %    "    \_   <    ~    >    {    }    -    #    rsft
+;;  lctl lmet @sym           spc            ralt rmet cmp  rctl
+;;)
+
+;;(deflayer shift-symbols
+;;  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+;;  XX   ‽    ⸘    §    £    ¥    „    “    ”    ‹    ›    XX   XX   bspc
+;;  tab  ¼    ½    ¾    °    ˇ    *    7    8    9    +    XX   XX   XX
+;;  XX   ¦    …    –    —    ·    /    4    5    6    -    XX   ret
+;;  @ssm ¶    ©    ™    ®    ¬    =    0    1    2    3    rsft
+;;  lctl lmet @sym           spc            ralt rmet cmp  rctl
+;;)
+
+;; ----------------------------------------------------------------------------
+;; ALIAS DEFINITIONS
+;;
+;; All aliases go here. KMonad performs alias lookup whenever a key name starts
+;; with '@' on layouts and layers.
+
+(defalias
+  ;; Layouts
+  cmk (layer-switch colemak-dh-ansi)
+  qwe (layer-switch qwerty)
+
+  ;; Layers
+  uti (layer-toggle utility)
+  sel (layer-toggle select-layout)
+  ;;sym (layer-toggle symbols)
+  ;;ssm (layer-toggle shift-symbols)
+
+  ;; Ctrl Shortcuts
+  all C-a
+  cls C-w
+  cpy C-c
+  cut C-x
+  fnd C-f
+  opn C-o
+  prt C-p
+  pst C-v
+  rep C-h
+  rdo C-y ;; Linux: C-S-z in some desktop environments
+  sav C-s
+  udo C-z
+
+  ;; Alt Shortcuts
+  bck A-left
+  fwd A-right
+)

@@ -100,12 +100,13 @@ SetKeyDelay -1, -1  ;; delay after each keystroke (default 10)
 ;;
 ;; Enable/disable features. Comment/uncomment the lines.
 
-;; Keyboard layouts
+;; Keyboard Layouts
 #Include %A_ScriptDir%\Layouts\colemak-dh-ansi.ahk
 
-;; Extra layers
+;; Extra Layers
 #Include %A_ScriptDir%\Layers\utility.ahk
-#Include %A_ScriptDir%\Layers\symbols.ahk
+;; Symbols -- needs refactoring
+;;#Include %A_ScriptDir%\Layers\symbols.ahk
 
 ;; Modules
 #Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
