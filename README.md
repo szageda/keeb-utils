@@ -59,7 +59,7 @@ I employ several tweaks or functions on additional layers to better accommodate 
 
 <div align="center">
 
-![Utility layer](Assets/Images/Keyboard%20Layers/utility-layer.png)  
+![Utility layer](Assets/Images/Keyboard%20Layers/utility.png)  
 *Utility layer function map for ANSI 101/104-key keyboards*
 
 </div>
