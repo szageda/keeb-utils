@@ -22,20 +22,20 @@
 
 # 1. Introduction
 
-Keeb Utils (‘Keyboard Utilities’) is a personal project aimed at sharing keyboard tweaks cross-platform; primarily Windows and Linux operating systems.
+Keeb Utils, short for ‘Keyboard Utilities‘, is a personal project dedicated to sharing keyboard tweaks on Windows and Linux operating systems.
 
-The repository contains my keyboard function customisations tailored for efficiency and comfort. Keeb Utils may provide a valuable resource for keyboard enthusiasts looking to enhance their typing experience. It may also serve as a starting point for people starting to get into keyboard programming.
+This repository features my custom keyboard function adjustments designed for improved efficiency and comfort. Keeb Utils can be a valuable resource for keyboard enthusiasts looking to enhance their typing experience and serves as a great starting point for anyone interested in keyboard programming.
 
-Following my journey through alternative keyboard layouts and other layers implementing functions on the alphanumeric keys, I decided to create my own. Keeb Utils was inspired by other people – refer to [5 Credits and Inspiration](#5-credits-and-inspiration).
+After exploring various alternative keyboard layouts and experimenting with different functions on the alphanumeric keys, I decided to create my own solution. The inspiration for Keeb Utils comes from the work of others – details can be found in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
 
-Keeb Utils follows these rules:
+Keeb Utils adheres to two key principles:
 
 - Keep it minimal and functional.
-- Implement solutions cross-platform without losing major functionalities.
+- Implement cross-platform solutions without sacrificing essential features.
 
 # 2. Keyboard Layout
 
-I type on a keyboard layout called ‘Colemak-DH’ (sometimes also referred to as ‘Colemak Mod-DH’). Colemak was developed in 2006 and later improved upon in 2015 (the ‘DH’ part) by replacing the D and H keys thus reducing lateral movement of the index fingers.
+I use a keyboard layout known as ‘Colemak-DH‘ (which is occasionally referred to as ‘Colemak Mod-DH‘). This layout was originally created in 2006 and was enhanced in 2015 with the addition of the ‘DH‘ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
 
 <div align="center">
 
@@ -48,14 +48,16 @@ Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been mo
 
 # 3. The Utils
 
-I employ several tweaks or functions on additional layers to better accommodate my keyboard-centric workflow thus achieving better efficiency and comfort. These tweaks include:
+I implement various adjustments and functions on extra layers to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. These adjustments consist of:
+- A utility layer that provides quick access to shortcut functions.
+- A symbols layer that offers easy access to symbols used in programming and prose writing.
 
-- A utility layer containing quick access shortcut functions.
-- A symbols layer containing quick access to programming and prose writing symbols.
+> [!NOTE]
+> The symbols layer is currently disabled across the configuration files. The layer requires some rework before I'm going to enable it.
 
 ## 3.1. Utility Layer
 
-‘Utility’ is a keymap layer implemented for extra functionality of your keyboard. It is activated by a dedicated key (I prefer <kbd>Caps Lock</kbd>) to provide text editing and navigation functions on the alphanumeric keys without having to move your hands away from their home positions.
+‘Utility‘ is a keymap layer designed to enhance your keyboard's functionality. It can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
 
 <div align="center">
 
@@ -66,9 +68,10 @@ I employ several tweaks or functions on additional layers to better accommodate 
 
 ## 3.2. Symbols Layer
 
-**Symbols Layer is currently disabled in the configuration files, because I'm planning a rework on it.**
+> [!IMPORTANT]
+> Symbols Layer is currently disabled in the configuration files, because I'm planning a rework on it.
 
-‘Symbols’ is a keymap layer implemented for typing efficiency by more comfortable access to digits and other symbols. It also contains characters that are not accessible on traditional keyboard layouts (such as ‘non-[dumb](https://en.wikipedia.org/wiki/Typographic_approximation)’ quotation marks). Like Utility, this layer is activated by a dedicated key (I generally use <kbd>Alt</kbd>).
+The ‘Symbols‘ keymap layer enhances typing efficiency by providing easier access to digits and various symbols. It includes characters that are not available on standard keyboard layouts, like'smart quotation marks. Similar to the Utility layer, it is activated with a dedicated key (which I typically set to <kbd>Alt</kbd>).
 
 <div align="center">
 
@@ -82,27 +85,24 @@ I employ several tweaks or functions on additional layers to better accommodate 
 
 # 4. Supported Platforms and Software
 
-I've primarily created software solutions for GNU/Linux and Windows operating systems. The reason is that these are the two types of systems I use every day – Linux on my private devices, and Windows on my work computer. It is also important to keep in mind that I'm not allowed to install just any kind of software on my work machine; a business justification must be provided just about for any installation for ‘private use’. So I prefer to stick to open source and portable software.
+I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as these are the platforms I use daily – Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
 
-### Important! I do _not_ provide the installers or any binary files that use the Keeb Utils configuration files contained in this repository. It is your responsibility to collect the corresponding software binaries.
+> [!WARNING]
+> I do not supply the installers or any binary files associated with the Keeb Utils configuration files found in this repository. It is your responsibility to obtain the necessary software binaries.
 
 ## 4.1. Linux
 
-#### Supported Software
+#### Supported Software:
 
 - **KMonad** version >=0.4.1
 - XKB (no extra layers)
 
 ## 4.2. Windows
 
-#### Supported Software
+#### Supported Software:
 
 - **AutoHotkey** version >2.0.1
 - **KMonad** version >=0.4.1 (AutoHotkey is preferred)
-
-**Planned:**
-
-- MS KLC (no extra layers)
 
 # 5. Credits and Inspiration
 
