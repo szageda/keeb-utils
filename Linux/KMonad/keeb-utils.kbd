@@ -12,15 +12,15 @@ License     : MIT
 ;; one input and output.
 
 (defcfg
-  ;; Linux Input
+  ;; Linux input
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
 
-  ;; Windows Input
+  ;; Windows input
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
-  ;; macOS Input
+  ;; macOS input
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
@@ -39,7 +39,7 @@ License     : MIT
 ;;
 ;; Keymap of the host OS goes here. It's advised to keep it US QWERTY, unless
 ;; you have a good reason to use another layout, because the output may produce
-;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
+;; unexpected results (see: https://github.com/kmonad/kmonad/issues/135)
 
 ;; US QWERTY
 (defsrc
@@ -69,7 +69,8 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; US QWERTY -- in case somebody needs to use my PC
+;; US QWERTY
+;; It's kept here just in case somebody needs to use my PC
 (deflayer qwerty
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -86,6 +87,7 @@ License     : MIT
 ;; assigned to keys on the custom layouts.
 
 ;; Utility
+;; Provides extra functionality enhancements on the alphanumeric keys.
 (deflayer utility
   XX   pp   vold volu mute prev next XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
@@ -95,7 +97,8 @@ License     : MIT
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
-;; Keyboad Layout Selection
+;; Keyboad layout selection
+;; Allows for keyboard layout selection (Colemak/QWERTY).
 (deflayer select-layout
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -105,7 +108,8 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; Symbols -- needs refactoring
+;; Symbols
+;; Needs refactoring; the code is kept for anybody wishing to use it.
 ;;(deflayer symbols
 ;;  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
 ;;  XX   ¡    ¿    ≠    €    ¢    ‚    ‘    ’    «    »    XX   XX   bspc
@@ -141,7 +145,7 @@ License     : MIT
   ;;sym (layer-toggle symbols)
   ;;ssm (layer-toggle shift-symbols)
 
-  ;; Ctrl Shortcuts
+  ;; Ctrl shortcuts
   all C-a
   cls C-w
   cpy C-c
@@ -155,7 +159,7 @@ License     : MIT
   sav C-s
   udo C-z
 
-  ;; Alt Shortcuts
+  ;; Alt shortcuts
   bck A-left
   fwd A-right
 )
