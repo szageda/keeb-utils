@@ -26,19 +26,27 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 
-;; Define the Utility key
+;; -------- Configuration -------------------------------------------------- ;;
+
+; Define the Utility key: map Caps Lock to F24 VirtualKey which activates
+; the layer when held down.
 #InputLevel 1
-CapsLock::F24   ;; Maps Caps Lock to F24 VirtualKey which activates the layer
+CapsLock::F24
 #InputLevel 0
 
-;; Turn off Caps Lock states
+; Turn off Caps Lock states: disables the Caps Lock LED on your physical
+; keyboard, so it doesn't light up when Caps Lock is held.
 SetCapsLockState "AlwaysOff"
 
-;; Note: Where function is 'Return' are unassigned.
-;; Formatting:
+;; -------- Layer Keymaps -------------------------------------------------- ;;
+; Note: Where the mapped function is 'Return' means that key is unassigned.
+;; ------------------------------------------------------------------------- ;;
+
+; Formatting:
 ;F24 & Scancode::Send "{key combination or function}"
 
-;; Function Row
+;; ---- Function Row ----------------------------------------------------------
+
 F24 & SC001::Return                         ; Esc
 F24 & SC03b::Send "{Media_Play_Pause}"      ; F1
 F24 & SC03c::Send "{Volume_Down}"           ; F2
@@ -53,7 +61,8 @@ F24 & SC044::Return                         ; F10
 F24 & SC057::Return                         ; F11
 F24 & SC058::Return                         ; F12
 
-;; Numeric Row
+;; ---- Numeric Row -----------------------------------------------------------
+
 F24 & SC001::Send "{Blind}{Escape}"         ; QWERTY `~
 F24 & SC002::Send "{Blind}{F1}"             ; QWERTY 1!
 F24 & SC003::Send "{Blind}{F2}"             ; QWERTY 2@
@@ -68,7 +77,8 @@ F24 & SC00b::Send "{Blind}{F10}"            ; QWERTY 0)
 F24 & SC00c::Send "{Blind}{F11}"            ; QWERTY -_
 F24 & SC00d::Send "{Blind}{F12}"            ; QWERTY =+
 
-;; Top Row
+;; ---- Top Row ---------------------------------------------------------------
+
 F24 & SC010::Send "{Ctrl Down}{s}{Ctrl Up}" ; QWERTY qQ
 F24 & SC011::Send "{Browser_Back}"          ; QWERTY wW
 F24 & SC012::Send "{Ctrl Down}{f}{Ctrl Up}" ; QWERTY eE
@@ -88,7 +98,8 @@ F24 & SC01a::NumLock                        ; QWERTY [{
 F24 & SC01b::Return                         ; QWERTY ]}
 F24 & SC02b::Return                         ; QWERTY \|
 
-;; Home Row
+;; ---- Home Row --------------------------------------------------------------
+
 F24 & SC01e::Send "{Ctrl Down}{a}{Ctrl Up}" ; QWERTY aA
 F24 & SC01f::Send "{Blind}{LAlt Down}"      ; QWERTY sS
 F24 & SC01f Up::Send "{LAlt Up}"
@@ -105,7 +116,8 @@ F24 & SC027::Send "{Blind}{LShift Down}"    ; QWERTY ;:
 F24 & SC027 Up::Send "{LShift Up}"
 F24 & SC028::PrintScreen                    ; QWERTY '"
 
-;; Bottom Row
+;; ---- Bottom Row ------------------------------------------------------------
+
 F24 & SC02c::Send "{Ctrl Down}{z}{Ctrl Up}" ; QWERTY zZ
 F24 & SC02d::Send "{Ctrl Down}{x}{Ctrl Up}" ; QWERTY xX
 F24 & SC02e::Send "{Ctrl Down}{c}{Ctrl Up}" ; QWERTY cC
@@ -117,5 +129,6 @@ F24 & SC033::Send "{Ctrl Down}{h}{Ctrl Up}" ; QWERTY ,<
 F24 & SC034::Send "{Blind}{Ins}"            ; QWERTY .>
 F24 & SC035::Send "{Blind}{Escape}"         ; QWERTY /?
 
-;; Misc. Keys
+;; ---- Misc. Keys ------------------------------------------------------------
+
 F24 & SC039::Send "{Blind}{Enter}"          ; Space

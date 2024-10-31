@@ -5,41 +5,39 @@ Copyright   : (c) 2024, Gergely Szabo
 License     : MIT
 |#
 
-;; ----------------------------------------------------------------------------
-;; KMONAD CONFIGURATION
-;;
-;; General configuration of KMonad goes here. This block must at least contain
-;; one input and output.
+;; -------- KMonad Configuration ------------------------------------------- ;;
+;; This block controls the behavior of KMonad scripts, and must contain at
+;; least one 'input' and 'output' definition based on the operating system.
+;; ------------------------------------------------------------------------- ;;
 
 (defcfg
-  ;; Linux input
+  ;; ---- Linux Input ---------------------------------------------------------
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
 
-  ;; Windows input
+  ;; ---- Windows Input -------------------------------------------------------
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
-  ;; macOS input
+  ;; ---- macOS Input ---------------------------------------------------------
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
-  ;; Enable/disable emitting unhandled events. For example: Passing input from
+  ;; Enable/disable emitting unhandled events. For example: passing input from
   ;; the source layer to other alphanumeric layers.
   ;; (default true)
   fallthrough true
 
-  ;; Enable/disable command execution.
+  ;; Enable/disable command execution
   ;; (default true)
   allow-cmd false
 )
 
-;; ----------------------------------------------------------------------------
-;; SOURCE LAYOUT
-;;
+;; -------- Source Keyboard Layout ----------------------------------------- ;;
 ;; Keymap of the host OS goes here. It's advised to keep it US QWERTY, unless
 ;; you have a good reason to use another layout, because the output may produce
-;; unexpected results (see: https://github.com/kmonad/kmonad/issues/135)
+;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
+;; ------------------------------------------------------------------------- ;;
 
 ;; US QWERTY
 (defsrc
@@ -51,11 +49,10 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; ----------------------------------------------------------------------------
-;; KEYBOARD LAYOUTS
-;;
-;; Custom layout keymaps go here. The first layout in the list is loaded when
-;; KMonad starts.
+;; -------- Custom Keyboard Layouts ---------------------------------------- ;;
+;; Custom layout keymaps go here. The first layout in the list is loaded
+;; by default when KMonad starts.
+;; ------------------------------------------------------------------------- ;;
 
 ;; Colemak-DH
 ;; © Shai Coleman -- https://colemak.com
@@ -80,11 +77,10 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; ----------------------------------------------------------------------------
-;; EXTRA LAYERS
-;;
-;; Custom layer keymaps go here. They can be made available using aliases ('@')
-;; assigned to keys on the custom layouts.
+;; -------- Extra Keyboard Layers ------------------------------------------ ;;
+;; Custom layer keymaps go here. They can be made available using
+;; aliases ('@') assigned to keys on the custom layouts.
+;; ------------------------------------------------------------------------- ;;
 
 ;; Utility
 ;; Provides extra functionality enhancements on the alphanumeric keys.
@@ -128,24 +124,23 @@ License     : MIT
 ;;  lctl lmet @sym           spc            ralt rmet cmp  rctl
 ;;)
 
-;; ----------------------------------------------------------------------------
-;; ALIAS DEFINITIONS
-;;
-;; All aliases go here. KMonad performs alias lookup whenever a key name starts
-;; with '@' on layouts and layers.
+;; -------- Alias Definitions ---------------------------------------------- ;;
+;; All aliases go here. KMonad performs alias lookup whenever a key name
+;; starts with '@' on layouts and layers.
+;; ------------------------------------------------------------------------- ;;
 
 (defalias
-  ;; Layouts
+  ;; ---- Layouts -------------------------------------------------------------
   cmk (layer-switch colemak-dh-ansi)
   qwe (layer-switch qwerty)
 
-  ;; Layers
+  ;; ---- Layers --------------------------------------------------------------
   uti (layer-toggle utility)
   sel (layer-toggle select-layout)
   ;;sym (layer-toggle symbols)
   ;;ssm (layer-toggle shift-symbols)
 
-  ;; Ctrl shortcuts
+  ;; ---- Ctrl Shortcuts ------------------------------------------------------
   all C-a
   cls C-w
   cpy C-c
@@ -159,7 +154,7 @@ License     : MIT
   sav C-s
   udo C-z
 
-  ;; Alt shortcuts
+  ;; ---- Alt Shortcuts -------------------------------------------------------
   bck A-left
   fwd A-right
 )

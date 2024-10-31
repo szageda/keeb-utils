@@ -45,10 +45,11 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 
-;; Formatting:
-;Scancode::VirtualKey
+; Formatting:
+;Scancode::VirtualKey   ; comments
 
-;; Numeric Row
+;; ---- Numeric Row -----------------------------------------------------------
+
 ;SC01::vkC0 ; QWERTY `~
 ;SC02::1    ; QWERTY 1!
 ;SC03::2    ; QWERTY 2@
@@ -63,7 +64,8 @@
 SC0c::vkDB  ; QWERTY -_
 SC0d::vkDD  ; QWERTY =+
 
-;; Top Row
+;; ---- Top Row ---------------------------------------------------------------
+
 SC010::q    ; QWERTY qQ
 SC011::w    ; QWERTY wW
 SC012::f    ; QWERTY eE
@@ -78,7 +80,8 @@ SC01a::vkBD ; QWERTY [{
 SC01b::vkBB ; QWERTY ]}
 SC02b::vkDC ; QWERTY \|
 
-;; Home Row
+;; ---- Home Row --------------------------------------------------------------
+
 SC01e::a    ; QWERTY aA
 SC01f::r    ; QWERTY sS
 SC020::s    ; QWERTY dD
@@ -91,7 +94,8 @@ SC026::i    ; QWERTY lL
 SC027::o    ; QWERTY ;:
 SC028::vkDE ; QWERTY '"
 
-;; Bottom Row
+;; ---- Bottom Row ------------------------------------------------------------
+
 SC02c::x    ; QWERTY zZ
 SC02d::c    ; QWERTY xX
 SC02e::d    ; QWERTY cC
