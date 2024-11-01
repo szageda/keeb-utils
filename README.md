@@ -22,11 +22,11 @@
 
 # 1. Introduction
 
-Keeb Utils, short for ‘Keyboard Utilities‘, is a personal project dedicated to sharing keyboard tweaks on Windows and Linux operating systems.
+Keeb Utils, short for “Keyboard Utilities,“ is a personal project dedicated to sharing keyboard tweaks on Windows and Linux operating systems.
 
 This repository features my custom keyboard function adjustments designed for improved efficiency and comfort. Keeb Utils can be a valuable resource for keyboard enthusiasts looking to enhance their typing experience and serves as a great starting point for anyone interested in keyboard programming.
 
-After exploring various alternative keyboard layouts and experimenting with different functions on the alphanumeric keys, I decided to create my own solution. The inspiration for Keeb Utils comes from the work of others – details can be found in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
+After exploring various alternative keyboard layouts and experimenting with different functions on the alphanumeric keys, I decided to create my own solution. The inspiration for Keeb Utils comes from the work of others—details can be found in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
 
 Keeb Utils adheres to two key principles:
 
@@ -35,7 +35,7 @@ Keeb Utils adheres to two key principles:
 
 # 2. Keyboard Layout
 
-I use a keyboard layout known as ‘Colemak-DH‘ (which is occasionally referred to as ‘Colemak Mod-DH‘). This layout was originally created in 2006 and was enhanced in 2015 with the addition of the ‘DH‘ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
+I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). This layout was originally created in 2006 and was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
 
 <div align="center">
 
@@ -57,7 +57,7 @@ I implement various adjustments and functions on extra layers to enhance my keyb
 
 ## 3.1. Utility Layer
 
-‘Utility‘ is a keymap layer designed to enhance your keyboard's functionality. It can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
+“Utility“ is a keymap layer designed to enhance your keyboard's functionality. It can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
 
 <div align="center">
 
@@ -71,7 +71,7 @@ I implement various adjustments and functions on extra layers to enhance my keyb
 > [!IMPORTANT]
 > Symbols Layer is currently disabled in the configuration files, because I'm planning a rework on it.
 
-The ‘Symbols‘ keymap layer enhances typing efficiency by providing easier access to digits and various symbols. It includes characters that are not available on standard keyboard layouts, like'smart quotation marks. Similar to the Utility layer, it is activated with a dedicated key (which I typically set to <kbd>Alt</kbd>).
+The “Symbols“ keymap layer enhances typing efficiency by providing easier access to digits and various symbols. It includes characters that are not available on standard keyboard layouts, like'smart quotation marks. Similar to the Utility layer, it is activated with a dedicated key (which I typically set to <kbd>Alt</kbd>).
 
 <div align="center">
 
@@ -85,7 +85,7 @@ The ‘Symbols‘ keymap layer enhances typing efficiency by providing easier ac
 
 # 4. Supported Platforms and Software
 
-I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as these are the platforms I use daily – Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
+I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as these are the platforms I use daily—Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
 
 > [!WARNING]
 > I do not supply the installers or any binary files associated with the Keeb Utils configuration files found in this repository. It is your responsibility to obtain the necessary software binaries.
@@ -106,16 +106,16 @@ I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as t
 
 # 5. Credits and Inspiration
 
-**Shai Coleman** – *[Colemak keyboard layout](https://colemak.com)*  
-**Steve ‘stevep99’ P** – *[Seniply](https://stevep99.github.io/seniply/)*, *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
-**Øystein ‘DreymaR’ Bech-Aase** – *[The Big Bag Theory](https://dreymar.colemak.org/)*  
-**Manna Harbour** – *[Miryoku](https://github.com/manna-harbour/miryoku)*  
-**Precondition** – *[Home Row Mods](https://precondition.github.io/home-row-mods)*  
-**Pascal Getreuer** – *[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
+**Shai Coleman**—*[Colemak keyboard layout](https://colemak.com)*  
+**Steve “stevep99” P**—*[Seniply](https://stevep99.github.io/seniply/)*, *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
+**Øystein “DreymaR” Bech-Aase**—*[The Big Bag Theory](https://dreymar.colemak.org/)*  
+**Manna Harbour**—*[Miryoku](https://github.com/manna-harbour/miryoku)*  
+**Precondition**—*[Home Row Mods](https://precondition.github.io/home-row-mods)*  
+**Pascal Getreuer**—*[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
 
 # 6. License
 
-All files under the `Assets` directory without a specified license are Public Domain, the rest are licensed under the MIT license – refer to `LICENSE` in the root directory.
+All files under the `Assets` directory without a specified license are Public Domain, the rest are licensed under the MIT license—refer to `LICENSE` in the root directory.
 
 You may change and/or distribute all files contained in this repository under their license requirements.
 

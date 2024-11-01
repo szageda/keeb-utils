@@ -25,7 +25,7 @@
 > The scripts support AutoHotkey version 2.0. While running them under version 1.0 may be possible, you may experience problems or erratic behaviour.
 
 > [!TIP]
-> An alternative solution to AutoHotkey on Windows is KMonad – see `keeb-utils\Linux\KMonad`.
+> An alternative solution to AutoHotkey on Windows is KMonad—see `keeb-utils\Linux\KMonad`.
 
 ## 1.2. Configuration
 

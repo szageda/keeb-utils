@@ -28,7 +28,7 @@
 > If you didn't configure the uinput permissions as instructed by KMonad, you must run it with sudo priviliges, and if KMonad isn't in your root user's path you should use absolute paths to execute it and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /path/to/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
 
 > [!WARNING]
-> You must manually configure your keyboard device in the configuration file – see [1.2 Configuration](#12-configuration).
+> You must manually configure your keyboard device in the configuration file—see [1.2 Configuration](#12-configuration).
 
 ### 1.2. Configuration
 
@@ -36,13 +36,13 @@
 
 1. Navigate to `keeb-utils/Linux/KMonad/`.
 2. Open `keeb-utils.kbd` in a text editor.
-3. Change the ‘value’ of `input (device-file "value")` following the KMonad [wiki instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
+3. Change the “value” of `input (device-file "value")` following the KMonad [wiki instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
 4. Save your changes.
 5. Start KMonad.
 
 ## 2. Windows
 
-KMonad is compatible with Windows, but I view it as a ‘Linux first’ solution, so I only use Keeb Utils with KMonad on Windows when I need to conduct tests. Additionally, AutoHotkey has shown strong compatibility with various Windows versions.
+KMonad is compatible with Windows, but I view it as a “Linux first” solution, so I only use Keeb Utils with KMonad on Windows when I need to conduct tests. Additionally, AutoHotkey has shown strong compatibility with various Windows versions.
 
 ### 2.1. Installation
 
@@ -55,7 +55,7 @@ KMonad is compatible with Windows, but I view it as a ‘Linux first’ solution
 > If you place the KMonad executable into a folder in your `PATH` variable, you won't have to use the absolute path.
 
 > [!WARNING]
-> You must manually configure your keyboard device in the configuration file – see [2.2 Configuration](#22-configuration).
+> You must manually configure your keyboard device in the configuration file—see [2.2 Configuration](#22-configuration).
 
 ### 2.2. Configuration
 
