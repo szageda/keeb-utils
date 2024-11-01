@@ -67,3 +67,6 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 4. Uncomment (remove `;;`) the lines starting with `input` and `output` under the `Windows` section.
 5. Save your changes.
 6. Start KMonad.
+
+> [!NOTE]
+> In contrast to Linux, on Windows you don't have to configure the keyboard device; i.e., leave the `input` and `output` fields as they are.
