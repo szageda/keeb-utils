@@ -4,7 +4,7 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * 'Utility layer' extends the keyboard's current abilities and puts them onto
+ * "Utility layer" extends the keyboard's current abilities and puts them onto
  * an extra layer activated by a dedicated key (Caps Lock).
  *
  * This keymap stays persistent regardless of the active host keyboard layout,
@@ -39,11 +39,11 @@ CapsLock::F24
 SetCapsLockState "AlwaysOff"
 
 ;; -------- Layer Keymaps -------------------------------------------------- ;;
-; Note: Where the mapped function is 'Return' means that key is unassigned.
+; Note: Where the mapped function is "Return" means that key is unassigned.
 ;; ------------------------------------------------------------------------- ;;
 
 ; Formatting:
-;F24 & Scancode::Send "{key combination or function}"
+;F24 & Scancode::Send "{key combination or function}"   ; comments
 
 ;; ---- Function Row ----------------------------------------------------------
 

@@ -6,8 +6,8 @@
  *
  * The hotkey allows all scripts (keyboard layouts and layers) to be
  * disabled by a single key combination without right clicking on the
- * AutoHotkey tray icon then selecting 'Suspend Hotkeys'. Thanks to the
- * 'SuspendExempt' directive, AutoHotkey listens to the key combination
+ * AutoHotkey tray icon then selecting "Suspend Hotkeys". Thanks to the
+ * "SuspendExempt" directive, AutoHotkey listens to the key combination
  * even if it is currently suspended. Toggling states also changes the
  * tray icon to indicate AutoHotkey's status.
  */

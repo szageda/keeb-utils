@@ -7,7 +7,7 @@ License     : MIT
 
 ;; -------- KMonad Configuration ------------------------------------------- ;;
 ;; This block controls the behavior of KMonad scripts, and must contain at
-;; least one 'input' and 'output' definition based on the operating system.
+;; least one "input" and "output" definition based on the operating system.
 ;; ------------------------------------------------------------------------- ;;
 
 (defcfg
@@ -36,7 +36,7 @@ License     : MIT
 ;; -------- Source Keyboard Layout ----------------------------------------- ;;
 ;; Keymap of the host OS goes here. It's advised to keep it US QWERTY, unless
 ;; you have a good reason to use another layout, because the output may produce
-;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
+;; unexpected results--see: https://github.com/kmonad/kmonad/issues/135
 ;; ------------------------------------------------------------------------- ;;
 
 ;; US QWERTY
@@ -55,8 +55,8 @@ License     : MIT
 ;; ------------------------------------------------------------------------- ;;
 
 ;; Colemak-DH
-;; © Shai Coleman -- https://colemak.com
-;; © stevep99 -- https://colemakmods.github.io/mod-dh
+;; © Shai Coleman--https://colemak.com
+;; © stevep99--https://colemakmods.github.io/mod-dh
 (deflayer colemak-dh-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
@@ -79,7 +79,7 @@ License     : MIT
 
 ;; -------- Extra Keyboard Layers ------------------------------------------ ;;
 ;; Custom layer keymaps go here. They can be made available using
-;; aliases ('@') assigned to keys on the custom layouts.
+;; aliases ("@") assigned to keys on the custom layouts.
 ;; ------------------------------------------------------------------------- ;;
 
 ;; Utility
@@ -126,7 +126,7 @@ License     : MIT
 
 ;; -------- Alias Definitions ---------------------------------------------- ;;
 ;; All aliases go here. KMonad performs alias lookup whenever a key name
-;; starts with '@' on layouts and layers.
+;; starts with "@" on layouts and layers.
 ;; ------------------------------------------------------------------------- ;;
 
 (defalias

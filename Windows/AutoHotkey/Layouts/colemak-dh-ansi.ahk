@@ -24,7 +24,7 @@
  * for the numeric Shift layer, AltGr, and AltGr+Shift layers (layers 6 and 7).
  * This means that the output of Shift+4 and AltGr+a depends on the active host
  * keyboard layout. Such remapped layouts prevent the use of hotstrings, e.g.
- * typing 'btw' outputs 'by the way'.
+ * typing "btw" outputs "by the way".
  *
  * The below keymap is only true for the non-alphabetic and non-numeric keys
  * if the active host keyboard layout is English US QWERTY.

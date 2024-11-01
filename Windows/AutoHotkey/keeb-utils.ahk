@@ -14,13 +14,13 @@
 ;; ------------------------------------------------------------------------- ;;
 
 ; Allow a script to run again. If this directive is unspecified in a script,
-; it will behave as though set to 'Prompt'. This directive is ignored when any
+; it will behave as though set to "Prompt". This directive is ignored when any
 ; of the following command line switches are used: /force /restart
 ; https://www.autohotkey.com/docs/v2/lib/_SingleInstance.htm
 ; (default Force)
 #SingleInstance Force
 
-; Set the maximum number of simultaneous threads. Although a value of '1' is
+; Set the maximum number of simultaneous threads. Although a value of 1 is
 ; allowed, it is not recommended because it would prevent new hotkeys from
 ; launching whenever the script is displaying a message box or other dialog.
 ; https://www.autohotkey.com/docs/v2/lib/_MaxThreads.htm
@@ -34,7 +34,7 @@
 ; (default 1)
 #MaxThreadsPerHotkey 3
 
-; Buffer rather than ignore keypresses when their '#MaxThreadsPerHotkey' limit
+; Buffer rather than ignore keypresses when their "#MaxThreadsPerHotkey" limit
 ; has been reached. The main use for this directive is to increase the
 ; responsiveness of the keyboard's auto-repeat feature.
 ; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsBuffer.htm
@@ -42,12 +42,12 @@
 #MaxThreadsBuffer False
 
 ; Set the interval in seconds before a warning dialog is triggered by
-; consecutive hotkey execution, i.e. key spamming. 'A_MaxHotkeysPerInterval'
-; is not affected, if 'A_HotkeyInterval' is 0.
+; consecutive hotkey execution, i.e. key spamming. "A_MaxHotkeysPerInterval"
+; is not affected, if "A_HotkeyInterval" is 0.
 ;
 ; IMPORTANT: Care should be taken not to make the setting too lenient because
 ; if you ever inadvertently introduce an infinite loop of keystrokes (via a
-; 'Send' function that accidentally triggers other hotkeys), your computer
+; "Send" function that accidentally triggers other hotkeys), your computer
 ; could become unresponsive due to the rapid flood of keyboard events.
 ; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ; (default 2000)
@@ -70,7 +70,7 @@ Persistent True
 ; Install the keyboard hook. The keyboard hook monitors keystrokes for the
 ; purpose of activating hotstrings and any keyboard hotkeys not supported by
 ; RegisterHotkey (which is a function built into the operating system). It
-; also supports a few other features such as the 'InputHook' function.
+; also supports a few other features such as the "InputHook" function.
 ; https://www.autohotkey.com/docs/v2/lib/InstallKeybdHook.htm
 ; (default True, False)
 InstallKeybdHook True, True
@@ -81,17 +81,17 @@ InstallKeybdHook True, True
 ; (default Normal)
 ProcessSetPriority "High"
 
-; Default command sending mode, makes 'Send' synonymous with 'SendEvent' or
-; 'SendPlay'. Since 'SendMode' also changes the mode of 'Click', 'MouseMove',
-; 'MouseClick' and 'MouseClickDrag', there may be times when you wish to use
-; a different mode for a particular mouse event. If 'SendMode' is 'Input'
+; Default command sending mode, makes "Send" synonymous with "SendEvent" or
+; "SendPlay". Since "SendMode" also changes the mode of "Click", "MouseMove",
+; "MouseClick" and "MouseClickDrag", there may be times when you wish to use
+; a different mode for a particular mouse event. If "SendMode" is "Input"
 ; (the default), Windows might ignore remapped keys if CPU speed is too slow.
 ; https://www.autohotkey.com/docs/v2/lib/SendMode.htm
 ; (default Input)
 SendMode "Event"
 
 ; Set the tray icon on AutoHotkey startup. Changing the tray icon also changes
-; the icon displayed by 'InputBox' and subsequently-created GUI windows.
+; the icon displayed by "InputBox" and subsequently-created GUI windows.
 ; Compiled scripts are also affected even if a custom icon was specified at
 ; the time of compiling.
 ; https://www.autohotkey.com/docs/v2/lib/TraySetIcon.htm
@@ -99,8 +99,8 @@ SendMode "Event"
 TraySetIcon("Icons\active.ico",, false)
 
 ;; -------- Debugging & Troubleshooting ------------------------------------ ;;
-; These settings don't have an effect if 'SendMode' is 'Input' with the
-; exception of 'KeyHistory' and 'ListLines'.
+; These settings don't have an effect if "SendMode" is "Input" with the
+; exception of "KeyHistory" and "ListLines".
 ;; ------------------------------------------------------------------------- ;;
 
 ; Enables or disables key history. This feature is intended to help debug
@@ -116,8 +116,8 @@ KeyHistory 0
 ; (default 1)
 ListLines 0
 
-; Sets the delay that will occur after each keystroke sent by 'Send' or
-; 'ControlSend'.
+; Sets the delay that will occur after each keystroke sent by "Send" or
+; "ControlSend".
 ; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
 ; (default 10)
 SetKeyDelay -1, -1
@@ -132,7 +132,7 @@ SetKeyDelay -1, -1
 
 ; Extra Layers
 #Include %A_ScriptDir%\Layers\utility.ahk
-; Symbols -- needs refactoring
+; Symbols--needs refactoring
 ;#Include %A_ScriptDir%\Layers\symbols.ahk
 
 ; Modules
