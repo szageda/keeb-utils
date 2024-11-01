@@ -13,11 +13,11 @@
  */
 
 #SuspendExempt
-ScrollLock & SC010::    ;; Scroll Lock + Q
+ScrollLock & SC010::    ; Scroll Lock + Q
 {
-    Suspend -1  ;; 0 = activate, 1 = suspend, -1 = switch to opposite state
+    Suspend -1  ; 0 = activate, 1 = suspend, -1 = switch to opposite state
 
-    ;; Update the tray icon and tip
+    ; Update the tray icon and tip
     if (A_IsSuspended = 1) {
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
