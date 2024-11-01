@@ -8,18 +8,18 @@
  * by right clicking) for the Keeb Utils projects.
  */
 
-;; Add the menu items
-Tray := A_TrayMenu                  ;; for convenience
-Tray.Delete()                       ;; delete the standard menu times
+; Add the menu items
+Tray := A_TrayMenu                  ; for convenience
+Tray.Delete()                       ; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
-Tray.Add("")                        ;; separator
+Tray.Add("")                        ; separator
 Tray.Add("Key History", OpenHistory)
 Tray.Add("Reload", ReloadScripts)
 Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-;; Configure the menu items
+; Configure the menu items
 ChangeStatus(*)
 {
     static OldName := "", NewName := ""
@@ -67,6 +67,6 @@ CloseAHK(*)
     ExitApp
 }
 
-;; Set Activating/Disabling Keeb Utils as the default
+; Set Activating/Disabling Keeb Utils as the default
 CurrentDefault := Tray.Default
 Tray.Default := "Active"
