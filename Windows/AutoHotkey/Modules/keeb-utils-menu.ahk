@@ -67,6 +67,7 @@ CloseAHK(*)
     ExitApp
 }
 
-; Set Activating/Disabling Keeb Utils as the default
+; Set Activating/Disabling Keeb Utils as the default option
+; when double clicking the tray icon
 CurrentDefault := Tray.Default
 Tray.Default := "Active"
