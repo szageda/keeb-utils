@@ -28,7 +28,7 @@ ChangeStatus(*)
         OldName := "Active"
         NewName := "Disabled"
 
-        ;; Update the tray icon and tip
+        ; Update the tray icon and tip
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
     } else {
@@ -36,7 +36,7 @@ ChangeStatus(*)
         OldName := "Disabled"
         NewName := "Active"
 
-        ;; Update the tray icon and tip
+        ; Update the tray icon and tip
         A_IconTip := "Keeb Utils is active"
         TraySetIcon("Icons\active.ico",, false)
     }
