@@ -55,11 +55,11 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 > If you place the KMonad executable into a folder in your `PATH` variable, you won't have to use the absolute path.
 
 > [!WARNING]
-> You must manually configure your keyboard device in the configuration file—see [2.2 Configuration](#22-configuration).
+> You must manually configure your keyboard device in the configuration file—see [2.2. Configuration](#22-configuration).
 
 ### 2.2. Configuration
 
-**Configure your operating system input**
+**Configure your operating system input:**
 
 1. Navigate to `keeb-utils\Linux\KMonad\`.
 2. Open `keeb-utils.kbd` in a text editor.
