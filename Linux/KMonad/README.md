@@ -32,7 +32,7 @@
 
 ### 1.2. Configuration
 
-#### Configure your keyboard:
+**Configure your keyboard:**
 
 1. Navigate to `keeb-utils/Linux/KMonad/`.
 2. Open `keeb-utils.kbd` in a text editor.
@@ -59,7 +59,7 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 
 ### 2.2. Configuration
 
-#### Configure your operating system input
+**Configure your operating system input**
 
 1. Navigate to `keeb-utils\Linux\KMonad\`.
 2. Open `keeb-utils.kbd` in a text editor.
