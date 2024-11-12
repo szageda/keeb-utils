@@ -22,14 +22,9 @@
 
 ## 1. Introduction
 
-Keeb Utils, short for “Keyboard Utilities,“ is a personal project dedicated to sharing keyboard tweaks on Windows and Linux operating systems.
-
-This repository features my custom keyboard function adjustments designed for improved efficiency and comfort. Keeb Utils can be a valuable resource for keyboard enthusiasts looking to enhance their typing experience and serves as a great starting point for anyone interested in keyboard programming.
-
-After exploring various alternative keyboard layouts and experimenting with different functions on the alphanumeric keys, I decided to create my own solution. The inspiration for Keeb Utils comes from the work of others—details can be found in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
+Keeb Utils, short for “Keyboard Utilities,” is my personal project focused on sharing custom keyboard tweaks for Windows and Linux. This repository features adjustments aimed at enhancing efficiency and comfort. It serves as a valuable resource for keyboard enthusiasts seeking to improve their typing experience and as a starting point for those interested in keyboard programming. After exploring various alternative layouts and experimenting with different alphanumeric functions, I was inspired to create this solution, drawing on the work of others—details are in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
 
 Keeb Utils adheres to two key principles:
-
 - Keep it minimal and functional.
 - Implement cross-platform solutions without sacrificing essential features.
 
@@ -85,7 +80,7 @@ The “Symbols“ keymap layer enhances typing efficiency by providing easier ac
 
 ## 4. Supported Platforms and Software
 
-I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as these are the platforms I use daily—Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
+I primarily develop Keeb Utils for GNU/Linux and Windows operating systems as these are the platforms I use daily—Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
 
 > [!WARNING]
 > I do not supply the installers or any binary files associated with the Keeb Utils configuration files found in this repository. It is your responsibility to obtain the necessary software binaries.
@@ -101,7 +96,7 @@ I primarily develop Keeb Utils for GNU/Linux and Windows operating systems, as t
 
 **Supported Software:**
 
-- **AutoHotkey** version >2.0.1
+- **AutoHotkey** version >=2.0
 - **KMonad** version >=0.4.1 (AutoHotkey is preferred)
 
 ## 5. Credits and Inspiration
