@@ -1,5 +1,7 @@
 <div align="center">
 <h1>KEEB UTILS - AutoHotkey README</h1>
+
+![Project avatar](/Assets/Images/Meta/autohotkey-logo-128.png)
 </div>
 
 ## Table of Contents
