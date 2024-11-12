@@ -19,16 +19,30 @@
 
 ### 1.1. Installation
 
-1. Make sure you have already downloaded/installed KMonad.
-2. Download or clone the contents of this repository to your computer.
-3. If you cloned the repository, you can skip this step. However, if you downloaded the data as a zip archive (or in formats like tar or tar.gz), please extract it.
-4. Start KMonad from your command line pointing it to the KMonad configuration file (e.g. `kmonad ~/Downloads/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
+1. Download the KMonad executable and place it into one of your `$PATH` variable's directory.
+
+> ![TIP]
+> Placing KMonad into your $PATH makes sure you don't have to type the absolute path to the executable every time you want to run it.
+
+2. Clone the contents of this repository to your computer.
+
+```shell
+git clone https://github.com/szageda/keeb-utils.git
+```
+
+3. Go into the directory of the cloned repository.
+
+```shell
+cd keeb-utils
+```
+
+4. Start KMonad from your command line pointing it to the KMonad configuration file (e.g., `kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
 
 > [!IMPORTANT]
-> If you didn't configure the uinput permissions as instructed by KMonad, you must run it with sudo priviliges, and if KMonad isn't in your root user's path you should use absolute paths to execute it and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /path/to/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
+> If you didn't configure the uinput permissions as instructed by KMonad, you must run it with sudo priviliges, and if KMonad isn't in your root user's $PATH variable you should use absolute paths to execute it and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /home/user/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
 
 > [!WARNING]
-> You must manually configure your keyboard device in the configuration file—see [1.2 Configuration](#12-configuration).
+> You must manually configure your keyboard device in the configuration file—see [1.2. Configuration](#12-configuration). KMonad fails to start otherwise.
 
 ### 1.2. Configuration
 
@@ -36,7 +50,7 @@
 
 1. Navigate to `keeb-utils/Linux/KMonad/`.
 2. Open `keeb-utils.kbd` in a text editor.
-3. Change the “value” of `input (device-file "value")` following the KMonad [wiki instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
+3. Change the value of `input (device-file "value")` following the KMonad [wiki instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
 4. Save your changes.
 5. Start KMonad.
 
@@ -46,13 +60,14 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 
 ### 2.1. Installation
 
-1. Make sure you have already downloaded/installed KMonad.
-2. Download or clone the contents of this repository to your computer.
-3. If you cloned the repository, you can skip this step. However, if you downloaded the data as a zip archive (or in formats like tar or tar.gz), please extract it.
-4. Start KMonad from the command prompt pointing it to the KMonad configuration file (e.g. `C:\Users\username\Downloads\KMonad C:\path\to\keeb-utils\Linux\KMonad\keeb-utils.kbd`).
+1. Download the KMonad executable and place it into one of your `%PATH%` variable's folder.
 
-> [!NOTE]
-> If you place the KMonad executable into a folder in your `PATH` variable, you won't have to use the absolute path.
+> ![TIP]
+> Placing KMonad into your %PATH% makes sure you don't have to type the absolute path to the executable every time you want to run it.
+
+2. Download the contents of this repository to your computer.
+3. Extract the downloaded .zip archive.
+4. Start KMonad from the command prompt pointing it to the KMonad configuration file (e.g. `C:\Users\%username%\Downloads\kmonad C:\Users\%username%\Downloads\keeb-utils\Linux\KMonad\keeb-utils.kbd`).
 
 > [!WARNING]
 > You must manually configure your keyboard device in the configuration file—see [2.2. Configuration](#22-configuration).
