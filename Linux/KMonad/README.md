@@ -23,7 +23,7 @@
 
 1. Download the KMonad executable and place it into one of your `$PATH` variable's directory.
 
-> ![TIP]
+> [!TIP]
 > Placing KMonad into your $PATH makes sure you don't have to type the absolute path to the executable every time you want to run it.
 
 2. Clone the contents of this repository to your computer.
@@ -64,7 +64,7 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 
 1. Download the KMonad executable and place it into one of your `%PATH%` variable's folder.
 
-> ![TIP]
+> [!TIP]
 > Placing KMonad into your %PATH% makes sure you don't have to type the absolute path to the executable every time you want to run it.
 
 2. Download the contents of this repository to your computer.
