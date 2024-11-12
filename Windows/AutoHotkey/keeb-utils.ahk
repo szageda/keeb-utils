@@ -132,8 +132,6 @@ SetKeyDelay -1, -1
 
 ; Extra Layers
 #Include %A_ScriptDir%\Layers\utility.ahk
-; Symbols--needs refactoring
-;#Include %A_ScriptDir%\Layers\symbols.ahk
 
 ; Modules
 #Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk

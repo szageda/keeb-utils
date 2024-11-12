@@ -61,23 +61,6 @@ I implement various adjustments and functions on extra layers to enhance my keyb
 
 </div>
 
-### 3.2. Symbols Layer
-
-> [!IMPORTANT]
-> Symbols Layer is currently disabled in the configuration files, because I'm planning a rework on it.
-
-The “Symbols“ keymap layer enhances typing efficiency by providing easier access to digits and various symbols. It includes characters that are not available on standard keyboard layouts, like'smart quotation marks. Similar to the Utility layer, it is activated with a dedicated key (which I typically set to <kbd>Alt</kbd>).
-
-<div align="center">
-
-![Symbols layer](Assets/Images/Keyboard%20Layers/colemak-dh-ansi-symbols-layer.png)  
-*Symbols layer characters for ANSI 101/104-key keyboards*
-
-![Shift Symbols layer](Assets/Images/Keyboard%20Layers/colemak-dh-ansi-shift-symbols-layer.png)  
-*Shift Symbols layer characters for ANSI 101/104-key keyboards*
-
-</div>
-
 ## 4. Supported Platforms and Software
 
 I primarily develop Keeb Utils for GNU/Linux and Windows operating systems as these are the platforms I use daily—Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
