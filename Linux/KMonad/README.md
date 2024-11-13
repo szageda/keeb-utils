@@ -47,7 +47,7 @@ cd keeb-utils
 
 ### 1.2. Configuration
 
-**Configure your keyboard:**
+**Configure your keyboard device:**
 
 1. Navigate to `keeb-utils/Linux/KMonad/`.
 2. Open `keeb-utils.kbd` in a text editor.
