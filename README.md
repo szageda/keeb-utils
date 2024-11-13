@@ -12,8 +12,6 @@
 [1. Introduction](#1-introduction)  
 [2. Keyboard Layout](#2-keyboard-layout)  
 [3. The Utils](#3-the-utils)  
-. . [3.1. Utility Layer](#31-utility-layer)  
-. . [3.2. Symbols Layer](#32-symbols-layer)  
 [4. Supported Platforms and Software](#4-supported-platforms-and-software)  
 . . [4.1. Linux](#41-linux)  
 . . [4.2. Windows](#42-windows)  
@@ -43,16 +41,7 @@ Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been mo
 
 ## 3. The Utils
 
-I implement various adjustments and functions on extra layers to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. These adjustments consist of:
-- A utility layer that provides quick access to shortcut functions.
-- A symbols layer that offers easy access to symbols used in programming and prose writing.
-
-> [!NOTE]
-> The symbols layer is currently disabled across the configuration files. The layer requires some rework before I'm going to enable it.
-
-### 3.1. Utility Layer
-
-“Utility“ is a keymap layer designed to enhance your keyboard's functionality. It can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
+I implement various adjustments and functions on an extra layer—“Utility“—to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
 
 <div align="center">
 
