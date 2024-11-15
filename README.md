@@ -62,14 +62,13 @@ I primarily develop Keeb Utils for GNU/Linux and Windows operating systems as th
 **Supported Software:**
 
 - **KMonad** version >=0.4.1
-- XKB (no extra layers)
 
 ### 4.2. Windows
 
 **Supported Software:**
 
 - **AutoHotkey** version >=2.0
-- **KMonad** version >=0.4.1 (AutoHotkey is preferred)
+- KMonad version >=0.4.1 (AutoHotkey is preferred)
 
 ## 5. Credits and Inspiration
 
