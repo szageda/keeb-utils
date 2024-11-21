@@ -8,18 +8,18 @@
  * by right clicking) for the Keeb Utils projects.
  */
 
-; Add the menu items
-Tray := A_TrayMenu                  ; for convenience
-Tray.Delete()                       ; delete the standard menu times
+;; Add the menu items
+Tray := A_TrayMenu                  ;; for convenience
+Tray.Delete()                       ;; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
-Tray.Add("")                        ; separator
+Tray.Add("")                        ;; separator
 Tray.Add("Key History", OpenHistory)
 Tray.Add("Reload", ReloadScripts)
 Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-; Configure the menu items
+;; Configure the menu items
 ChangeStatus(*)
 {
     static OldName := "", NewName := ""
@@ -28,7 +28,7 @@ ChangeStatus(*)
         OldName := "Active"
         NewName := "Disabled"
 
-        ; Update the tray icon and tip
+        ;; Update the tray icon and tip
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
     } else {
@@ -36,7 +36,7 @@ ChangeStatus(*)
         OldName := "Disabled"
         NewName := "Active"
 
-        ; Update the tray icon and tip
+        ;; Update the tray icon and tip
         A_IconTip := "Keeb Utils is active"
         TraySetIcon("Icons\active.ico",, false)
     }
@@ -67,7 +67,7 @@ CloseAHK(*)
     ExitApp
 }
 
-; Set Activating/Disabling Keeb Utils as the default option
-; when double clicking the tray icon
+;; Set Activating/Disabling Keeb Utils as the default
+;; option when double clicking the tray icon.
 CurrentDefault := Tray.Default
 Tray.Default := "Active"

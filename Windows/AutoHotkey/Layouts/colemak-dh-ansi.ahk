@@ -27,7 +27,7 @@
  * typing "btw" outputs "by the way".
  *
  * The below keymap is only true for the non-alphabetic and non-numeric keys
- * if the active host keyboard layout is English US QWERTY.
+ * if the active host keyboard layout is US QWERTY.
  *
  * ┌───┐   ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐ ┌───┬───┬───┬───┐
  * │Esc│   │ F1│ F2│ F3│ F4│ │ F5│ F6│ F7│ F8│ │ F9│F10│F11│F12│
@@ -45,64 +45,62 @@
  * └────┴────┴────┴────────────────────────┴────┴────┴────┴────┘
  */
 
-; Formatting:
-;Scancode::VirtualKey   ; comments
+;; -- KEYMAPS -----------------------------------------------------------------
+;;
+;; Formatting:
+;;  Scacode::VirtualKey ;; comments
 
-;; ---- Numeric Row -----------------------------------------------------------
+;; Numeric Row
+;;SC01::vkC0    ;; QWERTY `~
+;;SC02::1       ;; QWERTY 1!
+;;SC03::2       ;; QWERTY 2@
+;;SC04::3       ;; QWERTY 3#
+;;SC05::4       ;; QWERTY 4$
+;;SC06::5       ;; QWERTY 5%
+;;SC07::6       ;; QWERTY 6^
+;;SC08::7       ;; QWERTY 7&
+;;SC09::8       ;; QWERTY 8*
+;;SC0a::9       ;; QWERTY 9(
+;;SC0b::0       ;; QWERTY 0)
+SC0c::vkDB      ;; QWERTY -_
+SC0d::vkDD      ;; QWERTY =+
 
-;SC01::vkC0 ; QWERTY `~
-;SC02::1    ; QWERTY 1!
-;SC03::2    ; QWERTY 2@
-;SC04::3    ; QWERTY 3#
-;SC05::4    ; QWERTY 4$
-;SC06::5    ; QWERTY 5%
-;SC07::6    ; QWERTY 6^
-;SC08::7    ; QWERTY 7&
-;SC09::8    ; QWERTY 8*
-;SC0a::9    ; QWERTY 9(
-;SC0b::0    ; QWERTY 0)
-SC0c::vkDB  ; QWERTY -_
-SC0d::vkDD  ; QWERTY =+
+;; Top Row
+SC010::q        ;; QWERTY qQ
+SC011::w        ;; QWERTY wW
+SC012::f        ;; QWERTY eE
+SC013::p        ;; QWERTY rR
+SC014::b        ;; QWERTY tT
+SC015::j        ;; QWERTY yY
+SC016::l        ;; QWERTY uU
+SC017::u        ;; QWERTY iI
+SC018::y        ;; QWERTY oO
+SC019::vkBA     ;; QWERTY pP
+SC01a::vkBD     ;; QWERTY [{
+SC01b::vkBB     ;; QWERTY ]}
+SC02b::vkDC     ;; QWERTY \|
 
-;; ---- Top Row ---------------------------------------------------------------
+;; Home Row
+SC01e::a        ;; QWERTY aA
+SC01f::r        ;; QWERTY sS
+SC020::s        ;; QWERTY dD
+SC021::t        ;; QWERTY fF
+SC022::g        ;; QWERTY gG
+SC023::m        ;; QWERTY hH
+SC024::n        ;; QWERTY jJ
+SC025::e        ;; QWERTY kK
+SC026::i        ;; QWERTY lL
+SC027::o        ;; QWERTY ;:
+SC028::vkDE     ;; QWERTY '"
 
-SC010::q    ; QWERTY qQ
-SC011::w    ; QWERTY wW
-SC012::f    ; QWERTY eE
-SC013::p    ; QWERTY rR
-SC014::b    ; QWERTY tT
-SC015::j    ; QWERTY yY
-SC016::l    ; QWERTY uU
-SC017::u    ; QWERTY iI
-SC018::y    ; QWERTY oO
-SC019::vkBA ; QWERTY pP
-SC01a::vkBD ; QWERTY [{
-SC01b::vkBB ; QWERTY ]}
-SC02b::vkDC ; QWERTY \|
-
-;; ---- Home Row --------------------------------------------------------------
-
-SC01e::a    ; QWERTY aA
-SC01f::r    ; QWERTY sS
-SC020::s    ; QWERTY dD
-SC021::t    ; QWERTY fF
-SC022::g    ; QWERTY gG
-SC023::m    ; QWERTY hH
-SC024::n    ; QWERTY jJ
-SC025::e    ; QWERTY kK
-SC026::i    ; QWERTY lL
-SC027::o    ; QWERTY ;:
-SC028::vkDE ; QWERTY '"
-
-;; ---- Bottom Row ------------------------------------------------------------
-
-SC02c::x    ; QWERTY zZ
-SC02d::c    ; QWERTY xX
-SC02e::d    ; QWERTY cC
-SC02f::v    ; QWERTY vV
-SC030::z    ; QWERTY bB
-SC031::k    ; QWERTY nN
-SC032::h    ; QWERTY mM
-SC033::vkBC ; QWERTY ,<
-SC034::vkBE ; QWERTY .>
-SC035::vkBF ; QWERTY /?
+;; Bottom Row
+SC02c::x        ;; QWERTY zZ
+SC02d::c        ;; QWERTY xX
+SC02e::d        ;; QWERTY cC
+SC02f::v        ;; QWERTY vV
+SC030::z        ;; QWERTY bB
+SC031::k        ;; QWERTY nN
+SC032::h        ;; QWERTY mM
+SC033::vkBC     ;; QWERTY ,<
+SC034::vkBE     ;; QWERTY .>
+SC035::vkBF     ;; QWERTY /?
