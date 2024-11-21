@@ -124,8 +124,8 @@ SetKeyDelay -1, -1
 
 ;; -- KEEB UTIL MODULES -------------------------------------------------------
 ;;
-;; Enable or disable modules. Scripts on commented lines are not loaded
-;; and therefore remain disabled.
+;; Enable or disable features. Scripts (modules) on commented lines
+;; are not loaded and therefore remain disabled.
 
 ;; Keyboard Layouts
 #Include %A_ScriptDir%\Layouts\colemak-dh-ansi.ahk
