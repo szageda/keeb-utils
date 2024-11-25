@@ -7,24 +7,35 @@ License     : MIT
 
 ;; -- KMONAD CONFIGURATION ----------------------------------------------------
 ;;
-;; This block controls the behavior of KMonad scripts, and must contain at
-;; least one "input" and "output" definition based on the operating system.
+;; The "defcfg" block controls the behavior of KMonad scripts.
 
 (defcfg
-  ;; Linux Input
+  ;; -- OS INPUT CONFIGURATION ------------------------------------------------
+  ;;
+  ;; The "defcfg" must contain at least one "input" and "output" function for
+  ;; KMonad to work: KMonad catches input events and tries to match them to
+  ;; various handlers. If it cannot match an event to any handler (for example,
+  ;; if it isn't included in the corresponding "defsrc" block, or if it is, but
+  ;; the current keymap does not map any buttons to it), then the event gets
+  ;; quietly ignored. If "fallthrough" is set to "true", any unhandled events
+  ;; simply get reemitted.
+
+  ;; Linux
   ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L116
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
 
-  ;; Windows Input
+  ;; Windows
   ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L134
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
-  ;; macOS Input
+  ;; macOS
   ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L163
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
+
+  ;; -- OTHER SETTINGS --------------------------------------------------------
 
   ;; Enable/disable emitting unhandled events. For example: passing input from
   ;; the source layer to other alphanumeric layers.
