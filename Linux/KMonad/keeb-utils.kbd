@@ -56,7 +56,6 @@ License     : MIT
 ;;
 ;; Custom layout keymaps go here. The first layout in the list is loaded
 ;; by default when KMonad starts.
-;; ----------------------------------------------------------------------------
 
 ;; Colemak-DH
 ;; © Shai Coleman -- https://colemak.com
