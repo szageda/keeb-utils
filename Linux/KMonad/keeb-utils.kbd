@@ -7,7 +7,7 @@ License     : MIT
 
 ;; -- KMONAD CONFIGURATION ----------------------------------------------------
 ;;
-;; The "defcfg" block controls the behavior of KMonad scripts.
+;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
 
 (defcfg
   ;; -- OS INPUT CONFIGURATION ------------------------------------------------
