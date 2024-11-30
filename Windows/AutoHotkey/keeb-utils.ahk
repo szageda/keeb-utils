@@ -122,7 +122,7 @@ ListLines 0
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;; -- KEEB UTIL MODULES -------------------------------------------------------
+;; -- KEEB UTILS --------------------------------------------------------------
 ;;
 ;; Enable or disable features. Scripts (modules) on commented lines
 ;; are not loaded and therefore remain disabled.
@@ -133,6 +133,6 @@ SetKeyDelay -1, -1
 ;; Extra Layers
 #Include %A_ScriptDir%\Layers\utility.ahk
 
-;; Extra Scripts
+;; Modules
 #Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
 #Include %A_ScriptDir%\Modules\keeb-utils-toggle.ahk
