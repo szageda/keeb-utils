@@ -124,7 +124,7 @@ SetKeyDelay -1, -1
 
 ;; -- KEEB UTILS --------------------------------------------------------------
 ;;
-;; Enable or disable features. Scripts (modules) on commented lines
+;; Enable or disable features. Scripts on commented lines (starting with ;;)
 ;; are not loaded and therefore remain disabled.
 
 ;; Keyboard Layouts
