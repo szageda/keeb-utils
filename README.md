@@ -1,5 +1,5 @@
 <div align="center">
-<h1>KEEB UTILS</h1>
+<h1>Keeb Utils</h1>
 
 ![Project avatar](Assets/Images/Meta/avatar-256.png)
 
