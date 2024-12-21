@@ -39,6 +39,25 @@ I use a keyboard layout known as “Colemak-DH“ (which is occasionally referre
 
 Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been moved due to personal preference.
 
+**What is Colemak?**
+
+> *Colemak, pronounced /'ko:lmæk/ (Coal-Mac), is a keyboard layout designed for touch typing in English. It is designed to be a practical alternative to the QWERTY and Dvorak keyboard layouts. It was released on 01-Jan-2006.*
+
+— Colemak.com, [link](https://colemak.com/FAQ#What_is_Colemak.3F)
+
+**Ergonomics and Health Benefits of Using Colemak:**
+
+- **Reduces Risk of Injuries:** Beneficial for individuals suffering from Repetitive Strain Injury (RSI) or Carpal Tunnel Syndrome (CTS).
+- **Alleviates Discomfort:** Helps those who experience pain or discomfort while typing.
+- **Caters to Heavy Keyboard Users:** Designed for anyone spending over 10 hours per week at the keyboard, promoting better ergonomics.
+- **Enhances Typing Speed:** Supports writers and programmers who need to type as fast as they think, preventing loss of thought.
+- **Improves Efficiency in Time-Critical Situations:** Ideal for journalists and bloggers who require quick typing.
+- **Facilitates Note-Taking:** Assists students using laptops during lectures to keep up with fast-paced discussions.
+- **Promotes Efficient Work Habits:** Appeals to individuals interested in lifehacks and improved efficiency.
+- **Supports Frequent Communication:** Beneficial for users of instant messaging and chat software.
+
+— Colemak.com, [link](https://colemak.com/FAQ#Who_should_learn_Colemak.3F)
+
 ## 3. The Utils
 
 I implement various adjustments and functions on an extra layer—“Utility“—to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
