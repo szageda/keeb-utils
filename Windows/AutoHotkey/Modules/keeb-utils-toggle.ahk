@@ -4,12 +4,11 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * The hotkey allows all scripts (keyboard layouts and layers) to be
- * disabled by a single key combination without right clicking on the
- * AutoHotkey tray icon then selecting "Suspend Hotkeys". Thanks to the
- * "SuspendExempt" directive, AutoHotkey listens to the key combination
- * even if it is currently suspended. Toggling states also changes the
- * tray icon to indicate AutoHotkey's status.
+ * The hotkey disables all scripts (layouts and layers) with a single
+ * key combination, eliminating the need to right-click the AutoHotkey
+ * tray icon and select "Suspend Hotkeys." The "SuspendExempt" directive
+ * allows AutoHotkey to recognize the key combination even when suspended,
+ * and toggling states changes the tray icon to reflect AutoHotkey's status.
  */
 
 #SuspendExempt
