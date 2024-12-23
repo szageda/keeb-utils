@@ -4,8 +4,11 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * This file configures a custom menu for the AutoHotkey tray icon (activated
- * by right clicking) for the Keeb Utils projects.
+ * This file configures a custom menu for AutoHotkey.
+ * 
+ * Usage:
+ *  The script file must be loaded when AutoHotkey starts. The custom
+ *  menu is accessible by right clicking the tray icon.
  */
 
 ;; Add the menu items

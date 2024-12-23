@@ -9,6 +9,10 @@
  * tray icon and select "Suspend Hotkeys." The "SuspendExempt" directive
  * allows AutoHotkey to recognize the key combination even when suspended,
  * and toggling states changes the tray icon to reflect AutoHotkey's status.
+ * 
+ * Usage:
+ *  The script file must be loaded when AutoHotkey starts. Suspending (or
+ *  activating) AutoHotkey is achieved by pressing Scroll Lock+Q.
  */
 
 #SuspendExempt
