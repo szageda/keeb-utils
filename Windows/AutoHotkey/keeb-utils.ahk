@@ -5,7 +5,8 @@
  * License     : MIT
  *
  * This file is responsible for configuring AutoHotkey and the behavior of
- * loaded scripts.
+ * loaded scripts -- all subsequently loaded scripts run with the settings
+ * defined here.
  */
 
 ;; -- AUTOHOTKEY GENERAL SETTINGS ---------------------------------------------
