@@ -16,7 +16,7 @@
  */
 
 #SuspendExempt
-ScrollLock & SC010::    ;; Scroll Lock + Q
+ScrollLock & sc010::    ;; Scroll Lock + Q
 {
     Suspend -1  ;; 0 = activate, 1 = suspend, -1 = switch to opposite state
 
