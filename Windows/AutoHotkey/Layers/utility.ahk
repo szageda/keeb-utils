@@ -61,7 +61,7 @@ F24 & SC057::Return                         ;; F11
 F24 & SC058::Return                         ;; F12
 
 ;; Numeric Row
-F24 & SC001::Send "{Blind}{Escape}"         ;; QWERTY `~
+F24 & SC029::Send "{Blind}{Escape}"         ;; QWERTY `~
 F24 & SC002::Send "{Blind}{F1}"             ;; QWERTY 1!
 F24 & SC003::Send "{Blind}{F2}"             ;; QWERTY 2@
 F24 & SC004::Send "{Blind}{F3}"             ;; QWERTY 3#

@@ -51,17 +51,17 @@
 ;;  Scacode::VirtualKey ;; comments
 
 ;; Numeric Row
-;;SC01::vkC0    ;; QWERTY `~
-;;SC02::1       ;; QWERTY 1!
-;;SC03::2       ;; QWERTY 2@
-;;SC04::3       ;; QWERTY 3#
-;;SC05::4       ;; QWERTY 4$
-;;SC06::5       ;; QWERTY 5%
-;;SC07::6       ;; QWERTY 6^
-;;SC08::7       ;; QWERTY 7&
-;;SC09::8       ;; QWERTY 8*
-;;SC0a::9       ;; QWERTY 9(
-;;SC0b::0       ;; QWERTY 0)
+;SC001::vkC0    ;; QWERTY `~
+;SC002::1       ;; QWERTY 1!
+;SC003::2       ;; QWERTY 2@
+;SC004::3       ;; QWERTY 3#
+;SC005::4       ;; QWERTY 4$
+;SC006::5       ;; QWERTY 5%
+;SC007::6       ;; QWERTY 6^
+;SC008::7       ;; QWERTY 7&
+;SC009::8       ;; QWERTY 8*
+;SC00a::9       ;; QWERTY 9(
+;SC00b::0       ;; QWERTY 0)
 SC0c::vkDB      ;; QWERTY -_
 SC0d::vkDD      ;; QWERTY =+
 
