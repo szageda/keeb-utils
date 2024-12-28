@@ -27,8 +27,11 @@
  * typing "btw" outputs "by the way".
  *
  * The below keymap is only true for the non-alphabetic and non-numeric keys
- * if the active host keyboard layout is US QWERTY.
+ * if the active host keyboard layout is US QWERTY:
  *
+ * ,---,   ,---,---,---,---, ,---,---,---,---, ,---,---,---,---,
+ * |Esc|   | F1| F2| F3| F4| | F5| F6| F7| F8| | F9|F10|F11|F12|
+ * '---'   '---'---'---'---' '---'---'---'---' '---'---'---'---'
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------,
  * | ` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] | <-    |
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
@@ -46,6 +49,21 @@
 ;;
 ;; Formatting:
 ;;  scancode::VirtualKey ;; comments
+
+;; Function Row
+;;sc001::Escape ;; Esc
+;;sc03B::F1     ;; F1
+;;sc03C::F2     ;; F2
+;;sc03D::F3     ;; F3
+;;sc03E::F4     ;; F4
+;;sc03F::F5     ;; F5
+;;sc040::F6     ;; F6
+;;sc041::F7     ;; F7
+;;sc042::F8     ;; F8
+;;sc043::F9     ;; F9
+;;sc044::F10    ;; F10
+;;sc057::F11    ;; F11
+;;sc058::F12    ;; F12
 
 ;; Numeric Row
 ;;sc029::vkC0   ;; QWERTY `~
