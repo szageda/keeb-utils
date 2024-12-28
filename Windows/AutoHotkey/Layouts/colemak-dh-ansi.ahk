@@ -51,7 +51,7 @@
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
 ;; The keymap definitions tell AutoHotkey which scancodes to capture from the
-;; keyboard, and which virtual key map to them. Lines starting with ";;" are
+;; keyboard, and which virtual key assign to them. Lines starting with ";;" are
 ;; ignored.
 ;;
 ;; Formatting:
