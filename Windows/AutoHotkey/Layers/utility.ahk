@@ -4,12 +4,13 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * "Utility layer" extends the keyboard's current abilities and puts them onto
- * an extra layer activated by a dedicated key (Caps Lock).
+ * AutoHotkey creates an extra layer ("Utility") by defining new key
+ * combinations using the F24 virtual key and physical key locations
+ * (scancodes). Functions are then mapped to these new key combinations.
  *
- * This keymap stays persistent regardless of the active host keyboard layout,
- * because the functions are mapped to the physical key locations (scancodes).
- *
+ * The layer keymap stays persistent regardless of the active keyboard
+ * layout of the operating system thanks to using scancodes instead of
+ * virtual keys:
  * ,---,   ,---,---,---,---, ,---,---,---,---, ,---,---,---,---,
  * |   |   |MPP|Vld|Vlu|Mut| |Prv|Nxt|   |   | |   |   |   |   |
  * '---'   '---'---'---'---' '---'---'---'---' '---'---'---'---'
@@ -24,26 +25,32 @@
  * |-----,--'-,-'--,'---'---'---'---'---'---',--'--,'----,-----|
  * | Ctrl| Win| Alt|                         | RAlt| Menu| Ctrl|
  * '-----'----'----'-------------------------'-----'-----'-----'
+ *
+ * Scancode Codes:
+ * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
+ *
+ * Virtual Key Codes:
+ * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
 ;; -- CONFIGURATION -----------------------------------------------------------
 
-;; Utility layer keybind: Map Caps Lock to F24 VirtualKey which activates
-;; the layer when held down.
+;; Map Caps Lock to F24 to activate the layer when held down
 #InputLevel 1
 CapsLock::F24
 #InputLevel 0
 
-;; Turn off Caps Lock states: Disables the Caps Lock LED on your physical
-;; keyboard, so it doesn't light up when Caps Lock is held.
+;; Disable Caps Lock states, so the LED won't light up on your device
 SetCapsLockState "AlwaysOff"
 
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
-;; Keys where the mapped function is "Return" are not used.
+;; The keymap definitions map virtual keys or functions to Caps Lock + Some Key
+;; combinations. Lines where the mapped function is "Return" means, those key
+;; combinations won't emit anything.
 ;;
 ;; Formatting:
-;;  F24 & scancode::Send "{key combination or function}"   ;; comments
+;;      F24 & scancode::virtualkey OR function  ;; comments
 
 ;; Function Row
 F24 & sc001::Return                         ;; Esc

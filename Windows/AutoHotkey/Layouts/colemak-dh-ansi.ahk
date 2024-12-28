@@ -4,31 +4,16 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * Colemak-DH is an improvement over the standard Colemak keyboard layout by
- * replacing the D and H keys thus reducing lateral movement of the index
- * fingers.
+ * AutoHotkey remaps the software keyboard layout from QWERTY to Colemak-DH
+ * by moving the host layout's virtual keys around: AutoHotkey captures the
+ * scancode sent by the keyboard, and maps it to a virtual key emitted by
+ * the operating system. Such keyboard layout remaps prevent the use of
+ * hotstrings ("::btw::by the way" -- typing "btw" outputs "by the way").
  *
- * Colemak Authorship:
- * Shai Coleman
- * https://colemak.com
- *
- * Colemak-DH Authorship:
- * stevep99
- * https://colemakmods.github.io/mod-dh/
- *
- * Remaps the software keyboard layout from QWERTY to Colemak-DH by moving the
- * host layout's VirtualKeys around.
- *
- * AutoHotkey only ignores the keymaps of the OS host layout on the Base and
- * Shift layers (layers 0 and 1) for alphabetic keys. But it keeps the keymaps
- * for the numeric Shift layer, AltGr, and AltGr+Shift layers (layers 6 and 7).
- * This means that the output of Shift+4 and AltGr+a depends on the active host
- * keyboard layout. Such remapped layouts prevent the use of hotstrings, e.g.
- * typing "btw" outputs "by the way".
- *
- * The below keymap is only true for the non-alphabetic and non-numeric keys
- * if the active host keyboard layout is US QWERTY:
- *
+ * The below keymap is only true for the symbol keys (, . ' = etc.)
+ * if US QWERTY is the current keyboard layout as what character is
+ * actually emitted is always dependent on the active keyboard layout
+ * of the operating system:
  * ,---,   ,---,---,---,---, ,---,---,---,---, ,---,---,---,---,
  * |Esc|   | F1| F2| F3| F4| | F5| F6| F7| F8| | F9|F10|F11|F12|
  * '---'   '---'---'---'---' '---'---'---'---' '---'---'---'---'
@@ -43,12 +28,34 @@
  * |-----,--'-,-'--,'---'---'---'---'---'---',--'--,'----,-----|
  * | Ctrl| Win| Alt|                         | RAlt| Menu| Ctrl|
  * '-----'----'----'-------------------------'-----'-----'-----'
+ *
+ * Colemak-DH is an improvement over the standard Colemak keyboard layout by
+ * replacing the D and H keys thus reducing lateral movement of the index
+ * fingers.
+ *
+ * Colemak Authorship:
+ * Shai Coleman
+ * https://colemak.com
+ *
+ * Colemak-DH Authorship:
+ * stevep99
+ * https://colemakmods.github.io/mod-dh/
+ * 
+ * Scancode Codes:
+ * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
+ *
+ * Virtual Key Codes:
+ * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
+;; The keymap definitions tell AutoHotkey which scancodes to capture from the
+;; keyboard, and which virtual key map to them. Lines starting with ";;" are
+;; ignored.
+;;
 ;; Formatting:
-;;  scancode::VirtualKey ;; comments
+;;      scancode::virtualkey    ;; comments
 
 ;; Function Row
 ;;sc001::Escape ;; Esc
