@@ -11,7 +11,10 @@
  *  menu is accessible by right clicking the tray icon.
  */
 
-;; Add the menu items
+;; -- MENU ITEMS --------------------------------------------------------------
+;;
+;; This section contains the menu items visible to the user.
+
 Tray := A_TrayMenu                  ;; for convenience
 Tray.Delete()                       ;; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
@@ -22,12 +25,22 @@ Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-;; Configure the menu items
+;;-- MENU ITEMS CONFIGURATION -------------------------------------------------
+;;
+;; Each menu item's function is defined here.
+
 ChangeStatus(*)
 {
+    ;; Create variables to store the menu item's name
     static OldName := "", NewName := ""
+
+    ;; Use logic to toggle between suspended and active states
+    ;; when the user clicks on the menu item.
     if NewName != "Disabled" {
+        ;; Suspend AutoHotkey
         Suspend 1
+
+        ;; Update the menu item's name
         OldName := "Active"
         NewName := "Disabled"
 
@@ -35,7 +48,10 @@ ChangeStatus(*)
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
     } else {
+        ;; Activate AutoHotkey
         Suspend 0
+
+        ;; Update the menu item's name
         OldName := "Disabled"
         NewName := "Active"
 
@@ -43,6 +59,8 @@ ChangeStatus(*)
         A_IconTip := "Keeb Utils is active"
         TraySetIcon("Icons\active.ico",, false)
     }
+    ;; Toggle between the AutoHotkey states
+    ;; when the user clics the menu item
     Tray.Rename(OldName, NewName)
 }
 
