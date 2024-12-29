@@ -41,7 +41,7 @@
  * Colemak-DH Authorship:
  * stevep99
  * https://colemakmods.github.io/mod-dh/
- * 
+ *
  * Scancode Codes:
  * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  *
