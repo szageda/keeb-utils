@@ -4,13 +4,12 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey creates an extra layer ("Utility") by defining new key
- * combinations using the F24 virtual key and physical key locations
- * (scancodes). Functions are then mapped to these new key combinations.
+ * AutoHotkey adds a "Utility" layer by defining new key combinations using the
+ * F24 virtual key and physical key locations (scancodes), allowing functions
+ * to be mapped to these new key combinations.
  *
- * The layer keymap stays persistent regardless of the active keyboard
- * layout of the operating system thanks to using scancodes instead of
- * virtual keys:
+ * The layer keymap stays persistent regardless of the active keyboard layout
+ * of the operating system thanks to using scancodes instead of virtual keys:
  * ,---,  ,---,---,---,---,  ,---,---,---,---,  ,---,---,---,---,
  * |   |  |MPP|Vld|Vlu|Mut|  |Prv|Nxt|   |   |  |   |   |   |   |
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'

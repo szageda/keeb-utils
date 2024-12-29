@@ -4,17 +4,15 @@
  * Copyright   : (c) 2024, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey remaps the software keyboard layout from QWERTY to
- * Colemak-DH by moving the host layout's virtual keys around:
- * AutoHotkey captures the scancode sent by the keyboard, and maps
- * it to a virtual key emitted by the operating system. Such
- * keyboard layout remaps prevent the use of hotstrings, for example:
- * "::btw::by the way" -- typing "btw" outputs "by the way".
+ * AutoHotkey remaps the software keyboard layout from QWERTY to Colemak-DH by
+ * moving the host layout's virtual keys around: AutoHotkey captures the
+ * scancode sent by the keyboard, and maps it to a virtual key emitted by the
+ * operating system. Such keyboard layout remaps prevent the use of hotstrings,
+ * for example: "::btw::by the way" -- typing "btw" outputs "by the way".
  *
- * The below keymap is only true for the symbol keys (, . ' = etc.)
- * if US QWERTY is the current keyboard layout as what character is
- * actually emitted always depends on the active keyboard layout of
- * the operating system:
+ * The below keymap is only true for the symbol keys (, . = etc.) if US QWERTY
+ * is the current keyboard layout as what character is actually emitted always
+ * depends on the active keyboard layout of the operating system:
  * ,---,  ,---,---,---,---,  ,---,---,---,---,  ,---,---,---,---,
  * |Esc|  | F1| F2| F3| F4|  | F5| F6| F7| F8|  | F9|F10|F11|F12|
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'
@@ -30,9 +28,8 @@
  * |Ctrl| Win | Alt|                       | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
  *
- * Colemak-DH is an improvement over the standard Colemak keyboard
- * layout by replacing the D and H keys thus reducing lateral movement
- * of the index fingers.
+ * Colemak-DH enhances the standard Colemak layout by moving the D and H keys,
+ * minimizing lateral movement of the index fingers.
  *
  * Colemak Authorship:
  * Shai Coleman
