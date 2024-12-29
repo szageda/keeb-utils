@@ -30,9 +30,9 @@
  * | Ctrl| Win| Alt|                         | RAlt| Menu| Ctrl|
  * '-----'----'----'-------------------------'-----'-----'-----'
  *
- * Colemak-DH is an improvement over the standard Colemak keyboard layout by
- * replacing the D and H keys thus reducing lateral movement of the index
- * fingers.
+ * Colemak-DH is an improvement over the standard Colemak keyboard
+ * layout by replacing the D and H keys thus reducing lateral movement
+ * of the index fingers.
  *
  * Colemak Authorship:
  * Shai Coleman
