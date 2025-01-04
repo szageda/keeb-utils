@@ -14,6 +14,14 @@
 ;; These directives and variables control the general behavior of AutoHotkey
 ;; and the subsequently loaded scripts.
 
+;; Define the AutoHotkey version required to run this script. When sharing
+;; a script or posting code online, using this directive allows anyone who
+;; finds the code to readily identify which version of AutoHotkey it was
+;; intended for.
+;; https://www.autohotkey.com/docs/v2/lib/_Requires.htm
+;; (default "")
+#Requires AutoHotkey v2.0
+
 ;; Allow a script to run again. If this directive is unspecified in a script,
 ;; it will behave as though set to "Prompt". This directive is ignored when
 ;; ANY of the following command line switches are used: /force /restart
