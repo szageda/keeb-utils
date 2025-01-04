@@ -60,7 +60,7 @@ Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been mo
 
 ## 3. The Utils
 
-I implement various adjustments and functions on an extra layer—“Utility“—to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
+I implement various adjustments and functions on an extra layer, called “Utility“, to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
 
 <div align="center">
 
