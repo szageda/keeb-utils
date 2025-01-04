@@ -88,9 +88,9 @@ F24 & sc012::Send "{Ctrl Down}{f}{Ctrl Up}" ;; QWERTY eE
 F24 & sc013::Send "{Browser_Forward}"       ;; QWERTY rR
 F24 & sc014::                               ;; QWERTY tT
 {
-    SetCapsLockState GetKeyState('CapsLock', 'T')
-    ? 'AlwaysOff'
-    : 'AlwaysOn'
+    SetCapsLockState GetKeyState("CapsLock", "T")
+    ? "AlwaysOff"
+    : "AlwaysOn"
 }
 F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
