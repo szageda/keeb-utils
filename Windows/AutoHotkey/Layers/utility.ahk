@@ -118,7 +118,7 @@ F24 & sc01F::                               ;; QWERTY sS
         Send "{Alt Down}"
     }
     KeyWait "sc01F"     ;; Wait for key release
-    Send "{Alt Up}"     ;; "Unsticky" the Ctrl key
+    Send "{Alt Up}"     ;; "Unsticky" the Alt key
 }
 F24 & sc020::                               ;; QWERTY dD
 {
