@@ -63,7 +63,7 @@
 ;; (default 2000)
 A_HotkeyInterval := 0
 ;; (default 70)
-A_MaxHotkeysPerInterval := 300
+A_MaxHotkeysPerInterval := 70
 
 ;; Set the default icon tip (text on mouse hover) on AutoHotkey startup.
 ;; If blank, the script's name is used instead.
