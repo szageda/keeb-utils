@@ -52,7 +52,8 @@
 
 ;; Set the interval in seconds before a warning dialog is triggered by
 ;; consecutive hotkey execution, i.e. key spamming. "A_MaxHotkeysPerInterval"
-;; is not affected, if "A_HotkeyInterval" is 0.
+;; is not affected, if "A_HotkeyInterval" is 0. The value 0 disables the
+;; warning dialog entirely.
 ;;
 ;; IMPORTANT: Care should be taken not to make the setting too lenient because
 ;; if you ever inadvertently introduce an infinite loop of keystrokes (via a
