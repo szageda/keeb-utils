@@ -72,10 +72,11 @@ I implement various adjustments and functions on an extra layer, called “Utili
 | Key Category  | Description |
 | ------------- | ----------- |
 | ![Navigation keys](Assets/Images/Keyboard%20Layers/utility-blue.png) | Navigation keys (e.g., <kbd>Left</kbd> <kbd>Up</kbd> <kbd>PgDn</kbd> etc.) |
-| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/utility-green.png) | Ctrl shortcuts (e.g., <kbd>Ctrl+C</kbd> <kbd>Ctrl+S</kbd> etc.) |
-| ![Modifiers](Assets/Images/Keyboard%20Layers/utility-orange.png) | Modifiers (e.g., <kbd>Win</kbd>, <kbd>Shift</kbd> etc.) |
+| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/utility-green.png) | Ctrl shortcuts (e.g., <kbd>Ctrl+C</kbd> <kbd>Ctrl+S</kbd> <kbd>Ctrl+X</kbd> etc.) |
+| ![Modifiers](Assets/Images/Keyboard%20Layers/utility-orange.png) | Modifiers (e.g., <kbd>Win</kbd> <kbd>Shift</kbd> <kbd>Ctrl</kbd> etc.) |
 | ![Sticky keys](Assets/Images/Keyboard%20Layers/utility-sticky.png) | Sticky keys **\*** |
-| ![Text manipulation keys](Assets/Images/Keyboard%20Layers/utility-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd>, <kbd>Caps Lock</kbd> etc.) |
+| ![Text manipulation keys](Assets/Images/Keyboard%20Layers/utility-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd> <kbd>Caps Lock</kbd> <kbd>Tab</kbd> etc.) |
+| ![Multimedia keys](Assets/Images/Keyboard%20Layers/utility-light-green.png) | Multimedia keys (e.g., <kbd>Play</kbd> <kbd>Vol. Down</kbd> <kbd>Vol. Up</kbd> etc.) |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/utility-grey.png) | Function and misc. keys | 
 
 **\*** **Sticky keys:**
