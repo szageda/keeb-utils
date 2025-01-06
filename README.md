@@ -76,7 +76,7 @@ I implement various adjustments and functions on an extra layer, called “Utili
 | ![Modifiers](Assets/Images/Keyboard%20Layers/utility-orange.png) | Modifiers (e.g., <kbd>Win</kbd>, <kbd>Shift</kbd> etc.) |
 | ![Sticky keys](Assets/Images/Keyboard%20Layers/utility-sticky.png) | Sticky keys **\*** |
 | ![Text manipulation keys](Assets/Images/Keyboard%20Layers/utility-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd>, <kbd>Caps Lock</kbd> etc.) |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/utility-grey.png)| Function and misc. keys | 
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/utility-grey.png) | Function and misc. keys | 
 
 **\*** **Sticky keys:**
 
