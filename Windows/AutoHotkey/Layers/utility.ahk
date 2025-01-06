@@ -44,7 +44,7 @@ SetCapsLockState "AlwaysOff"
 
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
-;; The keymap definitions map virtual keys or functions to Caps Lock + Some Key
+;; The keymap definitions map virtual keys or functions to Caps Lock+Some Key
 ;; combinations. Lines where the mapped function is "Return" means, those key
 ;; combinations won't emit anything.
 ;;
@@ -103,10 +103,40 @@ F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
 F24 & sc01E::Send "{Ctrl Down}{a}{Ctrl Up}" ;; QWERTY aA
-F24 & sc01F::Send "{Blind}{LAlt Down}"      ;; QWERTY sS
-F24 & sc01F Up::Send "{LAlt Up}"
-F24 & sc020::Send "{Blind}{LCtrl Down}"     ;; QWERTY dD
-F24 & sc020 Up::Send "{LCtrl Up}"
+F24 & sc01F::                               ;; QWERTY sS
+{
+    ;; Implement sticky key behavior:
+    ;; Act as sticky key when tapped,
+    ;; act as regular Alt when held.
+
+    ;; When tapped
+    Send "{Blind}{Alt Down}"
+    Sleep 500           ;; Sticky time in milliseconds
+
+    ;; When held
+    If (!KeyWait("sc01F", "T0.5")) {
+        Send "{Alt Down}"
+    }
+    KeyWait "sc01F"     ;; Wait for key release
+    Send "{Alt Up}"     ;; "Unsticky" the Alt key
+}
+F24 & sc020::                               ;; QWERTY dD
+{
+    ;; Implement sticky key behavior:
+    ;; Act as sticky key when tapped,
+    ;; act as regular Ctrl when held.
+
+    ;; When tapped
+    Send "{Blind}{Ctrl Down}"
+    Sleep 500           ;; Sticky time in milliseconds
+
+    ;; When held
+    If (!KeyWait("sc020", "T0.5")) {
+        Send "{Ctrl Down}"
+    }
+    KeyWait "sc020"     ;; Wait for key release
+    Send "{Ctrl Up}"    ;; "Unsticky" the Ctrl key
+}
 F24 & sc021::Send "{Blind}{Tab}"            ;; QWERTY fF
 F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
 F24 & sc022 Up::Send "{LWin Up}"

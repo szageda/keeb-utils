@@ -69,6 +69,32 @@ I implement various adjustments and functions on an extra layer, called “Utili
 
 </div>
 
+| Key Category  | Description |
+| ------------- | ----------- |
+| ![Navigation keys](Assets/Images/Keyboard%20Layers/utility-blue.png) | Navigation keys (e.g., <kbd>Left</kbd> <kbd>Up</kbd> <kbd>PgDn</kbd> etc.) |
+| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/utility-green.png) | Ctrl shortcuts (e.g., <kbd>Ctrl+C</kbd> <kbd>Ctrl+S</kbd> etc.) |
+| ![Modifiers](Assets/Images/Keyboard%20Layers/utility-orange.png) | Modifiers (e.g., <kbd>Win</kbd>, <kbd>Shift</kbd> etc.) |
+| ![Sticky keys](Assets/Images/Keyboard%20Layers/utility-sticky.png) | Sticky keys **\*** |
+| ![Text manipulation keys](Assets/Images/Keyboard%20Layers/utility-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd>, <kbd>Caps Lock</kbd> etc.) |
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/utility-grey.png)| Function and misc. keys | 
+
+**\*** **Sticky keys:**
+
+These keys behave differently depending on whether they are:
+- **Tapped:** They become “sticky” for 500 ms to allow for <kbd>Ctrl</kbd> and <kbd>Alt</kbd> shortcuts that are not available on the Utility layer, for example:
+    - <kbd>Ctrl+W</kbd>: Close your current tab (Notepad, web browsers, File Explorer etc.)
+    - <kbd>Ctrl+T</kbd>: Open a new tab (web browsers, File Explorer etc.)
+    - <kbd>Ctrl+N</kbd>: Create a new file (text editors)
+    - <kbd>Ctrl+O</kbd>: Open a new document (text editors)
+    - Shortcuts in online HTML WYSIWYG text editors: <kbd>Ctrl+B</kbd> for bold text, <kbd>Ctrl+I</kbd> for italic text, <kbd>Ctrl+U</kbd> for underlined text etc.
+- **Held:** They function like regular <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys allowing, for example, advanced navigation and text manipulation:
+    - <kbd>Ctrl+Right</kbd>: Jump to the next word.
+    - <kbd>Ctrl+Shift+Right</kbd>: Select the next word.
+    - <kbd>Ctrl+End</kbd>: Jump to the end of the current document/text.
+    - <kbd>Alt+Tab</kbd>: Cycle through your open windows.
+    - <kbd>Alt+Shift+Tab</kbd>: Cycle through your open windows in reverse order.
+    - <kbd>Alt+F4</kbd>: Close your current window.
+
 ## 4. Supported Platforms and Software
 
 I primarily develop Keeb Utils for GNU/Linux and Windows operating systems as these are the platforms I use daily—Linux on my personal devices and Windows on my work computer. Additionally, I must consider that I'm restricted from installing arbitrary software on my work machine; a business justification is typically required for any installation intended for personal use. Therefore, I tend to focus on open-source and portable software.
