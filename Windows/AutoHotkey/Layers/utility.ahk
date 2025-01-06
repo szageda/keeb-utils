@@ -115,7 +115,7 @@ F24 & sc01F::                               ;; QWERTY sS
 
     ;; When held
     If (!KeyWait("sc01F", "T0.5")) {
-        Send "{Alt Down}"
+        Send "{Blind}{Alt Down}"
     }
     KeyWait "sc01F"     ;; Wait for key release
     Send "{Alt Up}"     ;; "Unsticky" the Alt key
@@ -132,7 +132,7 @@ F24 & sc020::                               ;; QWERTY dD
 
     ;; When held
     If (!KeyWait("sc020", "T0.5")) {
-        Send "{Ctrl Down}"
+        Send "{Blind}{Ctrl Down}"
     }
     KeyWait "sc020"     ;; Wait for key release
     Send "{Ctrl Up}"    ;; "Unsticky" the Ctrl key
