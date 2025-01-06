@@ -90,7 +90,7 @@ These keys behave differently depending on whether they are:
 - **Held:** They function like regular <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys allowing, for example, advanced navigation and text manipulation:
     - <kbd>Ctrl+Right</kbd>: Jump to the next word.
     - <kbd>Ctrl+Shift+Right</kbd>: Select the next word.
-    - <kbd>Ctrl+End</kbd>: Jump to the end of the current document/text.
+    - <kbd>Ctrl+End</kbd>: Jump to the end of the current document/page.
     - <kbd>Alt+Tab</kbd>: Cycle through your open windows.
     - <kbd>Alt+Shift+Tab</kbd>: Cycle through your open windows in reverse order.
     - <kbd>Alt+F4</kbd>: Close your current window.
