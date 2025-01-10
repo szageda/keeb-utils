@@ -58,7 +58,7 @@ ChangeStatus(*)
         TraySetIcon("Icons\active.ico",, false)
     }
     ;; Toggle between the AutoHotkey states
-    ;; when the user clics the menu item
+    ;; when the user clicks the menu item
     Tray.Rename(OldName, NewName)
 }
 
