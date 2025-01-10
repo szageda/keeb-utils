@@ -37,8 +37,7 @@ ChangeStatus(*)
     ;; Use logic to toggle between suspended and active states
     ;; when the user clicks on the menu item.
     if (NewName != "Disabled") {
-        ;; Suspend AutoHotkey
-        Suspend 1
+        Suspend 1   ;; Suspend AutoHotkey
 
         ;; Update the menu item's name
         OldName := "Active"
@@ -48,8 +47,7 @@ ChangeStatus(*)
         A_IconTip := "Keeb Utils is disabled"
         TraySetIcon("Icons\suspended.ico",, true)
     } else {
-        ;; Activate AutoHotkey
-        Suspend 0
+        Suspend 0   ;; Activate AutoHotkey
 
         ;; Update the menu item's name
         OldName := "Disabled"
