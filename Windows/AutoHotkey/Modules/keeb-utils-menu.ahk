@@ -1,7 +1,7 @@
 /*
  * File        : keeb-utils-menu.ahk
  * Description : Minimalist AutoHotkey tray icon menu for Keeb Utils
- * Copyright   : (c) 2024, Gergely Szabo
+ * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
  * This file configures a custom menu for AutoHotkey.
@@ -36,7 +36,7 @@ ChangeStatus(*)
 
     ;; Use logic to toggle between suspended and active states
     ;; when the user clicks on the menu item.
-    if NewName != "Disabled" {
+    if (NewName != "Disabled") {
         ;; Suspend AutoHotkey
         Suspend 1
 
@@ -76,7 +76,7 @@ ReloadScripts(*)
 
 OpenHelp(*)
 {
-    if DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey") {
+    if (DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey")) {
         Run 'hh.exe "C:\Users\' A_Username '\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey.chm" href'
     } else {
         Run 'hh.exe "C:\Program Files\AutoHotkey\v2\AutoHotkey.chm" href'
