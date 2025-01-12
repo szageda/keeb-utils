@@ -26,12 +26,12 @@ License     : MIT
   output (uinput-sink "KMonad output")
 
   ;; Windows
-  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L134
+  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L136
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
   ;; macOS
-  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L163
+  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L165
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
@@ -107,7 +107,7 @@ License     : MIT
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
-;; Keyboad layout selection
+;; Keyboad Layout Selection
 ;; Allows for keyboard layout selection (Colemak/QWERTY).
 (deflayer select-layout
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
