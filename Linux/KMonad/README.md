@@ -57,7 +57,7 @@ cd keeb-utils
 
 **Change to load the Dvorak keyboard layout by default:**
 
-1. Navigate to `keeb-utils\Linux\KMonad`.
+1. Navigate to `keeb-utils/Linux/KMonad`.
 2. Open `keeb-utils.kbd` in a text editor.
 3. Copy the entire section of the Dvorak keyboard layout definition starting with `(deflayer dvorak-ansi` to the closing `)` and place it above the Colemak-DH layout definition (`(deflayer colemak-dh-ansi`).
 4. Save your changes.
