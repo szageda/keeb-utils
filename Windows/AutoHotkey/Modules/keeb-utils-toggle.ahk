@@ -1,14 +1,16 @@
 /*
  * File        : keeb-utils-toggle.ahk
  * Description : AutoHotkey state toggle for Keeb Utils
- * Copyright   : (c) 2024, Gergely Szabo
+ * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
  * The hotkey disables all scripts (layouts and layers) with a single
  * key combination, eliminating the need to right-click the AutoHotkey
- * tray icon and select "Suspend Hotkeys." The "SuspendExempt" directive
- * allows AutoHotkey to recognize the key combination even when suspended,
- * and toggling states changes the tray icon to reflect AutoHotkey's status.
+ * tray icon and select "Suspend Hotkeys."
+ * 
+ * The "SuspendExempt" directive allows AutoHotkey to recognize the key
+ * combination even when suspended, and toggling states changes the tray
+ * icon to reflect AutoHotkey's status.
  *
  * Usage:
  *  The script file must be loaded when AutoHotkey starts. Suspending (or
