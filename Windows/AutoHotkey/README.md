@@ -35,3 +35,12 @@
 
 1. Create a shortcut of `keeb-utils\Windows\AutoHotkey\keeb-utils.ahk`.
 2. Move the shortcut to `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`.
+
+**Change to load the Dvorak keyboard layout by default:**
+
+1. Navigate to `keeb-utils\Windows\AutoHotkey`.
+2. Open `keeb-utils.ahk` in a text editor.
+3. Comment (`;;`) the line ending with `colemak-dh-ansi.ahk`.
+4. Uncomment (remove `;;`) the line ending with `dvorak-ansi.ahk`.
+5. Save your changes.
+6. Start AutoHotkey (or reload if running already).

@@ -10,7 +10,9 @@
 ## Table of Contents
 
 [1. Introduction](#1-introduction)  
-[2. Keyboard Layout](#2-keyboard-layout)  
+[2. Keyboard Layouts](#2-keyboard-layouts)  
+. . [2.1. Colemak-DH](#21-colemak-dh)  
+. . [2.2. Dvorak](#22-dvorak)  
 [3. The Utils](#3-the-utils)  
 [4. Supported Platforms and Software](#4-supported-platforms-and-software)  
 . . [4.1. Linux](#41-linux)  
@@ -26,7 +28,11 @@ Keeb Utils adheres to two key principles:
 - Keep it minimal and functional.
 - Implement cross-platform solutions without sacrificing essential features.
 
-## 2. Keyboard Layout
+## 2. Keyboard Layouts
+
+Keeb Utils is configured to load the Colemak-DH keyboard layout by default. You must edit the configuration files to load a different layout on program startup—this is explained in the given software solution's `README.md` file.
+
+### 2.1. Colemak-DH
 
 I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). This layout was originally created in 2006 and was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
 
@@ -57,6 +63,17 @@ Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been mo
 - **Supports Frequent Communication:** Beneficial for users of instant messaging and chat software.
 
 — Colemak.com, [link](https://colemak.com/FAQ#Who_should_learn_Colemak.3F)
+
+### 2.2. Dvorak
+
+The Dvorak keyboard layout, sometimes also called “Dvorak Simplified Keyboard”, was patented in the 1930s by August Dvorak as a more ergonomic and faster altenative to QWERTY. To design his keyboard layout for the English language, August Dvorak used letter frequency and physiology of the hands.
+
+<div align="center">
+
+![Colemak-DH keyboard layout](Assets/Images/Keyboard%20Layouts/dvorak-ansi.png)  
+*Dvorak keymap for ANSI 101/104-key keyboards*
+
+</div>
 
 ## 3. The Utils
 

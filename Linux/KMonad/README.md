@@ -49,11 +49,19 @@ cd keeb-utils
 
 **Configure your keyboard device:**
 
-1. Navigate to `keeb-utils/Linux/KMonad/`.
+1. Navigate to `keeb-utils/Linux/KMonad`.
 2. Open `keeb-utils.kbd` in a text editor.
 3. Change the value of `input (device-file "value")` following the KMonad [wiki instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
 4. Save your changes.
 5. Start KMonad.
+
+**Change to load the Dvorak keyboard layout by default:**
+
+1. Navigate to `keeb-utils\Linux\KMonad`.
+2. Open `keeb-utils.kbd` in a text editor.
+3. Copy the entire section of the Dvorak keyboard layout definition starting with `(deflayer dvorak-ansi` to the closing `)` and place it above the Colemak-DH layout definition (`(deflayer colemak-dh-ansi`).
+4. Save your changes.
+5. Start KMonad (or restart it if running already).
 
 ## 2. Windows
 
@@ -76,7 +84,7 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 
 **Configure your operating system input:**
 
-1. Navigate to `keeb-utils\Linux\KMonad\`.
+1. Navigate to `keeb-utils\Linux\KMonad`.
 2. Open `keeb-utils.kbd` in a text editor.
 3. Comment (`;;`) the lines starting with `input` and `output` under the `Linux` section.
 4. Uncomment (remove `;;`) the lines starting with `input` and `output` under the `Windows` section.
@@ -85,3 +93,11 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 
 > [!NOTE]
 > In contrast to Linux, on Windows you don't have to configure the keyboard device; i.e., leave the `input` and `output` fields as they are.
+
+**Change to load the Dvorak keyboard layout by default:**
+
+1. Navigate to `keeb-utils\Linux\KMonad`.
+2. Open `keeb-utils.kbd` in a text editor.
+3. Copy the entire section of the Dvorak keyboard layout definition starting with `(deflayer dvorak-ansi` to the closing `)` and place it above the Colemak-DH layout definition (`(deflayer colemak-dh-ansi`).
+4. Save your changes.
+5. Start KMonad (or restart it if running already).
