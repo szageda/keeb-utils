@@ -1,14 +1,14 @@
 /*
  * File        : colemak-dh-ansi.ahk
  * Description : AutoHotkey keyboard layout configuration file
- * Copyright   : (c) 2024, Gergely Szabo
+ * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey remaps the software keyboard layout from QWERTY to Colemak-DH by
- * moving the host layout's virtual keys around: AutoHotkey captures the
- * scancode sent by the keyboard, and maps it to a virtual key emitted by the
- * operating system. Such keyboard layout remaps prevent the use of hotstrings,
- * for example: "::btw::by the way" -- typing "btw" outputs "by the way".
+ * AutoHotkey remaps the software keyboard layout from QWERTY to Colemak-DH
+ * by moving the host layout's virtual keys around: AutoHotkey captures the
+ * scancode sent by the keyboard, and maps a virtual key to it. Such keyboard
+ * layout remaps prevent the use of hotstrings, for example:
+ * "::btw::by the way" -- typing "btw" outputs "by the way".
  *
  * The below keymap is only true for the symbol keys (, . = etc.) if US QWERTY
  * is the current keyboard layout as what character is actually emitted always
