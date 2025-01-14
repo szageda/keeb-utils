@@ -1,7 +1,7 @@
 /*
  * File        : utility.ahk
  * Description : Keeb Utils Utility keyboard layer
- * Copyright   : (c) 2024, Gergely Szabo
+ * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
  * AutoHotkey adds a "Utility" layer by defining new key combinations using the
@@ -14,15 +14,15 @@
  * |   |  |MPP|Vld|Vlu|Mut|  |Prv|Nxt|   |   |  |   |   |   |   |
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
- * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| <-     |
+ * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | ->| | ^S|Bck| ^F|Fwd|Cps|PgU|Hom| Up|End|Slk|Nlk|   |      |
+ * | Tab | ^S|Bck| ^F|Fwd|Cps|PgU|Hom| Up|End|Slk|Nlk|   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
  * | Caps | ^A|Alt|Lct|Tab|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp| ^H|Ins|Esc| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
- * |Ctrl| Win | Alt| Enter                 | RAlt| Win|Menu|Ctrl|
+ * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
  *
  * Scancode Codes:
