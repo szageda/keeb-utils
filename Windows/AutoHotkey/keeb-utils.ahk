@@ -1,7 +1,7 @@
 /*
  * File        : keeb-utils.ahk
  * Description : Entry-point to AutoHotkey implementation of Keeb Utils
- * Copyright   : (c) 2024, Gergely Szabo
+ * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
  * This file is responsible for configuring AutoHotkey and the behavior of
@@ -139,6 +139,7 @@ SetKeyDelay -1, -1
 
 ;; Keyboard Layouts
 #Include %A_ScriptDir%\Layouts\colemak-dh-ansi.ahk
+;;#Include %A_ScriptDir%\Layouts\dvorak-ansi.ahk
 
 ;; Extra Layers
 #Include %A_ScriptDir%\Layers\utility.ahk

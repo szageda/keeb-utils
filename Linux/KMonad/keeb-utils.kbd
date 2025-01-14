@@ -1,7 +1,7 @@
 #|
 File        : keeb-utils.kbd
 Description : KMonad keyboard layout configuration file
-Copyright   : (c) 2024, Gergely Szabo
+Copyright   : (c) 2024-2025, Gergely Szabo
 License     : MIT
 |#
 
@@ -80,6 +80,15 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
+(deflayer dvorak-ansi
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
+  @uti a    o    e    u    i    d    h    t    n    s    -    ret
+  lsft ;    q    j    k    x    b    m    w    v    z    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
 ;; US QWERTY
 ;; It's kept here just in case somebody needs to use my PC.
 (deflayer qwerty
@@ -113,7 +122,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   ret
+  XX   XX   XX   @dvk XX   XX   XX   XX   XX   XX   XX   XX   ret
   lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
@@ -126,6 +135,7 @@ License     : MIT
 (defalias
   ;; Layouts
   cmk (layer-switch colemak-dh-ansi)
+  dvk (layer-switch dvorak-ansi)
   qwe (layer-switch qwerty)
 
   ;; Layers
