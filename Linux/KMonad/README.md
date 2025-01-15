@@ -37,10 +37,10 @@ cd keeb-utils
 4. Start KMonad from your command line pointing it to the KMonad configuration file (e.g., `kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
 
 > [!TIP]
-> Placing KMonad into your $PATH makes sure you don't have to type the absolute path to the executable every time you want to run it.
+> Placing KMonad into your $PATH helps, so you don't have to type the absolute path to the executable every time you want to run it.
 
 > [!IMPORTANT]
-> If you didn't configure the uinput permissions as instructed by KMonad, you must run it with sudo priviliges, and if KMonad isn't in your root user's $PATH variable you should use absolute paths to execute it and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /home/user/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
+> If you didn't follow KMonad's guide to configure uinput permissions, you must run it with sudo priviliges. If KMonad isn't in your root user's $PATH variable you must use the absolute path to execute it and load the config file (e.g. `sudo /home/user/.local/bin/kmonad /home/user/keeb-utils/Linux/KMonad/keeb-utils.kbd`).
 
 > [!WARNING]
 > You must manually configure your keyboard device in the configuration file—see [1.2. Configuration](#12-configuration). KMonad fails to start otherwise.
@@ -75,18 +75,18 @@ KMonad is compatible with Windows, but I view it as a “Linux first” solution
 4. Start KMonad from the command prompt pointing it to the KMonad configuration file (e.g. `C:\Users\%username%\Downloads\kmonad C:\Users\%username%\Downloads\keeb-utils\Linux\KMonad\keeb-utils.kbd`).
 
 > [!TIP]
-> Placing KMonad into your %PATH% makes sure you don't have to type the absolute path to the executable every time you want to run it.
+> Placing KMonad into your %PATH% helps, so you don't have to type the absolute path to the executable every time you want to run it.
 
 > [!WARNING]
-> You must manually configure your keyboard device in the configuration file—see [2.2. Configuration](#22-configuration).
+> You must manually change the input and output to Windows in the configuration file—see [2.2. Configuration](#22-configuration).
 
 ### 2.2. Configuration
 
-**Configure your operating system input:**
+**Configure your operating system input and output:**
 
 1. Navigate to `keeb-utils\Linux\KMonad`.
 2. Open `keeb-utils.kbd` in a text editor.
-3. Comment (`;;`) the lines starting with `input` and `output` under the `Linux` section.
+3. Comment (insert `;;`) the lines starting with `input` and `output` under the `Linux` section.
 4. Uncomment (remove `;;`) the lines starting with `input` and `output` under the `Windows` section.
 5. Save your changes.
 6. Start KMonad.
