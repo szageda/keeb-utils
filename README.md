@@ -34,7 +34,7 @@ Keeb Utils is configured to load the Colemak-DH keyboard layout by default. You 
 
 ### 2.1. Colemak-DH
 
-I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). This layout was originally created in 2006 and was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
+I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). Colemak was originally created in 2006 and was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
 
 <div align="center">
 
