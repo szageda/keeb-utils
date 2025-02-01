@@ -111,7 +111,7 @@ F24 & sc01F::                               ;; QWERTY sS
 
     ;; When tapped
     Send "{Blind}{Alt Down}"
-    Sleep 500           ;; Sticky time in milliseconds
+    Sleep 350           ;; Sticky time in milliseconds
 
     ;; When held
     If (!KeyWait("sc01F")) {
@@ -128,7 +128,7 @@ F24 & sc020::                               ;; QWERTY dD
 
     ;; When tapped
     Send "{Blind}{Ctrl Down}"
-    Sleep 500           ;; Sticky time in milliseconds
+    Sleep 350           ;; Sticky time in milliseconds
 
     ;; When held
     If (!KeyWait("sc020")) {

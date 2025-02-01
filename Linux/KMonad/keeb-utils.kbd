@@ -164,6 +164,6 @@ License     : MIT
   ;; Sticky Keys
   ;; - When tapped: Held until the next key press
   ;; - When held: Held until release
-  ask (sticky-key 500 lalt)
-  csk (sticky-key 500 lctl)
+  ask (sticky-key 350 lalt)
+  csk (sticky-key 350 lctl)
 )
