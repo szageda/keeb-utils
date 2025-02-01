@@ -114,7 +114,7 @@ F24 & sc01F::                               ;; QWERTY sS
     Sleep 500           ;; Sticky time in milliseconds
 
     ;; When held
-    If (!KeyWait("sc01F", "T0.5")) {
+    If (!KeyWait("sc01F")) {
         Send "{Blind}{Alt Down}"
     }
     KeyWait "sc01F"     ;; Wait for key release
@@ -131,7 +131,7 @@ F24 & sc020::                               ;; QWERTY dD
     Sleep 500           ;; Sticky time in milliseconds
 
     ;; When held
-    If (!KeyWait("sc020", "T0.5")) {
+    If (!KeyWait("sc020")) {
         Send "{Blind}{Ctrl Down}"
     }
     KeyWait "sc020"     ;; Wait for key release
