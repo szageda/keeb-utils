@@ -22,7 +22,7 @@
 
 ## 1. Introduction
 
-Keeb Utils, short for “Keyboard Utilities,” is my personal project focused on sharing custom keyboard tweaks for Windows and Linux. This repository features adjustments aimed at enhancing efficiency and comfort. It serves as a valuable resource for keyboard enthusiasts seeking to improve their typing experience and as a starting point for those interested in keyboard programming. After exploring various alternative layouts and experimenting with different alphanumeric functions, I was inspired to create this solution, drawing on the work of others—details are in the [5. Credits and Inspiration](#5-credits-and-inspiration) section.
+Keeb Utils, short for “Keyboard Utilities,” is my personal project for sharing custom keyboard tweaks for Windows and Linux. This repository offers adjustments to enhance typing efficiency, ergonomics, and comfort, making it a useful resource for keyboard enthusiasts and those new to keyboard programming. The works of others inspired me to share my keyboard configuration, too—details are found under [5. Credits and Inspiration](#5-credits-and-inspiration).
 
 Keeb Utils adheres to two key principles:
 - Keep it minimal and functional.
