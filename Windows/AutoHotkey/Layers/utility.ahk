@@ -18,7 +18,7 @@
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
  * | Tab | ^S|Bck| ^F|Fwd|Cps|PgU|Hom| Up|End|Slk|Nlk|   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps | ^A|Alt|Lct|Tab|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
+ * | Caps | ^A|Tab|Alt|Lct|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp| ^H|Ins|Esc| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
@@ -103,7 +103,8 @@ F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
 F24 & sc01E::Send "{Ctrl Down}{a}{Ctrl Up}" ;; QWERTY aA
-F24 & sc01F::                               ;; QWERTY sS
+F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
+F24 & sc020::                               ;; QWERTY dD
 {
     ;; Implement sticky key behavior:
     ;; Act as sticky key when tapped,
@@ -120,7 +121,7 @@ F24 & sc01F::                               ;; QWERTY sS
     KeyWait "sc01F"     ;; Wait for key release
     Send "{Alt Up}"     ;; "Unsticky" the Alt key
 }
-F24 & sc020::                               ;; QWERTY dD
+F24 & sc021::                               ;; QWERTY fF
 {
     ;; Implement sticky key behavior:
     ;; Act as sticky key when tapped,
@@ -137,7 +138,6 @@ F24 & sc020::                               ;; QWERTY dD
     KeyWait "sc020"     ;; Wait for key release
     Send "{Ctrl Up}"    ;; "Unsticky" the Ctrl key
 }
-F24 & sc021::Send "{Blind}{Tab}"            ;; QWERTY fF
 F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
 F24 & sc022 Up::Send "{LWin Up}"
 F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
