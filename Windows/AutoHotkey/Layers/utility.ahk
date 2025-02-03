@@ -115,10 +115,10 @@ F24 & sc020::                               ;; QWERTY dD
     Sleep 350           ;; Sticky time in milliseconds
 
     ;; When held
-    If (!KeyWait("sc01F")) {
+    If (!KeyWait("sc020")) {
         Send "{Blind}{Alt Down}"
     }
-    KeyWait "sc01F"     ;; Wait for key release
+    KeyWait "sc020"     ;; Wait for key release
     Send "{Alt Up}"     ;; "Unsticky" the Alt key
 }
 F24 & sc021::                               ;; QWERTY fF
@@ -132,10 +132,10 @@ F24 & sc021::                               ;; QWERTY fF
     Sleep 350           ;; Sticky time in milliseconds
 
     ;; When held
-    If (!KeyWait("sc020")) {
+    If (!KeyWait("sc021")) {
         Send "{Blind}{Ctrl Down}"
     }
-    KeyWait "sc020"     ;; Wait for key release
+    KeyWait "sc021"     ;; Wait for key release
     Send "{Ctrl Up}"    ;; "Unsticky" the Ctrl key
 }
 F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
