@@ -16,11 +16,11 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab |Mut|Bck|Fwd|Vld|Vlu|PgU|Hom| Up|End|Cps|Slk|Nlk|      |
+ * | Tab |Mut|Bck|Fwd|Vld|Vlu|PgU|Hom| Up|End|Slk|Nlk|   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
  * | Caps |PP |Tab|Alt|Lct|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
- * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp| ^H|Ins|Esc| Shift     |
+ * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp|Esc|Ins|Cps| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
@@ -91,14 +91,9 @@ F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
-F24 & sc019::                               ;; QWERTY pP
-{
-    SetCapsLockState GetKeyState("CapsLock", "T")
-    ? "AlwaysOff"
-    : "AlwaysOn"
-}
-F24 & sc01A::ScrollLock                     ;; QWERTY [{
-F24 & sc01B::NumLock                        ;; QWERTY ]}
+F24 & sc019::ScrollLock                     ;; QWERTY pP
+F24 & sc01A::NumLock                        ;; QWERTY [{
+F24 & sc01B::Return                         ;; QWERTY ]}
 F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
@@ -156,9 +151,14 @@ F24 & sc02F::Send "{Ctrl Down}{v}{Ctrl Up}" ;; QWERTY vV
 F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Delete}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
-F24 & sc033::Send "{Ctrl Down}{h}{Ctrl Up}" ;; QWERTY ,<
+F24 & sc033::Send "{Blind}{Escape}"         ;; QWERTY ,<
 F24 & sc034::Send "{Blind}{Ins}"            ;; QWERTY .>
-F24 & sc035::Send "{Blind}{Escape}"         ;; QWERTY /?
+F24 & sc035::                               ;; QWERTY /?
+{
+    SetCapsLockState GetKeyState("CapsLock", "T")
+    ? "AlwaysOff"
+    : "AlwaysOn"
+}
 
 ;; Misc. Keys
 F24 & sc039::Send "{Blind}{Enter}"          ;; Space

@@ -112,9 +112,9 @@ License     : MIT
 (deflayer utility
   XX   prev next XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  mute @bck @fwd vold volu pgup home up   end  caps slck nlck XX
+  tab  mute @bck @fwd vold volu pgup home up   end  slck nlck XX   XX
   @uti pp   tab  @ask @csk lmet pgdn left down rght lsft ssrq ret
-  lsft @udo @cut @cpy @pst @rdo del  bspc @rep ins  esc  rsft
+  lsft @udo @cut @cpy @pst @rdo del  bspc esc  ins  caps  rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
