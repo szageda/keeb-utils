@@ -104,7 +104,7 @@ These keys behave differently depending on whether they are:
     - <kbd>Ctrl+T</kbd>: Open a new tab (web browsers, File Explorer etc.)
     - <kbd>Ctrl+N</kbd>: Create a new file (text editors)
     - <kbd>Ctrl+O</kbd>: Open a new document (text editors)
-    - Shortcuts in online HTML WYSIWYG text editors: <kbd>Ctrl+B</kbd> for bold text, <kbd>Ctrl+I</kbd> for italic text, <kbd>Ctrl+U</kbd> for underlined text etc.
+    - Shortcuts in WYSIWYG text editors: <kbd>Ctrl+B</kbd> for bold text, <kbd>Ctrl+I</kbd> for italic text, <kbd>Ctrl+U</kbd> for underlined text etc.
 - **Held:** They function like regular <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys allowing, for example, advanced navigation and text manipulation:
     - <kbd>Ctrl+Right</kbd>: Jump to the next word.
     - <kbd>Ctrl+Shift+Right</kbd>: Select the next word.
