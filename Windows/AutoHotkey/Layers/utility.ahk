@@ -11,14 +11,14 @@
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scancodes instead of virtual keys:
  * ,---,  ,---,---,---,---,  ,---,---,---,---,  ,---,---,---,---,
- * |   |  |MPP|Vld|Vlu|Mut|  |Prv|Nxt|   |   |  |   |   |   |   |
+ * |   |  |Prv|Nxt|   |   |  |   |   |   |   |  |   |   |   |   |
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab | ^S|Bck| ^F|Fwd|Cps|PgU|Hom| Up|End|Slk|Nlk|   |      |
+ * | Tab |Mut|Bck|Fwd|Vld|Vlu|PgU|Hom| Up|End|Cps|Slk|Nlk|      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps | ^A|Tab|Alt|Lct|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
+ * | Caps |PP |Tab|Alt|Lct|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp| ^H|Ins|Esc| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
@@ -53,12 +53,12 @@ SetCapsLockState "AlwaysOff"
 
 ;; Function Row
 F24 & sc001::Return                         ;; Esc
-F24 & sc03B::Send "{Media_Play_Pause}"      ;; F1
-F24 & sc03C::Send "{Volume_Down}"           ;; F2
-F24 & sc03D::Send "{Volume_Up}"             ;; F3
-F24 & sc03E::Send "{Volume_Mute}"           ;; F4
-F24 & sc03F::Send "{Media_Prev}"            ;; F5
-F24 & sc040::Send "{Media_Next}"            ;; F6
+F24 & sc03B::Send "{Media_Prev}"            ;; F1
+F24 & sc03C::Send "{Volume_Next}"           ;; F2
+F24 & sc03D::Return                         ;; F3
+F24 & sc03E::Return                         ;; F4
+F24 & sc03F::Return                         ;; F5
+F24 & sc040::Return                         ;; F6
 F24 & sc041::Return                         ;; F7
 F24 & sc042::Return                         ;; F8
 F24 & sc043::Return                         ;; F9
@@ -82,27 +82,27 @@ F24 & sc00C::Send "{Blind}{F11}"            ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{Ctrl Down}{s}{Ctrl Up}" ;; QWERTY qQ
+F24 & sc010::Send "{Volume_Mute}"           ;; QWERTY qQ
 F24 & sc011::Send "{Browser_Back}"          ;; QWERTY wW
-F24 & sc012::Send "{Ctrl Down}{f}{Ctrl Up}" ;; QWERTY eE
-F24 & sc013::Send "{Browser_Forward}"       ;; QWERTY rR
-F24 & sc014::                               ;; QWERTY tT
+F24 & sc012::Send "{Browser_Forward}"       ;; QWERTY eE
+F24 & sc013::Send "{Volume_Down}"           ;; QWERTY rR
+F24 & sc014::Send "{Volume_Up}"             ;; QWERTY tT
+F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
+F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
+F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
+F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
+F24 & sc019::                               ;; QWERTY pP
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
     ? "AlwaysOff"
     : "AlwaysOn"
 }
-F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
-F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
-F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
-F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
-F24 & sc019::scrollLock                     ;; QWERTY pP
-F24 & sc01A::NumLock                        ;; QWERTY [{
-F24 & sc01B::Return                         ;; QWERTY ]}
+F24 & sc01A::ScrollLock                     ;; QWERTY [{
+F24 & sc01B::NumLock                        ;; QWERTY ]}
 F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Ctrl Down}{a}{Ctrl Up}" ;; QWERTY aA
+F24 & sc01E::Send "{Media_Play_Pause}"      ;; QWERTY aA
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {

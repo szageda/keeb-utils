@@ -108,11 +108,12 @@ License     : MIT
 
 ;; Utility
 ;; Provides extra functionality enhancements on the alphanumeric keys.
+
 (deflayer utility
-  XX   pp   vold volu mute prev next XX   XX   XX   XX   XX   XX   XX   XX
+  XX   prev next XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  @sav @bck @fnd @fwd caps pgup home up   end  slck nlck XX   XX
-  @uti @all tab  @ask @csk lmet pgdn left down rght lsft ssrq ret
+  tab  mute @bck @fwd vold volu pgup home up   end  caps slck nlck XX
+  @uti pp   tab  @ask @csk lmet pgdn left down rght lsft ssrq ret
   lsft @udo @cut @cpy @pst @rdo del  bspc @rep ins  esc  rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
