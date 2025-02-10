@@ -16,11 +16,11 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab |Mut|Bck|Fwd|Vld|Vlu|PgU|Hom| Up|End|Slk|Nlk|   |      |
+ * | Tab |Mut|Bck|Fwd|Vld|Vlu|Cps|Hom| Up|End|Slk|Nlk|   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps |PP |Tab|Alt|Lct|Win|PgD|Lft|Dwn|Rht|Lst|Prt| Enter   |
+ * | Caps |PP |Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|Prt| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
- * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp|Esc|Ins|Cps| Shift     |
+ * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp|Ins|PgD|PgU| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
