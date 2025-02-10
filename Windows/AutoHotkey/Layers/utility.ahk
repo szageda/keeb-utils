@@ -87,7 +87,12 @@ F24 & sc011::Send "{Browser_Back}"          ;; QWERTY wW
 F24 & sc012::Send "{Browser_Forward}"       ;; QWERTY eE
 F24 & sc013::Send "{Volume_Down}"           ;; QWERTY rR
 F24 & sc014::Send "{Volume_Up}"             ;; QWERTY tT
-F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
+F24 & sc015::                               ;; QWERTY yY
+{
+    SetCapsLockState GetKeyState("CapsLock", "T")
+    ? "AlwaysOff"
+    : "AlwaysOn"
+}
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
@@ -135,7 +140,7 @@ F24 & sc021::                               ;; QWERTY fF
 }
 F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
 F24 & sc022 Up::Send "{LWin Up}"
-F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
+F24 & sc023::Send "{Blind}{Escape}"         ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
@@ -151,14 +156,9 @@ F24 & sc02F::Send "{Ctrl Down}{v}{Ctrl Up}" ;; QWERTY vV
 F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Delete}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
-F24 & sc033::Send "{Blind}{Escape}"         ;; QWERTY ,<
-F24 & sc034::Send "{Blind}{Ins}"            ;; QWERTY .>
-F24 & sc035::                               ;; QWERTY /?
-{
-    SetCapsLockState GetKeyState("CapsLock", "T")
-    ? "AlwaysOff"
-    : "AlwaysOn"
-}
+F24 & sc033::Send "{Blind}{Ins}"            ;; QWERTY ,<
+F24 & sc034::Send "{Blind}{PgDn}"           ;; QWERTY .>
+F24 & sc035::Send "{Blind}{PgUp}"           ;; QWERTY /?
 
 ;; Misc. Keys
 F24 & sc039::Send "{Blind}{Enter}"          ;; Space
