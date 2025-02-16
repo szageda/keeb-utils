@@ -7,8 +7,11 @@
 ## Table of Contents
 
 [1. About](#1-about)  
-. . [1.1. Installation](#11-installation)  
-. . [1.2. Configuration](#12-configuration)
+[2. Installation](#2-installation)  
+[3. Configuration](#3-configuration)  
+. . [3.1. AutoHotkey](#31-autohotkey)  
+. . [3.2. Keeb Utils Configuration File](#32-keeb-utils-configuration-file)  
+[4. Startup](#4-startup)
 
 ## 1. About
 
@@ -16,31 +19,46 @@
 
 — *www.autohotkey.com*, AutoHotkey, [link](https://www.autohotkey.com/)
 
-### 1.1. Installation
+## 2. Installation
 
-1. Install AutoHotkey (or use the portable version).
-2. Download the contents of this repository to your computer.
-3. Extract the downloaded .zip archive.
-4. Start Keeb Utils by navigating to `keeb-utils\Windows\AutoHotkey` and double clicking `keeb-utils.ahk`.
+This repository doesn not package or distribute AutoHotkey binaries required to run the Keeb Utils configuration files. It is your responsibility to install the required software version.
+
+> [!TIP]
+> An alternative solution to AutoHotkey on Windows is KMonad—see [KMonad](/Linux/KMonad/README.md#5-installation-windows).
+
+1. Install AutoHotkey from [www.AutoHotkey.com](https://www.autohotkey.com) (or use the portable version).
+
+2. Donwload the contents of this repository to your computer.
+
+3. Extract the contents of `keeb-utils-main.zip`.
+
+## 3. Configuration
+
+### 3.1. AutoHotkey
+
+#### Start Keeb Utils automatically on Windows logon
+
+1. Create a shortcut of `keeb-utils\Windows\AutoHotkey\keeb-utils.ahk`.
+
+2. Move the shortcut to `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`.
+
+### 3.2. Keeb Utils Configuration File
+
+#### Load the Dvorak keyboard layout by default
+
+1. Open `keeb-utils-main\Windows\AutoHotkey\keeb-utils.ahk` in a text editor.
+
+2. Comment (insert `;;`) the line ending with `colemak-dh-ansi.ahk`.
+
+3. Uncomment (remove `;;`) the line ending with `dvorak-ansi.ahk`.
+
+4. Save your changes.
+
+## 4. Startup
+
+1. Navigate to `keeb-utils\Windows\AutoHotkey`
+
+2. Double click `keeb-utils.ahk`
 
 > [!NOTE]
 > The scripts support AutoHotkey version 2.0. While running them under version 1.0 may be possible, you may experience problems or erratic behavior.
-
-> [!TIP]
-> An alternative solution to AutoHotkey on Windows is KMonad—see [KMonad](/Linux/KMonad/README.md#2-windows).
-
-### 1.2. Configuration
-
-**Start Keeb Utils automatically on Windows login:**
-
-1. Create a shortcut of `keeb-utils\Windows\AutoHotkey\keeb-utils.ahk`.
-2. Move the shortcut to `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`.
-
-**Change to load the Dvorak keyboard layout by default:**
-
-1. Navigate to `keeb-utils\Windows\AutoHotkey`.
-2. Open `keeb-utils.ahk` in a text editor.
-3. Comment (insert `;;`) the line ending with `colemak-dh-ansi.ahk`.
-4. Uncomment (remove `;;`) the line ending with `dvorak-ansi.ahk`.
-5. Save your changes.
-6. Start AutoHotkey (or reload it if running already).
