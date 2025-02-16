@@ -79,8 +79,7 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
 
 #### kmonad: command not found
 
-**Explanation:** The `kmonad` binary is not in a directory of your `$PATH` variable.
-
+**Explanation:** The `kmonad` binary is not in a directory of your `$PATH` variable.  
 **Troubleshooting:**
 
 1. Move `kmonad` into a directory in your `$PATH`, for example:
@@ -93,10 +92,11 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
     - Local user: `chmod u+x kmonad`
     - System-wide: `chmod +x kmonad`
 
+___
+
 #### openFd: does not exist (No such file or directory)
 
-**Explanation:** KMonad cannot find the keyboard device file.
-
+**Explanation:** KMonad cannot find the keyboard device file.  
 **Troubleshooting:**
 
 1. Follow the [KMonad wiki](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard) to find your keyboard device file.
@@ -108,10 +108,11 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
     1. Replace `value` with `/path/to/keyboard-device-file` inside `input (device-file "value")`
     2. Save your changes.
 
+___
+
 #### openFd: permission denied (Permission denied)
 
-**Explanation:** uinput permissions aren't configured or `kmonad` wasn't executed as sudo.
-
+**Explanation:** uinput permissions aren't configured or `kmonad` wasn't executed as sudo.  
 **Troubleshooting:**
 
 - Configure uinput permissions—refer to [KMonad wiki: How do I get uinput permissions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-get-uinput-permissions).
