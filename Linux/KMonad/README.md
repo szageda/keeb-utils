@@ -75,9 +75,9 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
 > [!NOTE]
 > KMonad must be restarted (stopped and started) everytime you make changes to a configuration file.
 
-## 4.1. Errors and Troubleshooting
+### 4.1. Errors and Troubleshooting
 
-### kmonad: command not found
+#### kmonad: command not found
 
 **Explanation:** The `kmonad` binary is not in a directory of your `$PATH` variable.
 
@@ -93,7 +93,7 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
     - Local user: `chmod u+x kmonad`
     - System-wide: `chmod +x kmonad`
 
-### openFd: does not exist (No such file or directory)
+#### openFd: does not exist (No such file or directory)
 
 **Explanation:** KMonad cannot find the keyboard device file.
 
@@ -108,7 +108,7 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
     1. Replace `value` with `/path/to/keyboard-device-file` inside `input (device-file "value")`
     2. Save your changes.
 
-### openFd: permission denied (Permission denied)
+#### openFd: permission denied (Permission denied)
 
 **Explanation:** uinput permissions aren't configured or `kmonad` wasn't executed as sudo.
 
@@ -168,7 +168,7 @@ kmonad C:\Users\%username%\Downloads\keeb-utils-main\Linux\KMonad\keeb-utils.kbd
 
 ## 8. Additional Configuration (platform agnostic)
 
-### Load the Dvorak keyboard layout by default
+#### Load the Dvorak keyboard layout by default
 
 1. Open `keeb-utils.kbd` in a text editor.
 2. Copy the entire section of the Dvorak keyboard layout definition starting with `(deflayer dvorak-ansi` to the closing `)` and place it above the Colemak-DH layout definition (`(deflayer colemak-dh-ansi`).
