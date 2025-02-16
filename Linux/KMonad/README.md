@@ -64,7 +64,7 @@ git clone https://github.com/szageda/keeb-utils.git
     1. Change the value of `input (device-file "value")` following the KMonad [instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).
     2. Save your changes.
 
-# 4. Startup (Linux)
+## 4. Startup (Linux)
 
 Start KMonad using `keeb-utils.kbd` configuration file, for example: 
 
@@ -95,17 +95,17 @@ kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
 
 ### openFd: does not exist (No such file or directory)
 
-**Explanation:** KMonad cannot find the keyboard device.
+**Explanation:** KMonad cannot find the keyboard device file.
 
 **Troubleshooting:**
 
-1. Follow the [KMonad wiki](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard) to find your keyboard device.
+1. Follow the [KMonad wiki](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard) to find your keyboard device file.
 
 2. Open `keeb-utils/Linux/KMonad/keeb-utils.kbd` in a text editor.
 
 3. Configure your keyboard device:
 
-    1. Change the value of `input (device-file "value")`
+    1. Replace `value` with `/path/to/keyboard-device-file` inside `input (device-file "value")`
     2. Save your changes.
 
 ### openFd: permission denied (Permission denied)
@@ -155,7 +155,7 @@ This repository doesn not package or distribute KMonad binaries required to run 
 > [!NOTE]
 > In contrast to Linux, on Windows you don't have to configure the keyboard device; i.e., leave the `input` and `output` fields as they are.
 
-### 7. Startup (Windows)
+## 7. Startup (Windows)
 
 Start KMonad using `keeb-utils.kbd` configuration file, for example: 
 
