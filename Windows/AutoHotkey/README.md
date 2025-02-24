@@ -1,7 +1,11 @@
 <div align="center">
 <h1>Keeb Utils – AutoHotkey README</h1>
 
-![Project avatar](/Assets/Images/Meta/autohotkey-logo-128.png)
+![Project avatar](/Assets/Images/Meta/avatar-64.png) ![AutoHotkey logo](/Assets/Images/Meta/autohotkey-logo-64.png)
+
+<a href="https://www.flaticon.com/free-icons/computer-hardware" title="computer hardware icons">Computer hardware icons created by Rian Maulana - Flaticon (CC-BY-SA 4.0)</a>  
+<a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon (CC-BY-SA 4.0)</a>  
+<a href="https://github.com/AutoHotkey/AutoHotkey/blob/v1.1/source/resources/icon_main.ico" title="autohotkey logo">AutoHotkey logo created by AutoHotkey developers (GPLv3)</a>
 </div>
 
 ## Table of Contents

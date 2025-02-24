@@ -1,10 +1,10 @@
 <div align="center">
 <h1>Keeb Utils</h1>
 
-![Project avatar](Assets/Images/Meta/avatar-128.png)
+![Project avatar](/Assets/Images/Meta/avatar-128.png)
 
-<a href="https://www.flaticon.com/free-icons/computer-hardware" title="computer hardware icons">Computer hardware icons created by Rian Maulana - Flaticon</a>  
-<a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/computer-hardware" title="computer hardware icons">Computer hardware icons created by Rian Maulana - Flaticon (CC-BY-SA 4.0)</a>  
+<a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon (CC-BY-SA 4.0)</a>
 </div>
 
 ## Table of Contents
