@@ -11,14 +11,14 @@
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scancodes instead of virtual keys:
  * ,---,  ,---,---,---,---,  ,---,---,---,---,  ,---,---,---,---,
- * |   |  |Prv|Nxt|   |   |  |   |   |   |   |  |   |   |   |   |
+ * |   |  |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab |Mut|Bck|Fwd|Vld|Vlu|Cps|Hom| Up|End|Slk|Nlk|   |      |
+ * | Tab |Prv|Bck|Fwd|Vld|Vlu|Cps|Hom| Up|End|PP |Nlk|Slk|PrtScr|
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps |PP |Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|Prt| Enter   |
+ * | Caps |Nxt|Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|Mut| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp|Ins|PgD|PgU| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
@@ -53,8 +53,8 @@ SetCapsLockState "AlwaysOff"
 
 ;; Function Row
 F24 & sc001::Return                         ;; Esc
-F24 & sc03B::Send "{Media_Prev}"            ;; F1
-F24 & sc03C::Send "{Volume_Next}"           ;; F2
+F24 & sc03B::Return                         ;; F1
+F24 & sc03C::Return                         ;; F2
 F24 & sc03D::Return                         ;; F3
 F24 & sc03E::Return                         ;; F4
 F24 & sc03F::Return                         ;; F5
@@ -82,7 +82,7 @@ F24 & sc00C::Send "{Blind}{F11}"            ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{Volume_Mute}"           ;; QWERTY qQ
+F24 & sc010::Send "{Media_Prev}"            ;; QWERTY qQ
 F24 & sc011::Send "{Browser_Back}"          ;; QWERTY wW
 F24 & sc012::Send "{Browser_Forward}"       ;; QWERTY eE
 F24 & sc013::Send "{Volume_Down}"           ;; QWERTY rR
@@ -96,13 +96,13 @@ F24 & sc015::                               ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
-F24 & sc019::ScrollLock                     ;; QWERTY pP
+F24 & sc019::Send "{Media_Play_Pause}"      ;; QWERTY pP
 F24 & sc01A::NumLock                        ;; QWERTY [{
-F24 & sc01B::Return                         ;; QWERTY ]}
-F24 & sc02B::Return                         ;; QWERTY \|
+F24 & sc01B::ScrollLock                     ;; QWERTY ]}
+F24 & sc02B::PrintScreen                    ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Media_Play_Pause}"      ;; QWERTY aA
+F24 & sc01E::Send "{Media_Next}"            ;; QWERTY aA
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {
@@ -146,7 +146,7 @@ F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
 F24 & sc027::Send "{Blind}{LShift Down}"    ;; QWERTY ;:
 F24 & sc027 Up::Send "{LShift Up}"
-F24 & sc028::PrintScreen                    ;; QWERTY '"
+F24 & sc028::Send "{Volume_Mute}"           ;; QWERTY '"
 
 ;; Bottom Row
 F24 & sc02C::Send "{Ctrl Down}{z}{Ctrl Up}" ;; QWERTY zZ
