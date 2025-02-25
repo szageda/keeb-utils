@@ -16,7 +16,7 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab |Prv|Bck|Fwd|Vld|Vlu|Cps|Hom| Up|End|PP |Nlk|Slk|PrtScr|
+ * | Tab |Prv|Bck|Fwd|VlD|VlU|Cps|Hom| Up|End| PP|Nlk|Slk|PrtScr|
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
  * | Caps |Nxt|Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|Mut| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
