@@ -30,11 +30,14 @@ Keeb Utils adheres to two key principles:
 
 ## 2. Keyboard Layouts
 
-Keeb Utils is configured to load the Colemak-DH keyboard layout by default. You must edit the configuration files to load a different layout on program startup—this is explained in the given software solution's `README.md` file.
+Keeb Utils is configured to load Colemak-DH by default. You must edit the configuration files to load a different layout on program startup—this is explained in the given software solution's `README.md` file.
 
 ### 2.1. Colemak-DH
 
-I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). Colemak was originally created in 2006 and was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
+I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). Colemak was originally created in 2006 primarily for the English lanaguage. It was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
+
+*More information on Colemak: https://colemak.com/*  
+*More information on Colemak Mod DH: https://colemakmods.github.io/mod-dh*
 
 <div align="center">
 
@@ -45,28 +48,11 @@ I use a keyboard layout known as “Colemak-DH“ (which is occasionally referre
 
 Note that some symbol keys (<kbd>[</kbd> <kbd>]</kbd> <kbd>=</kbd>) have been moved due to personal preference.
 
-**What is Colemak?**
-
-> *Colemak, pronounced /'ko:lmæk/ (Coal-Mac), is a keyboard layout designed for touch typing in English. It is designed to be a practical alternative to the QWERTY and Dvorak keyboard layouts. It was released on 01-Jan-2006.*
-
-— Colemak.com, [link](https://colemak.com/FAQ#What_is_Colemak.3F)
-
-**Ergonomics and Health Benefits of Using Colemak:**
-
-- **Reduces Risk of Injuries:** Beneficial for individuals suffering from Repetitive Strain Injury (RSI) or Carpal Tunnel Syndrome (CTS).
-- **Alleviates Discomfort:** Helps those who experience pain or discomfort while typing.
-- **Caters to Heavy Keyboard Users:** Designed for anyone spending over 10 hours per week at the keyboard, promoting better ergonomics.
-- **Enhances Typing Speed:** Supports writers and programmers who need to type as fast as they think, preventing loss of thought.
-- **Improves Efficiency in Time-Critical Situations:** Ideal for journalists and bloggers who require quick typing.
-- **Facilitates Note-Taking:** Assists students using laptops during lectures to keep up with fast-paced discussions.
-- **Promotes Efficient Work Habits:** Appeals to individuals interested in lifehacks and improved efficiency.
-- **Supports Frequent Communication:** Beneficial for users of instant messaging and chat software.
-
-— Colemak.com, [link](https://colemak.com/FAQ#Who_should_learn_Colemak.3F)
-
 ### 2.2. Dvorak
 
 The Dvorak keyboard layout, sometimes also called “Dvorak Simplified Keyboard”, was patented in the 1930s by August Dvorak as a more ergonomic and faster altenative to QWERTY. To design his keyboard layout for the English language, August Dvorak used letter frequency and physiology of the hands.
+
+*More information on Dvorak: https://dvorak-keyboard.com*
 
 <div align="center">
 
