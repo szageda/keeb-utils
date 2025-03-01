@@ -100,15 +100,15 @@ I implement various adjustments and functions on an extra layer, called “Utili
 
 These keys behave differently depending on whether they are:
 - **Tapped:** They become “sticky” for 350 ms to allow for <kbd>Ctrl</kbd> and <kbd>Alt</kbd> shortcuts that are not available on the Utility layer, for example:
-    - <kbd>Ctrl+W</kbd>: Close your current tab (text editors, web browsers, File Explorer etc.)
-    - <kbd>Ctrl+T</kbd>: Open a new tab (web browsers, File Explorer etc.)
-    - <kbd>Ctrl+N</kbd>: Create a new file (text editors)
-    - <kbd>Ctrl+O</kbd>: Open a new document (text editors)
+    - <kbd>Ctrl+W</kbd>: Close your current tab.
+    - <kbd>Ctrl+T</kbd>: Open a new tab.
+    - <kbd>Ctrl+N</kbd>: Create a new file.
+    - <kbd>Ctrl+O</kbd>: Open a new file.
     - Shortcuts in WYSIWYG text editors: <kbd>Ctrl+B</kbd> for bold text, <kbd>Ctrl+I</kbd> for italic text, <kbd>Ctrl+U</kbd> for underlined text etc.
 - **Held:** They function like regular <kbd>Ctrl</kbd> and <kbd>Alt</kbd> keys allowing, for example, advanced navigation and text manipulation:
     - <kbd>Ctrl+Right</kbd>: Jump to the next word.
     - <kbd>Ctrl+Shift+Right</kbd>: Select the next word.
-    - <kbd>Ctrl+End</kbd>: Jump to the end of the current document/page.
+    - <kbd>Ctrl+End</kbd>: Jump to the end of the current page.
     - <kbd>Alt+Tab</kbd>: Cycle through your open windows.
     - <kbd>Alt+Shift+Tab</kbd>: Cycle through your open windows in reverse order.
     - <kbd>Alt+F4</kbd>: Close your current window.
