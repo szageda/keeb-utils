@@ -42,7 +42,7 @@ This repository doesn not package or distribute AutoHotkey binaries required to 
 
 #### Start Keeb Utils automatically on Windows logon
 
-1. Create a shortcut of `keeb-utils\Windows\AutoHotkey\keeb-utils.ahk`.
+1. Create a shortcut of `keeb-utils-main\Windows\AutoHotkey\keeb-utils.ahk`.
 
 2. Move the shortcut to `%AppData%\Microsoft\Windows\Start Menu\Programs\Startup`.
 
@@ -60,7 +60,7 @@ This repository doesn not package or distribute AutoHotkey binaries required to 
 
 ## 4. Startup
 
-1. Navigate to `keeb-utils\Windows\AutoHotkey`
+1. Navigate to `keeb-utils-main\Windows\AutoHotkey`
 
 2. Double click `keeb-utils.ahk`
 

@@ -61,7 +61,7 @@ git clone https://github.com/szageda/keeb-utils.git
 
 ### 3.2. Keeb Utils Configuration File
 
-1. Open `keeb-utils/Linux/KMonad/keeb-utils.kbd` in a text editor.
+1. Open `keeb-utils-main/Linux/KMonad/keeb-utils.kbd` in a text editor.
 
 2. Configure your keyboard device:
 
@@ -73,7 +73,7 @@ git clone https://github.com/szageda/keeb-utils.git
 Start KMonad using `keeb-utils.kbd` configuration file, for example: 
 
 ```shell
-kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd
+kmonad ~/keeb-utils-main/Linux/KMonad/keeb-utils.kbd
 ```
 
 > [!NOTE]
@@ -105,7 +105,7 @@ ___
 
 1. Follow the [KMonad wiki](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard) to find your keyboard device file.
 
-2. Open `keeb-utils/Linux/KMonad/keeb-utils.kbd` in a text editor.
+2. Open `keeb-utils-main/Linux/KMonad/keeb-utils.kbd` in a text editor.
 
 3. Configure your keyboard device:
 
@@ -121,7 +121,7 @@ ___
 
 - Configure uinput permissions—refer to [KMonad wiki: How do I get uinput permissions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-get-uinput-permissions).
 
-- Run `sudo kmonad ~/keeb-utils/Linux/KMonad/keeb-utils.kbd`
+- Run `sudo kmonad ~/keeb-utils-main/Linux/KMonad/keeb-utils.kbd`
 
 ## 5. Installation (Windows)
 
