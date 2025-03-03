@@ -142,7 +142,7 @@ This repository doesn not package or distribute KMonad binaries required to run 
 
 ### 6.1. KMonad
 
-1. Place the KMonad binary into one your `%PATH%` variable's directory.
+Place the KMonad binary into one your `%PATH%` variable's directory.
 
 > [!TIP]
 > Placing KMonad into your `%PATH%` helps, so you don't have to type the absolute path to the executable every time you want to run it.
