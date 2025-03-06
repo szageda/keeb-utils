@@ -144,8 +144,23 @@ F24 & sc023::Send "{Blind}{Escape}"         ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::Send "{Blind}{LShift Down}"    ;; QWERTY ;:
-F24 & sc027 Up::Send "{LShift Up}"
+F24 & sc027::                               ;; QWERTY ;:
+{
+    ;; Implement sticky key behavior:
+    ;; Act as sticky key when tapped,
+    ;; act as regular Shift when held.
+
+    ;; When tapped
+    Send "{Blind}{Shift Down}"
+    Sleep 350           ;; Sticky time in milliseconds
+
+    ;; When held
+    If (!KeyWait("sc027")) {
+        Send "{Blind}{Shift Down}"
+    }
+    KeyWait "sc027"     ;; Wait for key release
+    Send "{Shift Up}"   ;; "Unsticky" the Ctrl key
+}
 F24 & sc028::Send "{Volume_Mute}"           ;; QWERTY '"
 
 ;; Bottom Row
