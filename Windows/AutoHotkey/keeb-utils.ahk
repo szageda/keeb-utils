@@ -138,12 +138,12 @@ SetKeyDelay -1, -1
 ;; are not loaded and therefore remain disabled.
 
 ;; Keyboard Layouts
-#Include %A_ScriptDir%\Layouts\colemak-dh-ansi.ahk
-;;#Include %A_ScriptDir%\Layouts\dvorak-ansi.ahk
+#Include Layouts\colemak-dh-ansi.ahk
+;;#Include Layouts\dvorak-ansi.ahk
 
 ;; Extra Layers
-#Include %A_ScriptDir%\Layers\utility.ahk
+#Include Layers\utility.ahk
 
 ;; Modules
-#Include %A_ScriptDir%\Modules\keeb-utils-menu.ahk
-#Include %A_ScriptDir%\Modules\keeb-utils-toggle.ahk
+#Include Modules\keeb-utils-menu.ahk
+#Include Modules\keeb-utils-toggle.ahk
