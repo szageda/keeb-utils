@@ -10,9 +10,6 @@
  */
 
 ;; -- AUTOHOTKEY GENERAL SETTINGS ---------------------------------------------
-;;
-;; These directives and variables control the general behavior of AutoHotkey
-;; and the subsequently loaded scripts.
 
 ;; Define the AutoHotkey version required to run this script. When sharing
 ;; a script or posting code online, using this directive allows anyone who
@@ -65,12 +62,6 @@ A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 70
 
-;; Set the default icon tip (text on mouse hover) on AutoHotkey startup.
-;; If blank, the script's name is used instead.
-;; https://www.autohotkey.com/docs/v2/Variables.htm#IconTip
-;; (default "")
-A_IconTip := "Keeb Utils is active"
-
 ;; Keep scripts running in the background, they will stay running
 ;; after the startup completes and all other threads have exited.
 ;; https://www.autohotkey.com/docs/v2/lib/Persistent.htm
@@ -99,14 +90,6 @@ ProcessSetPriority "High"
 ;; https://www.autohotkey.com/docs/v2/lib/SendMode.htm
 ;; (default Input)
 SendMode "Event"
-
-;; Set the tray icon on AutoHotkey startup. Changing the tray icon also changes
-;; the icon displayed by "InputBox" and subsequently-created GUI windows.
-;; Compiled scripts are also affected even if a custom icon was specified at
-;; the time of compiling.
-;; https://www.autohotkey.com/docs/v2/lib/TraySetIcon.htm
-;; (default ())
-TraySetIcon("Icons\active.ico",, false)
 
 ;; -- DEBUGGING & TROUBLESHOOTING ---------------------------------------------
 ;;
@@ -145,5 +128,6 @@ SetKeyDelay -1, -1
 #Include Layers\utility.ahk
 
 ;; Modules
+#Include Modules\keeb-utils-icon.ahk
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk
