@@ -4,7 +4,7 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This file configures a custom menu for AutoHotkey.
+ * This script configures a custom menu for AutoHotkey.
  *
  * Usage:
  *  The script file must be loaded when AutoHotkey starts. The custom
@@ -35,7 +35,7 @@ ChangeStatus(*)
     static OldName := "", NewName := ""
 
     ;; Use logic to toggle AutoHotkey between suspended and
-    ;; active states when the user clicks on the menu item.
+    ;; active states when the user clicks on the menu item
     if (NewName != "Disabled") {
         ;; Switch AutoHotkey state to suspended and update the tray icon
         Suspend 1
@@ -82,6 +82,6 @@ CloseAHK(*)
 }
 
 ;; Set activating/suspending AutoHotkey as the default option
-;; when user double-clicks the tray icon.
+;; when user double-clicks the tray icon
 CurrentDefault := Tray.Default
 Tray.Default := "Active"

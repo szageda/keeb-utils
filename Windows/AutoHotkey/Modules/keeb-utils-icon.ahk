@@ -4,7 +4,7 @@
  * Copyright   : (c) 2025, Gergely Szabo
  * License     : MIT
  *
- * This file is rensponsible to update the AutoHotkey tray icon and tooltip.
+ * This script is responsible for updating AutoHotkey's tray icon and tooltip.
  *
  * Usage:
  *  The script file must be loaded when AutoHotkey starts. The UpdateIcon()

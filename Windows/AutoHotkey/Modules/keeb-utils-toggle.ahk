@@ -5,7 +5,7 @@
  * License     : MIT
  *
  * The hotkey disables all scripts with a single key combination,
- * eliminating the need to right-click the AutoHotkey tray icon and
+ * eliminating the need to right-click AutoHotkey's tray icon then
  * selecting "Suspend Hotkeys."
  * 
  * The "SuspendExempt" directive allows AutoHotkey to recognize the key
