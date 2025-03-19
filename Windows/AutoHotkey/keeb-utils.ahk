@@ -49,11 +49,6 @@ ProcessSetPriority "High"
 ;; consecutive hotkey execution, i.e. key spamming. A_MaxHotkeysPerInterval
 ;; is not affected, if A_HotkeyInterval is 0. The value 0 disables the warning
 ;; dialog entirely.
-;;
-;; IMPORTANT: Care should be taken not to make the setting too lenient because
-;; if you ever inadvertently introduce an infinite loop of keystrokes (via a
-;; Send function that accidentally triggers other hotkeys), your computer could
-;; become unresponsive due to the rapid flood of keyboard events.
 ;; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ;; (default 2000)
 A_HotkeyInterval := 0
@@ -61,19 +56,15 @@ A_HotkeyInterval := 0
 A_MaxHotkeysPerInterval := 70
 
 ;; Default command sending mode, makes Send synonymous with SendEvent or
-;; SendPlay. Since SendMode also changes the mode of Click, MouseMove,
-;; MouseClick and MouseClickDrag, there may be times when you wish to use a
-;; different mode for a particular mouse event. If SendMode is Input (the
-;; default), Windows might ignore remapped keys if CPU speed is slow.
+;; SendPlay. If SendMode is Input (the default), Windows might ignore
+;; remapped keys if CPU speed is slow.
 ;; https://www.autohotkey.com/docs/v2/lib/SendMode.htm
 ;; (default Input)
 SendMode "Event"
 
 ;; Set the delay that will occur after each keystroke sent by Send or
 ;; ControlSend. If SetKeyDelay is not used, the default delay is 10 for the
-;; traditional SendEvent mode and -1 for SendPlay mode. SetKeyDelay is not
-;; obeyed by SendInput; there is no delay between keystrokes in that mode.
-;; This same is true for Send when SendMode Input is in effect.
+;; traditional SendEvent mode and -1 for SendPlay mode.
 ;; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
 ;; (default 10)
 SetKeyDelay -1, -1
@@ -84,18 +75,14 @@ SetKeyDelay -1, -1
 ;; determine why a script is not working as expected, or to help identify the
 ;; source of an error.
 
-;; Enables or disables line logging or displays the script lines most
-;; recently executed. If ListLines is not used to affect line logging,
-;; the default setting is 1 (true).
+;; Enables or disables line logging or displays the script lines most recently
+;; executed.
 ;; https://www.autohotkey.com/docs/v2/lib/ListLines.htm
 ;; (default 1)
 ListLines 0
 
-;; Displays script info and a history of the most recent keystrokes and
-;; mouse clicks. This feature is intended to help debug scripts and hotkeys.
-;; It can also be used to detect the scan code of a non-standard keyboard key
-;; using the steps described at the bottom of the key list page (knowing the
-;; scan code allows such a key to be made into a hotkey).
+;; Displays script info and a history of the most recent keystrokes and mouse
+;; clicks. This feature is intended to help debug scripts and hotkeys.
 ;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
 ;; (default 40)
 KeyHistory 0
