@@ -93,6 +93,28 @@ SendMode "Event"
 ;; (default 10)
 SetKeyDelay -1, -1
 
+;; -- DEBUGGING SETTINGS -----------------------------------------------------
+;;
+;; These settings are useful for debugging scripts. They can be used to
+;; determine why a script is not working as expected, or to help identify the
+;; source of an error.
+
+;; Enables or disables line logging or displays the script lines most
+;; recently executed. If ListLines is not used to affect line logging,
+;; the default setting is 1 (true).
+;; https://www.autohotkey.com/docs/v2/lib/ListLines.htm
+;; (default 1)
+ListLines 0
+
+;; Displays script info and a history of the most recent keystrokes and
+;; mouse clicks. This feature is intended to help debug scripts and hotkeys.
+;; It can also be used to detect the scan code of a non-standard keyboard key
+;; using the steps described at the bottom of the key list page (knowing the
+;; scan code allows such a key to be made into a hotkey).
+;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
+;; (default 40)
+KeyHistory 0
+
 ;; -- KEEB UTILS --------------------------------------------------------------
 ;;
 ;; Enable or disable features. Scripts on commented lines (starting with ;;)
