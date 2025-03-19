@@ -75,14 +75,6 @@ A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 70
 
-;; Install the keyboard hook. The keyboard hook monitors keystrokes for the
-;; purpose of activating hotstrings and any keyboard hotkeys not supported by
-;; RegisterHotkey (which is a function built into the operating system). It
-;; also supports a few other features such as the InputHook function.
-;; https://www.autohotkey.com/docs/v2/lib/InstallKeybdHook.htm
-;; (default True, False)
-InstallKeybdHook True, True
-
 ;; Default command sending mode, makes Send synonymous with SendEvent or
 ;; SendPlay. Since SendMode also changes the mode of Click, MouseMove,
 ;; MouseClick and MouseClickDrag, there may be times when you wish to use a
