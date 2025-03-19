@@ -43,6 +43,12 @@
 ;; (default Normal)
 ProcessSetPriority "High"
 
+;; Prevents the script from exiting automatically when its last thread
+;; completes, allowing it to stay running in an idle state.
+;; https://www.autohotkey.com/docs/v2/lib/Persistent.htm
+;; (default True)
+Persistent True
+
 ;; -- INPUT SETTINGS ----------------------------------------------------------
 
 ;; Set the interval in seconds before a warning dialog is triggered by
