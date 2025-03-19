@@ -10,21 +10,15 @@
  */
 
 ;; -- AUTOHOTKEY GENERAL SETTINGS ---------------------------------------------
-;;
-;; These directives and variables control the general behavior of AutoHotkey
-;; and the subsequently loaded scripts.
 
-;; Define the AutoHotkey version required to run this script. When sharing
-;; a script or posting code online, using this directive allows anyone who
-;; finds the code to readily identify which version of AutoHotkey it was
-;; intended for.
+;; Define the AutoHotkey version required to run this script.
 ;; https://www.autohotkey.com/docs/v2/lib/_Requires.htm
 ;; (default "")
 #Requires AutoHotkey v2.0
 
-;; Allow a script to run again. If this directive is unspecified in a script,
-;; it will behave as though set to "Prompt". This directive is ignored when
-;; ANY of the following command line switches are used: /force /restart
+;; Determine whether a script is allowed to run again when it is already
+;; running. If this directive is unspecified in a script, it will behave
+;; as though set to Prompt.
 ;; https://www.autohotkey.com/docs/v2/lib/_SingleInstance.htm
 ;; (default Force)
 #SingleInstance Force
@@ -37,100 +31,61 @@
 #MaxThreads 32
 
 ;; Set the maximum number of simultaneous threads per hotkey or hotstring.
-;; This setting is used to control how many "instances" of a given hotkey
-;; or hotstring subroutine are allowed to exist simultaneously.
+;; This setting is used to control how many "instances" of a given hotkey or
+;; hotstring subroutine are allowed to exist simultaneously.
 ;; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsPerHotkey.htm
 ;; (default 1)
 #MaxThreadsPerHotkey 3
 
-;; Buffer rather than ignore keypresses when their "#MaxThreadsPerHotkey"
-;; limit has been reached. The main use for this directive is to increase
-;; the responsiveness of the keyboard's auto-repeat feature.
-;; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsBuffer.htm
-;; (default True)
-#MaxThreadsBuffer False
+;; Set AutoHotkey's process priority level. This setting can also be applied
+;; to individual scripts. The value is visible in Task Manager.
+;; https://www.autohotkey.com/docs/v2/lib/ProcessSetPriority.htm
+;; (default Normal)
+ProcessSetPriority "High"
+
+;; -- INPUT SETTINGS ----------------------------------------------------------
 
 ;; Set the interval in seconds before a warning dialog is triggered by
-;; consecutive hotkey execution, i.e. key spamming. "A_MaxHotkeysPerInterval"
-;; is not affected, if "A_HotkeyInterval" is 0. The value 0 disables the
-;; warning dialog entirely.
-;;
-;; IMPORTANT: Care should be taken not to make the setting too lenient because
-;; if you ever inadvertently introduce an infinite loop of keystrokes (via a
-;; "Send" function that accidentally triggers other hotkeys), your computer
-;; could become unresponsive due to the rapid flood of keyboard events.
+;; consecutive hotkey execution, i.e. key spamming. A_MaxHotkeysPerInterval
+;; is not affected, if A_HotkeyInterval is 0. The value 0 disables the warning
+;; dialog entirely.
 ;; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ;; (default 2000)
 A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 70
 
-;; Set the default icon tip (text on mouse hover) on AutoHotkey startup.
-;; If blank, the script's name is used instead.
-;; https://www.autohotkey.com/docs/v2/Variables.htm#IconTip
-;; (default "")
-A_IconTip := "Keeb Utils is active"
-
-;; Keep scripts running in the background, they will stay running
-;; after the startup completes and all other threads have exited.
-;; https://www.autohotkey.com/docs/v2/lib/Persistent.htm
-;; (default True)
-Persistent True
-
-;; Install the keyboard hook. The keyboard hook monitors keystrokes for the
-;; purpose of activating hotstrings and any keyboard hotkeys not supported
-;; by RegisterHotkey (which is a function built into the operating system).
-;; It also supports a few other features such as the "InputHook" function.
-;; https://www.autohotkey.com/docs/v2/lib/InstallKeybdHook.htm
-;; (default True, False)
-InstallKeybdHook True, True
-
-;; Set AutoHotkey's process priority level. This setting can also be
-;; applied to individual scripts. The value is visible in Task Manager.
-;; https://www.autohotkey.com/docs/v2/lib/ProcessSetPriority.htm
-;; (default Normal)
-ProcessSetPriority "High"
-
-;; Default command sending mode, makes "Send" synonymous with "SendEvent" or
-;; "SendPlay". Since "SendMode" also changes the mode of "Click", "MouseMove",
-;; "MouseClick" and "MouseClickDrag", there may be times when you wish to use
-;; a different mode for a particular mouse event. If "SendMode" is "Input"
-;; (the default), Windows might ignore remapped keys if CPU speed is too slow.
+;; Default command sending mode, makes Send synonymous with SendEvent or
+;; SendPlay. If SendMode is Input (the default), Windows might ignore
+;; remapped keys if CPU speed is slow.
 ;; https://www.autohotkey.com/docs/v2/lib/SendMode.htm
 ;; (default Input)
 SendMode "Event"
 
-;; Set the tray icon on AutoHotkey startup. Changing the tray icon also changes
-;; the icon displayed by "InputBox" and subsequently-created GUI windows.
-;; Compiled scripts are also affected even if a custom icon was specified at
-;; the time of compiling.
-;; https://www.autohotkey.com/docs/v2/lib/TraySetIcon.htm
-;; (default ())
-TraySetIcon("Icons\active.ico",, false)
+;; Set the delay that will occur after each keystroke sent by Send or
+;; ControlSend. If SetKeyDelay is not used, the default delay is 10 for the
+;; traditional SendEvent mode and -1 for SendPlay mode.
+;; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
+;; (default 10)
+SetKeyDelay -1, -1
 
-;; -- DEBUGGING & TROUBLESHOOTING ---------------------------------------------
+;; -- DEBUGGING SETTINGS ------------------------------------------------------
 ;;
-;; These settings don't have an effect if "SendMode" is "Input" with
-;; the exception of "KeyHistory" and "ListLines".
+;; These settings are useful for debugging scripts. They can be used to
+;; determine why a script is not working as expected, or to help identify the
+;; source of an error.
 
-;; Enables or disables key history. This feature is intended to help
-;; debug scripts and hotkeys. It can also be used to detect the scan
-;; code of a non-standard keyboard key.
-;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
-;; (default 40)
-KeyHistory 0
-
-;; Enables or disables line logging or displays the script
-;; lines most recently executed.
+;; Enables or disables line logging or displays the script lines most recently
+;; executed.
 ;; https://www.autohotkey.com/docs/v2/lib/ListLines.htm
 ;; (default 1)
 ListLines 0
 
-;; Sets the delay that will occur after each keystroke
-;; sent by "Send" or "ControlSend".
-;; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
-;; (default 10)
-SetKeyDelay -1, -1
+;; Displays script info and a history of the most recent keystrokes and mouse
+;; clicks. This feature is intended to help debug scripts and hotkeys.
+;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
+;; (default 40)
+KeyHistory 0
 
 ;; -- KEEB UTILS --------------------------------------------------------------
 ;;

@@ -4,12 +4,14 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This file configures a custom menu for AutoHotkey.
+ * This script configures a custom menu for AutoHotkey.
  *
  * Usage:
  *  The script file must be loaded when AutoHotkey starts. The custom
  *  menu is accessible by right clicking the tray icon.
  */
+
+#Include keeb-utils-icon.ahk
 
 ;; -- MENU ITEMS --------------------------------------------------------------
 ;;
@@ -19,8 +21,14 @@ Tray := A_TrayMenu                  ;; for convenience
 Tray.Delete()                       ;; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
 Tray.Add("")                        ;; separator
-Tray.Add("Key History", OpenHistory)
 Tray.Add("Reload", ReloadScripts)
+;; ------------------------------------
+;; Debug Submenu
+DebugMenu := Menu()
+DebugMenu.Add("History", OpenHistory)
+DebugMenu.Add("Line Logging", LineLogging)
+Tray.Add("Debug", DebugMenu)
+;; ------------------------------------
 Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
@@ -34,45 +42,69 @@ ChangeStatus(*)
     ;; Create variables to store the menu item's name
     static OldName := "", NewName := ""
 
-    ;; Use logic to toggle between suspended and active states
-    ;; when the user clicks on the menu item.
+    ;; Use logic to toggle AutoHotkey between suspended and
+    ;; active states when the user clicks on the menu item
     if (NewName != "Disabled") {
-        ;; Suspend AutoHotkey
+        ;; Switch AutoHotkey state to suspended
+        ;; and update the tray icon
         Suspend 1
+        UpdateIcon()
 
-        ;; Update the menu item's name
+        ;; Update the variables' value
         OldName := "Active"
         NewName := "Disabled"
-
-        ;; Update the tray icon and tip
-        A_IconTip := "Keeb Utils is disabled"
-        TraySetIcon("Icons\suspended.ico",, true)
     } else {
-        ;; Activate AutoHotkey
+        ;; Switch AutoHotkey state to active
+        ;; and update the tray icon
         Suspend 0
+        UpdateIcon()
 
-        ;; Update the menu item's name
+        ;; Update the variables' value
         OldName := "Disabled"
         NewName := "Active"
-
-        ;; Update the tray icon and tip
-        A_IconTip := "Keeb Utils is active"
-        TraySetIcon("Icons\active.ico",, false)
     }
-    ;; Toggle between the AutoHotkey states
-    ;; when the user clicks the menu item
+    ;; Update the menu item's name on user click
     Tray.Rename(OldName, NewName)
-}
-
-OpenHistory(*)
-{
-    KeyHistory
 }
 
 ReloadScripts(*)
 {
     Reload
 }
+
+;; Debug Submenu
+OpenHistory(*)
+{
+    KeyHistory
+}
+
+LineLogging(*)
+{
+    ;; Create a variable to store the function state
+    ;; 0 = disabled, 1 = enabled
+    static LogLines := 0
+
+    ;; Use logic to toggle line logging when
+    ;; the user clicks on the menu item
+    if (LogLines != 1) {
+        ;; Enable line logging and key history
+        ListLines 1
+        KeyHistory 100
+
+        ;; Update the variable's value
+        LogLines := 1
+    } else {
+        ;; Disable line logging and key history
+        ListLines 0
+        KeyHistory 0
+        
+        ;; Update the variable's value
+        LogLines := 0
+    }
+    ;; Update the menu item's checkmark on user click
+    DebugMenu.ToggleCheck("Line Logging")
+}
+;; End of Debug Submenu
 
 OpenHelp(*)
 {
@@ -88,7 +120,7 @@ CloseAHK(*)
     ExitApp
 }
 
-;; Set Activating/Disabling Keeb Utils as the default
-;; option when double clicking the tray icon.
+;; Set activating/suspending AutoHotkey as the default option
+;; when user double-clicks the tray icon
 CurrentDefault := Tray.Default
 Tray.Default := "Active"
