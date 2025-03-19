@@ -37,12 +37,6 @@
 ;; (default 1)
 #MaxThreadsPerHotkey 3
 
-;; Keep scripts running in the background, they will stay running after the
-;; startup completes and all other threads have exited.
-;; https://www.autohotkey.com/docs/v2/lib/Persistent.htm
-;; (default True)
-Persistent True
-
 ;; Set AutoHotkey's process priority level. This setting can also be applied
 ;; to individual scripts. The value is visible in Task Manager.
 ;; https://www.autohotkey.com/docs/v2/lib/ProcessSetPriority.htm
