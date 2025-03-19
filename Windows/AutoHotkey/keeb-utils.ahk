@@ -11,16 +11,14 @@
 
 ;; -- AUTOHOTKEY GENERAL SETTINGS ---------------------------------------------
 
-;; Define the AutoHotkey version required to run this script. When sharing a
-;; script or posting code online, using this directive allows anyone who finds
-;; the code to readily identify which version of AutoHotkey it was intended
-;; for. https://www.autohotkey.com/docs/v2/lib/_Requires.htm
+;; Define the AutoHotkey version required to run this script.
+;; https://www.autohotkey.com/docs/v2/lib/_Requires.htm
 ;; (default "")
 #Requires AutoHotkey v2.0
 
-;; Allow a script to run again. If this directive is unspecified in a script,
-;; it will behave as though set to Prompt. This directive is ignored when any
-;; of the following command line switches are used: /force /restart
+;; Determine whether a script is allowed to run again when it is already
+;; running. If this directive is unspecified in a script, it will behave
+;; as though set to Prompt.
 ;; https://www.autohotkey.com/docs/v2/lib/_SingleInstance.htm
 ;; (default Force)
 #SingleInstance Force
@@ -38,13 +36,6 @@
 ;; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsPerHotkey.htm
 ;; (default 1)
 #MaxThreadsPerHotkey 3
-
-;; Buffer rather than ignore keypresses when their #MaxThreadsPerHotkey limit
-;; has been reached. The main use for this directive is to increase the
-;; responsiveness of the keyboard's auto-repeat feature.
-;; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsBuffer.htm
-;; (default True)
-#MaxThreadsBuffer False
 
 ;; Keep scripts running in the background, they will stay running after the
 ;; startup completes and all other threads have exited.
