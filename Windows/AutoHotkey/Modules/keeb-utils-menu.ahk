@@ -11,6 +11,8 @@
  *  menu is accessible by right clicking the tray icon.
  */
 
+#Include keeb-utils-icon.ahk
+
 ;; -- MENU ITEMS --------------------------------------------------------------
 ;;
 ;; This section contains the menu items visible to the user.
@@ -19,8 +21,14 @@ Tray := A_TrayMenu                  ;; for convenience
 Tray.Delete()                       ;; delete the standard menu times
 Tray.Add("Active", ChangeStatus)
 Tray.Add("")                        ;; separator
-Tray.Add("Key History", OpenHistory)
 Tray.Add("Reload", ReloadScripts)
+;; ------------------------------------
+;; Debug Submenu
+DebugMenu := Menu()
+DebugMenu.Add("History", OpenHistory)
+DebugMenu.Add("Line Logging", LineLogging)
+Tray.Add("Debug", DebugMenu)
+;; ------------------------------------
 Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
@@ -37,17 +45,19 @@ ChangeStatus(*)
     ;; Use logic to toggle AutoHotkey between suspended and
     ;; active states when the user clicks on the menu item
     if (NewName != "Disabled") {
-        ;; Switch AutoHotkey state to suspended and update the tray icon
+        ;; Switch AutoHotkey state to suspended
+        ;; and update the tray icon
         Suspend 1
-        UpdateIcon()    ;; defined in keeb-utils-icon.ahk
+        UpdateIcon()
 
         ;; Update the variables' value
         OldName := "Active"
         NewName := "Disabled"
     } else {
-        ;; Switch AutoHotkey state to active and update the tray icon
+        ;; Switch AutoHotkey state to active
+        ;; and update the tray icon
         Suspend 0
-        UpdateIcon()    ;; defined in keeb-utils-icon.ahk
+        UpdateIcon()
 
         ;; Update the variables' value
         OldName := "Disabled"
@@ -57,15 +67,44 @@ ChangeStatus(*)
     Tray.Rename(OldName, NewName)
 }
 
+ReloadScripts(*)
+{
+    Reload
+}
+
+;; Debug Submenu
 OpenHistory(*)
 {
     KeyHistory
 }
 
-ReloadScripts(*)
+LineLogging(*)
 {
-    Reload
+    ;; Create a variable to store the function state
+    ;; 0 = disabled, 1 = enabled
+    static LogLines := 0
+
+    ;; Use logic to toggle line logging when
+    ;; the user clicks on the menu item
+    if (LogLines != 1) {
+        ;; Enable line logging and key history
+        ListLines 1
+        KeyHistory 100
+
+        ;; Update the variable's value
+        LogLines := 1
+    } else {
+        ;; Disable line logging and key history
+        ListLines 0
+        KeyHistory 0
+        
+        ;; Update the variable's value
+        LogLines := 0
+    }
+    ;; Update the menu item's checkmark on user click
+    DebugMenu.ToggleCheck("Line Logging")
 }
+;; End of Debug Submenu
 
 OpenHelp(*)
 {

@@ -96,19 +96,6 @@ SendMode "Event"
 ;; These settings don't have an effect if "SendMode" is "Input" with
 ;; the exception of "KeyHistory" and "ListLines".
 
-;; Enables or disables key history. This feature is intended to help
-;; debug scripts and hotkeys. It can also be used to detect the scan
-;; code of a non-standard keyboard key.
-;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
-;; (default 40)
-KeyHistory 0
-
-;; Enables or disables line logging or displays the script
-;; lines most recently executed.
-;; https://www.autohotkey.com/docs/v2/lib/ListLines.htm
-;; (default 1)
-ListLines 0
-
 ;; Sets the delay that will occur after each keystroke
 ;; sent by "Send" or "ControlSend".
 ;; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
@@ -128,6 +115,5 @@ SetKeyDelay -1, -1
 #Include Layers\utility.ahk
 
 ;; Modules
-#Include Modules\keeb-utils-icon.ahk
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk

@@ -17,16 +17,16 @@
  *  activating) AutoHotkey is achieved by pressing Scroll Lock+Q.
  */
 
+#Include keeb-utils-icon.ahk
+
 #SuspendExempt
-ScrollLock & sc010::    ;; Scroll Lock+Q
+ScrollLock & sc010::            ;; Scroll Lock+Q
 {
     ;; Toggle between suspended and active states:
-    ;; 0 = activate
-    ;; 1 = suspend
-    ;; -1 = switch to opposite state
+    ;; 0 = activate, 1 = suspend, -1 = switch to opposite state
     Suspend -1
 
     ;; Update the tray icon and tip
-    UpdateIcon()    ;; defined in keeb-utils-icon.ahk
+    UpdateIcon()
 }
 #SuspendExempt False
