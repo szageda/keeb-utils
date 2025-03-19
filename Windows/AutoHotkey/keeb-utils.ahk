@@ -43,7 +43,7 @@
 ;; (default Normal)
 ProcessSetPriority "High"
 
-;; -- AUTOHOTKEY INPUT SETTINGS -----------------------------------------------
+;; -- INPUT SETTINGS ----------------------------------------------------------
 
 ;; Set the interval in seconds before a warning dialog is triggered by
 ;; consecutive hotkey execution, i.e. key spamming. A_MaxHotkeysPerInterval
@@ -69,7 +69,7 @@ SendMode "Event"
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;; -- DEBUGGING SETTINGS -----------------------------------------------------
+;; -- DEBUGGING SETTINGS ------------------------------------------------------
 ;;
 ;; These settings are useful for debugging scripts. They can be used to
 ;; determine why a script is not working as expected, or to help identify the
