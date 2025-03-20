@@ -85,7 +85,7 @@ I implement various adjustments and functions on an extra layer, called “Utili
 **\*** **Sticky keys:**
 
 These keys behave differently depending on whether they are:
-- **Tapped:** They become “sticky” for 350 ms to allow for <kbd>Ctrl</kbd> and <kbd>Alt</kbd> shortcuts that are not available on the Utility layer, for example:
+- **Tapped:** They become “sticky” for 350 ms to allow for <kbd>Ctrl</kbd>, <kbd>Alt</kbd> and other shortcut combinations with <kbd>Shift</kbd> that are not available on the Utility layer, for example:
     - <kbd>Ctrl+W</kbd>: Close your current tab.
     - <kbd>Ctrl+T</kbd>: Open a new tab.
     - <kbd>Ctrl+N</kbd>: Create a new file.
