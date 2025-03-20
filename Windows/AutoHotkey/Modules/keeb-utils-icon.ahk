@@ -9,7 +9,7 @@
  * Usage:
  *  The script file must be loaded when AutoHotkey starts. The UpdateIcon()
  *  function can be called from other scripts to update the tray icon and
- *  tooltip.
+ *  tooltip based on the current state of AutoHotkey.
  */
 
 ;; Set the default tray icon and tooltip
@@ -18,7 +18,6 @@ A_IconTip := "Keeb Utils is active"
 
 UpdateIcon()
 {
-    ;; Update the tray icon and tip
     if (A_IsSuspended = 1) {
         TraySetIcon("Icons\suspended.ico",, true)
         A_IconTip := "Keeb Utils is disabled"

@@ -6,32 +6,24 @@ License     : MIT
 |#
 
 ;; -- KMONAD CONFIGURATION ----------------------------------------------------
-;;
-;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
 
 (defcfg
   ;; -- OS INPUT CONFIGURATION ------------------------------------------------
   ;;
   ;; The "defcfg" must contain at least one "input" and "output" function for
   ;; KMonad to work: KMonad catches input events and tries to match them to
-  ;; various handlers. If it cannot match an event to any handler (for example,
-  ;; if it isn't included in the corresponding "defsrc" block, or if it is, but
-  ;; the current keymap does not map any buttons to it), then the event gets
-  ;; quietly ignored. If "fallthrough" is set to "true", any unhandled events
-  ;; simply get reemitted.
+  ;; various handlers.
+  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L48
 
   ;; Linux
-  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L116
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
 
   ;; Windows
-  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L136
   ;;input  (low-level-hook)
   ;;output (send-event-sink)
 
   ;; macOS
-  ;; https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd#L165
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
