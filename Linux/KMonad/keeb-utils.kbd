@@ -136,17 +136,10 @@ License     : MIT
   sel (layer-toggle select-layout)
 
   ;; Ctrl Shortcuts
-  all C-a
-  cls C-w
   cpy C-c
   cut C-x
-  fnd C-f
-  opn C-o
-  prt C-p
   pst C-v
-  rep C-h
   rdo C-y ;; Linux: C-S-z in some desktop environments
-  sav C-s
   udo C-z
 
   ;; Alt Shortcuts
