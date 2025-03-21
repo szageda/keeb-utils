@@ -37,7 +37,7 @@
 ;; simultaneously.
 ;; https://www.autohotkey.com/docs/v2/lib/_MaxThreadsPerHotkey.htm
 ;; (default 1)
-#MaxThreadsPerHotkey 3
+#MaxThreadsPerHotkey 4
 
 ;; Set AutoHotkey's process priority level. This setting can also
 ;; be applied to individual scripts. The value is visible in Task
