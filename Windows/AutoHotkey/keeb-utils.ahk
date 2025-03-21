@@ -92,8 +92,7 @@ SetKeyDelay -1, -1
 ListLines 0
 
 ;; Displays script info and a history of the most recent
-;; keystrokes and mouse clicks. This feature is intended
-;; to help debug scripts and hotkeys.
+;; keystrokes and mouse clicks.
 ;; https://www.autohotkey.com/docs/v2/lib/KeyHistory.htm
 ;; (default 40)
 KeyHistory 0
