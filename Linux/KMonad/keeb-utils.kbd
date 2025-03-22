@@ -103,8 +103,8 @@ License     : MIT
 (deflayer utility
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  prev @bck @fwd vold volu caps home up   end  pp   nlck slck ssrq
-  @uti next tab  @ask @csk lmet esc  left down rght @ssk mute ret
+  tab  prev next vold volu mute caps home up   end  nlck slck XX   XX
+  @uti pp   tab  @ask @csk lmet esc  left down rght @ssk ssrq ret
   lsft @udo @cut @cpy @pst @rdo del  bspc ins  pgdn pgup rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
@@ -141,10 +141,6 @@ License     : MIT
   pst C-v
   rdo C-y ;; Linux: C-S-z in some desktop environments
   udo C-z
-
-  ;; Alt Shortcuts
-  bck A-left
-  fwd A-right
 
   ;; Sticky Keys
   ;; - When tapped: Held until the next key press

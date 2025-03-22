@@ -6,7 +6,7 @@
  *
  * AutoHotkey remaps the software keyboard layout from QWERTY to Dvorak
  * by moving the host layout's virtual keys around: AutoHotkey captures the
- * scancode sent by the keyboard, and maps a virtual key to it which is then
+ * scan code sent by the keyboard, and maps a virtual key to it which is then
  * emitted by the operating system. Such keyboard layout remaps prevent the
  * use of hotstrings, for example: "::btw::by the way" -- typing "btw"
  * outputs "by the way".
@@ -29,7 +29,7 @@
  * |Ctrl| Win |Alt |                       | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
  *
- * Scancode Codes:
+ * Keyboard Scan Codes:
  * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  *
  * Virtual Key Codes:

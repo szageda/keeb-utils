@@ -5,27 +5,27 @@
  * License     : MIT
  *
  * AutoHotkey adds a "Utility" layer by defining new key combinations using the
- * F24 virtual key and physical key locations (scancodes), allowing functions
+ * F24 virtual key and physical key locations (scan codes), allowing functions
  * to be mapped to these new key combinations.
  *
  * The layer keymap stays persistent regardless of the active keyboard layout
- * of the operating system thanks to using scancodes instead of virtual keys:
+ * of the operating system thanks to using scan codes instead of virtual keys:
  * ,---,  ,---,---,---,---,  ,---,---,---,---,  ,---,---,---,---,
  * |   |  |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  * '---'  '---'---'---'---'  '---'---'---'---'  '---'---'---'---'
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12| Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab |Prv|Bck|Fwd|VlD|VlU|Cps|Hom| Up|End| PP|Nlk|Slk|PrtScr|
+ * | Tab |Prv|Nxt|VlD|VlU|Mut|Cps|Hom| Up|End|Nlk|Slk|   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps |Nxt|Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|Mut| Enter   |
+ * | Caps |PP |Tab|Alt|Lct|Win|Esc|Lft|Dwn|Rht|Lst|PSc| Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Del|Bsp|Ins|PgD|PgU| Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
  *
- * Scancode Codes:
+ * Keyboard Scan Codes:
  * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  *
  * Virtual Key Codes:
@@ -83,10 +83,10 @@ F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
 F24 & sc010::Send "{Media_Prev}"            ;; QWERTY qQ
-F24 & sc011::Send "{Browser_Back}"          ;; QWERTY wW
-F24 & sc012::Send "{Browser_Forward}"       ;; QWERTY eE
-F24 & sc013::Send "{Volume_Down}"           ;; QWERTY rR
-F24 & sc014::Send "{Volume_Up}"             ;; QWERTY tT
+F24 & sc011::Send "{Media_Next}"            ;; QWERTY wW
+F24 & sc012::Send "{Volume_Down}"           ;; QWERTY eE
+F24 & sc013::Send "{Volume_Up}"             ;; QWERTY rR
+F24 & sc014::Send "{Volume_Mute}"           ;; QWERTY tT
 F24 & sc015::                               ;; QWERTY yY
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
@@ -96,13 +96,13 @@ F24 & sc015::                               ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
-F24 & sc019::Send "{Media_Play_Pause}"      ;; QWERTY pP
-F24 & sc01A::NumLock                        ;; QWERTY [{
-F24 & sc01B::ScrollLock                     ;; QWERTY ]}
-F24 & sc02B::PrintScreen                    ;; QWERTY \|
+F24 & sc019::NumLock                        ;; QWERTY pP
+F24 & sc01A::ScrollLock                     ;; QWERTY [{
+F24 & sc01B::Return                         ;; QWERTY ]}
+F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Media_Next}"            ;; QWERTY aA
+F24 & sc01E::Send "{Media_Play_Pause}"      ;; QWERTY aA
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {
@@ -112,14 +112,17 @@ F24 & sc020::                               ;; QWERTY dD
 
     ;; When tapped
     Send "{Blind}{Alt Down}"
-    Sleep 350           ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds
 
     ;; When held
     If (!KeyWait("sc020")) {
         Send "{Blind}{Alt Down}"
     }
-    KeyWait "sc020"     ;; Wait for key release
-    Send "{Alt Up}"     ;; "Unsticky" the Alt key
+
+    ;; Wait for key release
+    ;; and "unsticky" the modifier
+    KeyWait "sc020"
+    Send "{Alt Up}"
 }
 F24 & sc021::                               ;; QWERTY fF
 {
@@ -129,14 +132,17 @@ F24 & sc021::                               ;; QWERTY fF
 
     ;; When tapped
     Send "{Blind}{Ctrl Down}"
-    Sleep 350           ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds
 
     ;; When held
     If (!KeyWait("sc021")) {
         Send "{Blind}{Ctrl Down}"
     }
-    KeyWait "sc021"     ;; Wait for key release
-    Send "{Ctrl Up}"    ;; "Unsticky" the Ctrl key
+
+    ;; Wait for key release
+    ;; and "unsticky" the modifier
+    KeyWait "sc021"
+    Send "{Ctrl Up}"
 }
 F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
 F24 & sc022 Up::Send "{LWin Up}"
@@ -152,16 +158,19 @@ F24 & sc027::                               ;; QWERTY ;:
 
     ;; When tapped
     Send "{Blind}{Shift Down}"
-    Sleep 350           ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds
 
     ;; When held
     If (!KeyWait("sc027")) {
         Send "{Blind}{Shift Down}"
     }
-    KeyWait "sc027"     ;; Wait for key release
-    Send "{Shift Up}"   ;; "Unsticky" the Ctrl key
+
+    ;; Wait for key release
+    ;; and "unsticky" the modifier
+    KeyWait "sc027"
+    Send "{Shift Up}"
 }
-F24 & sc028::Send "{Volume_Mute}"           ;; QWERTY '"
+F24 & sc028::PrintScreen                    ;; QWERTY '"
 
 ;; Bottom Row
 F24 & sc02C::Send "{Ctrl Down}{z}{Ctrl Up}" ;; QWERTY zZ
