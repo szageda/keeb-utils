@@ -107,40 +107,38 @@ F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {
     ;; Implement sticky key behavior:
-    ;; Act as sticky key when tapped,
-    ;; act as regular Alt when held.
+    ;; On tap: Sticky key with a timeout
+    ;; On hold: Act as a regular modifier
 
-    ;; When tapped
+    ;; On tap
     Send "{Blind}{Alt Down}"
     Sleep 350   ;; Sticky time in milliseconds
 
-    ;; When held
+    ;; On hold
     If (!KeyWait("sc020")) {
         Send "{Blind}{Alt Down}"
     }
 
-    ;; Wait for key release
-    ;; and "unsticky" the modifier
+    ;; On release
     KeyWait "sc020"
     Send "{Alt Up}"
 }
 F24 & sc021::                               ;; QWERTY fF
 {
     ;; Implement sticky key behavior:
-    ;; Act as sticky key when tapped,
-    ;; act as regular Ctrl when held.
+    ;; On tap: Sticky key with a timeout
+    ;; On hold: Act as a regular modifier
 
-    ;; When tapped
+    ;; On tap
     Send "{Blind}{Ctrl Down}"
     Sleep 350   ;; Sticky time in milliseconds
 
-    ;; When held
+    ;; On hold
     If (!KeyWait("sc021")) {
         Send "{Blind}{Ctrl Down}"
     }
 
-    ;; Wait for key release
-    ;; and "unsticky" the modifier
+    ;; On release
     KeyWait "sc021"
     Send "{Ctrl Up}"
 }
@@ -153,20 +151,19 @@ F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
 F24 & sc027::                               ;; QWERTY ;:
 {
     ;; Implement sticky key behavior:
-    ;; Act as sticky key when tapped,
-    ;; act as regular Shift when held.
+    ;; On tap: Sticky key with a timeout
+    ;; On hold: Act as a regular modifier
 
-    ;; When tapped
+    ;; On tap
     Send "{Blind}{Shift Down}"
     Sleep 350   ;; Sticky time in milliseconds
 
-    ;; When held
+    ;; On hold
     If (!KeyWait("sc027")) {
         Send "{Blind}{Shift Down}"
     }
 
-    ;; Wait for key release
-    ;; and "unsticky" the modifier
+    ;; On release
     KeyWait "sc027"
     Send "{Shift Up}"
 }
