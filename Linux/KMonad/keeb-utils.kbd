@@ -103,9 +103,9 @@ License     : MIT
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX  bspc
-  tab  !    ?    \_   $    ~    ^    &    #    @    :    XX   XX   XX
-  @uti .    *    [    ]    %    /    \(   \)   -    =    XX   ret
-  lsft `    {    }    '    ;    \    <    |    +    >    rsft
+  tab  !    ?    \_   $    ~    ^    &    #    @    :    ,    XX   XX
+  @uti .    *    [    ]    %    /    \(   \)   -    =    ;   ret
+  lsft `    {    }    '    ¦    \    <    |    +    >    rsft
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
@@ -143,9 +143,9 @@ License     : MIT
   qwe (layer-switch qwerty)
 
   ;; Layers
-  sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold
   uti (layer-toggle utility)
   sel (layer-toggle select-layout)
+  sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold
 
   ;; Ctrl Shortcuts
   cpy C-c

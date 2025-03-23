@@ -9,8 +9,8 @@
  * to be mapped to these new key combinations.
  * 
  * Note: Alt+Tab's active window switching behavior is lost, but Alt's regular
- * functionality on key tap is preserved. This does affect the Right Alt (AltGr)
- * key, because it's left intact.
+ * functionality on key tap is preserved. This does not impact the Right Alt
+ * (AltGr) key.
  *
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scan codes instead of virtual keys:
@@ -20,11 +20,11 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,--------,
  * |   |   |   |   |   |   |   |   |   |   |   |   |   | Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
- * | Tab | ! | ? | _ | $ | ~ | ^ | & | # | @ | : |   |   |      |
+ * | Tab | ! | ? | _ | $ | ~ | ^ | & | # | @ | : | , |   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps | . | * | [ | ] | % | / | ( | ) | - | = |   | Enter   |
+ * | Caps | . | * | [ | ] | % | / | ( | ) | - | = | ; | Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
- * |  Shift | ` | { | } | ' | ; | \ | < | | | + | > | Shift     |
+ * |  Shift | ` | { | } | ' | ¦ | \ | < | | | + | > | Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
@@ -109,7 +109,7 @@ F23 & sc016::Send "{Raw}&"                  ;; QWERTY uU
 F23 & sc017::Send "{Raw}#"                  ;; QWERTY iI
 F23 & sc018::Send "{Raw}@"                  ;; QWERTY oO
 F23 & sc019::Send "{Raw}:"                  ;; QWERTY pP
-F23 & sc01A::Return                         ;; QWERTY [{
+F23 & sc01A::Send "{Raw},"                  ;; QWERTY [{
 F23 & sc01B::Return                         ;; QWERTY ]}
 F23 & sc02B::Return                         ;; QWERTY \|
 
@@ -124,14 +124,14 @@ F23 & sc024::Send "{Raw}("                  ;; QWERTY jJ
 F23 & sc025::Send "{Raw})"                  ;; QWERTY kK
 F23 & sc026::Send "{Raw}-"                  ;; QWERTY lL
 F23 & sc027::Send "{Raw}="                  ;; QWERTY ;:
-F23 & sc028::Return                         ;; QWERTY '"
+F23 & sc028::Send "{Raw};"                  ;; QWERTY '"
 
 ;; Bottom Row
 F23 & sc02C::Send "{Raw}``"                 ;; QWERTY zZ
 F23 & sc02D::Send "{Raw}{"                  ;; QWERTY xX
 F23 & sc02E::Send "{Raw}}"                  ;; QWERTY cC
 F23 & sc02F::Send "{Raw}'"                  ;; QWERTY vV
-F23 & sc030::Send "{Raw};"                  ;; QWERTY bB
+F23 & sc030::Send "{Raw}¦"                  ;; QWERTY bB
 F23 & sc031::Send "{Raw}\"                  ;; QWERTY nN
 F23 & sc032::Send "{Raw}<"                  ;; QWERTY mM
 F23 & sc033::Send "{Raw}|"                  ;; QWERTY ,<

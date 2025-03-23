@@ -107,8 +107,8 @@ KeyHistory 0
 ;;#Include Layouts\dvorak-ansi.ahk
 
 ;; Extra Layers
-#Include Layers\symbols.ahk
 #Include Layers\utility.ahk
+#Include Layers\symbols.ahk
 
 ;; Modules
 #Include Modules\keeb-utils-menu.ahk
