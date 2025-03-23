@@ -137,6 +137,3 @@ F23 & sc032::Send "{Raw}<"                  ;; QWERTY mM
 F23 & sc033::Send "{Raw}|"                  ;; QWERTY ,<
 F23 & sc034::Send "{Raw}+"                  ;; QWERTY .>
 F23 & sc035::Send "{Raw}>"                  ;; QWERTY /?
-
-;; Misc. Keys
-F24 & sc039::Send "{Blind}{Enter}"          ;; Space

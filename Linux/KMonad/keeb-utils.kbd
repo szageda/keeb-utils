@@ -106,7 +106,7 @@ License     : MIT
   tab  !    ?    \_   $    ~    ^    &    #    @    :    XX   XX   XX
   @uti .    *    [    ]    %    /    \(   \)   -    =    XX   ret
   lsft `    {    }    '    ;    \    <    |    +    >    rsft
-  lctl lmet lalt           ret            ralt rmet cmp  rctl
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
 ;; Utility
