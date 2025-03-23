@@ -69,7 +69,7 @@ License     : MIT
   tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
   @uti a    r    s    t    g    m    n    e    i    o    '    ret
   lsft x    c    d    v    z    k    h    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
 
 ;; Dvorak
@@ -79,7 +79,7 @@ License     : MIT
   tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
   @uti a    o    e    u    i    d    h    t    n    s    -    ret
   lsft ;    q    j    k    x    b    m    w    v    z    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
 
 ;; US QWERTY
@@ -97,6 +97,17 @@ License     : MIT
 ;;
 ;; Custom layer keymaps go here. They can be made available using
 ;; aliases ("@") assigned to keys on the custom layouts.
+
+;; Symbols
+;; Provides extra symbols and characters on the alphanumeric keys.
+(deflayer symbols
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX  bspc
+  tab  !    ?    \_   $    ~    ^    &    #    @    :    XX   XX   XX
+  @uti .    *    [    ]    %    /    \(   \)   -    =    XX   ret
+  lsft `    {    }    '    ;    \    <    |    +    >    rsft
+  lctl lmet lalt           ret            ralt rmet cmp  rctl
+)
 
 ;; Utility
 ;; Provides extra functionality enhancements on the alphanumeric keys.
@@ -132,6 +143,7 @@ License     : MIT
   qwe (layer-switch qwerty)
 
   ;; Layers
+  sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold
   uti (layer-toggle utility)
   sel (layer-toggle select-layout)
 
@@ -142,9 +154,9 @@ License     : MIT
   rdo C-y ;; Linux: C-S-z in some desktop environments
   udo C-z
 
-  ;; Sticky Keys
-  ;; - When tapped: Held until the next key press
-  ;; - When held: Held until release
+  ;; Sticky Keys:
+  ;; - On tap: Sticky key with a timeout
+  ;; - On hold: Act as a regular modifier
   ask (sticky-key 350 lalt)
   csk (sticky-key 350 lctl)
   ssk (sticky-key 350 lsft)
