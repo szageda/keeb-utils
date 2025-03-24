@@ -102,10 +102,21 @@ License     : MIT
 ;; Provides extra symbols and characters on the alphanumeric keys.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX  bspc
+  §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
   tab  !    ?    \_   $    ~    ^    &    #    @    :    ,    XX   XX
   @uti .    *    [    ]    %    /    \(   \)   -    =    ;   ret
-  lsft `    {    }    '    ¦    \    <    |    +    >    rsft
+  @ssm `    {    }    '    ¦    \    <    |    +    >    @ssm
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
+)
+
+;; Shifted Symbols
+;; Provides extra symbols and characters on the alphanumeric keys with Shift.
+(deflayer shifted-symbols
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  ¶    •    ≡    –    ¢    …    ‹    ›    ‚    ‘    ’    XX   XX   bspc
+  tab  !    ?    \_   $    ~    ^    &    #    @    :    ,    XX   XX
+  @uti .    *    [    ]    %    /    \(   \)   -    =    ;   ret
+  @ssm `    {    }    '    ¦    \    <    |    +    >    @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
@@ -146,6 +157,7 @@ License     : MIT
   uti (layer-toggle utility)
   sel (layer-toggle select-layout)
   sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold
+  ssm (layer-toggle shifted-symbols)
 
   ;; Ctrl Shortcuts
   cpy C-c

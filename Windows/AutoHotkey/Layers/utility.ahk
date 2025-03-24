@@ -115,7 +115,7 @@ F24 & sc020::                               ;; QWERTY dD
     Sleep 350   ;; Sticky time in milliseconds
 
     ;; On hold
-    If (!KeyWait("sc020")) {
+    if (!KeyWait("sc020")) {
         Send "{Blind}{Alt Down}"
     }
 
@@ -134,7 +134,7 @@ F24 & sc021::                               ;; QWERTY fF
     Sleep 350   ;; Sticky time in milliseconds
 
     ;; On hold
-    If (!KeyWait("sc021")) {
+    if (!KeyWait("sc021")) {
         Send "{Blind}{Ctrl Down}"
     }
 
@@ -159,7 +159,7 @@ F24 & sc027::                               ;; QWERTY ;:
     Sleep 350   ;; Sticky time in milliseconds
 
     ;; On hold
-    If (!KeyWait("sc027")) {
+    if (!KeyWait("sc027")) {
         Send "{Blind}{Shift Down}"
     }
 
