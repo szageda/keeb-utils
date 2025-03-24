@@ -38,29 +38,30 @@
 
 ;; -- CONFIGURATION -----------------------------------------------------------
 
-;; Map Left Alt (sc038) to F23 virtual key
+;; Map Left Alt to F23 virtual key
 #InputLevel 1
 LAlt::F23
 #InputLevel 0
 
-;; Implement sticky key behavior:
-;; On tap: Sticky key with a timeout
+;; Implement tap-hold behavior:
+;; On tap: Normal Alt key behavior
 ;; On hold: Hold the F23 virtual key which activates the layer
 F23::
 {
+    ;; The KeyWait functions use the scan code of the Alt key (sc038)
+    ;; to monitor the state of the physical Left Alt key.
+
     ;; On tap
     Send "{LAlt Down}"
-    Sleep 350   ;; sticky time in milliseconds
 
     ;; On hold
     If (!KeyWait("sc038")) {
-        Send "{F23 Down}"
+        Send "{F23}"
     }
 
     ;; On release
     KeyWait "sc038"
     Send "{Alt Up}"
-    Send "{F23 Up}"
 }
 
 ;; -- KEYMAP ------------------------------------------------------------------
