@@ -108,6 +108,7 @@ KeyHistory 0
 
 ;; Extra Layers
 #Include Layers\utility.ahk
+#Include Layers\symbols.ahk
 
 ;; Modules
 #Include Modules\keeb-utils-menu.ahk
