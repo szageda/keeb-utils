@@ -14,6 +14,7 @@
 . . [2.1. Colemak-DH](#21-colemak-dh)  
 . . [2.2. Dvorak](#22-dvorak)  
 [3. The Utils](#3-the-utils)  
+. . [3.1 Utility Layer](#31-utility-layer)  
 [4. Supported Platforms and Software](#4-supported-platforms-and-software)  
 . . [4.1. Linux](#41-linux)  
 . . [4.2. Windows](#42-windows)  
@@ -63,6 +64,8 @@ The Dvorak keyboard layout, sometimes also called “Dvorak Simplified Keyboard�
 
 ## 3. The Utils
 
+### 3.1 Utility Layer
+
 I implement various adjustments and functions on an extra layer, called “Utility“, to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
 
 <div align="center">
@@ -98,6 +101,17 @@ These keys behave differently depending on whether they are:
     - <kbd>Alt+Tab</kbd>: Cycle through your open windows.
     - <kbd>Alt+Shift+Tab</kbd>: Cycle through your open windows in reverse order.
     - <kbd>Alt+F4</kbd>: Close your current window.
+
+### 3.2. Symbols Layer
+
+“Symbols” layer places commonly used symbols and punctuation marks onto an extra layer this helps with making less mistakes while typing as well as using “smart” punctuation marks instead of “dumb” ones ("" vs “”). The Symbols layer can be activated using a specific key (I prefer <kbd>Left Alt</kbd>).
+
+<div align="center">
+
+![Symbols layer](Assets/Images/Keyboard%20Layers/symbols.png)  
+*Symbols layer symbol map for ANSI 101/104-key keyboards*
+
+</div>
 
 ## 4. Supported Platforms and Software
 
