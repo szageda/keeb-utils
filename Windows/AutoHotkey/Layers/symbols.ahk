@@ -193,7 +193,7 @@ F23 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
 F23 & sc01E::Send "{Raw}~"                  ;; QWERTY aA
-F23 & sc01F::Send "{Raw}$"                  ;; QWERTY sS
+F23 & sc01F::Send "{Raw}#"                  ;; QWERTY sS
 F23 & sc020::Send "{Raw}<"                  ;; QWERTY dD
 F23 & sc021::Send "{Raw}>"                  ;; QWERTY fF
 F23 & sc022::Send "{Raw}%"                  ;; QWERTY gG
