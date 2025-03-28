@@ -103,9 +103,9 @@ License     : MIT
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
-  tab  XX   \_   {    }    XX   XX   [    ]    *    XX   XX   XX   XX
-  @uti ~    #    <    >    %    /    \(   \)   -    =    \   ret
-  @ssm XX   @    $    ^    XX   XX   &    |    +    XX   @ssm
+  tab  XX   {    \_   }    XX   XX   [    *    ]    XX   XX   XX   XX
+  @uti $    <    =    >    #    /    \(   -    \)   %    \   ret
+  @ssm XX   ~    @    ^    XX   XX   &    +    |    XX   @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
@@ -114,9 +114,9 @@ License     : MIT
 (deflayer shifted-symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   ¶    •    ≡    –    ¢    …    ‹    ›    ‚    ‘    ’    XX   XX   bspc
-  tab  XX   \_   {    }    XX   XX   [    ]    *    XX   XX   XX   XX
-  @uti ~    #    <    >    %    /    \(   \)   -    =    \   ret
-  @ssm XX   @    $    ^    XX   XX   &    |    +    XX   @ssm
+  tab  XX   {    \_   }    XX   XX   [    *    ]    XX   XX   XX   XX
+  @uti $    <    =    >    #    /    \(   -    \)   %    \   ret
+  @ssm XX   ~    @    ^    XX   XX   &    +    |    XX   @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
