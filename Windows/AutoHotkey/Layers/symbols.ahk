@@ -67,7 +67,7 @@ F23::
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
 ;; Formatting:
-;;      F23 & scancode::Send "symbol"  ;; comments
+;;      F23 & scancode::function  ;; comments
 
 ;; Function Row
 F23 & sc001::Return                         ;; Esc
