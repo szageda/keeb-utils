@@ -21,6 +21,9 @@
 
 #Include keeb-utils-icon.ahk
 
+;; Disable Scroll Lock states, so the LED won't light up on your device
+SetScrollLockState "AlwaysOff"
+
 #SuspendExempt
 ScrollLock & sc010::    ;; Scroll Lock+Q
 {
