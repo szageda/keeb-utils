@@ -104,8 +104,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
   tab  XX   {    \_   }    XX   XX   [    *    ]    XX   XX   XX   XX
-  @uti $    <    =    >    #    /    \(   -    \)   %    \   ret
-  @ssm XX   ~    @    ^    XX   XX   &    +    |    XX   @ssm
+  @uti $    <    =    >    #    @    \(   -    \)   %    ~   ret
+  @ssm XX   \    /    ^    XX   XX   &    +    |    XX   @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
@@ -115,8 +115,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   ¶    •    ≡    –    ¢    …    ‹    ›    ‚    ‘    ’    XX   XX   bspc
   tab  XX   {    \_   }    XX   XX   [    *    ]    XX   XX   XX   XX
-  @uti $    <    =    >    #    /    \(   -    \)   %    \   ret
-  @ssm XX   ~    @    ^    XX   XX   &    +    |    XX   @ssm
+  @uti $    <    =    >    #    @    \(   -    \)   %    ~   ret
+  @ssm XX   \    /    ^    XX   XX   &    +    |    XX   @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
