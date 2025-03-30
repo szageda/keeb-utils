@@ -1,10 +1,10 @@
 /*
- * File        : utility.ahk
+ * File        : extend.ahk
  * Description : Keeb Utils Utility keyboard layer
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey adds a "Utility" layer by defining new key combinations using the
+ * AutoHotkey adds an "Extend" layer by defining new key combinations using the
  * F24 virtual key and physical key locations (scan codes), allowing functions
  * to be mapped to these new key combinations.
  *

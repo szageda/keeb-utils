@@ -67,7 +67,7 @@ License     : MIT
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
-  @uti a    r    s    t    g    m    n    e    i    o    '    ret
+  @xtn a    r    s    t    g    m    n    e    i    o    '    ret
   lsft x    c    d    v    z    k    h    ,    .    /    rsft
   lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
@@ -77,7 +77,7 @@ License     : MIT
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
-  @uti a    o    e    u    i    d    h    t    n    s    -    ret
+  @xtn a    o    e    u    i    d    h    t    n    s    -    ret
   lsft ;    q    j    k    x    b    m    w    v    z    rsft
   lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
@@ -98,13 +98,24 @@ License     : MIT
 ;; Custom layer keymaps go here. They can be made available using
 ;; aliases ("@") assigned to keys on the custom layouts.
 
+;; Extend
+;; Provides extra functionality enhancements on the alphanumeric keys.
+(deflayer extend
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+  tab  prev next vold volu mute caps home up   end  nlck slck XX   XX
+  @xtn pp   tab  @ask @csk lmet esc  left down rght @ssk ssrq ret
+  lsft @udo @cut @cpy @pst @rdo del  bspc ins  pgdn pgup rsft
+  lctl lmet lalt           ret            ralt rmet cmp  rctl
+)
+
 ;; Symbols
 ;; Provides extra symbols and characters on the alphanumeric keys.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
   tab  `    {    \_   }    ;    ~    [    *    ]    :    XX   XX   XX
-  @uti $    <    =    >    #    @    \(   -    \)   %    XX   ret
+  @xtn $    <    =    >    #    @    \(   -    \)   %    XX   ret
   @ssm \    ^    /    '    XX   !    &    +    |    ?    @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
@@ -115,20 +126,9 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   ¶    •    ≡    –    ¢    …    ‹    ›    ‚    ‘    ’    XX   XX   bspc
   tab  `    {    \_   }    ;    ~    [    *    ]    :    XX   XX   XX
-  @uti $    <    =    >    #    @    \(   -    \)   %    XX   ret
+  @xtn $    <    =    >    #    @    \(   -    \)   %    XX   ret
   @ssm \    ^    /    '    XX   !    &    +    |    ?    @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
-)
-
-;; Utility
-;; Provides extra functionality enhancements on the alphanumeric keys.
-(deflayer utility
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  prev next vold volu mute caps home up   end  nlck slck XX   XX
-  @uti pp   tab  @ask @csk lmet esc  left down rght @ssk ssrq ret
-  lsft @udo @cut @cpy @pst @rdo del  bspc ins  pgdn pgup rsft
-  lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
 
 ;; Keyboad Layout Selection
@@ -154,7 +154,7 @@ License     : MIT
   qwe (layer-switch qwerty)
 
   ;; Layers
-  uti (layer-toggle utility)
+  xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
   sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold
   ssm (layer-toggle shifted-symbols)

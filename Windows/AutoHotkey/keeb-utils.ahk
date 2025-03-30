@@ -107,7 +107,7 @@ KeyHistory 0
 ;;#Include Layouts\dvorak-ansi.ahk
 
 ;; Extra Layers
-#Include Layers\utility.ahk
+#Include Layers\extend.ahk
 #Include Layers\symbols.ahk
 
 ;; Modules

@@ -14,7 +14,7 @@
 . . [2.1. Colemak-DH](#21-colemak-dh)  
 . . [2.2. Dvorak](#22-dvorak)  
 [3. The Utils](#3-the-utils)  
-. . [3.1. Utility Layer](#31-utility-layer)  
+. . [3.1. Extend Layer](#31-extend-layer)  
 . . [3.2. Symbols Layer](#32-symbols-layer)  
 [4. Supported Platforms and Software](#4-supported-platforms-and-software)  
 . . [4.1. Linux](#41-linux)  
@@ -65,26 +65,26 @@ The Dvorak keyboard layout, sometimes also called “Dvorak Simplified Keyboard�
 
 ## 3. The Utils
 
-### 3.1 Utility Layer
+### 3.1 Extend Layer
 
-I implement various adjustments and functions on an extra layer, called “Utility“, to enhance my keyboard-focused workflow, resulting in improved efficiency and comfort. The Utility layer can be activated using a specific key (I prefer <kbd>Caps Lock</kbd>), allowing you to access text editing and navigation features on the alphanumeric keys without shifting your hands from their home positions.
+The “Extend” layer is designed to streamline keyboard-focused workflows by providing quick access to essential text editing and navigation features. Activating this layer with a designated key (<kbd>Caps Lock</kbd> by default) allows you to perform these tasks directly from the alphanumeric keys, keeping your hands comfortably in their home positions and enhancing both efficiency and comfort.
 
 <div align="center">
 
-![Utility layer](Assets/Images/Keyboard%20Layers/utility.png)  
-*Utility layer function map for ANSI 101/104-key keyboards*
+![Extend layer](Assets/Images/Keyboard%20Layers/extend.png)  
+*Extend layer function map for ANSI 101/104-key keyboards*
 
 </div>
 
 | Key Category  | Description |
 | :-----------: | ----------- |
-| ![Navigation keys](Assets/Images/Keyboard%20Layers/utility-blue.png) | Navigation keys (e.g., <kbd>Left</kbd> <kbd>Up</kbd> <kbd>PgDn</kbd> etc.) |
-| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/utility-green.png) | Ctrl shortcuts (e.g., <kbd>Ctrl+C</kbd> <kbd>Ctrl+S</kbd> <kbd>Ctrl+X</kbd> etc.) |
-| ![Modifiers](Assets/Images/Keyboard%20Layers/utility-orange.png) | Modifiers (e.g., <kbd>Win</kbd> <kbd>Shift</kbd> <kbd>Ctrl</kbd> etc.) |
-| ![Sticky keys](Assets/Images/Keyboard%20Layers/utility-sticky.png) | Sticky keys **\*** |
-| ![Text manipulation keys](Assets/Images/Keyboard%20Layers/utility-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd> <kbd>Caps Lock</kbd> <kbd>Tab</kbd> etc.) |
-| ![Multimedia keys](Assets/Images/Keyboard%20Layers/utility-light-green.png) | Multimedia keys (e.g., <kbd>Play</kbd> <kbd>Vol. Down</kbd> <kbd>Vol. Up</kbd> etc.) |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/utility-grey.png) | Function and misc. keys | 
+| ![Navigation keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Navigation keys (e.g., <kbd>Left</kbd> <kbd>Up</kbd> <kbd>PgDn</kbd> etc.) |
+| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/extend-green.png) | Ctrl shortcuts (e.g., <kbd>Ctrl+C</kbd> <kbd>Ctrl+S</kbd> <kbd>Ctrl+X</kbd> etc.) |
+| ![Modifiers](Assets/Images/Keyboard%20Layers/extend-orange.png) | Modifiers (e.g., <kbd>Win</kbd> <kbd>Shift</kbd> <kbd>Ctrl</kbd> etc.) |
+| ![Sticky keys](Assets/Images/Keyboard%20Layers/extend-sticky.png) | Sticky keys **\*** |
+| ![Text manipulation keys](Assets/Images/Keyboard%20Layers/extend-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd> <kbd>Caps Lock</kbd> <kbd>Tab</kbd> etc.) |
+| ![Multimedia keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Multimedia keys (e.g., <kbd>Play</kbd> <kbd>Vol. Down</kbd> <kbd>Vol. Up</kbd> etc.) |
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys | 
 
 **\*** **Sticky keys:**
 
@@ -105,7 +105,7 @@ These keys behave differently depending on whether they are:
 
 ### 3.2. Symbols Layer
 
-“Symbols” layer places commonly used symbols and punctuation marks onto an extra layer this helps with making less mistakes while typing as well as using “smart” punctuation marks instead of “dumb” ones ("" vs “”). The Symbols layer can be activated using a specific key (I prefer <kbd>Left Alt</kbd>).
+The “Symbols” layer provides quick access to commonly used symbols and punctuation marks, improving typing ergonomics and reducing errors. It also enables the use of “smart” punctuation marks (e.g., “” vs ""). This layer can be activated with a designated key (<kbd>Left Alt</kbd> by default).
 
 <div align="center">
 
