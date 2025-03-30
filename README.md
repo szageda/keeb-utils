@@ -65,7 +65,7 @@ The Dvorak keyboard layout, sometimes also called “Dvorak Simplified Keyboard�
 
 ## 3. The Utils
 
-### 3.1 Extend Layer
+### 3.1. Extend Layer
 
 The “Extend” layer is designed to streamline keyboard-focused workflows by providing quick access to essential text editing and navigation features. Activating this layer with a designated key (<kbd>Caps Lock</kbd> by default) allows you to perform these tasks directly from the alphanumeric keys, keeping your hands comfortably in their home positions and enhancing both efficiency and comfort.
 
