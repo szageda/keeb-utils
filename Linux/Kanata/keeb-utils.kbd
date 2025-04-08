@@ -1,0 +1,90 @@
+#|
+File        : keeb-utils.kbd
+Description : Kanata keyboard layout configuration file
+Copyright   : (c) 2024-2025, Gergely Szabo
+License     : MIT
+|#
+
+;; -- KANATA CONFIGURATION -----------------------------------------------------
+
+(defcfg
+  ;; Enable/disable processing of keys not defined in 'defsrc'.
+  ;; (default false)
+  process-unmapped-keys false
+
+  ;; Enable/disable command execution.
+  ;; (default false)
+  danger-enable-cmd false
+)
+
+;; -- SOURCE KEYBOARD LAYOUT --------------------------------------------------
+;;
+;; Keymap of the host OS goes here. It's advised to keep it US QWERTY, unless
+;; you have a good reason to use another layout, because the output may produce
+;; unexpected results.
+
+;; US QWERTY
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
+  `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+;; -- CUSTOM KEYBOARD LAYOUTS -------------------------------------------------
+;;
+;; Custom layout keymaps go here. The first layout in the list is loaded
+;; by default when Kanata starts.
+
+;; Colemak-DH
+;; © Shai Coleman -- https://colemak.com
+;; © stevep99 -- https://colemakmods.github.io/mod-dh
+(deflayer colemak-dh-ansi
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
+  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
+  @xtn a    r    s    t    g    m    n    e    i    o    '    ret
+  lsft x    c    d    v    z    k    h    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+;; -- EXTRA KEYBOARD LAYERS ---------------------------------------------------
+;;
+;; Custom layer keymaps go here. They can be made available using
+;; aliases ("@") assigned to keys on the custom layouts.
+
+;; Extend
+;; Provides extra functionality enhancements on the alphanumeric keys.
+(deflayer extend
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+  tab  prev next vold volu mute caps home up   end  nlck slck XX   XX
+  @xtn pp   tab  @ask @csk lmet esc  left down rght @ssk ssrq ret
+  lsft @udo @cut @cpy @pst @rdo del  bspc ins  pgdn pgup rsft
+  lctl lmet lalt           ret            ralt rmet rctl
+)
+
+;; -- ALIAS DEFINITIONS -------------------------------------------------------
+;;
+;; All aliases go here. Kanata performs alias lookup whenever a key name
+;; starts with "@" on layouts and layers.
+
+(defalias
+  xtn (layer-toggle extend)
+
+  ;; Ctrl Shortcuts
+  cpy C-c
+  cut C-x
+  pst C-v
+  rdo C-y ;; Linux: C-S-z in some desktop environments
+  udo C-z
+
+  ;; Sticky Keys:
+  ;; - On tap: Sticky key with a timeout
+  ;; - On hold: Act as a regular modifier
+  ask (one-shot 350 lalt)
+  csk (one-shot 350 lctl)
+  ssk (one-shot 350 lsft)
+)
