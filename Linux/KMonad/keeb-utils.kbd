@@ -3,27 +3,13 @@ File        : keeb-utils.kbd
 Description : KMonad keyboard layout configuration file
 Copyright   : (c) 2024-2025, Gergely Szabo
 License     : MIT
-
-defcfg:
-This statement is used to customize various configuration settings. Many of
-these settings have default values, but a minimal definition must contain at
-least one "input" and "output" function for KMonad to work: KMonad catches
-input events and tries to match them to various handlers.
-
-defsrc:
-This statement is used to define the source keyboard layout. The source layout
-is the keymap of the host OS.
- 
-deflayer:
-This statement is used to define custom keyboard layouts and layers.
-
-defalias:
-This statement is used to define custom key aliases. Aliases are used to
-reference other layers, layouts, or keys and implementing different behaviors
-for the referenced resources.
 |#
 
 ;; -- KMONAD CONFIGURATION ----------------------------------------------------
+;;
+;; 'defcfg' statement is used to customize various configuration settings. Many
+;; of these settings have default values; a minimal definition must contain at
+;; least one 'input' and 'output' function for KMonad to work.
 
 (defcfg
   ;; OS Input Configuration
@@ -54,9 +40,10 @@ for the referenced resources.
 
 ;; -- SOURCE KEYBOARD LAYOUT --------------------------------------------------
 ;;
-;; Keymap of the host OS. It's advised to keep it US QWERTY, unless you have a
-;; good reason to use another layout, because the output may produce unexpected
-;; results -- see: https://github.com/kmonad/kmonad/issues/135
+;; 'defsrc' statement is used to define the source keyboard layout. The source
+;; layout must be the keymap of the host OS. It's advised to keep it US QWERTY,
+;; unless you have a good reason to use another layout, because the output may
+;; produce unexpected results--see: https://github.com/kmonad/kmonad/issues/135
 
 ;; US QWERTY
 (defsrc
@@ -68,9 +55,14 @@ for the referenced resources.
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; -- CUSTOM KEYBOARD LAYOUTS -------------------------------------------------
+;; -- KEYBOARD LAYOUTS & LAYERS -----------------------------------------------
 ;;
-;; The first layout in the list is loaded by default when KMonad starts.
+;; 'deflayer' statement is used to define custom keyboard layouts and layers.
+;; The first layout in the list is loaded by default when KMonad starts. These
+;; layouts and layers can be made available using aliases ('@') and mapping
+;; them to keys.
+
+;; Keyboard Layouts
 
 ;; Colemak-DH
 ;; © Shai Coleman -- https://colemak.com
@@ -107,10 +99,7 @@ for the referenced resources.
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; -- EXTRA KEYBOARD LAYERS ---------------------------------------------------
-;;
-;; Layers can be made available using aliases ("@") assigned to keys on the
-;; custom layouts.
+;; Keyboard Layers
 
 ;; Extend
 ;; Provides extra functionality enhancements on the alphanumeric keys.
@@ -158,9 +147,11 @@ for the referenced resources.
 
 ;; -- ALIAS DEFINITIONS -------------------------------------------------------
 ;;
-;; KMonad performs alias lookup whenever a key name starts with "@" on layouts
-;; and layers. These aliases can be used to reference other layers, layouts, or
-;; keys.
+;; 'defalias' statement is used to define custom key, symbol, layout, and layer
+;; aliases. Aliases are also used to implement different behaviors for the
+;; referenced resources, for example: do one thing on key tap, do another on
+;; key hold, switch to a different layout, activate layer on key hold, etc.
+;; KMonad performs alias lookup whenever a key name starts with '@'.
 
 (defalias
   ;; Layouts
