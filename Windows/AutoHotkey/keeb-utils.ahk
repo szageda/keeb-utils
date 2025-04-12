@@ -57,33 +57,35 @@ Persistent True
 
 ;; Set the interval in seconds before a warning dialog is triggered
 ;; by consecutive hotkey execution, i.e. key spamming.
-;; A_MaxHotkeysPerInterval is not affected, if A_HotkeyInterval is 0.
+;; 'A_MaxHotkeysPerInterval' is not affected, if 'A_HotkeyInterval'
+;; is 0.
 ;; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ;; (default 2000)
 A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 70
 
-;; Default command sending mode, makes Send synonymous
-;; with SendEvent or SendPlay. If SendMode is Input
-;; (the default), Windows might ignore remapped keys if
-;; CPU speed is slow.
+;; Default command sending mode, makes 'Send' synonymous
+;; with 'SendEvent' or 'SendPlay'. If 'SendMode' is
+;; 'Input' (the default), Windows might ignore remapped
+;; keys if CPU speed is too slow.
 ;; https://www.autohotkey.com/docs/v2/lib/SendMode.htm
 ;; (default Input)
 SendMode "Event"
 
 ;; Set the delay that will occur after each keystroke sent
-;; by Send or ControlSend. If SetKeyDelay is not used, the
-;; default delay is 10 for the traditional SendEvent mode.
+;; by 'Send' or 'ControlSend'. If 'SetKeyDelay' is not used,
+;; the default delay is 10 for the traditional 'SendEvent'
+;; mode.
 ;; https://www.autohotkey.com/docs/v2/lib/SetKeyDelay.htm
 ;; (default 10)
 SetKeyDelay -1, -1
 
 ;; -- DEBUGGING SETTINGS ------------------------------------------------------
 ;;
-;; These settings are useful for debugging scripts. They can be used to
-;; determine why a script is not working as expected, or to help identify the
-;; source of an error.
+;; These settings are useful for debugging scripts. They can be used to verify
+;; why a script is not working as expected, or to help identify the source of
+;; an error.
 
 ;; Enables or disables line logging or displays the script
 ;; lines most recently executed.

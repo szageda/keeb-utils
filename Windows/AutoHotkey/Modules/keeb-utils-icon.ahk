@@ -7,7 +7,7 @@
  * This script is responsible for updating AutoHotkey's tray icon and tooltip.
  *
  * Usage:
- *  The script file must be loaded when AutoHotkey starts. The UpdateIcon()
+ *  The script file must be loaded when AutoHotkey starts. The 'UpdateIcon'
  *  function can be called from other scripts to update the tray icon and
  *  tooltip based on the current state of AutoHotkey.
  */

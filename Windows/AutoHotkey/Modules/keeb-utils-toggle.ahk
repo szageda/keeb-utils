@@ -8,7 +8,7 @@
  * eliminating the need to right-click AutoHotkey's tray icon
  * then selecting "Suspend Hotkeys."
  * 
- * The "SuspendExempt" directive allows AutoHotkey to recognize
+ * The 'SuspendExempt' directive allows AutoHotkey to recognize
  * the key combination even when it's in the suspended state.
  * Toggling states changes the tray icon using UpdateIcon() to
  * reflect AutoHotkey's status.

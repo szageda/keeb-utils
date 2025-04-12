@@ -68,6 +68,10 @@ F23::
 
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
+;; The keymap definitions map 'Send' function to Alt+Some Key combinations.
+;; Lines where the mapped function is 'Return' means those key combinations
+;; won't emit anything.
+;;
 ;; Formatting:
 ;;      F23 & scancode::function  ;; comments
 

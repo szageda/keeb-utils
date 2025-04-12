@@ -8,7 +8,7 @@
  * by moving the host layout's virtual keys around: AutoHotkey captures the
  * scan code sent by the keyboard, and maps a virtual key to it which is then
  * emitted by the operating system. Such keyboard layout remaps prevent the
- * use of hotstrings, for example: "::btw::by the way" -- typing "btw"
+ * use of hotstrings, for example: '::btw::by the way' -- typing "btw"
  * outputs "by the way".
  *
  * The below keymap is only true for the symbol keys (, . = etc.) if US QWERTY
@@ -28,9 +28,6 @@
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt |                       | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
- *
- * Colemak-DH enhances the standard Colemak layout by moving the D and H keys,
- * minimizing lateral movement of the index fingers.
  *
  * Colemak Authorship:
  * Shai Coleman

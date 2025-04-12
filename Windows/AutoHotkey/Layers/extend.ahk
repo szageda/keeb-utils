@@ -45,7 +45,7 @@ SetCapsLockState "AlwaysOff"
 ;; -- KEYMAP ------------------------------------------------------------------
 ;;
 ;; The keymap definitions map virtual keys or functions to Caps Lock+Some Key
-;; combinations. Lines where the mapped function is "Return" means, those key
+;; combinations. Lines where the mapped function is 'Return' means those key
 ;; combinations won't emit anything.
 ;;
 ;; Formatting:
