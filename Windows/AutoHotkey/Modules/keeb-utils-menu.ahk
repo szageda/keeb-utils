@@ -39,31 +39,31 @@ Tray.Add("Exit", CloseAHK)
 
 ChangeStatus(*)
 {
-    ;; Create variables to store the menu item's name
+    ;; Create variables to store the menu item's name.
     static OldName := "", NewName := ""
 
     ;; Use logic to toggle AutoHotkey between suspended and
-    ;; active states when the user clicks on the menu item
+    ;; active states when the user clicks on the menu item.
     if (NewName != "Disabled") {
         ;; Switch AutoHotkey state to suspended
-        ;; and update the tray icon
+        ;; and update the tray icon.
         Suspend 1
         UpdateIcon()
 
-        ;; Update the variables' value
+        ;; Update the variables' value.
         OldName := "Active"
         NewName := "Disabled"
     } else {
         ;; Switch AutoHotkey state to active
-        ;; and update the tray icon
+        ;; and update the tray icon.
         Suspend 0
         UpdateIcon()
 
-        ;; Update the variables' value
+        ;; Update the variables' value.
         OldName := "Disabled"
         NewName := "Active"
     }
-    ;; Update the menu item's name on user click
+    ;; Update the menu item's name on user click.
     Tray.Rename(OldName, NewName)
 }
 
@@ -80,28 +80,29 @@ OpenHistory(*)
 
 LineLogging(*)
 {
-    ;; Create a variable to store the function state
-    ;; 0 = disabled, 1 = enabled
+    ;; Create a variable to store the function state:
+    ;; 0 = disabled
+    ;; 1 = enabled
     static LogLines := 0
 
     ;; Use logic to toggle line logging when
-    ;; the user clicks on the menu item
+    ;; the user clicks on the menu item.
     if (LogLines != 1) {
-        ;; Enable line logging and key history
+        ;; Enable line logging and key history.
         ListLines 1
         KeyHistory 100
 
-        ;; Update the variable's value
+        ;; Update the variable's value.
         LogLines := 1
     } else {
-        ;; Disable line logging and key history
+        ;; Disable line logging and key history.
         ListLines 0
         KeyHistory 0
         
-        ;; Update the variable's value
+        ;; Update the variable's value.
         LogLines := 0
     }
-    ;; Update the menu item's checkmark on user click
+    ;; Update the menu item's checkmark on user click.
     DebugMenu.ToggleCheck("Line Logging")
 }
 ;; End of Debug Submenu
@@ -121,6 +122,6 @@ CloseAHK(*)
 }
 
 ;; Set activating/suspending AutoHotkey as the default option
-;; when user double-clicks the tray icon
+;; when user double-clicks the tray icon.
 CurrentDefault := Tray.Default
 Tray.Default := "Active"

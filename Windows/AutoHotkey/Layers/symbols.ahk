@@ -10,7 +10,7 @@
  * 
  * Note: Alt+Tab's active window switching behavior is lost, but Alt's regular
  * functionality on key tap is preserved. This does not impact the Right Alt
- * (AltGr) key.
+ * (or AltGr) key.
  *
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scan codes instead of virtual keys:
@@ -38,28 +38,30 @@
 
 ;; -- CONFIGURATION -----------------------------------------------------------
 
-;; Map Left Alt to F23 virtual key
+;; Map Left Alt to F23 virtual key.
 #InputLevel 1
 LAlt::F23
 #InputLevel 0
 
-;; Implement tap-hold behavior:
-;; On tap: Normal Alt key behavior
-;; On hold: Hold the F23 virtual key which activates the layer
+;; Configure the F23 virtual key.
 F23::
 {
-    ;; The KeyWait functions use the scan code of the Alt key (sc038)
-    ;; to monitor the state of the physical Left Alt key.
+    ;; Implement Tap-Hold Behavior:
+    ;; - On Tap: Normal Alt key behavior.
+    ;; - On Hold: Hold the F23 virtual key to activate the layer.
+    ;;
+    ;; The KeyWait function monitors the physical Left Alt key state
+    ;; using its scan code (sc038).
 
-    ;; On tap
+    ;; On Tap
     Send "{LAlt Down}"
 
-    ;; On hold
+    ;; On Hold
     If (!KeyWait("sc038")) {
         Send "{F23}"
     }
 
-    ;; On release
+    ;; On Release
     KeyWait "sc038"
     Send "{Alt Up}"
 }

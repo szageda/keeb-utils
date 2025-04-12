@@ -34,12 +34,12 @@
 
 ;; -- CONFIGURATION -----------------------------------------------------------
 
-;; Map Caps Lock to F24 to activate the layer when held down
+;; Map Caps Lock to F24 to activate the layer when held down.
 #InputLevel 1
 CapsLock::F24
 #InputLevel 0
 
-;; Disable Caps Lock states, so the LED won't light up on your device
+;; Disable Caps Lock states, so the LED won't light up on your device.
 SetCapsLockState "AlwaysOff"
 
 ;; -- KEYMAP ------------------------------------------------------------------
@@ -106,39 +106,39 @@ F24 & sc01E::Send "{Media_Play_Pause}"      ;; QWERTY aA
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {
-    ;; Implement sticky key behavior:
-    ;; On tap: Sticky key with a timeout
-    ;; On hold: Act as a regular modifier
+    ;; Implement Sticky Key Behavior:
+    ;; - On Tap: Sticky key with a timeout.
+    ;; - On Hold: Act as a regular modifier.
 
-    ;; On tap
+    ;; On Tap
     Send "{Blind}{Alt Down}"
-    Sleep 350   ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds.
 
-    ;; On hold
+    ;; On Hold
     if (!KeyWait("sc020")) {
         Send "{Blind}{Alt Down}"
     }
 
-    ;; On release
+    ;; On Release
     KeyWait "sc020"
     Send "{Alt Up}"
 }
 F24 & sc021::                               ;; QWERTY fF
 {
-    ;; Implement sticky key behavior:
-    ;; On tap: Sticky key with a timeout
-    ;; On hold: Act as a regular modifier
+    ;; Implement Sticky Key Behavior:
+    ;; - On Tap: Sticky key with a timeout.
+    ;; - On Hold: Act as a regular modifier.
 
-    ;; On tap
+    ;; On Tap
     Send "{Blind}{Ctrl Down}"
-    Sleep 350   ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds.
 
-    ;; On hold
+    ;; On Hold
     if (!KeyWait("sc021")) {
         Send "{Blind}{Ctrl Down}"
     }
 
-    ;; On release
+    ;; On Release
     KeyWait "sc021"
     Send "{Ctrl Up}"
 }
@@ -150,20 +150,20 @@ F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
 F24 & sc027::                               ;; QWERTY ;:
 {
-    ;; Implement sticky key behavior:
-    ;; On tap: Sticky key with a timeout
-    ;; On hold: Act as a regular modifier
+    ;; Implement Sticky Key Behavior:
+    ;; - On Tap: Sticky key with a timeout.
+    ;; - On Hold: Act as a regular modifier.
 
-    ;; On tap
+    ;; On Tap
     Send "{Blind}{Shift Down}"
-    Sleep 350   ;; Sticky time in milliseconds
+    Sleep 350   ;; Sticky time in milliseconds.
 
-    ;; On hold
+    ;; On Hold
     if (!KeyWait("sc027")) {
         Send "{Blind}{Shift Down}"
     }
 
-    ;; On release
+    ;; On Release
     KeyWait "sc027"
     Send "{Shift Up}"
 }

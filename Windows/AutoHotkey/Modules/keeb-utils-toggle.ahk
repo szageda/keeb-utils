@@ -21,17 +21,19 @@
 
 #Include keeb-utils-icon.ahk
 
-;; Disable Scroll Lock states, so the LED won't light up on your device
+;; Disable Scroll Lock states, so the LED won't light up on your device.
 SetScrollLockState "AlwaysOff"
 
 #SuspendExempt
 ScrollLock & sc010::    ;; Scroll Lock+Q
 {
     ;; Toggle between suspended and active states:
-    ;; 0 = activate, 1 = suspend, -1 = switch to opposite state
+    ;; 0 = activate
+    ;; 1 = suspend
+    ;; -1 = switch to opposite state
     Suspend -1
 
-    ;; Update the tray icon and tip
+    ;; Update the tray icon and tip.
     UpdateIcon()
 }
 #SuspendExempt False

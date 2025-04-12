@@ -106,7 +106,7 @@ KeyHistory 0
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
 
-;; Extra Layers
+;; Keyboard Layers
 #Include Layers\extend.ahk
 #Include Layers\symbols.ahk
 
