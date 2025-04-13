@@ -22,9 +22,9 @@
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,------|
  * | Tab | ! | { | } | " | ? | @ | ' | [ | ] | ~ |   |   |      |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'------|
- * | Caps | $ | * | + | = | # | : | - | ( | ) | % |   | Enter   |
+ * | Caps | $ | < | > | = | # | : | - | ( | ) | * |   | Enter   |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'---------|
- * |  Shift | \ | / | _ | ` |   | | | & | < | > | ^ | Shift     |
+ * |  Shift | \ | / | _ | ` |   | | | & | % | + | ^ | Shift     |
  * |----,---'-,-'--,'---'---'---'---'---'--,'---',--'-,----,----|
  * |Ctrl| Win |Alt | Enter                 | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
@@ -199,15 +199,15 @@ F23 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
 F23 & sc01E::Send "{Raw}$"                  ;; QWERTY aA
-F23 & sc01F::Send "{Raw}*"                  ;; QWERTY sS
-F23 & sc020::Send "{Raw}+"                  ;; QWERTY dD
+F23 & sc01F::Send "{Raw}<"                  ;; QWERTY sS
+F23 & sc020::Send "{Raw}>"                  ;; QWERTY dD
 F23 & sc021::Send "{Raw}="                  ;; QWERTY fF
 F23 & sc022::Send "{Raw}#"                  ;; QWERTY gG
 F23 & sc023::Send "{Raw}:"                  ;; QWERTY hH
 F23 & sc024::Send "{Raw}-"                  ;; QWERTY jJ
 F23 & sc025::Send "{Raw}("                  ;; QWERTY kK
 F23 & sc026::Send "{Raw})"                  ;; QWERTY lL
-F23 & sc027::Send "{Raw}%"                  ;; QWERTY ;:
+F23 & sc027::Send "{Raw}*"                  ;; QWERTY ;:
 F23 & sc028::Return                         ;; QWERTY '"
 
 ;; Bottom Row
@@ -218,6 +218,6 @@ F23 & sc02F::Send "{Raw}``"                 ;; QWERTY vV
 F23 & sc030::Return                         ;; QWERTY bB
 F23 & sc031::Send "{Raw}|"                  ;; QWERTY nN
 F23 & sc032::Send "{Raw}&"                  ;; QWERTY mM
-F23 & sc033::Send "{Raw}<"                  ;; QWERTY ,<
-F23 & sc034::Send "{Raw}>"                  ;; QWERTY .>
+F23 & sc033::Send "{Raw}%"                  ;; QWERTY ,<
+F23 & sc034::Send "{Raw}+"                  ;; QWERTY .>
 F23 & sc035::Send "{Raw}^"                  ;; QWERTY /?
