@@ -57,7 +57,7 @@ F23::
     Send "{LAlt Down}"
 
     ;; On Hold
-    If (!KeyWait("sc038")) {
+    if (!KeyWait("sc038")) {
         Send "{F23}"
     }
 
