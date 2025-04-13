@@ -29,6 +29,9 @@
  * |Ctrl| Win |Alt |                       | RAlt| Win|Menu|Ctrl|
  * '----'-----'----'-----------------------'-----'----'----'----'
  *
+ * Dvorak Keyboard Layout:
+ * https://dvorak-keyboard.com
+ * 
  * Keyboard Scan Codes:
  * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  *
