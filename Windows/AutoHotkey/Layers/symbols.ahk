@@ -50,7 +50,7 @@ F23::
     ;; - On Tap: Normal Alt key behavior.
     ;; - On Hold: Hold the F23 virtual key to activate the layer.
     ;;
-    ;; The KeyWait function monitors the physical Left Alt key state
+    ;; The 'KeyWait' function monitors the physical Left Alt key state
     ;; using its scan code (sc038).
 
     ;; On Tap
