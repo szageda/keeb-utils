@@ -44,7 +44,7 @@ ChangeStatus(*)
 
     ;; Use logic to toggle AutoHotkey between suspended and
     ;; active states when the user clicks on the menu item.
-    if (NewName != "Disabled") {
+    if NewName != "Disabled" {
         ;; Switch AutoHotkey state to suspended
         ;; and update the tray icon.
         Suspend 1
@@ -87,7 +87,7 @@ LineLogging(*)
 
     ;; Use logic to toggle line logging when
     ;; the user clicks on the menu item.
-    if (LogLines != 1) {
+    if LogLines != 1 {
         ;; Enable line logging and key history.
         ListLines 1
         KeyHistory 100
@@ -109,7 +109,7 @@ LineLogging(*)
 
 OpenHelp(*)
 {
-    if (DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey")) {
+    if DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey") {
         Run 'hh.exe "C:\Users\' A_Username '\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey.chm" href'
     } else {
         Run 'hh.exe "C:\Program Files\AutoHotkey\v2\AutoHotkey.chm" href'

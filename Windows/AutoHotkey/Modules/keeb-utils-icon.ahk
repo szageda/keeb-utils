@@ -18,7 +18,7 @@ A_IconTip := "Keeb Utils is active"
 
 UpdateIcon()
 {
-    if (A_IsSuspended = 1) {
+    if A_IsSuspended = 1 {
         TraySetIcon("Icons\suspended.ico",, true)
         A_IconTip := "Keeb Utils is disabled"
     } else {

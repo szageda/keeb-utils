@@ -57,7 +57,7 @@ F23::
     Send "{LAlt Down}"
 
     ;; On Hold
-    if (!KeyWait("sc038")) {
+    if !KeyWait("sc038") {
         Send "{F23}"
     }
 
@@ -93,7 +93,7 @@ F23 & sc058::Return                         ;; F12
 ;; Numeric Row
 F23 & sc029::                               ;; QWERTY `~
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}¶"
     } else {
         Send "{Raw}§"
@@ -101,7 +101,7 @@ F23 & sc029::                               ;; QWERTY `~
 }
 F23 & sc002::                               ;; QWERTY 1!
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}•"
     } else {
         Send "{Raw}¡"
@@ -109,7 +109,7 @@ F23 & sc002::                               ;; QWERTY 1!
 }
 F23 & sc003::                               ;; QWERTY 2@
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}≡"
     } else {
         Send "{Raw}¿"
@@ -117,7 +117,7 @@ F23 & sc003::                               ;; QWERTY 2@
 }
 F23 & sc004::                               ;; QWERTY 3#
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}–"
     } else {
         Send "{Raw}—"
@@ -125,7 +125,7 @@ F23 & sc004::                               ;; QWERTY 3#
 }
 F23 & sc005::                               ;; QWERTY 4$
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}¢"
     } else {
         Send "{Raw}€"
@@ -133,7 +133,7 @@ F23 & sc005::                               ;; QWERTY 4$
 }
 F23 & sc006::                               ;; QWERTY 5%
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}…"
     } else {
         Send "{Raw}¥"
@@ -141,7 +141,7 @@ F23 & sc006::                               ;; QWERTY 5%
 }
 F23 & sc007::                               ;; QWERTY 6^
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}‹"
     } else {
         Send "{Raw}«"
@@ -149,7 +149,7 @@ F23 & sc007::                               ;; QWERTY 6^
 }
 F23 & sc008::                               ;; QWERTY 7&
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}›"
     } else {
         Send "{Raw}»"
@@ -157,7 +157,7 @@ F23 & sc008::                               ;; QWERTY 7&
 }
 F23 & sc009::                               ;; QWERTY 8*
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}‚"
     } else {
         Send "{Raw}„"
@@ -165,7 +165,7 @@ F23 & sc009::                               ;; QWERTY 8*
 }
 F23 & sc00A::                               ;; QWERTY 9(
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}‘"
     } else {
         Send "{Raw}“"
@@ -173,7 +173,7 @@ F23 & sc00A::                               ;; QWERTY 9(
 }
 F23 & sc00B::                               ;; QWERTY 0)
 {
-    if (GetKeyState("Shift")) {
+    if GetKeyState("Shift") {
         Send "{Raw}’"
     } else {
         Send "{Raw}”"
