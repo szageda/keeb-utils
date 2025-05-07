@@ -20,11 +20,11 @@
  * ╭───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────╮
  * │ §¶│ ¡•│ ¿≡│ —–│ €¢│ ¥…│ «‹│ »›│ „‚│ “‘│ ”’│   │   │Backspc│
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │ Tab │ ! │ { │ } │ " │ ? │ @ │ ' │ [ │ ] │ ~ │   │   │     │
+ * │ Tab │ ! │ { │ } │ ` │ ? │ @ │ ' │ [ │ ] │ ~ │   │   │     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
  * │ Caps │ $ │ < │ > │ = │ # │ : │ - │ ( │ ) │ * │   │ Enter  │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
- * │ Shift  │ \ │ / │ _ │ ` │   │ | │ & │ % │ + │ ^ │ Shift    │
+ * │ Shift  │ \ │ / │ _ │ " │   │ | │ & │ % │ + │ ^ │ Shift    │
  * ├──────┬─┴─┬─┴──┬┴───┴───┴───┴───┴───┴─┬─┴──┬┴──┬┴───┬──────┤
  * │ Ctrl │Win│ Alt│ Enter                │ Alt│Win│Menu│ Ctrl │
  * ╰──────┴───┴────┴──────────────────────┴────┴───┴────┴──────╯
@@ -186,7 +186,7 @@ F23 & sc00D::Return                         ;; QWERTY =+
 F23 & sc010::Send "{Raw}!"                  ;; QWERTY qQ
 F23 & sc011::Send "{Raw}{"                  ;; QWERTY wW
 F23 & sc012::Send "{Raw}}"                  ;; QWERTY eE
-F23 & sc013::Send "{Raw}`""                 ;; QWERTY rR
+F23 & sc013::Send "{Raw}``"                 ;; QWERTY rR
 F23 & sc014::Send "{Raw}?"                  ;; QWERTY tT
 F23 & sc015::send "{Raw}@"                  ;; QWERTY yY
 F23 & sc016::Send "{Raw}'"                  ;; QWERTY uU
@@ -214,7 +214,7 @@ F23 & sc028::Return                         ;; QWERTY '"
 F23 & sc02C::Send "{Raw}\"                  ;; QWERTY zZ
 F23 & sc02D::Send "{Raw}/"                  ;; QWERTY xX
 F23 & sc02E::Send "{Raw}_"                  ;; QWERTY cC
-F23 & sc02F::Send "{Raw}``"                 ;; QWERTY vV
+F23 & sc02F::Send "{Raw}`""                 ;; QWERTY vV
 F23 & sc030::Return                         ;; QWERTY bB
 F23 & sc031::Send "{Raw}|"                  ;; QWERTY nN
 F23 & sc032::Send "{Raw}&"                  ;; QWERTY mM
