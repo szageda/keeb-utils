@@ -18,7 +18,7 @@
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
  * │ Tab │Prv│Nxt│VlD│VlU│Mut│Ins│Hom│ Up│End│Spc│NLk│Slk│     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
- * │ Caps │ PP│Tab│Alt│Ctl│Win│Esc│Lft│Dwn│Rht│Sht│PrS│ Enter  │
+ * │ Caps │Win│Tab│Alt│Ctl│PP │Esc│Lft│Dwn│Rht│Sht│PrS│ Enter  │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
  * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Del│Bsp│PgD│PgU│Cps│ Shift    │
  * ├──────┬─┴─┬─┴──┬┴───┴───┴───┴───┴───┴─┬─┴──┬┴──┬┴───┬──────┤
@@ -97,7 +97,8 @@ F24 & sc01B::ScrollLock                     ;; QWERTY ]}
 F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Media_Play_Pause}"      ;; QWERTY aA
+F24 & sc01E::Send "{Blind}{LWin Down}"      ;; QWERTY aA
+F24 & sc01E Up::Send "{Blind}{LWin Up}"
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
 F24 & sc020::                               ;; QWERTY dD
 {
@@ -137,8 +138,7 @@ F24 & sc021::                               ;; QWERTY fF
     KeyWait "sc021"
     Send "{Ctrl Up}"
 }
-F24 & sc022::Send "{Blind}{LWin Down}"      ;; QWERTY gG
-F24 & sc022 Up::Send "{LWin Up}"
+F24 & sc022::Send "{Media_Play_Pause}"      ;; QWERTY gG
 F24 & sc023::Send "{Blind}{Escape}"         ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK

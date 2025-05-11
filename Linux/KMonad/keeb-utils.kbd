@@ -107,7 +107,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
   tab  prev next vold volu mute ins  home up   end  spc  nlck slck XX
-  @xtn pp   tab  @ask @csk lmet esc  left down rght @ssk ssrq ret
+  @xtn lmet tab  @ask @csk pp   esc  left down rght @ssk ssrq ret
   lsft @udo @cut @cpy @pst @rdo del  bspc pgdn pgup caps rsft
   lctl lmet lalt           ret            ralt rmet cmp  rctl
 )
