@@ -173,7 +173,7 @@ F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Delete}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
 F24 & sc033::Send "{Blind}{PgDn}"           ;; QWERTY ,<
-F24 & sc034::Send "{Blind}{PgUn}"           ;; QWERTY .>
+F24 & sc034::Send "{Blind}{PgUp}"           ;; QWERTY .>
 F24 & sc035::                               ;; QWERTY /?
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
