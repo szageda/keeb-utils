@@ -118,7 +118,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
   tab  !    {    }    `    ?    @    '    [    ]    ~    XX   XX   XX
-  @xtn $    <    >    =    #    :    -    \(   \)   *    XX   ret
+  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
   @ssm \    /    \_   "    XX   |    &    %    +    ^    @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
