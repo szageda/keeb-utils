@@ -117,9 +117,9 @@ License     : MIT
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   §    ¡    ¿    —    €    ¥    «    »    „    “    ”    XX   XX   bspc
-  tab  !    {    }    `    ?    @    '    [    ]    ~    XX   XX   XX
+  tab  !    {    }    `    ^    @    '    [    ]    ~    XX   XX   XX
   @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    XX   |    &    %    +    ^    @ssm
+  @ssm \    /    \_   "    XX   |    &    %    +    ?    @ssm
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
