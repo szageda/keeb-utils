@@ -118,8 +118,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
-  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    —    |    &    %    +    ?    @ssm
+  @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
+  @ssm \    /    \_   "    —    |    &    :    +    ?    @ssm
   lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
 
@@ -129,8 +129,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    ‘    ’    ‚
-  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
+  @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
+  @ssm \    /    \_   "    –    |    &    :    +    ?    @ssm
   lctl lmet @sym           spc            ralt rmet cmp  rctl
 )
 
