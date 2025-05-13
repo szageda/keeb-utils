@@ -73,7 +73,7 @@ License     : MIT
   tab  q    w    f    p    b    j    l    u    y    ;    -    =    \
   @xtn a    r    s    t    g    m    n    e    i    o    '    ret
   lsft x    c    d    v    z    k    h    ,    .    /    rsft
-  lctl lmet @sym           spc            ralt rmet cmp  rctl
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; Dvorak
@@ -85,7 +85,7 @@ License     : MIT
   tab  '    ,    .    p    y    f    g    c    r    l    /    =    \
   @xtn a    o    e    u    i    d    h    t    n    s    -    ret
   lsft ;    q    j    k    x    b    m    w    v    z    rsft
-  lctl lmet @sym           spc            ralt rmet cmp  rctl
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; US QWERTY
@@ -96,7 +96,7 @@ License     : MIT
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
   lsft z    x    c    v    b    n    m    ,    .    /    rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
 ;; Keyboard Layers
@@ -109,7 +109,7 @@ License     : MIT
   tab  prev next vold volu mute pgup home up   end  ins  nlck slck XX
   @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk ssrq ret
   lsft @udo @cut @cpy @pst @rdo del  bspc esc  spc  caps rsft
-  lctl lmet lalt           ret            ralt rmet cmp  rctl
+  lctl lmet lalt           ret            ralt cmp  rmet rctl
 )
 
 ;; Symbols
@@ -120,7 +120,7 @@ License     : MIT
   tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
   @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
   @ssm \    /    \_   "    —    |    &    :    +    ?    @ssm
-  lctl lmet @sym           spc            ralt rmet cmp  rctl
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; Shifted Symbols
@@ -130,8 +130,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    ‘    ’    ‚
   @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    –    |    &    :    +    ?    @ssm
-  lctl lmet @sym           spc            ralt rmet cmp  rctl
+  @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; Keyboad Layout Selection
@@ -142,7 +142,7 @@ License     : MIT
   tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   @dvk XX   XX   XX   XX   XX   XX   XX   XX   ret
   lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
-  lctl lmet lalt           spc            ralt rmet cmp  rctl
+  lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
 ;; -- ALIAS DEFINITIONS -------------------------------------------------------
