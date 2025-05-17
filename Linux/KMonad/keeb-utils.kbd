@@ -119,7 +119,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
   @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    —    |    &    :    +    ?    @ssm
+  @ssm \    /    \_   "    –    |    &    :    +    ?    @ssm
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
@@ -130,7 +130,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    ‘    ’    ‚
   @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
+  @ssm \    /    \_   "    —    |    &    %    +    ?    @ssm
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
