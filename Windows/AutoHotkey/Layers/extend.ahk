@@ -20,7 +20,7 @@
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
  * │ Caps │Win│Tab│Alt│Ctl│PP │PgD│Lft│Dwn│Rht│Sht│PrS│ Enter  │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
- * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Del│Bsp│Esc│Spc│Cps│ Shift    │
+ * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Esc│Bsp│Del│Spc│Cps│ Shift    │
  * ├──────┬─┴─┬─┴──┬┴───┴───┴───┴───┴───┴─┬─┴──┬┴──┬┴───┬──────┤
  * │ Ctrl │Win│ Alt│ Enter                │ Alt│Win│Menu│ Ctrl │
  * ╰──────┴───┴────┴──────────────────────┴────┴───┴────┴──────╯
@@ -170,9 +170,9 @@ F24 & sc02D::Send "{Ctrl Down}{x}{Ctrl Up}" ;; QWERTY xX
 F24 & sc02E::Send "{Ctrl Down}{c}{Ctrl Up}" ;; QWERTY cC
 F24 & sc02F::Send "{Ctrl Down}{v}{Ctrl Up}" ;; QWERTY vV
 F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
-F24 & sc031::Send "{Blind}{Delete}"         ;; QWERTY nN
+F24 & sc031::Send "{Blind}{Escape}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
-F24 & sc033::Send "{Blind}{Escape}"         ;; QWERTY ,<
+F24 & sc033::Send "{Blind}{Delete}"         ;; QWERTY ,<
 F24 & sc034::Send "{Blind}{Space}"          ;; QWERTY .>
 F24 & sc035::                               ;; QWERTY /?
 {

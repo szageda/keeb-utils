@@ -108,7 +108,7 @@ License     : MIT
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
   tab  prev next vold volu mute pgup home up   end  ins  nlck slck XX
   @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk ssrq ret
-  lsft @udo @cut @cpy @pst @rdo del  bspc esc  spc  caps rsft
+  lsft @udo @cut @cpy @pst @rdo esc  bspc del  spc  caps rsft
   lctl lmet lalt           ret            ralt cmp  rmet rctl
 )
 
@@ -118,8 +118,8 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
-  @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    –    |    &    :    +    ?    @ssm
+  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
+  @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
@@ -129,7 +129,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    ‘    ’    ‚
-  @xtn $    <    >    =    #    %    -    \(   \)   *    ;    ret
+  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
   @ssm \    /    \_   "    —    |    &    %    +    ?    @ssm
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
