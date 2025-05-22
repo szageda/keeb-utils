@@ -1,0 +1,6 @@
+[{c:"#8a8a8a",a:7,f:6},"",{x:1,c:"#cccccc",f:8},"","","","",{x:0.5,c:"#8a8a8a"},"","",{f:6},"","",{x:0.5,c:"#cccccc"},"","","",""],
+[{y:0.5},"","","","","","","","","","","","","",{c:"#8a8a8a",f:8,w:2},"<i class='kb kb-Unicode-BackSpace-DeleteLeft-Big'></i>"],
+[{w:1.5},"<i class='kb kb-Line-Start-End'></i>",{c:"#cccccc"},"!",{sm:"alps"},"{","}","`","^","@","'","[","]","~",{a:4},"\n“\n‘","\n”\n’",{w:1.5},"\n„\n\n\n\n\n\n\n\n‚"],
+[{c:"#8a8a8a",a:7,w:1.75},"<i class='fa fa-arrow-circle-o-up'></i>",{c:"#cccccc"},"$","<",">",{n:true},"=","#",":",{n:true},"-","(",")","*",";",{c:"#8a8a8a",w:2.25},"<i class='kb kb-Return-2'></i>"],
+[{w:2.25},"<i class='kb kb-Arrows-Up-Circle-Filled'></i>",{c:"#cccccc"},"\\","/","_","\"",{a:4},"\n–\n—",{a:7},"|","&","%","+","?",{c:"#8a8a8a",w:2.75},"<i class='kb kb-Arrows-Up-Circle-Filled'></i>"],
+[{f:9,w:1.25},"<i class='kb kb-Unicode-Alternate-1'></i>",{f:6,w:1.25},"<i class='kb kb-logo-windows-8'></i>",{f:9,w:1.25},"<i class='kb kb-Unicode-Option-1'></i>",{c:"#cccccc",t:"#ffffff",f:6,w:6.25},"",{c:"#8a8a8a",t:"#000000",f:9,w:1.25},"<i class='kb kb-Unicode-Option-1'></i>",{f:6,w:1.25},"<i class='kb kb-logo-windows-8'></i>",{f:9,w:1.25},"<i class='kb kb-Hamburger-Menu'></i>",{w:1.25},"<i class='kb kb-Unicode-Alternate-1'></i>"]

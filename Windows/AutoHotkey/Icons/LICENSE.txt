@@ -1,0 +1,1 @@
+Refer to 'Keeb Utils\Assets\Images\AutoHotkey' for specific LICENSE terms.

@@ -1,0 +1,5 @@
+avatar-*.png:
+Refer to "Keeb Utils\Assets\Images\AutoHotkey" for specific LICENSE terms.
+
+*-logo-*.png:
+Refer to developers of the respective software project for specific LICENSE terms.
