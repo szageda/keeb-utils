@@ -82,7 +82,7 @@ SetKeyDelay -1, -1
 
 ;; -- DEBUGGING SETTINGS ------------------------------------------------------
 ;;
-;; These settings are useful for debugging -- they can be used to verify why 
+;; These settings are useful for debugging -- they can be used to verify why
 ;; a script is not working as expected, or to help identify the source of an
 ;; error.
 

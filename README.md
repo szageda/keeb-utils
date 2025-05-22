@@ -58,7 +58,7 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 | ![Sticky keys](Assets/Images/Keyboard%20Layers/extend-sticky.png) | Sticky keys **\*** |
 | ![Text manipulation keys](Assets/Images/Keyboard%20Layers/extend-red.png) | Text manipulation (e.g., <kbd>Backspace</kbd> <kbd>Caps Lock</kbd> <kbd>Tab</kbd> etc.) |
 | ![Multimedia keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Multimedia keys (e.g., <kbd>Play</kbd> <kbd>Vol. Down</kbd> <kbd>Vol. Up</kbd> etc.) |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys | 
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys |
 
 **\*** **Sticky keys behave differently depending on whether they are:**
 
