@@ -13,13 +13,13 @@
 
 — *www.autohotkey.com*, AutoHotkey, [link](https://www.autohotkey.com/)
 
+> [!NOTE]
+> An alternative solution to AutoHotkey on Windows is [KMonad](/Linux/KMonad/README.md#windows).
+
 ## Installation & Startup
 
 > [!IMPORTANT]
 > **This repository does not package or distribute AutoHotkey binaries required to run the Keeb Utils configuration files. It is your responsibility to install the required software version.**
-
-> [!NOTE]
-> An alternative solution to AutoHotkey on Windows is [KMonad](/Linux/KMonad/README.md#windows).
 
 1. Install AutoHotkey from [www.AutoHotkey.com](https://www.autohotkey.com) (or use the portable version).
 
