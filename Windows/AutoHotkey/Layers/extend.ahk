@@ -16,11 +16,11 @@
  * ╭───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────╮
  * │Esc│ F1│ F2│ F3│ F4│ F5│ F6│ F7│ F8│ F9│F10│F11│F12│Backspc│
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │ Tab │Prv│Nxt│VlD│VlU│Mut│PgU│Hom│ Up│End│Ins│NLk│Slk│     │
+ * │ Tab │Ins│Spc│VlD│VlU│Mut│PgU│Hom│ Up│End│Prt│NLk│Slk│     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
- * │ Caps │Win│Tab│Alt│Ctl│PP │PgD│Lft│Dwn│Rht│Sht│PrS│ Enter  │
+ * │ Caps │Win│Tab│Alt│Ctl│PP │PgD│Lft│Dwn│Rht│Sht│Cps│ Enter  │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
- * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Esc│Bsp│Del│Spc│Cps│ Shift    │
+ * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Esc│Bsp│Del│Prv│Nxt│ Shift    │
  * ├──────┬─┴─┬─┴──┬┴───┴───┴───┴───┴───┴─┬─┴──┬┴──┬┴───┬──────┤
  * │ Ctrl │Win│ Alt│ Enter                │ Alt│Win│Menu│ Ctrl │
  * ╰──────┴───┴────┴──────────────────────┴────┴───┴────┴──────╯
@@ -78,8 +78,8 @@ F24 & sc00C::Send "{Blind}{F11}"            ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{Media_Prev}"            ;; QWERTY qQ
-F24 & sc011::Send "{Media_Next}"            ;; QWERTY wW
+F24 & sc010::Send "{Blind}{Insert}"         ;; QWERTY qQ
+F24 & sc011::Send "{Blind}{Space}"          ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"           ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"             ;; QWERTY rR
 F24 & sc014::Send "{Volume_Mute}"           ;; QWERTY tT
@@ -87,7 +87,7 @@ F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"           ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"             ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"             ;; QWERTY oO
-F24 & sc019::Send "{Blind}{Insert}"         ;; QWERTY pP
+F24 & sc019::PrintScreen                    ;; QWERTY pP
 F24 & sc01A::NumLock                        ;; QWERTY [{
 F24 & sc01B::ScrollLock                     ;; QWERTY ]}
 F24 & sc02B::Return                         ;; QWERTY \|
@@ -158,7 +158,12 @@ F24 & sc027::                               ;; QWERTY ;:
     KeyWait "sc027"
     Send "{Shift Up}"
 }
-F24 & sc028::PrintScreen                    ;; QWERTY '"
+F24 & sc028::                               ;; QWERTY '"
+{
+    SetCapsLockState GetKeyState("CapsLock", "T")
+    ? "AlwaysOff"
+    : "AlwaysOn"
+}
 
 ;; Bottom Row
 F24 & sc02C::Send "{Ctrl Down}{z}{Ctrl Up}" ;; QWERTY zZ
@@ -169,13 +174,8 @@ F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Escape}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
 F24 & sc033::Send "{Blind}{Delete}"         ;; QWERTY ,<
-F24 & sc034::Send "{Blind}{Space}"          ;; QWERTY .>
-F24 & sc035::                               ;; QWERTY /?
-{
-    SetCapsLockState GetKeyState("CapsLock", "T")
-    ? "AlwaysOff"
-    : "AlwaysOn"
-}
+F24 & sc034::Send "{Media_Prev}"            ;; QWERTY .>
+F24 & sc035::Send "{Media_Next}"            ;; QWERTY /?
 
 ;; Misc. Keys
 F24 & sc039::Send "{Blind}{Enter}"          ;; Space
