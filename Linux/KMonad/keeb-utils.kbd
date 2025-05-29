@@ -107,8 +107,8 @@ License     : MIT
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  caps spc  vold volu mute pgup home up   end  ins  nlck slck XX
-  @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk ssrq ret
+  tab  ins  spc  vold volu mute pgup home up   end  ssrq nlck slck XX
+  @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk caps ret
   lsft @udo @cut @cpy @pst @rdo esc  bspc del  prev next rsft
   lctl lmet lalt           ret            ralt cmp  rmet rctl
 )
