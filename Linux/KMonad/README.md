@@ -50,7 +50,7 @@ kmonad ~/Downloads/keeb-utils-main/Linux/KMonad/keeb-utils.kbd
 ### Windows
 
 > [!NOTE]
-> KMonad is compatible with Windows, but I view it as a ‘Linux first’ solution, so I only use Keeb Utils with KMonad on Windows when I need to conduct tests.
+> KMonad is compatible with Windows, but I view it as a “Linux first” solution, so I only use Keeb Utils with KMonad on Windows when I need to conduct tests.
 
 > [!IMPORTANT]
 > **This repository does not package or distribute the KMonad binary required to run the Keeb Utils configuration file. It is your responsibility to install the required software version.**

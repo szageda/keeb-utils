@@ -8,7 +8,7 @@
 
 # Keeb Utils
 
-Keeb Utils (‘Keyboard Utilities’) is a collection of my custom keyboard layout and layers for Windows and Linux, aimed at improving typing efficiency, ergonomics, and comfort. It's designed for both keyboard enthusiasts and newcomers, inspired by the work of others.
+Keeb Utils, “Keyboard Utilities”, is a collection of my custom keyboard layout and layers for Windows and Linux, aimed at improving typing efficiency, ergonomics, and comfort. It's designed for both keyboard enthusiasts and newcomers, inspired by the work of others.
 
 Keeb Utils adheres to these key principles:
 
@@ -23,7 +23,7 @@ Keeb Utils employs technics provided by third-party software to remap the keys o
 
 ## Keyboard Layout
 
-I use a keyboard layout known as ‘Colemak-DH‘ (which is occasionally referred to as ‘Colemak Mod-DH‘). Colemak was originally created in 2006 primarily for the English lanaguage. It was enhanced in 2015 with the addition of the ‘DH‘ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
+I use a keyboard layout known as “Colemak-DH“ (which is occasionally referred to as “Colemak Mod-DH“). Colemak was originally created in 2006 primarily for the English lanaguage. It was enhanced in 2015 with the addition of the “DH“ modification, which involved swapping the D and H keys to minimize the side-to-side movement of the index fingers.
 
 More information on Colemak: https://colemak.com/  
 More information on Colemak Mod DH: https://colemakmods.github.io/mod-dh
@@ -62,7 +62,7 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 
 **\*** **Sticky keys behave differently depending on whether they are:**
 
-- **Tapped:** They become ‘sticky’ for 350 milliseconds to allow for <kbd>Ctrl</kbd>, <kbd>Alt</kbd> and other shortcut combinations with <kbd>Shift</kbd> that are not available on the Extend layer, for example:
+- **Tapped:** They become “sticky” for 350 milliseconds to allow for <kbd>Ctrl</kbd>, <kbd>Alt</kbd> and other shortcut combinations with <kbd>Shift</kbd> that are not available on the Extend layer, for example:
     - <kbd>Ctrl</kbd>+<kbd>W</kbd>: Close your current tab.
     - <kbd>Ctrl</kbd>+<kbd>T</kbd>: Open a new tab.
     - <kbd>Ctrl</kbd>+<kbd>N</kbd>: Create a new file.
@@ -90,8 +90,8 @@ The Symbols layer provides quick access to commonly used symbols and punctuation
 ## Credits and Inspiration
 
 **Shai Coleman** – *[Colemak keyboard layout](https://colemak.com)*  
-**Steve ‘stevep99’ P** – *[Seniply](https://stevep99.github.io/seniply/)*, *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
-**Øystein ‘DreymaR’ Bech-Aase** – *[The Big Bag Theory](https://dreymar.colemak.org/)*  
+**Steve “stevep99” P** – *[Seniply](https://stevep99.github.io/seniply/)*, *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
+**Øystein “DreymaR” Bech-Aase** – *[The Big Bag Theory](https://dreymar.colemak.org/)*  
 **Manna Harbour** – *[Miryoku](https://github.com/manna-harbour/miryoku)*  
 **Precondition** – *[Home Row Mods](https://precondition.github.io/home-row-mods)*  
 **Pascal Getreuer** – *[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
