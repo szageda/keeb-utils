@@ -5,16 +5,15 @@ Copyright   : (c) 2024-2025, Gergely Szabo
 License     : MIT
 |#
 
-;; -- KMONAD CONFIGURATION ----------------------------------------------------
-;;
+;;;
+;;;  KMONAD CONFIGURATION
+;;;
 ;; The 'defcfg' block defines global configuration options of KMonad. This
 ;; includes the input and output devices, and customizing various behaviors.
 ;; This block must contain at least one input() and one output() function for
 ;; KMonad to work.
 
 (defcfg
-  ;; OS Input Configuration
-
   ;; Linux
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
   output (uinput-sink "KMonad output")
@@ -27,8 +26,6 @@ License     : MIT
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
-  ;; Other Settings
-
   ;; Enable/disable emitting unhandled events; for example: passing input from
   ;; the source layer to other alphanumeric layers.
   ;; (default true)
@@ -39,8 +36,9 @@ License     : MIT
   allow-cmd false
 )
 
-;; -- SOURCE KEYBOARD LAYOUT --------------------------------------------------
-;;
+;;;
+;;; SOURCE KEYBOARD LAYOUT
+;;;
 ;; The 'defsrc' block defines the source keyboard layout -- this is the layout
 ;; of the host operating system. It's advised to keep it US QWERTY, unless you
 ;; have a good reason to use another layout, because the output may produce
@@ -56,8 +54,9 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; -- KEYBOARD LAYOUTS & LAYERS -----------------------------------------------
-;;
+;;;
+;;; KEYBOARD LAYOUTS & LAYERS
+;;;
 ;; The 'deflayer' block defines custom keymaps; i.e., keyboard layouts and
 ;; and layers. The first keymap in the block is loaded by default when KMonad
 ;; starts. The various keymaps are made available using aliases ('@').
@@ -148,13 +147,14 @@ License     : MIT
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;; -- ALIAS DEFINITIONS -------------------------------------------------------
-;;
+;;;
+;;; ALIAS DEFINITIONS
+;;;
 ;; The 'defalias' block defines aliases -- they are used to identify custom
-;; keymaps (keyboard layouts and layers). Also, alias definitions can be used
+;; keymaps, key combinations, and macros. Also, alias definitions can be used
 ;; to alter the behavior of keys: for example, do one thing on key tap, do
-;; something else while the key is held down. KMonad performs alias lookup
-;; whenever a key name starts with '@'.
+;; something else while the key is held. KMonad performs alias lookup whenever
+;; a key name starts with '@'.
 
 (defalias
   ;; Layouts
