@@ -32,8 +32,6 @@
  * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
-;; -- CONFIGURATION -----------------------------------------------------------
-
 ;; Map Left Alt to F23 virtual key.
 ;; Note: Alt+Tab's active window switching behavior is lost, but Alt's regular
 ;; functionality on key tap is preserved -- this does not impact the Right Alt
@@ -63,11 +61,6 @@ F23::
     KeyWait "sc038"
     Send "{Alt Up}"
 }
-
-;; -- KEYMAP ------------------------------------------------------------------
-;;
-;; The keymap definitions map 'Send' function to Alt+Some Key combinations.
-;; Lines where the mapped function is 'Return' are ignored.
 
 ;; Function Row
 F23 & sc001::Return                         ;; Esc

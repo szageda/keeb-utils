@@ -10,7 +10,7 @@
  * current state of AutoHotkey.
  */
 
-;; Set the default tray icon and tooltip.
+;; Load the default icon and tooltip.
 TraySetIcon("Icons\active.ico",, false)
 A_IconTip := "Keeb Utils is active"
 

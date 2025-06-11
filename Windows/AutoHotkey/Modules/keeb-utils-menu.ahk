@@ -11,9 +11,9 @@
 
 #Include keeb-utils-icon.ahk
 
-;; -- MENU ITEMS --------------------------------------------------------------
-;;
-;; This section contains the menu items visible to the user.
+;;;
+;;; MENU ITEMS
+;;;
 
 Tray := A_TrayMenu                  ;; for convenience
 Tray.Delete()                       ;; delete the standard menu times
@@ -31,37 +31,29 @@ Tray.Add("")
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-;;-- MENU ITEMS CONFIGURATION -------------------------------------------------
-;;
-;; Each menu item's function is defined here.
+;;;
+;;; MENU ITEMS CONFIGURATION
+;;;
 
 ChangeStatus(*)
 {
-    ;; Create variables to store the menu item's name.
     static OldName := "", NewName := ""
 
     ;; Use logic to toggle AutoHotkey between suspended and
     ;; active states when the user clicks on the menu item.
     if NewName != "Disabled" {
-        ;; Switch AutoHotkey state to suspended
-        ;; and update the tray icon.
         Suspend 1
         UpdateIcon()
 
-        ;; Update the variables' value.
         OldName := "Active"
         NewName := "Disabled"
     } else {
-        ;; Switch AutoHotkey state to active
-        ;; and update the tray icon.
         Suspend 0
         UpdateIcon()
 
-        ;; Update the variables' value.
         OldName := "Disabled"
         NewName := "Active"
     }
-    ;; Update the menu item's name on user click.
     Tray.Rename(OldName, NewName)
 }
 

@@ -44,11 +44,6 @@
  * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
-;; -- KEYMAP ------------------------------------------------------------------
-;;
-;; The keymap tells AutoHotkey which scan codes to capture from the keyboard
-;; and which virtual key to assign to them.
-
 ;; Function Row
 ;;sc001::Escape ;; Esc
 ;;sc03B::F1     ;; F1

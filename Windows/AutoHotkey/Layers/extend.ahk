@@ -32,20 +32,13 @@
  * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
-;; -- CONFIGURATION -----------------------------------------------------------
-
-;; Map Caps Lock to F24 to activate the layer when held down.
+;; Map Caps Lock to F24 to activate the layer when held.
 #InputLevel 1
 CapsLock::F24
 #InputLevel 0
 
 ;; Disable Caps Lock states, so the LED won't light up on your device.
 SetCapsLockState "AlwaysOff"
-
-;; -- KEYMAP ------------------------------------------------------------------
-;;
-;; The keymap definitions map virtual keys or functions to Caps Lock+Some Key
-;; combinations. Lines where the mapped function is 'Return' are ignored.
 
 ;; Function Row
 F24 & sc001::Return                         ;; Esc
