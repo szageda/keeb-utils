@@ -16,9 +16,9 @@
  * ╭───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───────╮
  * │Esc│ F1│ F2│ F3│ F4│ F5│ F6│ F7│ F8│ F9│F10│F11│F12│Backspc│
  * ├───┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─────┤
- * │ Tab │Ins│Spc│VlD│VlU│Mut│PgU│Hom│ Up│End│Prt│NLk│Slk│     │
+ * │ Tab │Ins│VlD│Tab│VlU│Mut│PgU│Hom│ Up│End│Prt│NLk│Slk│     │
  * ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴─────┤
- * │ Caps │Win│Tab│Alt│Ctl│PP │PgD│Lft│Dwn│Rht│Sht│Cps│ Enter  │
+ * │ Caps │Win│Alt│Sht│Ctl│PP │PgD│Lft│Dwn│Rht│Spc│Cps│ Enter  │
  * ├──────┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴────────┤
  * │ Shift  │ ^Z│ ^X│ ^C│ ^V│ ^Y│Esc│Bsp│Del│Prv│Nxt│ Shift    │
  * ├──────┬─┴─┬─┴──┬┴───┴───┴───┴───┴───┴─┬─┴──┬┴──┬┴───┬──────┤
@@ -72,8 +72,8 @@ F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
 F24 & sc010::Send "{Blind}{Insert}"         ;; QWERTY qQ
-F24 & sc011::Send "{Blind}{Space}"          ;; QWERTY wW
-F24 & sc012::Send "{Volume_Down}"           ;; QWERTY eE
+F24 & sc011::Send "{Volume_Down}"           ;; QWERTY wW
+F24 & sc012::Send "{Blind}{Tab}"            ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"             ;; QWERTY rR
 F24 & sc014::Send "{Volume_Mute}"           ;; QWERTY tT
 F24 & sc015::Send "{Blind}{PgUp}"           ;; QWERTY yY
@@ -88,8 +88,7 @@ F24 & sc02B::Return                         ;; QWERTY \|
 ;; Home Row
 F24 & sc01E::Send "{Blind}{LWin Down}"      ;; QWERTY aA
 F24 & sc01E Up::Send "{Blind}{LWin Up}"
-F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
-F24 & sc020::                               ;; QWERTY dD
+F24 & sc01F::                               ;; QWERTY sS
 {
     ;; Implement Sticky Key Behavior:
     ;; - On Tap: Sticky key with a timeout.
@@ -100,13 +99,32 @@ F24 & sc020::                               ;; QWERTY dD
     Sleep 350   ;; Sticky time in milliseconds.
 
     ;; On Hold
-    if !KeyWait("sc020") {
+    if !KeyWait("sc01F") {
         Send "{Blind}{Alt Down}"
     }
 
     ;; On Release
-    KeyWait "sc020"
+    KeyWait "sc01F"
     Send "{Alt Up}"
+}
+F24 & sc020::                               ;; QWERTY dD
+{
+    ;; Implement Sticky Key Behavior:
+    ;; - On Tap: Sticky key with a timeout.
+    ;; - On Hold: Act as a regular modifier.
+
+    ;; On Tap
+    Send "{Blind}{Shift Down}"
+    Sleep 350   ;; Sticky time in milliseconds.
+
+    ;; On Hold
+    if !KeyWait("sc020") {
+        Send "{Blind}{Shift Down}"
+    }
+
+    ;; On Release
+    KeyWait "sc020"
+    Send "{Shift Up}"
 }
 F24 & sc021::                               ;; QWERTY fF
 {
@@ -132,25 +150,7 @@ F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::                               ;; QWERTY ;:
-{
-    ;; Implement Sticky Key Behavior:
-    ;; - On Tap: Sticky key with a timeout.
-    ;; - On Hold: Act as a regular modifier.
-
-    ;; On Tap
-    Send "{Blind}{Shift Down}"
-    Sleep 350   ;; Sticky time in milliseconds.
-
-    ;; On Hold
-    if !KeyWait("sc027") {
-        Send "{Blind}{Shift Down}"
-    }
-
-    ;; On Release
-    KeyWait "sc027"
-    Send "{Shift Up}"
-}
+F24 & sc027::Send "{Blind}{Space}"          ;; QWERTY ;:
 F24 & sc028::                               ;; QWERTY '"
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
