@@ -32,6 +32,8 @@
  * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
+#Include Lib/sticky-key.ahk
+
 ;; Map Caps Lock to F24 to activate the layer when held.
 #InputLevel 1
 CapsLock::F24
@@ -89,68 +91,14 @@ F24 & sc02B::Return                         ;; QWERTY \|
 F24 & sc01E::Send "{Blind}{LWin Down}"      ;; QWERTY aA
 F24 & sc01E Up::Send "{Blind}{LWin Up}"
 F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
-F24 & sc020::                               ;; QWERTY dD
-{
-    ;; Implement Sticky Key Behavior:
-    ;; - On Tap: Sticky key with a timeout.
-    ;; - On Hold: Act as a regular modifier.
-
-    ;; On Tap
-    Send "{Blind}{Alt Down}"
-    Sleep 350   ;; Sticky time in milliseconds.
-
-    ;; On Hold
-    if !KeyWait("sc020") {
-        Send "{Blind}{Alt Down}"
-    }
-
-    ;; On Release
-    KeyWait "sc020"
-    Send "{Alt Up}"
-}
-F24 & sc021::                               ;; QWERTY fF
-{
-    ;; Implement Sticky Key Behavior:
-    ;; - On Tap: Sticky key with a timeout.
-    ;; - On Hold: Act as a regular modifier.
-
-    ;; On Tap
-    Send "{Blind}{Ctrl Down}"
-    Sleep 350   ;; Sticky time in milliseconds.
-
-    ;; On Hold
-    if !KeyWait("sc021") {
-        Send "{Blind}{Ctrl Down}"
-    }
-
-    ;; On Release
-    KeyWait "sc021"
-    Send "{Ctrl Up}"
-}
+F24 & sc020::StickyKey(350, "Alt")          ;; QWERTY dD
+F24 & sc021::StickyKey(350, "Ctrl")         ;; QWERTY fF
 F24 & sc022::Send "{Media_Play_Pause}"      ;; QWERTY gG
 F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::                               ;; QWERTY ;:
-{
-    ;; Implement Sticky Key Behavior:
-    ;; - On Tap: Sticky key with a timeout.
-    ;; - On Hold: Act as a regular modifier.
-
-    ;; On Tap
-    Send "{Blind}{Shift Down}"
-    Sleep 350   ;; Sticky time in milliseconds.
-
-    ;; On Hold
-    if !KeyWait("sc027") {
-        Send "{Blind}{Shift Down}"
-    }
-
-    ;; On Release
-    KeyWait "sc027"
-    Send "{Shift Up}"
-}
+F24 & sc027::StickyKey(350, "Shift")        ;; QWERTY ;:
 F24 & sc028::                               ;; QWERTY '"
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
