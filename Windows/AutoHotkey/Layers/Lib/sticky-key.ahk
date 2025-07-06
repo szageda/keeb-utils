@@ -14,7 +14,7 @@
  *  hold action.
  * @param {integer} timeout Duration in milliseconds to sticky KeyName when
  *  KeySC was tapped.
- * @param {string} KeyName The key to sticky with a timeout on tap, or hold 
+ * @param {string} KeyName The key to sticky with a timeout on tap, or hold
  *  while KeySC is held.
  * @returns None.
  * @example Shift & sc020::StickyKey(350, "Ctrl")
