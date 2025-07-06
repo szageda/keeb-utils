@@ -28,7 +28,7 @@
  * |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
- * 
+ *
  * Colemak Authorship:
  * Shai Coleman
  * https://colemak.com
