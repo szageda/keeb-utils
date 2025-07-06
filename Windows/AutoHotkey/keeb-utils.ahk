@@ -103,17 +103,25 @@ KeyHistory 0
 ;;;
 ;;; KEEB UTILS
 ;;;
-;; Enable or disable features. Scripts on commented lines (starting with ;;)
-;; are not loaded and therefore remain disabled.
+
+;; Scripts on commented lines (starting with ;;) are not loaded,
+;; therefore remain disabled.
 
 ;; Keyboard Layouts
+;; An arrangement of keys on a keyboard that defines the
+;; characters produced when keys are pressed.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
 
 ;; Keyboard Layers
+;; A set of key mappings that can be activated or deactivated
+;; on-demand allowing for different key behaviors based on the
+;; active layer.
 #Include Layers\extend.ahk
 #Include Layers\symbols.ahk
 
 ;; Modules
+;; The core functionality of Keeb Utils doesn't depend on any
+;; of the modules, but they provide additional conveniences.
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk

@@ -8,6 +8,7 @@ License     : MIT
 ;;;
 ;;;  KMONAD CONFIGURATION
 ;;;
+
 ;; The 'defcfg' block defines global configuration options of KMonad. This
 ;; includes the input and output devices, and customizing various behaviors.
 ;; This block must contain at least one input() and one output() function for
@@ -37,14 +38,18 @@ License     : MIT
 )
 
 ;;;
-;;; SOURCE KEYBOARD LAYOUT
+;;; KEYBOARD KEYMAPS
 ;;;
+
 ;; The 'defsrc' block defines the source keyboard layout -- this is the layout
 ;; of the host operating system. It's advised to keep it US QWERTY, unless you
 ;; have a good reason to use another layout, because the output may produce
 ;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
+;;
+;; The 'deflayer' block defines custom keymaps; i.e., keyboard layouts and
+;; and layers. The first keymap in the block is loaded by default when KMonad
+;; starts. The various keymaps are made available using aliases ('@').
 
-;; US QWERTY
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -54,14 +59,9 @@ License     : MIT
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;;;
-;;; KEYBOARD LAYOUTS & LAYERS
-;;;
-;; The 'deflayer' block defines custom keymaps; i.e., keyboard layouts and
-;; and layers. The first keymap in the block is loaded by default when KMonad
-;; starts. The various keymaps are made available using aliases ('@').
-
 ;; Keyboard Layouts
+;; An arrangement of keys on a keyboard that defines the
+;; characters produced when keys are pressed.
 
 ;; Colemak-DH
 ;; © Shai Coleman -- https://colemak.com
@@ -99,9 +99,12 @@ License     : MIT
 )
 
 ;; Keyboard Layers
+;; A set of key mappings that can be activated or deactivated
+;; on-demand allowing for different key behaviors based on the
+;; active layer.
 
 ;; Extend
-;; Provides quick access to essential text editing, navigation features
+;; Quick access to essential text editing, navigation features
 ;; and other system functions.
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -113,7 +116,7 @@ License     : MIT
 )
 
 ;; Symbols
-;; Provides quick access to commonly used symbols and punctuation marks
+;; Quick access to commonly used symbols and punctuation marks
 ;; regardless of the active keyboard layout.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -125,7 +128,7 @@ License     : MIT
 )
 
 ;; Shifted Symbols
-;; Provides quick access to commonly used symbols and punctuation marks
+;; Quick access to commonly used symbols and punctuation marks
 ;; when Shift is held regardless of the active keyboard layout.
 (deflayer shifted-symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -148,8 +151,9 @@ License     : MIT
 )
 
 ;;;
-;;; ALIAS DEFINITIONS
+;;; ALIASES
 ;;;
+
 ;; The 'defalias' block defines aliases -- they are used to identify custom
 ;; keymaps, key combinations, and macros. Also, alias definitions can be used
 ;; to alter the behavior of keys: for example, do one thing on key tap, do
