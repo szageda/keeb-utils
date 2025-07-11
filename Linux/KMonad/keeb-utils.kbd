@@ -182,7 +182,11 @@ License     : MIT
   ;; Sticky Keys:
   ;; - On Tap: Sticky key with a timeout.
   ;; - On Hold: Act as a regular modifier.
-  ask (sticky-key 350 lalt)
-  csk (sticky-key 350 lctl)
-  ssk (sticky-key 350 lsft)
+  ;;
+  ;; Note: Sticky keys do not combine, i.e. if you sticky Ctrl and Shift,
+  ;; you don't get Ctrl+Shift, but rather Ctrl or Shift -- see:
+  ;; https://github.com/kmonad/kmonad/discussions/1013
+  ask (sticky-key 350 (around lalt P100))
+  csk (sticky-key 350 (around lctl P100))
+  ssk (sticky-key 350 (around lsft P100))
 )
