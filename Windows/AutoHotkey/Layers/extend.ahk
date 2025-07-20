@@ -16,9 +16,9 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  * |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- * | Tab |Ins|Spc|VlD|VlU|Mut|PgU|Hom| Up|End|PSc|NLk|SLk|     |
+ * | Tab |Ins|Tab|VlD|VlU|Mut|PgU|Hom| Up|End|PSc|NLk|SLk|     |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- * | Caps |Win|Tab|Alt|Ctl| PP|PgD|Lft|Dwn|Rht|Sft|Cps| Enter  |
+ * | Caps |Alt|Win|Sft|Ctl| PP|PgD|Lft|Dwn|Rht|Spc|Cps| Enter  |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Prv|Nxt| Shift    |
  * |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
@@ -74,7 +74,7 @@ F24 & sc00D::Send "{Blind}{F12}"            ;; QWERTY =+
 
 ;; Top Row
 F24 & sc010::Send "{Blind}{Insert}"         ;; QWERTY qQ
-F24 & sc011::Send "{Blind}{Space}"          ;; QWERTY wW
+F24 & sc011::Send "{Blind}{Tab}"            ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"           ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"             ;; QWERTY rR
 F24 & sc014::Send "{Volume_Mute}"           ;; QWERTY tT
@@ -88,17 +88,17 @@ F24 & sc01B::ScrollLock                     ;; QWERTY ]}
 F24 & sc02B::Return                         ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Blind}{LWin Down}"      ;; QWERTY aA
-F24 & sc01E Up::Send "{Blind}{LWin Up}"
-F24 & sc01F::Send "{Blind}{Tab}"            ;; QWERTY sS
-F24 & sc020::StickyKey(350, "Alt")          ;; QWERTY dD
+F24 & sc01E::StickyKey(350, "Alt")          ;; QWERTY aA
+F24 & sc01F::Send "{Blind}{LWin Down}"      ;; QWERTY sS
+F24 & sc01F Up::Send "{Blind}{LWin Up}"
+F24 & sc020::StickyKey(350, "Shift")        ;; QWERTY dD
 F24 & sc021::StickyKey(350, "Ctrl")         ;; QWERTY fF
 F24 & sc022::Send "{Media_Play_Pause}"      ;; QWERTY gG
 F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::StickyKey(350, "Shift")        ;; QWERTY ;:
+F24 & sc027::Send "{Blind}{Space}"          ;; QWERTY ;:
 F24 & sc028::                               ;; QWERTY '"
 {
     SetCapsLockState GetKeyState("CapsLock", "T")

@@ -106,11 +106,20 @@ License     : MIT
 ;; Extend
 ;; Quick access to essential text editing, navigation features
 ;; and other system functions.
+;;(deflayer extend
+;;  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+;;  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
+;;  tab  ins  spc  vold volu mute pgup home up   end  ssrq nlck slck XX
+;;  @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk caps ret
+;;  lsft @udo @cut @cpy @pst @rdo esc  bspc del  prev next rsft
+;;  lctl lmet lalt           ret            ralt cmp  rmet rctl
+;;)
+
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
-  tab  ins  spc  vold volu mute pgup home up   end  ssrq nlck slck XX
-  @xtn lmet tab  @ask @csk pp   pgdn left down rght @ssk caps ret
+  tab  ins  tab  vold volu mute pgup home up   end  ssrq nlck slck XX
+  @xtn @ask lmet @ssk @csk pp   pgdn left down rght spc caps ret
   lsft @udo @cut @cpy @pst @rdo esc  bspc del  prev next rsft
   lctl lmet lalt           ret            ralt cmp  rmet rctl
 )
