@@ -98,7 +98,7 @@ F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::Send "{Blind}{Space}"          ;; QWERTY ;:
+F24 & sc027::Send "{Blind}{Enter}"          ;; QWERTY ;:
 F24 & sc028::                               ;; QWERTY '"
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
