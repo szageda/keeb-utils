@@ -60,8 +60,8 @@ License     : MIT
 )
 
 ;; Keyboard Layouts
-;; An arrangement of keys on a keyboard that defines the
-;; characters produced when keys are pressed.
+;; An arrangement of keys that defines the characters
+;; produced when keys are pressed on the alphanumeric keys.
 
 ;; Colemak-DH
 ;; © Shai Coleman -- https://colemak.com
@@ -76,7 +76,7 @@ License     : MIT
 )
 
 ;; Dvorak
-;; For testing purposes only. I don't actually use it.
+;; For testing purposes only.
 ;; https://dvorak-keyboard.com
 (deflayer dvorak-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
@@ -88,7 +88,7 @@ License     : MIT
 )
 
 ;; US QWERTY
-;; For games and in case somebody needs to use my PC.
+;; For games and if somebody needs to use my PC.
 (deflayer qwerty
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -104,7 +104,7 @@ License     : MIT
 ;; active layer.
 
 ;; Extend
-;; Quick access to essential text editing, navigation features
+;; Quick access to essential text editing, navigation features,
 ;; and other system functions.
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -116,8 +116,7 @@ License     : MIT
 )
 
 ;; Symbols
-;; Quick access to commonly used symbols and punctuation marks
-;; regardless of the active keyboard layout.
+;; Quick access to commonly used symbols and punctuation marks.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -129,7 +128,7 @@ License     : MIT
 
 ;; Shifted Symbols
 ;; Quick access to commonly used symbols and punctuation marks
-;; when Shift is held regardless of the active keyboard layout.
+;; when the Symbols key and Shift are held down.
 (deflayer shifted-symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -139,8 +138,8 @@ License     : MIT
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
-;; Keyboad Layout Selection
-;; Allows for selection of KMonad keymaps (Colemak/Dvorak/QWERTY).
+;; Keyboard Layout Selection
+;; Allows for selection of the active keyboard layout (Colemak/Dvorak/QWERTY).
 (deflayer select-layout
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -183,8 +182,8 @@ License     : MIT
   ;; - On Tap: Sticky key with a timeout.
   ;; - On Hold: Act as a regular modifier.
   ;;
-  ;; Note: Sticky keys do not combine, i.e. if you sticky Ctrl and Shift,
-  ;; you don't get Ctrl+Shift, but rather Ctrl or Shift -- see:
+  ;; Note: Sticky keys do not combine, i.e. if you sticky Ctrl and Shift and
+  ;; press 's', you will get Ctrl+s or Shift+s, but not Ctrl+Shift+s -- see:
   ;; https://github.com/kmonad/kmonad/discussions/1013
   ask (sticky-key 350 (around lalt P100))
   csk (sticky-key 350 (around lctl P100))
