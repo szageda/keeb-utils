@@ -92,7 +92,7 @@ LineLogging(*)
         ;; Update the variable's value.
         LogLines := 0
     }
-    ;; Update the menu item's checkmark on user click.
+    ;; Update the menu item's check mark on user click.
     DebugMenu.ToggleCheck("Line Logging")
 }
 ;; End of Debug Submenu
@@ -112,6 +112,6 @@ CloseAHK(*)
 }
 
 ;; Set activating/suspending AutoHotkey as the default option
-;; when user double-clicks the tray icon.
+;; when user double clicks the tray icon.
 CurrentDefault := Tray.Default
 Tray.Default := "Active"

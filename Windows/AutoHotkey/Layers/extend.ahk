@@ -18,11 +18,11 @@
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
  * | Tab |Ins|Spc|VlD|VlU|Mut|PgU|Hom| Up|End|PSc|NLk|SLk|     |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- * | Caps |Win|Tab|Alt|Ctl| PP|PgD|Lft|Dwn|Rht|Sft|Cps| Enter  |
+ * | Caps |Win|Tab|Alt|Ctl| PP|PgD|Lft|Dwn|Rht|Ent|Cps| Enter  |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
  * |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Prv|Nxt| Shift    |
  * |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
- * | Ctrl |Win|Alt | Enter                | Alt|Win|Menu| Ctrl |
+ * | Ctrl |Win|Alt | Shift                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
  * Keyboard Scan Codes:
@@ -98,7 +98,7 @@ F24 & sc023::Send "{Blind}{PgDn}"           ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"           ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"           ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"          ;; QWERTY lL
-F24 & sc027::StickyKey(350, "Shift")        ;; QWERTY ;:
+F24 & sc027::Send "{Blind}{Enter}"          ;; QWERTY ;:
 F24 & sc028::                               ;; QWERTY '"
 {
     SetCapsLockState GetKeyState("CapsLock", "T")
@@ -119,4 +119,4 @@ F24 & sc034::Send "{Media_Prev}"            ;; QWERTY .>
 F24 & sc035::Send "{Media_Next}"            ;; QWERTY /?
 
 ;; Misc. Keys
-F24 & sc039::Send "{Blind}{Enter}"          ;; Space
+F24 & sc039::StickyKey(350, "Shift")        ;; Space
