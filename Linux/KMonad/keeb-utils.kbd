@@ -182,7 +182,7 @@ License     : MIT
   ;;
   ;; - On Tap: Sticky key with a timeout.
   ;; - On Hold: Act as a regular modifier.
-  ssk (sticky-key 350 (around lsft P100))
+  ssk (sticky-key 450 lsft)
 
   ;; Multi-Sticky Keys
   ;;
