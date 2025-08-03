@@ -9,7 +9,7 @@
  * @description Implements a multi-tap sticky key behavior emulating KMonad's
  *  combination of 'multi-tap' and 'sticky-key' functions.
  * @caution The function must be mapped to a key defined with its scan code.
- * @var {string} KeySC The scan code of the key that called the function. This
+ * @var {string} keySC The scan code of the key that called the function. This
  *  is used to determine the key's physical state to initiate a tap or hold
  *  action.
  * @var {integer} keyPresses Static variable to count the number of taps. It is
@@ -31,14 +31,14 @@ MultiSticky(multiTapTimeout := 150,
             primaryKey := "",
             stickyKeyTimeout := 450,
             secondaryKey := "") {
-    KeySC := A_ThisHotkey
-    KeySC := RegExMatch(KeySC, "sc\d+", &OutputVar)
-    KeySC := OutputVar[]
+    keySC := A_ThisHotkey
+    keySC := RegExMatch(keySC, "sc\d+", &OutputVar)
+    keySC := OutputVar[]
 
     static keyPresses := 0
     if (keyPresses > 0) {
         keyPresses += 1
-        return
+        Return
     }
 
     keyPresses := 1
@@ -51,12 +51,12 @@ MultiSticky(multiTapTimeout := 150,
             Sleep stickyKeyTimeout
 
             ;; Single Tap & Hold
-            if !KeyWait(KeySC) {
+            if !KeyWait(keySC) {
                 Send "{Blind}{" primaryKey " Down}"
             }
 
             ;; Release
-            KeyWait KeySC
+            KeyWait keySC
             Send "{" primaryKey " Up}"
         }
 
@@ -67,13 +67,13 @@ MultiSticky(multiTapTimeout := 150,
             Sleep stickyKeyTimeout
 
             ;; Double Tap & Hold
-            if !KeyWait(KeySC) {
+            if !KeyWait(keySC) {
                 Send "{Blind}{" primaryKey " Down}"
                 Send "{Blind}{" secondaryKey " Down}"
             }
 
             ;; Release
-            KeyWait KeySC
+            KeyWait keySC
             Send "{" primaryKey " Up}"
             Send "{" secondaryKey " Up}"
         }
