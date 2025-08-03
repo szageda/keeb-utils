@@ -110,7 +110,7 @@ License     : MIT
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
   tab  ins  spc  vold volu mute pgup home up   end  ssrq nlck slck XX
-  @xtn lmet tab  @ask @csk pp   pgdn left down rght ret  caps ret
+  @xtn lmet tab  @ams @cms pp   pgdn left down rght ret  caps ret
   lsft @udo @cut @cpy @pst @rdo esc  bspc del  prev next rsft
   lctl lmet lalt           @ssk           ralt cmp  rmet rctl
 )
@@ -178,14 +178,32 @@ License     : MIT
   rdo C-y ;; Linux: C-S-z in some desktop environments.
   udo C-z
 
-  ;; Sticky Keys:
+  ;; Sticky Keys
+  ;;
   ;; - On Tap: Sticky key with a timeout.
   ;; - On Hold: Act as a regular modifier.
-  ;;
-  ;; Note: Sticky keys do not combine, i.e. if you sticky Ctrl and Shift and
-  ;; press 's', you will get Ctrl+s or Shift+s, but not Ctrl+Shift+s -- see:
-  ;; https://github.com/kmonad/kmonad/discussions/1013
-  ask (sticky-key 350 (around lalt P100))
-  csk (sticky-key 350 (around lctl P100))
   ssk (sticky-key 350 (around lsft P100))
+
+  ;; Multi-Sticky Keys
+  ;;
+  ;; To fix the issue of Ctrl and Shift not combining with 'sticky-key'
+  ;; (see: https://github.com/kmonad/kmonad/discussions/1013), 'multi-tap'
+  ;; is used to create a multi-tap sticky key that combines modifiers into a
+  ;; single key. This allows for Ctrl+Shift+S to work as expected.
+  ;;
+  ;; - Single Tap: Sticky the modifier for the next key press then release.
+  ;;  - Single Tap & Hold: Hold the modifier.
+  ;; - Double Tap: Sticky both modifiers for the next key press then release.
+  ;;  - Double Tap & Hold: Hold both modifiers.
+  ;;
+  ;; Important: For this to work, you must compile KMomad from source with the
+  ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
+
+  ams (multi-tap 150
+        (sticky-key 450 lalt)
+        (sticky-key 450 A-lsft))
+
+  cms (multi-tap 150
+        (sticky-key 450 lctl)
+        (sticky-key 450 C-lsft))
 )
