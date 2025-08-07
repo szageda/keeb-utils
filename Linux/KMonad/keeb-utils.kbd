@@ -199,11 +199,11 @@ License     : MIT
   ;; Important: For this to work, you must compile KMomad from source with the
   ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
 
-  ams (multi-tap 350
+  ams (multi-tap 175
         (sticky-key 450 lalt)
         (sticky-key 450 A-lsft))
 
-  cms (multi-tap 350
+  cms (multi-tap 175
         (sticky-key 450 lctl)
         (sticky-key 450 C-lsft))
 )

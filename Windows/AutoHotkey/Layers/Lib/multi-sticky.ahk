@@ -25,9 +25,9 @@
  *  on a double tap, or to hold with the primaryKey on a double tap and hold
  *  while KeySC is held.
  * @returns None.
- * @example Shift & sc020::MultiSticky(350, "Ctrl", 450, "Shift")
+ * @example Shift & sc020::MultiSticky(175, "Ctrl", 450, "Shift")
  */
-MultiSticky(multiTapTimeout := 350,
+MultiSticky(multiTapTimeout := 175,
             primaryKey := "",
             stickyKeyTimeout := 450,
             secondaryKey := "") {
