@@ -120,4 +120,4 @@ F24 & sc034::Send "{Media_Prev}"                    ;; QWERTY .>
 F24 & sc035::Send "{Media_Next}"                    ;; QWERTY /?
 
 ;; Misc. Keys
-F24 & sc039::StickyKey(350, "Shift")                ;; Space
+F24 & sc039::StickyKey(450, "Shift")                ;; Space
