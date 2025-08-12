@@ -69,7 +69,7 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 > [!NOTE]
 > The stickiness expires when the timeout is over (450 milliseconds by default).
 
-<b>**</b> **Combination of multi-tap and sticky keys with** <kbd>Ctrl</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd> and <kbd>Alt</kbd>, <kbd>Alt</kbd>+<kbd>Shift</kbd>:
+<b>**</b> **Combination of multi-tap and sticky keys with** <kbd>Ctrl</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd> **and** <kbd>Alt</kbd>, <kbd>Alt</kbd>+<kbd>Shift</kbd>:
 
 To fix the issue of <kbd>Ctrl</kbd> and <kbd>Shift</kbd> not combining with the  `sticky-key` function in KMonad (see: https://github.com/kmonad/kmonad/discussions/1013), `multi-tap` is used to combine the <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, and <kbd>Shift</kbd> keys:
 - **Single Tap:** Sticky the modifier for the next key press then release.
