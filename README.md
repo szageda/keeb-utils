@@ -66,19 +66,18 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 - **Tapped:** <kbd>Shift</kbd> becomes sticky until the next key press.
 - **Held:** Holds <kbd>Shift</kbd> until the key is released.
 
-> [!NOTE]
-> The stickiness expires when the timeout is over (450 milliseconds by default).
+*Note: The stickiness expires when the timeout is over (450 milliseconds by default).*
 
 <b>**</b> **Combination of multi-tap and sticky keys with** <kbd>Ctrl</kbd>, <kbd>Ctrl</kbd>+<kbd>Shift</kbd> **and** <kbd>Alt</kbd>, <kbd>Alt</kbd>+<kbd>Shift</kbd>:
 
-To fix the issue of <kbd>Ctrl</kbd> and <kbd>Shift</kbd> not combining with the  `sticky-key` function in KMonad (see: https://github.com/kmonad/kmonad/discussions/1013), `multi-tap` is used to combine the <kbd>Ctrl</kbd>, <kbd>Alt</kbd>, and <kbd>Shift</kbd> keys:
 - **Single Tap:** Sticky the modifier for the next key press then release.
     - **Single Tap & Hold:** Hold the modifier.
 - **Double Tap:** Sticky both modifiers (<kbd>Ctrl</kbd> or <kbd>Alt</kbd> with <kbd>Shift</kbd>) for the next key press then release.
     - **Double Tap & Hold:** Hold both modifiers (<kbd>Ctrl</kbd> or <kbd>Alt</kbd> with <kbd>Shift</kbd>).
 
-> [!NOTE]
-> A double tap must be registered within 175 milliseconds otherwise the multi-tap function expires. The stickiness expires when the timeout is over (450 milliseconds by default).
+*Notes:*
+- *A double tap must be registered within 175 milliseconds otherwise the multi-tap function expires. The stickiness expires when the timeout is over (450 milliseconds by default).*
+- *This is the solution to fix the issue of* <kbd>Ctrl</kbd>/<kbd>Alt</kbd> *and* <kbd>Shift</kbd> *not combining with the* `sticky-key` *function in KMonad (see: https://github.com/kmonad/kmonad/discussions/1013).*
 
 ### Symbols Layer
 
