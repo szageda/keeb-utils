@@ -17,9 +17,9 @@
  * @param {string} keyName The key to sticky with a timeout on tap, or to hold
  *  while keySC is held.
  * @returns None.
- * @example Shift & sc020::StickyKey(350, "Ctrl")
+ * @example Shift & sc020::StickyKey(450, "Ctrl")
  */
-StickyKey(stickyKeyTimeout := 350, keyName := "") {
+StickyKey(stickyKeyTimeout := 450, keyName := "") {
     keySC := A_ThisHotkey
     keySC := RegExMatch(keySC, "sc\d+", &OutputVar)
     keySC := OutputVar[]
