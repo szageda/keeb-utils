@@ -12,10 +12,10 @@
  * @var {string} keySC The scan code of the key that called the function. This
  *  is used to determine the key's physical state to initiate the tap or
  *  hold action.
- * @param {integer} stickyKeyTimeout Duration in milliseconds to sticky KeyName
- *  when KeySC was tapped.
+ * @param {integer} stickyKeyTimeout Duration in milliseconds to sticky keyName
+ *  when keySC was tapped.
  * @param {string} keyName The key to sticky with a timeout on tap, or to hold
- *  while KeySC is held.
+ *  while keySC is held.
  * @returns None.
  * @example Shift & sc020::StickyKey(350, "Ctrl")
  */

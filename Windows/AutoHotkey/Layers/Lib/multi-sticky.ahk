@@ -17,13 +17,13 @@
  * @param {integer} multiTapTimeout Duration in milliseconds to wait for the
  * second tap.
  * @param {string} primaryKey The primary key to sticky with a timeout on tap,
- *  or to hold while KeySC is held.
+ *  or to hold while keySC is held.
  * @param {integer} stickyKeyTimeout Duration in milliseconds to sticky the
- *  primaryKey when KeySC is tapped, or sticky the primaryKey and secondaryKey
+ *  primaryKey when keySC is tapped, or sticky the primaryKey and secondaryKey
  *  on a double tap.
  * @param {string} secondaryKey The secondary key to sticky with the primaryKey
  *  on a double tap, or to hold with the primaryKey on a double tap and hold
- *  while KeySC is held.
+ *  while keySC is held.
  * @returns None.
  * @example Shift & sc020::MultiSticky(175, "Ctrl", 450, "Shift")
  */
