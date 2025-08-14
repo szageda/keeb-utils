@@ -9,31 +9,31 @@
  * @description Implements a sticky key behavior that simulates a virtual key
  *  press with support for tap and hold actions.
  * @caution The function must be mapped to a key defined with its scan code.
- * @var {string} KeySC The scan code of the key that called the function. This
- *  is used to determine the key's physical state that initiates the tap or
+ * @var {string} keySC The scan code of the key that called the function. This
+ *  is used to determine the key's physical state to initiate the tap or
  *  hold action.
- * @param {integer} timeout Duration in milliseconds to sticky KeyName when
- *  KeySC was tapped.
- * @param {string} KeyName The key to sticky with a timeout on tap, or hold
- *  while KeySC is held.
+ * @param {integer} stickyKeyTimeout Duration in milliseconds to sticky keyName
+ *  when keySC was tapped.
+ * @param {string} keyName The key to sticky with a timeout on tap, or to hold
+ *  while keySC is held.
  * @returns None.
- * @example Shift & sc020::StickyKey(350, "Ctrl")
+ * @example Shift & sc020::StickyKey(450, "Ctrl")
  */
-StickyKey(timeout := 350, KeyName := "") {
-    KeySC := A_ThisHotkey
-    KeySC := RegExMatch(KeySC, "sc\d+", &OutputVar)
-    KeySC := OutputVar[]
+StickyKey(stickyKeyTimeout := 450, keyName := "") {
+    keySC := A_ThisHotkey
+    keySC := RegExMatch(keySC, "sc\d+", &OutputVar)
+    keySC := OutputVar[]
 
     ;; On Tap
-    Send "{Blind}{" KeyName " Down}"
-    Sleep timeout
+    Send "{Blind}{" keyName " Down}"
+    Sleep stickyKeyTimeout
 
     ;; On Hold
-    if !KeyWait(KeySC) {
-        Send "{Blind}{" KeyName " Down}"
+    if !KeyWait(keySC) {
+        Send "{Blind}{" keyName " Down}"
     }
 
     ;; On Release
-    KeyWait KeySC
-    Send "{" KeyName " Up}"
+    KeyWait keySC
+    Send "{" keyName " Up}"
 }
