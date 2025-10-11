@@ -76,8 +76,8 @@ License     : MIT
 )
 
 ;; Dvorak
-;; For testing purposes only.
 ;; https://dvorak-keyboard.com
+;; For testing purposes only.
 (deflayer dvorak-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
@@ -87,16 +87,16 @@ License     : MIT
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
-;; Gallium with Angle Mod
-;; For experimental use.
+;; Gallium-Angle Mod
 ;; © Bryson James -- https://github.com/GalileoBlues/Gallium
+;; For experimental use.
 (deflayer gallium-angle-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  b    l    d    c    z    j    f    o    u    ,    /    =    \
   @xtn n    r    t    s    g    y    h    a    e    i    -    ret
   lsft q    m    w    v    x    k    p    '    ;    .    rsft
-  lctl lmet @sym           spc            ralt cmp  rmet rctl 
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; US QWERTY

@@ -60,8 +60,7 @@ Persistent True
 
 ;; Set the interval in seconds before a warning dialog is triggered
 ;; by consecutive hotkey execution; i.e. key spamming.
-;; 'A_MaxHotkeysPerInterval' is not affected, if 'A_HotkeyInterval'
-;; is 0.
+;; 'A_MaxHotkeysPerInterval' isn't active if 'A_HotkeyInterval' is 0.
 ;; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ;; (default 2000)
 A_HotkeyInterval := 0

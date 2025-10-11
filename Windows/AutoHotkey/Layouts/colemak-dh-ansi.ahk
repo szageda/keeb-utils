@@ -4,16 +4,14 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey remaps the software keyboard layout from QWERTY to Colemak-DH
- * by moving the host layout's virtual keys around: AutoHotkey captures the
- * scan code sent by the keyboard, and maps a virtual key to it which is then
- * emitted by the operating system. Such keyboard layout remaps prevent the
- * use of hotstrings, for example: '::btw::by the way' -- typing "btw"
- * outputs "by the way".
+ * This script implements the Colemak-DH keyboard layout by creating
+ * a scan code to character/virtual key translation layer using key
+ * names ('a', 'b', etc.) to bypass the OS keyboard layout, and virtual
+ * keys ('vkXX') whose character output depends on the active keyboard
+ * layout in the OS.
  *
- * The below keymap is only true for the symbol keys (, . = etc.) if US QWERTY
- * is the current keyboard layout as what character is actually emitted always
- * depends on the active keyboard layout of the operating system:
+ * The below keymap is only true for the symbol keys (, . = etc.) if the
+ * active keyboard layout is US QWERTY:
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
  * |Esc| | F1| F2| F3| F4|  | F5| F6| F7| F8|  | F9|F10|F11|F12|
  * `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
@@ -29,13 +27,9 @@
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
- * Colemak Authorship:
- * Shai Coleman
- * https://colemak.com
- *
  * Colemak-DH Authorship:
- * stevep99
- * https://colemakmods.github.io/mod-dh/
+ * Colemak © Shai Coleman -- https://colemak.com
+ * Mod-DH © stevep99 -- https://colemakmods.github.io/mod-dh
  *
  * Keyboard Scan Codes:
  * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
