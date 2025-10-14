@@ -90,7 +90,7 @@ License     : MIT
 ;; Galliope
 ;; Gallium © Bryson James -- https://github.com/GalileoBlues/Gallium
 ;; My modifications of Gallium with Angle Mod.
-(deflayer galliope-angle-ansi
+(deflayer galliope-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  b    l    d    c    z    j    f    u    o    ,    /    =    \
@@ -175,7 +175,7 @@ License     : MIT
   ;; Layouts
   cmk (layer-switch colemak-dh-ansi)
   dvk (layer-switch dvorak-ansi)
-  glm (layer-switch galliope-angle-ansi)
+  glm (layer-switch galliope-ansi)
   qwe (layer-switch qwerty)
 
   ;; Layers
