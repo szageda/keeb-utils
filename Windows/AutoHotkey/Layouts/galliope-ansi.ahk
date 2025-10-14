@@ -4,11 +4,11 @@
  * Copyright   : (c) 2025, Gergely Szabo
  * License     : MIT
  *
- * This script implements the Gallium-Angle Mod keyboard layout by creating
- * a scan code to character/virtual key translation layer using key
- * names ('a', 'b', etc.) to bypass the OS keyboard layout, and virtual
- * keys ('vkXX') whose character output depends on the active keyboard
- * layout in the OS.
+ * This script implements the Galliope keyboard layout (my modifications of
+ * Gallium with Angle Mod) by creating a scan code to character/virtual key
+ * translation layer using key names ('a', 'b', etc.) to bypass the OS keyboard
+ * layout, and virtual keys ('vkXX') whose character output depends on the
+ * active keyboard layout in the OS.
  *
  * The below keymap is only true for the symbol keys (, . = etc.) if the
  * active keyboard layout is US QWERTY:
@@ -18,11 +18,11 @@
  * ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  * | ` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] |Backspc|
  * |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- * | Tab | B | L | D | C | Z | J | F | O | U | , | / | = | \   |
+ * | Tab | B | L | D | C | Z | J | F | U | O | , | / | = | \   |
  * |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- * | Caps | N | R | T | S | G | Y | H | A | E | I | - | Enter  |
+ * | Caps | N | R | T | S | G | Y | H | E | A | I | - | Enter  |
  * |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- * |  Shift | Q | M | W | V | X | K | P | ' | ; | . | Shift    |
+ * |  Shift | Q | M | W | V | X | K | P | ; | ' | . | Shift    |
  * |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
@@ -75,8 +75,8 @@ sc013::c        ;; QWERTY rR
 sc014::z        ;; QWERTY tT
 sc015::j        ;; QWERTY yY
 sc016::f        ;; QWERTY uU
-sc017::o        ;; QWERTY iI
-sc018::u        ;; QWERTY oO
+sc017::u        ;; QWERTY iI
+sc018::o        ;; QWERTY oO
 sc019::vkBC     ;; QWERTY pP
 sc01A::vkBF     ;; QWERTY [{
 sc01B::vkBB     ;; QWERTY ]}
@@ -90,8 +90,8 @@ sc021::s        ;; QWERTY fF
 sc022::g        ;; QWERTY gG
 sc023::y        ;; QWERTY hH
 sc024::h        ;; QWERTY jJ
-sc025::a        ;; QWERTY kK
-sc026::e        ;; QWERTY lL
+sc025::e        ;; QWERTY kK
+sc026::a        ;; QWERTY lL
 sc027::i        ;; QWERTY ;:
 sc028::vkBD     ;; QWERTY '"
 
@@ -103,6 +103,6 @@ sc02F::v        ;; QWERTY vV
 sc030::x        ;; QWERTY bB
 sc031::k        ;; QWERTY nN
 sc032::p        ;; QWERTY mM
-sc033::vkDE     ;; QWERTY ,<
-sc034::vkBA     ;; QWERTY .>
+sc033::vkBA     ;; QWERTY ,<
+sc034::vkDE     ;; QWERTY .>
 sc035::vkBE     ;; QWERTY /?

@@ -64,8 +64,8 @@ License     : MIT
 ;; produced when keys are pressed on the alphanumeric keys.
 
 ;; Colemak-DH
-;; © Shai Coleman -- https://colemak.com
-;; © stevep99 -- https://colemakmods.github.io/mod-dh
+;; Colemak © Shai Coleman -- https://colemak.com
+;; Mod-DH © stevep99 -- https://colemakmods.github.io/mod-dh
 (deflayer colemak-dh-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
@@ -87,15 +87,15 @@ License     : MIT
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
-;; Gallium-Angle Mod
-;; © Bryson James -- https://github.com/GalileoBlues/Gallium
-;; For experimental use.
-(deflayer gallium-angle-ansi
+;; Galliope
+;; Gallium © Bryson James -- https://github.com/GalileoBlues/Gallium
+;; My modifications of Gallium with Angle Mod.
+(deflayer galliope-angle-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-  tab  b    l    d    c    z    j    f    o    u    ,    /    =    \
-  @xtn n    r    t    s    g    y    h    a    e    i    -    ret
-  lsft q    m    w    v    x    k    p    '    ;    .    rsft
+  tab  b    l    d    c    z    j    f    u    o    ,    /    =    \
+  @xtn n    r    t    s    g    y    h    e    a    i    -    ret
+  lsft q    m    w    v    x    k    p    ;    '    .    rsft
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
@@ -175,7 +175,7 @@ License     : MIT
   ;; Layouts
   cmk (layer-switch colemak-dh-ansi)
   dvk (layer-switch dvorak-ansi)
-  glm (layer-switch gallium-angle-ansi)
+  glm (layer-switch galliope-angle-ansi)
   qwe (layer-switch qwerty)
 
   ;; Layers
