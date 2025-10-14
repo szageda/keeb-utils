@@ -111,7 +111,7 @@ KeyHistory 0
 ;; characters produced when keys are pressed.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
-#Include Layouts\galliope-ansi.ahk
+;;#Include Layouts\galliope-ansi.ahk
 
 ;; Keyboard Layers
 ;; A set of key mappings that can be activated or deactivated
