@@ -4,11 +4,12 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This script implements the Dvorak keyboard layout by creating
- * a scan code to character/virtual key translation layer using key
- * names ('a', 'b', etc.) to bypass the OS keyboard layout, and virtual
- * keys ('vkXX') whose character output depends on the active keyboard
- * layout in the OS.
+ * This script creates a scan code-to-character/virtual key translation
+ * layer bypassing the keyboard layout of the operating system. AutoHotkey
+ * intercepts the scan codes from the keyboard and remaps the output of:
+ * - Alphanumeric keys using key names ('a'-'z') bypassing the OS layout.
+ * - Symbol keys using virtual keys ('vkXX') where the output of the keys
+ *  depends on the active keyboard layout of the OS.
  *
  * The below keymap is only true for the symbol keys (, . = etc.) if the
  * active keyboard layout is US QWERTY:

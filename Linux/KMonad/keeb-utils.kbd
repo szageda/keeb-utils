@@ -60,8 +60,8 @@ License     : MIT
 )
 
 ;; Keyboard Layouts
-;; An arrangement of keys that defines the characters
-;; produced when keys are pressed on the alphanumeric keys.
+;; Keymaps defining the key arrangements and characters produced
+;; when alphanumeric keys are pressed.
 
 ;; Colemak-DH
 ;; Colemak © Shai Coleman -- https://colemak.com
@@ -111,9 +111,8 @@ License     : MIT
 )
 
 ;; Keyboard Layers
-;; A set of key mappings that can be activated or deactivated
-;; on-demand allowing for different key behaviors based on the
-;; active layer.
+;; Set of key-to-function keymaps that can modify the behavior
+;; of alphanumeric keys when activate.
 
 ;; Extend
 ;; Quick access to essential text editing, navigation features,

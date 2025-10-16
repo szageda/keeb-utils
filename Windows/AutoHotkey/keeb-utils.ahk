@@ -107,16 +107,15 @@ KeyHistory 0
 ;; therefore remain disabled.
 
 ;; Keyboard Layouts
-;; An arrangement of keys on a keyboard that defines the
-;; characters produced when keys are pressed.
+;; Keymaps defining the key arrangements and characters produced
+;; when alphanumeric keys are pressed.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
 ;;#Include Layouts\galliope-ansi.ahk
 
 ;; Keyboard Layers
-;; A set of key mappings that can be activated or deactivated
-;; on-demand allowing for different key behaviors based on the
-;; active layer.
+;; Set of key-to-function keymaps that can modify the behavior
+;; of alphanumeric keys when activate.
 #Include Layers\extend.ahk
 #Include Layers\symbols.ahk
 
