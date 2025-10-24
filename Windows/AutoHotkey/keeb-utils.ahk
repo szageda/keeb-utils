@@ -60,8 +60,7 @@ Persistent True
 
 ;; Set the interval in seconds before a warning dialog is triggered
 ;; by consecutive hotkey execution; i.e. key spamming.
-;; 'A_MaxHotkeysPerInterval' is not affected, if 'A_HotkeyInterval'
-;; is 0.
+;; 'A_MaxHotkeysPerInterval' isn't active if 'A_HotkeyInterval' is 0.
 ;; https://www.autohotkey.com/docs/v2/lib/A_MaxHotkeysPerInterval.htm
 ;; (default 2000)
 A_HotkeyInterval := 0
@@ -108,15 +107,15 @@ KeyHistory 0
 ;; therefore remain disabled.
 
 ;; Keyboard Layouts
-;; An arrangement of keys on a keyboard that defines the
-;; characters produced when keys are pressed.
+;; Keymaps defining the key arrangements and characters produced
+;; when alphanumeric keys are pressed.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
+;;#Include Layouts\galliope-ansi.ahk
 
 ;; Keyboard Layers
-;; A set of key mappings that can be activated or deactivated
-;; on-demand allowing for different key behaviors based on the
-;; active layer.
+;; Set of key-to-function keymaps that can modify the behavior
+;; of alphanumeric keys when activate.
 #Include Layers\extend.ahk
 #Include Layers\symbols.ahk
 
