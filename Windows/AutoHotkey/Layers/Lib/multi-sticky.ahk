@@ -1,7 +1,7 @@
 /*
  * File        : multi-sticky.ahk
  * Description : AutoHotkey Multi-Sticky Key function (Keeb Utils)
- * Copyright   : (c) 2025, Gergely Szabo
+ * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  *
  * Implement a multi-tap sticky key function to combine two modifiers into

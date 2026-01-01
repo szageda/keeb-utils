@@ -1,7 +1,7 @@
 /*
  * File        : sticky-key.ahk
  * Description : AutoHotkey Sticky Key function (Keeb Utils)
- * Copyright   : (c) 2025, Gergely Szabo
+ * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  * 
  * Implement a sticky key function to change the behavior of a modifier key

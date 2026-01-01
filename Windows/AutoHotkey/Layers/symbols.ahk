@@ -1,7 +1,7 @@
 /*
  * File        : symbols.ahk
  * Description : AutoHotkey keyboard layer configuration file (Keeb Utils)
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
  * AutoHotkey adds a "Symbols" layer by defining new key shortcuts using the
@@ -46,7 +46,7 @@ F23::
     ;; - On Tap: Normal Alt key behavior.
     ;; - On Hold: Hold the F23 virtual key to activate the layer.
     ;;
-    ;; KeyWait() monitors the physical state of Left Alt key using
+    ;; 'KeyWait()' monitors the physical state of Left Alt key using
     ;; its scan code (sc038).
 
     ;; On Tap
