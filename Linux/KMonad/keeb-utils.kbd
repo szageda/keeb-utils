@@ -200,13 +200,20 @@ License     : MIT
   ;;
   ;; To fix the issue of Ctrl and Shift not combining with 'sticky-key'
   ;; (see: https://github.com/kmonad/kmonad/discussions/1013), 'multi-tap'
-  ;; is used to create a multi-tap sticky key that combines modifiers into a
-  ;; single key. This allows for Ctrl+Shift+S to work as expected.
+  ;; creates a single multi-tap sticky key that combines two modifiers. This
+  ;; allows for Ctrl+Shift+S to work as expected.
   ;;
-  ;; - Single Tap: Sticky the modifier for the next key press then release.
-  ;;  - Single Tap & Hold: Hold the modifier.
-  ;; - Double Tap: Sticky both modifiers for the next key press then release.
-  ;;  - Double Tap & Hold: Hold both modifiers.
+  ;;  - Single Tap & Release: Sticky the primary modifier for the next key
+  ;;                          press (stickiness expires after the timeout
+  ;;                          period).
+  ;;    - Single Tap & Hold: Hold the primary modifier.
+  ;;  - Double Tap & Release: Sticky two modifiers for the next key press
+  ;;                          (stickiness expires after the timeout period).
+  ;;    - Double Tap & Hold: Hold both modifiers.
+  ;;
+  ;; Notes:
+  ;;  - The tap counter resets after its defined timeout period.
+  ;;  - The sticky keys expire after their defined timeout period.
   ;;
   ;; Important: For this to work, you must compile KMomad from source with the
   ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
