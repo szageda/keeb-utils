@@ -4,12 +4,13 @@
  * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  *
- * Implement a multi-tap sticky key function to combine two modifiers into
- * a single key:
- *  - Single Tap & Release: Sticky the primary modifier for the next key press.
+ * Implement a multi-tap sticky key function to combine two modifiers
+ * into a single key:
+ *  - Single Tap & Release: Sticky the primary modifier
+ *                          for the next key press.
  *    - Single Tap & Hold: Hold the primary modifier.
- *  - Double Tap & Release: Sticky the primary and secondary modifiers for the
- *                          next key press.
+ *  - Double Tap & Release: Sticky the primary and secondary modifiers
+ *                          for the next key press. 
  *    - Double Tap & Hold: Hold both modifiers.
  *
  * Notes:
@@ -26,8 +27,8 @@ MultiSticky(tapTimeout := 175,
             secondaryKey := "") {
 
     ;; Extract the scan code from the key that called the function.
-    ;; Important: The function must be mapped to a key defined using its scan
-    ;; code (e.g., "sc020").
+    ;; Important: The function must be mapped to a key defined using
+    ;; its scan code (e.g., "sc020").
     triggerKey := A_ThisHotkey
     triggerKey := RegExMatch(triggerKey, "sc\d+", &OutputVar)
     triggerKey := OutputVar[]
@@ -39,8 +40,8 @@ MultiSticky(tapTimeout := 175,
         Return
     }
 
-    ;; Start the tap counter on the first key press; the counter resets after
-    ;; the timeout defined by 'tapTimeout' in milliseconds.
+    ;; Start the tap counter on the first key press; the counter resets
+    ;; after the timeout defined by 'tapTimeout' in milliseconds.
     keyPresses := 1
     SetTimer Taps, -tapTimeout
 
