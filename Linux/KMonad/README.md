@@ -13,68 +13,28 @@
 
 — *README.md*, KMonad, [link](https://github.com/kmonad/kmonad)
 
-## Installation & Startup
+## Requirements
 
-### Linux
+- **KMonad 0.4.2+:** Ensure you have the latest version installed. The minimal required version is 0.4.2.
+- **Linux (Debian 12+, Ubuntu 22.04+, Fedora 42+ etc.):** The configuration file is tested on modern Linux distributions.
+- **Windows 10+:** I view KMonad as a “Linux first” solution; while running it on Windows is possible, make sure you download the Windows binary.
 
-> [!IMPORTANT]
-> **This repository does not package or distribute the KMonad binary required to run the Keeb Utils configuration file. It is your responsibility to install the required software version.**
+## Installation
 
-1. Install KMonad using:
-
-    - the latest [binary release](https://github.com/kmonad/kmonad/releases).
-    - a [compiliation method](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#compilation).
-
-2. Clone the contents of this repository to your computer.
-
+1. **Download the scripts:** Clone or download this repository to your computer.
 ```shell
-git clone https://github.com/szageda/keeb-utils.git
+git clone https://github.com/szageda/keeb-utils
 ```
-3. Load `keeb-utils.kbd` with KMonad.
-
+2. **Launch KMonad:** Start KMonad with the configuration file.
 ```shell
 kmonad ~/Downloads/keeb-utils-main/Linux/KMonad/keeb-utils.kbd
 ```
-> [!WARNING]
-> **You must configure your input device before KMonad can load: Change the value of `input (device-file "value")` following the KMonad [instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).**
-
-> [!IMPORTANT]
-> If you haven't configured the uinput permissions for your user, you must run KMonad as sudo.
-
-> [!TIP]
-> Placing KMonad into your `$PATH` helps, so you don't have to type the absolute path to the executable every time you want to run it.
-
-> [!NOTE]
-> KMonad must be restarted (stopped and started) everytime you make changes to a configuration file.
-
-### Windows
-
-> [!NOTE]
-> KMonad is compatible with Windows, but I view it as a “Linux first” solution, so I only use Keeb Utils with KMonad on Windows when I need to conduct tests.
-
-> [!IMPORTANT]
-> **This repository does not package or distribute the KMonad binary required to run the Keeb Utils configuration file. It is your responsibility to install the required software version.**
-
-1. Install KMonad using:
-
-    - the latest [binary release](https://github.com/kmonad/kmonad/releases).
-    - the [Windows compiliation method](https://github.com/kmonad/kmonad/blob/master/doc/installation.md#windows-environment).
-
-2. Donwload the contents of this repository to your computer.
-
-3. Extract `keeb-utils-main.zip`.
-
-3. Load `keeb-utils.kbd` with KMonad using Windows Terminal, PowerShell, or CMD.
-
-```PowerShell
-kmonad C:\Users\%username%\Downloads\keeb-utils-main\Linux\KMonad\keeb-utils.kbd
-```
 
 > [!WARNING]
-> **You must configure your input method before KMonad can load: Comment (insert `;;`) the lines starting with `input` and `output` under the `Linux` section, then uncomment (remove `;;`) the lines starting with `input` and `output` under the `Windows` section.**
+> **You must configure your input device before KMonad can start: Change the value of `input (device-file "value")` following the KMonad [instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).**
 
-> [!TIP]
-> To quit KMonad, use the <kbd>Ctrl</kbd>+<kbd>X</kbd> combination inside the Windows Terminal, PowerShell, or CMD window.
+## Usage
 
-> [!NOTE]
-> KMonad must be restarted (stopped and started) everytime you make changes to a configuration file.
+To keep KMonad running in the background, use one of the following methods:
+- Run KMonad inside a [tmux](https://github.com/tmux/tmux) session.
+- Run KMonad as a [systemd service](https://github.com/kmonad/kmonad/blob/master/startup/kmonad%40.service).
