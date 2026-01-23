@@ -15,7 +15,7 @@
  * @param {string} keyName    Name of the modifier key to sticky or hold (e.g., "Ctrl").
  * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code (e.g., "sc020"). 
  */
-StickyKey(stickyTimeout := 450, keyName := "") {
+StickyKey(stickyTimeout := 0, keyName := "") {
 
     ;; Extract the scan code from the key that called the function.
     RegExMatch(A_ThisHotkey, "i)sc[0-9A-F]+|.", &match)

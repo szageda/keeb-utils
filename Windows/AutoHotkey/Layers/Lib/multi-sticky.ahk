@@ -21,9 +21,9 @@
  * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code (e.g., "sc020").
  * @var {int} keyPresses    Stores the number of taps detected within 'tapTimeout'.
  */
-MultiSticky(tapTimeout := 175,
+MultiSticky(tapTimeout := 0,
             primaryKey := "",
-            stickyTimeout := 450,
+            stickyTimeout := 0,
             secondaryKey := "") {
 
     ;; Extract the scan code from the key that called the function.
