@@ -8,9 +8,9 @@
  * loaded by this file run with the settings defined here.
  */
 
-;;;
-;;; AUTOHOTKEY GENERAL SETTINGS
-;;;
+;;
+;; AutoHotkey General Settings
+;;
 
 ;; Define the AutoHotkey version required to run this script.
 ;; https://www.autohotkey.com/docs/v2/lib/_Requires.htm
@@ -54,9 +54,9 @@ ProcessSetPriority "High"
 ;; (default True)
 Persistent True
 
-;;;
-;;; INPUT SETTINGS
-;;;
+;;
+;; Input Settings
+;;
 
 ;; Set the interval in seconds before a warning dialog is triggered
 ;; by consecutive hotkey execution; i.e. key spamming.
@@ -83,9 +83,9 @@ SendMode "Event"
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;;;
-;;; DEBUGGING SETTINGS
-;;;
+;;
+;; Debugging Settings
+;;
 
 ;; Enables or disables line logging or displays the script
 ;; lines most recently executed.
@@ -99,10 +99,9 @@ ListLines 0
 ;; (default 40)
 KeyHistory 0
 
-;;;
-;;; KEEB UTILS
-;;;
-
+;;
+;; Keeb Utils Configuration
+;;
 ;; Scripts on commented lines (starting with ;;) are not loaded,
 ;; therefore remain disabled.
 

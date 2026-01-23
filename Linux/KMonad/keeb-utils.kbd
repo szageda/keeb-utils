@@ -1,13 +1,13 @@
 #|
 File        : keeb-utils.kbd
 Description : KMonad keymap configuration file for Keeb Utils
-Copyright   : (c) 2024-2025, Gergely Szabo
+Copyright   : (c) 2024-2026, Gergely Szabo
 License     : MIT
 |#
 
-;;;
-;;;  KMONAD CONFIGURATION
-;;;
+;;
+;; KMonad General Configuration
+;;
 
 ;; The 'defcfg' block defines global configuration options of KMonad. This
 ;; includes the input and output devices, and customizing various behaviors.
@@ -37,9 +37,9 @@ License     : MIT
   allow-cmd false
 )
 
-;;;
-;;; KEYBOARD KEYMAPS
-;;;
+;;
+;; Keymaps
+;;
 
 ;; The 'defsrc' block defines the source keyboard layout -- this is the layout
 ;; of the host operating system. It's advised to keep it US QWERTY, unless you
@@ -160,9 +160,9 @@ License     : MIT
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;;;
-;;; ALIASES
-;;;
+;;
+;; Aliases
+;;
 
 ;; The 'defalias' block defines aliases -- they are used to identify custom
 ;; keymaps, key combinations, and macros. Also, alias definitions can be used
@@ -191,9 +191,6 @@ License     : MIT
   udo C-z
 
   ;; Sticky Keys
-  ;;
-  ;; - On Tap: Sticky key with a timeout.
-  ;; - On Hold: Act as a regular modifier.
   ssk (sticky-key 450 lsft)
 
   ;; Multi-Sticky Keys
@@ -202,18 +199,6 @@ License     : MIT
   ;; (see: https://github.com/kmonad/kmonad/discussions/1013), 'multi-tap'
   ;; creates a single multi-tap sticky key that combines two modifiers. This
   ;; allows for Ctrl+Shift+S to work as expected.
-  ;;
-  ;;  - Single Tap & Release: Sticky the primary modifier for the next key
-  ;;                          press (stickiness expires after the timeout
-  ;;                          period).
-  ;;    - Single Tap & Hold: Hold the primary modifier.
-  ;;  - Double Tap & Release: Sticky two modifiers for the next key press
-  ;;                          (stickiness expires after the timeout period).
-  ;;    - Double Tap & Hold: Hold both modifiers.
-  ;;
-  ;; Notes:
-  ;;  - The tap counter resets after its defined timeout period.
-  ;;  - The sticky keys expire after their defined timeout period.
   ;;
   ;; Important: For this to work, you must compile KMomad from source with the
   ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
