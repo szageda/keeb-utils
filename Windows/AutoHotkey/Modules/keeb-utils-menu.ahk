@@ -1,7 +1,7 @@
 /*
  * File        : keeb-utils-menu.ahk
  * Description : Minimalist AutoHotkey tray icon menu (Keeb Utils)
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
  * This script creates a minimalist tray icon menu for AutoHotkey with custom

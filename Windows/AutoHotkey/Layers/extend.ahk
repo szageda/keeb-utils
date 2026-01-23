@@ -1,7 +1,7 @@
 /*
  * File        : extend.ahk
  * Description : AutoHotkey keyboard layer configuration file (Keeb Utils)
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
  * AutoHotkey adds an "Extend" layer by defining new key shortcuts using the

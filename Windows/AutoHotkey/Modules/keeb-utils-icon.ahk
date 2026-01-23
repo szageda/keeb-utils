@@ -1,7 +1,7 @@
 /*
  * File        : keeb-utils-icon.ahk
  * Description : AutoHotkey function to update the tray icon (Keeb Utils)
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
  * This function changes the AutoHotkey tray icon and text on mouse hover
