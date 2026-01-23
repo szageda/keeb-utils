@@ -27,11 +27,8 @@ MultiSticky(tapTimeout := 175,
             secondaryKey := "") {
 
     ;; Extract the scan code from the key that called the function.
-    ;; Important: The function must be mapped to a key defined using
-    ;; its scan code (e.g., "sc020").
-    triggerKey := A_ThisHotkey
-    triggerKey := RegExMatch(triggerKey, "sc\d+", &OutputVar)
-    triggerKey := OutputVar[]
+    RegExMatch(A_ThisHotkey, "i)sc[0-9A-F]+|.", &match)
+    triggerKey := match[0]
 
     ;; Implement the tap counting logic.
     static keyPresses := 0
