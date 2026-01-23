@@ -34,7 +34,7 @@ MultiSticky(tapTimeout := 0,
     static keyPresses := 0
     if (keyPresses > 0) {
         keyPresses += 1
-        Return
+        return
     }
     keyPresses := 1
     SetTimer Taps, -tapTimeout

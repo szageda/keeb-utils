@@ -44,19 +44,19 @@ CapsLock::F24
 SetCapsLockState "AlwaysOff"
 
 ;; Function Row
-F24 & sc001::Return                                 ;; Esc
-F24 & sc03B::Return                                 ;; F1
-F24 & sc03C::Return                                 ;; F2
-F24 & sc03D::Return                                 ;; F3
-F24 & sc03E::Return                                 ;; F4
-F24 & sc03F::Return                                 ;; F5
-F24 & sc040::Return                                 ;; F6
-F24 & sc041::Return                                 ;; F7
-F24 & sc042::Return                                 ;; F8
-F24 & sc043::Return                                 ;; F9
-F24 & sc044::Return                                 ;; F10
-F24 & sc057::Return                                 ;; F11
-F24 & sc058::Return                                 ;; F12
+F24 & sc001::return                                 ;; Esc
+F24 & sc03B::return                                 ;; F1
+F24 & sc03C::return                                 ;; F2
+F24 & sc03D::return                                 ;; F3
+F24 & sc03E::return                                 ;; F4
+F24 & sc03F::return                                 ;; F5
+F24 & sc040::return                                 ;; F6
+F24 & sc041::return                                 ;; F7
+F24 & sc042::return                                 ;; F8
+F24 & sc043::return                                 ;; F9
+F24 & sc044::return                                 ;; F10
+F24 & sc057::return                                 ;; F11
+F24 & sc058::return                                 ;; F12
 
 ;; Numeric Row
 F24 & sc029::Send "{Blind}{Escape}"                 ;; QWERTY `~
@@ -86,7 +86,7 @@ F24 & sc018::Send "{Bind}{End}"                     ;; QWERTY oO
 F24 & sc019::PrintScreen                            ;; QWERTY pP
 F24 & sc01A::NumLock                                ;; QWERTY [{
 F24 & sc01B::ScrollLock                             ;; QWERTY ]}
-F24 & sc02B::Return                                 ;; QWERTY \|
+F24 & sc02B::return                                 ;; QWERTY \|
 
 ;; Home Row
 F24 & sc01E::Send "{Blind}{LWin Down}"              ;; QWERTY aA

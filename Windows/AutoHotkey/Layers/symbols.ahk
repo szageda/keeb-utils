@@ -63,34 +63,34 @@ F23::
 }
 
 ;; Function Row
-F23 & sc001::Return                         ;; Esc
-F23 & sc03B::Return                         ;; F1
-F23 & sc03C::Return                         ;; F2
-F23 & sc03D::Return                         ;; F3
-F23 & sc03E::Return                         ;; F4
-F23 & sc03F::Return                         ;; F5
-F23 & sc040::Return                         ;; F6
-F23 & sc041::Return                         ;; F7
-F23 & sc042::Return                         ;; F8
-F23 & sc043::Return                         ;; F9
-F23 & sc044::Return                         ;; F10
-F23 & sc057::Return                         ;; F11
-F23 & sc058::Return                         ;; F12
+F23 & sc001::return                         ;; Esc
+F23 & sc03B::return                         ;; F1
+F23 & sc03C::return                         ;; F2
+F23 & sc03D::return                         ;; F3
+F23 & sc03E::return                         ;; F4
+F23 & sc03F::return                         ;; F5
+F23 & sc040::return                         ;; F6
+F23 & sc041::return                         ;; F7
+F23 & sc042::return                         ;; F8
+F23 & sc043::return                         ;; F9
+F23 & sc044::return                         ;; F10
+F23 & sc057::return                         ;; F11
+F23 & sc058::return                         ;; F12
 
 ;; Numeric Row
-F23 & sc029::Return                         ;; QWERTY `~
-F23 & sc002::Return                         ;; QWERTY 1!
-F23 & sc003::Return                         ;; QWERTY 2@
-F23 & sc004::Return                         ;; QWERTY 3#
-F23 & sc005::Return                         ;; QWERTY 4$
-F23 & sc006::Return                         ;; QWERTY 5%
-F23 & sc007::Return                         ;; QWERTY 6^
-F23 & sc008::Return                         ;; QWERTY 7&
-F23 & sc009::Return                         ;; QWERTY 8*
-F23 & sc00A::Return                         ;; QWERTY 9(
-F23 & sc00B::Return                         ;; QWERTY 0)
-F23 & sc00C::Return                         ;; QWERTY -_
-F23 & sc00D::Return                         ;; QWERTY =+
+F23 & sc029::return                         ;; QWERTY `~
+F23 & sc002::return                         ;; QWERTY 1!
+F23 & sc003::return                         ;; QWERTY 2@
+F23 & sc004::return                         ;; QWERTY 3#
+F23 & sc005::return                         ;; QWERTY 4$
+F23 & sc006::return                         ;; QWERTY 5%
+F23 & sc007::return                         ;; QWERTY 6^
+F23 & sc008::return                         ;; QWERTY 7&
+F23 & sc009::return                         ;; QWERTY 8*
+F23 & sc00A::return                         ;; QWERTY 9(
+F23 & sc00B::return                         ;; QWERTY 0)
+F23 & sc00C::return                         ;; QWERTY -_
+F23 & sc00D::return                         ;; QWERTY =+
 
 ;; Top Row
 F23 & sc010::Send "{Raw}!"                  ;; QWERTY qQ
