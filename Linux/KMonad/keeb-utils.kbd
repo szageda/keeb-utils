@@ -8,7 +8,6 @@ License     : MIT
 ;;
 ;; KMonad General Configuration
 ;;
-
 ;; The 'defcfg' block defines global configuration options of KMonad. This
 ;; includes the input and output devices, and customizing various behaviors.
 ;; This block must contain at least one input() and one output() function for
@@ -40,7 +39,6 @@ License     : MIT
 ;;
 ;; Keymaps
 ;;
-
 ;; The 'defsrc' block defines the source keyboard layout -- this is the layout
 ;; of the host operating system. It's advised to keep it US QWERTY, unless you
 ;; have a good reason to use another layout, because the output may produce
@@ -163,7 +161,6 @@ License     : MIT
 ;;
 ;; Aliases
 ;;
-
 ;; The 'defalias' block defines aliases -- they are used to identify custom
 ;; keymaps, key combinations, and macros. Also, alias definitions can be used
 ;; to alter the behavior of keys: for example, do one thing on key tap, do
