@@ -18,7 +18,7 @@
 StickyKey(stickyTimeout := 0, keyName := "") {
 
     ;; Extract the scan code from the key that called the function.
-    RegExMatch(A_ThisHotkey, "i)sc[0-9A-F]+|.", &match)
+    RegExMatch(A_ThisHotkey, "sc\d+", &match)
     triggerKey := match[0]
 
     Send "{Blind}{" keyName " Down}"
