@@ -25,7 +25,6 @@ MultiSticky(tapTimeout := 0,
             primaryKey := "",
             stickyTimeout := 0,
             secondaryKey := "") {
-
     ;; Extract the scan code from the key that called the function.
     RegExMatch(A_ThisHotkey, "i)sc\d+", &match)
     triggerKey := match[0]

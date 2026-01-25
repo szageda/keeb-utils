@@ -40,24 +40,15 @@
 LAlt::F23
 #InputLevel 0
 
+;; Monitor the physical state of the Left Key using its scan code (sc038).
 F23::
 {
-    ;; Implement Tap-Hold Behavior:
-    ;; - On Tap: Normal Alt key behavior.
-    ;; - On Hold: Hold the F23 virtual key to activate the layer.
-    ;;
-    ;; 'KeyWait()' monitors the physical state of Left Alt key using
-    ;; its scan code (sc038).
-
-    ;; On Tap
     Send "{LAlt Down}"
 
-    ;; On Hold
     if !KeyWait("sc038") {
         Send "{F23}"
     }
 
-    ;; On Release
     KeyWait "sc038"
     Send "{Alt Up}"
 }
