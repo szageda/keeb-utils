@@ -18,13 +18,13 @@
 
 ## Requirements
 
-- **AutoHotkey v2.0:** Ensure you have the latest version of AutoHotkey installed. The scripts may run on AutoHotkey 1.0, but they are likely to behave incorrectly.
-- **Windows 7.0+:** Windows 10 and 11 are guaranteed to be compatible. These scripts are tested on modern Windows environments.
+- **AutoHotkey v2.0**: Ensure you have the latest version of AutoHotkey installed. The scripts may run on AutoHotkey 1.0, but they are likely to behave incorrectly.
+- **Windows 7.0+**: Windows 10 and 11 are guaranteed to be compatible. These scripts are tested on modern Windows environments.
 
 ## Installation
 
-1. **Download the scripts:** Clone or download this repository to your computer.
-2. **Run the main script:** Navigate<b>*</b> to `keeb-utils-main\Windows\AutoHotkey` and double click `keeb-utils.ahk`
+1. **Download the scripts**: Clone or download this repository to your computer.
+2. **Run the main script**: Navigate<b>*</b> to `keeb-utils-main\Windows\AutoHotkey` and double click `keeb-utils.ahk`
 
 <b>*</b> If you downloaded the repository, extract the archive first.
 

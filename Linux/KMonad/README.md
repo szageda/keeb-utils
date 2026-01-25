@@ -15,17 +15,17 @@
 
 ## Requirements
 
-- **KMonad 0.4.2+:** Ensure you have the latest version installed. The minimal required version is 0.4.2.
-- **Linux (Debian 12+, Ubuntu 22.04+, Fedora 42+ etc.):** The configuration file is tested on modern Linux distributions.
-- **Windows 10+:** I view KMonad as a “Linux first” solution; while running it on Windows is possible, make sure you download the Windows binary.
+- **KMonad 0.4.2+**: Ensure you have the latest version installed. The minimal required version is 0.4.2.
+- **Linux (Debian 12+, Ubuntu 22.04+, Fedora 42+ etc.)**: The configuration file is tested on modern Linux distributions.
+- **Windows 10+**: I view KMonad as a “Linux first” solution; while running it on Windows is possible, make sure you download the Windows binary.
 
 ## Installation
 
-1. **Download the scripts:** Clone or download this repository to your computer.
+1. **Download the scripts**: Clone or download this repository to your computer.
 ```shell
 git clone https://github.com/szageda/keeb-utils
 ```
-2. **Launch KMonad:** Start KMonad with the configuration file.
+2. **Launch KMonad**: Start KMonad with the configuration file.
 ```shell
 kmonad ~/Downloads/keeb-utils-main/Linux/KMonad/keeb-utils.kbd
 ```
