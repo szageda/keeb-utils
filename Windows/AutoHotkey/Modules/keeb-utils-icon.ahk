@@ -1,16 +1,14 @@
 /*
  * File        : keeb-utils-icon.ahk
  * Description : AutoHotkey function to update the tray icon (Keeb Utils)
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * Usage:
- * The script file must be loaded when AutoHotkey starts. UpdateIcon() can be
- * called from other scripts to update the tray icon and tooltip based on the
- * current state of AutoHotkey.
+ * This function changes the AutoHotkey tray icon and text on mouse hover
+ * based on the application's state.
  */
 
-;; Load the default icon and tooltip.
+;; Set the default icon and tooltip.
 TraySetIcon("Icons\active.ico",, false)
 A_IconTip := "Keeb Utils is active"
 

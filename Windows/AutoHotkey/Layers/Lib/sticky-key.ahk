@@ -1,39 +1,32 @@
 /*
  * File        : sticky-key.ahk
  * Description : AutoHotkey Sticky Key function (Keeb Utils)
- * Copyright   : (c) 2025, Gergely Szabo
+ * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
+ *
+ * This function implements sticky and hold behaviors for modifier keys.
+ *
+ * Example Usage:
+ *  Shift & sc020::StickyKey(450, "Ctrl")
  */
 
 /**
- * @description Implements a sticky key behavior that simulates a virtual key
- *  press with support for tap and hold actions.
- * @caution The function must be mapped to a key defined with its scan code.
- * @var {string} keySC The scan code of the key that called the function. This
- *  is used to determine the key's physical state to initiate the tap or
- *  hold action.
- * @param {integer} stickyKeyTimeout Duration in milliseconds to sticky keyName
- *  when keySC was tapped.
- * @param {string} keyName The key to sticky with a timeout on tap, or to hold
- *  while keySC is held.
- * @returns None.
- * @example Shift & sc020::StickyKey(450, "Ctrl")
+ * @param {int} stickyTimeout    Sticky-time after a tap-and-release.
+ * @param {string} keyName    Name of the modifier key to sticky or hold (e.g., "Ctrl").
+ * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code (e.g., "sc020").
  */
-StickyKey(stickyKeyTimeout := 450, keyName := "") {
-    keySC := A_ThisHotkey
-    keySC := RegExMatch(keySC, "sc\d+", &OutputVar)
-    keySC := OutputVar[]
+StickyKey(stickyTimeout := 0, keyName := "") {
+    ;; Extract the scan code from the key that called the function.
+    RegExMatch(A_ThisHotkey, "i)sc\d+", &match)
+    triggerKey := match[0]
 
-    ;; On Tap
     Send "{Blind}{" keyName " Down}"
-    Sleep stickyKeyTimeout
+    Sleep stickyTimeout
 
-    ;; On Hold
-    if !KeyWait(keySC) {
+    if !KeyWait(triggerKey) {
         Send "{Blind}{" keyName " Down}"
     }
 
-    ;; On Release
-    KeyWait keySC
+    KeyWait triggerKey
     Send "{" keyName " Up}"
 }

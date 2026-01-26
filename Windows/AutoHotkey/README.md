@@ -16,24 +16,21 @@
 > [!NOTE]
 > An alternative solution to AutoHotkey on Windows is [KMonad](/Linux/KMonad/README.md#windows).
 
-## Installation & Startup
+## Requirements
 
-> [!IMPORTANT]
-> **This repository does not package or distribute AutoHotkey binaries required to run the Keeb Utils configuration files. It is your responsibility to install the required software version.**
+- **AutoHotkey v2.0**: Ensure you have the latest version of AutoHotkey installed. The scripts may run on AutoHotkey 1.0, but they are likely to behave incorrectly.
+- **Windows 7.0+**: Windows 10 and 11 are guaranteed to be compatible. These scripts are tested on modern Windows environments.
 
-1. Install AutoHotkey from [www.AutoHotkey.com](https://www.autohotkey.com) (or use the portable version).
+## Installation
 
-2. Donwload the contents of this repository to your computer.
+1. **Download the scripts**: Clone or download this repository to your computer.
+2. **Run the main script**: Navigate<b>*</b> to `keeb-utils-main\Windows\AutoHotkey` and double click `keeb-utils.ahk`
 
-3. Extract `keeb-utils-main.zip`.
+<b>*</b> If you downloaded the repository, extract the archive first.
 
-4. Navigate to `keeb-utils-main\Windows\AutoHotkey` and double-click `keeb-utils.ahk`.
+## Usage
 
-> [!CAUTION]
-> **The Keeb Utils configuration files support AutoHotkey version 2.0. While running them under version 1.0 may be possible, you may experience problems or erratic behavior.**
-
-> [!TIP]
-> To quit AutoHotkey, use the tray icon or close the `AutoHotkey64.exe` process in Task Manager.
+The scripts run in the background. You can see the AutoHotkey icon (replaced by the project's) in your system tray when AutoHotkey is running. If you want to quit AutoHotkey, right click the system tray icon and select *Exit*.
 
 > [!NOTE]
-> AutoHotkey must be reloaded everytime you make changes to a configuration file. You can use the tray icon.
+> To use Keeb Utils in all windows, you must run AutoHotkey as an Administrator. Otherwise, the script cannot control applications that have elevated privileges.

@@ -1,14 +1,13 @@
 #|
 File        : keeb-utils.kbd
 Description : KMonad keymap configuration file for Keeb Utils
-Copyright   : (c) 2024-2025, Gergely Szabo
+Copyright   : (c) 2024-2026, Gergely Szabo
 License     : MIT
 |#
 
-;;;
-;;;  KMONAD CONFIGURATION
-;;;
-
+;;
+;; KMonad General Configuration
+;;
 ;; The 'defcfg' block defines global configuration options of KMonad. This
 ;; includes the input and output devices, and customizing various behaviors.
 ;; This block must contain at least one input() and one output() function for
@@ -37,10 +36,9 @@ License     : MIT
   allow-cmd false
 )
 
-;;;
-;;; KEYBOARD KEYMAPS
-;;;
-
+;;
+;; Keymaps
+;;
 ;; The 'defsrc' block defines the source keyboard layout -- this is the layout
 ;; of the host operating system. It's advised to keep it US QWERTY, unless you
 ;; have a good reason to use another layout, because the output may produce
@@ -160,10 +158,9 @@ License     : MIT
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;;;
-;;; ALIASES
-;;;
-
+;;
+;; Aliases
+;;
 ;; The 'defalias' block defines aliases -- they are used to identify custom
 ;; keymaps, key combinations, and macros. Also, alias definitions can be used
 ;; to alter the behavior of keys: for example, do one thing on key tap, do
@@ -180,7 +177,7 @@ License     : MIT
   ;; Layers
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
-  sym (tap-next lalt (layer-toggle symbols)) ;; LAlt on tap, Symbols on hold.
+  sym (tap-next lalt (layer-toggle symbols))
   ssm (layer-toggle shifted-symbols)
 
   ;; Ctrl Shortcuts
@@ -191,22 +188,14 @@ License     : MIT
   udo C-z
 
   ;; Sticky Keys
-  ;;
-  ;; - On Tap: Sticky key with a timeout.
-  ;; - On Hold: Act as a regular modifier.
   ssk (sticky-key 450 lsft)
 
   ;; Multi-Sticky Keys
   ;;
   ;; To fix the issue of Ctrl and Shift not combining with 'sticky-key'
   ;; (see: https://github.com/kmonad/kmonad/discussions/1013), 'multi-tap'
-  ;; is used to create a multi-tap sticky key that combines modifiers into a
-  ;; single key. This allows for Ctrl+Shift+S to work as expected.
-  ;;
-  ;; - Single Tap: Sticky the modifier for the next key press then release.
-  ;;  - Single Tap & Hold: Hold the modifier.
-  ;; - Double Tap: Sticky both modifiers for the next key press then release.
-  ;;  - Double Tap & Hold: Hold both modifiers.
+  ;; creates a single multi-tap sticky key that combines two modifiers. This
+  ;; allows for Ctrl+Shift+S to work as expected.
   ;;
   ;; Important: For this to work, you must compile KMomad from source with the
   ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
