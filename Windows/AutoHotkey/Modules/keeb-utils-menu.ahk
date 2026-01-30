@@ -29,23 +29,23 @@ Tray.Add("Exit", CloseAHK)
 
 ChangeStatus(*)
 {
-    static OldName := "", NewName := ""
+    static oldName := "", newName := ""
 
     ;; Switch between AutoHotkey states on item clicks.
-    if NewName != "Disabled" {
+    if newName != "Disabled" {
         Suspend 1
         UpdateIcon()
 
-        OldName := "Active"
-        NewName := "Disabled"
+        oldName := "Active"
+        newName := "Disabled"
     } else {
         Suspend 0
         UpdateIcon()
 
-        OldName := "Disabled"
-        NewName := "Active"
+        oldName := "Disabled"
+        newName := "Active"
     }
-    Tray.Rename(OldName, NewName)
+    Tray.Rename(oldName, newName)
 }
 
 ReloadScripts(*)
@@ -60,18 +60,18 @@ OpenHistory(*)
 
 LineLogging(*)
 {
-    static LogLines := 0
+    static logLines := 0
 
-    if LogLines != 1 {
+    if logLines != 1 {
         ListLines 1
         KeyHistory 100
 
-        LogLines := 1
+        logLines := 1
     } else {
         ListLines 0
         KeyHistory 0
 
-        LogLines := 0
+        logLines := 0
     }
     DebugMenu.ToggleCheck("Line Logging")
 }
