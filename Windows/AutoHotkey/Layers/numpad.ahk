@@ -4,9 +4,10 @@
  * Copyright   : (c) 2026, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey adds a "Numpad" layer by defining new key shortcuts using the
- * 'Left Alt+Space' hotkey combination.
- *
+ * This script creates a new keyboard layer by using AutoHotkey's built-in
+ * hotkeys feature: It creates new shortcuts with the Left Alt, Space, and
+ * alphanumeric keys allowing for new key-to-fuction keymaps.
+ * 
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scan codes instead of virtual keys:
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
