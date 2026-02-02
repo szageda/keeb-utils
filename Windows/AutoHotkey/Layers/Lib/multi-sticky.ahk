@@ -16,8 +16,8 @@
 /**
  * @param {int} tapTimeout    Max ms between taps to increment count.
  * @param {string} primaryKey    Primary modifier (e.g., "Ctrl").
- * @param {int} stickyTimeout    Sticky-time after a tap-and-release.
- * @param {string} secondaryKey    Modifier added on double-tap (e.g., "Shift").
+ * @param {int} stickyTimeout    Sticky time after a tap-and-release.
+ * @param {string} secondaryKey    Modifier added on double tap (e.g., "Shift").
  * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code (e.g., "sc020").
  * @var {int} keyPresses    Stores the number of taps detected within 'tapTimeout'.
  */

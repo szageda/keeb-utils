@@ -115,8 +115,12 @@ KeyHistory 0
 ;; Keyboard Layers
 ;; Set of key-to-function keymaps that can modify the behavior
 ;; of alphanumeric keys when activate.
-#Include Layers\extend.ahk
+;;
+;; Note: The order of layers matters, for
+;; the function maps to work as expected.
 #Include Layers\symbols.ahk
+#Include Layers\numpad.ahk
+#Include Layers\extend.ahk
 
 ;; Modules
 ;; The core functionality of Keeb Utils doesn't depend on any
