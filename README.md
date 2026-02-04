@@ -105,6 +105,24 @@ The Symbols layer provides quick access to commonly used symbols and punctuation
 
 </div>
 
+### Numpad Layer
+
+The Numpad layer provides comfortable access to a numpad-like layer for data entry without the need to reach to the top row or across the keyboard. It is accessed by a defined key combo (<kbd>Left Alt</kbd>+<kbd>Space</kbd> by default).
+
+<div align="center">
+
+![Numpad layer](Assets/Images/Keyboard%20Layers/numpad.png)  
+*Numpad layer keymap for ANSI 101/104-key keyboards*
+
+</div>
+
+| Key Category  | Description |
+| :-----------: | ----------- |
+| ![Numerals](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numeric keys |
+| ![Letters](Assets/Images/Keyboard%20Layers/extend-orange.png) | Letter keys for hexadecimal numbers and error codes |
+| ![Math symbols](Assets/Images/Keyboard%20Layers/extend-red.png) | Math symbols and operators |
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. keys |
+
 ## Credits and Inspiration
 
 **Shai Coleman** – *[Colemak keyboard layout](https://colemak.com)*  
