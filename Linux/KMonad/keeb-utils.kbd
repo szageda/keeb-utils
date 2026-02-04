@@ -132,7 +132,7 @@ License     : MIT
   tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
   @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
   @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
+  lctl lmet @sym           @num           ralt cmp  rmet rctl
 )
 
 ;; Shifted Symbols
@@ -145,6 +145,17 @@ License     : MIT
   @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
   @ssm \    /    \_   "    —    |    &    %    +    ?    @ssm
   lctl lmet @sym           spc            ralt cmp  rmet rctl
+)
+
+;; Numpad
+;; Quick access to a numeric keypad and associated symbols for data entry.
+(deflayer numpad
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  x    d    e    f    %    *    7    8    9    -    XX   XX   XX
+  @xtn .    a    b    c    =    /    4    5    6    +    XX   ret
+  @ssm \    ,    :    \_   ^    0    1    2    3    @dbz @ssm
+  lctl lmet @sym           @num           ralt cmp  rmet rctl
 )
 
 ;; Keyboard Layout Selection
@@ -179,6 +190,7 @@ License     : MIT
   sel (layer-toggle select-layout)
   sym (tap-next lalt (layer-toggle symbols))
   ssm (layer-toggle shifted-symbols)
+  num (layer-toggle numpad)
 
   ;; Ctrl Shortcuts
   cpy C-c
@@ -186,6 +198,9 @@ License     : MIT
   pst C-v
   rdo C-y ;; Linux: C-S-z in some desktop environments.
   udo C-z
+
+  ;; Numpad Layer Tricks
+  dbz #(0 0)
 
   ;; Sticky Keys
   ssk (sticky-key 450 lsft)

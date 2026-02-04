@@ -4,9 +4,9 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * AutoHotkey adds an "Extend" layer by defining new key shortcuts using the
- * F24 virtual key and physical key locations (scan codes), allowing functions
- * to be mapped to these new key combinations.
+ * This script creates a new keyboard layer by using AutoHotkey's built-in
+ * hotkeys feature: It creates new shortcuts with the F24 virtual key and
+ * alphanumeric keys allowing for new key-to-fuction keymaps.
  *
  * The layer keymap stays persistent regardless of the active keyboard layout
  * of the operating system thanks to using scan codes instead of virtual keys:
