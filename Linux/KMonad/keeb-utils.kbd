@@ -151,10 +151,10 @@ License     : MIT
 ;; Quick access to a numeric keypad and associated symbols for data entry.
 (deflayer numpad
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   a    b    c    XX   XX   XX   d    e    f    XX   XX   XX   bspc
-  tab  del  bspc spc  XX   XX   XX   7    8    9    XX   XX   XX   XX
-  @xtn *    +    -    =    #    ,    4    5    6    .    XX   ret
-  @ssm \    /    \_   :    XX   0    1    2    3    @dbz @ssm
+  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
+  tab  x    d    e    f    %    *    7    8    9    -    XX   XX   XX
+  @xtn .    a    b    c    =    /    4    5    6    +    XX   ret
+  @ssm \    ,    :    \_   ^    0    1    2    3    @dbz @ssm
   lctl lmet @sym           @num           ralt cmp  rmet rctl
 )
 
