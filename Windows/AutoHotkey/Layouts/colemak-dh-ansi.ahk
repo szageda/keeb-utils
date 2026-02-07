@@ -1,18 +1,20 @@
 /*
  * File        : colemak-dh-ansi.ahk
- * Description : AutoHotkey keyboard layout configuration file (Keeb Utils)
+ * Description : Colemak-DH (ANSI) layout for Keeb Utils
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This script creates a scan code-to-character/virtual key translation
- * layer bypassing the keyboard layout of the operating system. AutoHotkey
- * intercepts the scan codes from the keyboard and remaps the output of:
- * - Alphanumeric keys using key names ('a'-'z') bypassing the OS layout.
- * - Symbol keys using virtual keys ('vkXX') where the output of the keys
- *  depends on the active keyboard layout of the OS.
+ * This script implements the Colemak-DH layout by remapping physical
+ * Scan Codes (SC) to specific character outputs or Virtual Keys (VK).
  *
- * The below keymap is only true for the symbol keys (, . = etc.) if the
- * active keyboard layout is US QWERTY:
+ * Logic:
+ *  - Alphanumeric keys: Remapped directly to characters (a-z) to bypass OS
+ *  keyboard layout.
+ *  - Symbol keys: Remapped to Virtual Keys (vkXX) to ensure standard system
+ *  behavior while maintaining the physical Colemak-DH position.
+ *
+ * Layout Diagram:
+ *  - Note: It represents the layout when the OS is set to US QWERTY.
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
  * |Esc| | F1| F2| F3| F4|  | F5| F6| F7| F8|  | F9|F10|F11|F12|
  * `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
@@ -28,15 +30,14 @@
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
- * Colemak-DH Authorship:
- * Colemak © Shai Coleman -- https://colemak.com
- * Mod-DH © stevep99 -- https://colemakmods.github.io/mod-dh
+ * References:
+ *  Colemak (c) Shai Coleman: https://colemak.com
+ *  Mod-DH (c) stevep99: https://colemakmods.github.io/mod-dh
  *
- * Keyboard Scan Codes:
- * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
- *
- * Virtual Key Codes:
- * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
+ * Documentation:
+ *  AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
+ *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
+ *  Virtual Keys: https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
  */
 
 ;; Function Row
