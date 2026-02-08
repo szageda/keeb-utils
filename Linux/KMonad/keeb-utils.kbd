@@ -201,11 +201,11 @@ Documentation:
   ;; Note: This requires KMonad to be compiled from source with the patch
   ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).
 
-  ams (multi-tap 175
-        (sticky-key 450 lalt)
-        (sticky-key 450 A-lsft))
+  ams (multi-tap 120
+        (sticky-key 280 lalt)
+        (sticky-key 280 A-lsft))
 
-  cms (multi-tap 175
-        (sticky-key 450 lctl)
-        (sticky-key 450 C-lsft))
+  cms (multi-tap 120
+        (sticky-key 280 lctl)
+        (sticky-key 280 C-lsft))
 )
