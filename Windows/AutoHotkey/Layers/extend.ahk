@@ -95,8 +95,8 @@ F24 & sc02B::return                                 ;; QWERTY \|
 F24 & sc01E::Send "{Blind}{LWin Down}"              ;; QWERTY aA
 F24 & sc01E Up::Send "{Blind}{LWin Up}"
 F24 & sc01F::Send "{Blind}{Tab}"                    ;; QWERTY sS
-F24 & sc020::MultiSticky(175, "Alt", 450, "Shift")  ;; QWERTY dD
-F24 & sc021::MultiSticky(175, "Ctrl", 450, "Shift") ;; QWERTY fF
+F24 & sc020::MultiSticky(120, "Alt", 280, "Shift")  ;; QWERTY dD
+F24 & sc021::MultiSticky(120, "Ctrl", 280, "Shift") ;; QWERTY fF
 F24 & sc022::Send "{Media_Play_Pause}"              ;; QWERTY gG
 F24 & sc023::Send "{Blind}{PgDn}"                   ;; QWERTY hH
 F24 & sc024::Send "{Blind}{Left}"                   ;; QWERTY jJ
@@ -123,4 +123,4 @@ F24 & sc034::Send "{Media_Prev}"                    ;; QWERTY .>
 F24 & sc035::Send "{Media_Next}"                    ;; QWERTY /?
 
 ;; Misc. Keys
-F24 & sc039::StickyKey(450, "Shift")                ;; Space
+F24 & sc039::StickyKey(280, "Shift")                ;; Space

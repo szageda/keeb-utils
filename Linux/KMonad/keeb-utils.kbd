@@ -87,18 +87,6 @@ Documentation:
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
-;; Galliope
-;; Gallium © Bryson James -- https://github.com/GalileoBlues/Gallium
-;; My modifications of Gallium with Angle Mod.
-(deflayer galliope-ansi
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
-  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-  tab  b    l    d    c    z    j    f    u    o    ,    /    =    \
-  @xtn n    r    t    s    g    y    h    e    a    i    -    ret
-  lsft q    m    w    v    x    k    p    ;    '    .    rsft
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
-)
-
 ;; US QWERTY
 ;; For games and if somebody needs to use my PC.
 (deflayer qwerty
@@ -213,11 +201,11 @@ Documentation:
   ;; Note: This requires KMonad to be compiled from source with the patch
   ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).
 
-  ams (multi-tap 175
-        (sticky-key 450 lalt)
-        (sticky-key 450 A-lsft))
+  ams (multi-tap 120
+        (sticky-key 280 lalt)
+        (sticky-key 280 A-lsft))
 
-  cms (multi-tap 175
-        (sticky-key 450 lctl)
-        (sticky-key 450 C-lsft))
+  cms (multi-tap 120
+        (sticky-key 280 lctl)
+        (sticky-key 280 C-lsft))
 )

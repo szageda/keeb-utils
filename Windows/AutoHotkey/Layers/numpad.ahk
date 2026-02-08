@@ -32,7 +32,7 @@
  *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  */
 
-#HotIf GetKeyState("sc038", "P") && GetKeyState("sc039", "P")
+#HotIf GetKeyState("sc038", "P")
 
 ;; Suppress the native Spacebar output when the layer is active.
 sc039::return
