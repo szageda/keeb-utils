@@ -84,7 +84,7 @@ SendMode "Event"
 SetKeyDelay -1, -1
 
 ;;
-;; Debugging Settings
+;; Debug Settings
 ;;
 
 ;; Enables or disables line logging or displays the script
