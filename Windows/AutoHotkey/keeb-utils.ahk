@@ -102,7 +102,6 @@ KeyHistory 0
 ;;
 ;; Keeb Utils Configuration
 ;;
-;; Scripts on commented lines (starting with ;;) are not loaded.
 
 ;; Keyboard Layouts
 ;; Keymaps defining the physical key arrangements and character
