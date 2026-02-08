@@ -1,19 +1,18 @@
 /*
  * File        : keeb-utils-icon.ahk
- * Description : AutoHotkey function to update the tray icon (Keeb Utils)
+ * Description : System tray status indicator for Keeb Utils
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This function changes the AutoHotkey tray icon and text on mouse hover
- * based on the application's state.
+ * This function updates the system tray icon and tooltip text to reflect
+ * the current state (Active or Suspended) of the application.
  */
 
-;; Set the default icon and tooltip.
+;; Initialize default tray icon and tooltip.
 TraySetIcon("Icons\active.ico",, false)
 A_IconTip := "Keeb Utils is active"
 
-UpdateIcon()
-{
+UpdateIcon() {
     if A_IsSuspended = 1 {
         TraySetIcon("Icons\suspended.ico",, true)
         A_IconTip := "Keeb Utils is disabled"

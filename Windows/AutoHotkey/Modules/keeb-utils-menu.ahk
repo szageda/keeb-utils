@@ -1,34 +1,39 @@
 /*
  * File        : keeb-utils-menu.ahk
- * Description : Minimalist AutoHotkey tray icon menu (Keeb Utils)
+ * Description : Custom system tray menu for Keeb Utils
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a minimalist tray icon menu for AutoHotkey with custom
- * options.
+ * This script defines a custom tray menu, replacing the default AutoHotkey
+ * menu with specialized status toggles and debug tools.
  */
 
 #Include keeb-utils-icon.ahk
 
-;; Menu Options
-Tray := A_TrayMenu                  ;; for convenience
-Tray.Delete()                       ;; delete the standard menu times
-Tray.Add("Active", ChangeStatus)
-Tray.Add("")                        ;; separator
+;; Remove the default AutoHotkey menu items.
+Tray := A_TrayMenu
+Tray.Delete()
+
+;; Primary Actions
+Tray.Add("Enabled", ChangeStatus)
+Tray.Check("Enabled")
+Tray.Add()
 Tray.Add("Reload", ReloadScripts)
+
 ;; ------------------------------------
 ;; Debug Submenu
+;; Provides access to internal AHK diagnostic tools.
 DebugMenu := Menu()
-DebugMenu.Add("History", OpenHistory)
+DebugMenu.Add("Key History", OpenHistory)
 DebugMenu.Add("Line Logging", LineLogging)
 Tray.Add("Debug", DebugMenu)
 ;; ------------------------------------
-Tray.Add("")
+
+Tray.Add()
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-ChangeStatus(*)
-{
+ChangeStatus(*) {
     static oldName := "", newName := ""
 
     ;; Switch between AutoHotkey states on item clicks.
@@ -48,18 +53,15 @@ ChangeStatus(*)
     Tray.Rename(oldName, newName)
 }
 
-ReloadScripts(*)
-{
+ReloadScripts(*) {
     Reload
 }
 
-OpenHistory(*)
-{
+OpenHistory(*) {
     KeyHistory
 }
 
-LineLogging(*)
-{
+LineLogging(*) {
     static logLines := 0
 
     if logLines != 1 {
@@ -76,8 +78,7 @@ LineLogging(*)
     DebugMenu.ToggleCheck("Line Logging")
 }
 
-OpenHelp(*)
-{
+OpenHelp(*) {
     if DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey") {
         Run 'hh.exe "C:\Users\' A_Username '\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey.chm" href'
     } else {
@@ -85,8 +86,7 @@ OpenHelp(*)
     }
 }
 
-CloseAHK(*)
-{
+CloseAHK(*) {
     ExitApp
 }
 

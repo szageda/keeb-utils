@@ -1,19 +1,23 @@
 /*
  * File        : sticky-key.ahk
- * Description : AutoHotkey Sticky Key function (Keeb Utils)
+ * Description : Timed Sticky Key (one-shot modifier) for Keeb Utils
  * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  *
- * This function implements sticky and hold behaviors for modifier keys.
+ * This function provides dual-role behavior for modifiers:
+ *  1. Hold: Acts as a standard modifier.
+ *  2. Tap: Keeps the modifier active for a defined timeout (Sticky).
  *
- * Example Usage:
- *  Shift & sc020::StickyKey(450, "Ctrl")
+ * Documentation:
+ *  AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
+ *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  */
 
 /**
  * @param {int} stickyTimeout    Sticky time after a tap-and-release.
  * @param {string} keyName    Name of the modifier key to sticky or hold (e.g., "Ctrl").
- * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code (e.g., "sc020").
+ * @var {string} triggerKey    Scan code of the key that called the function. Important: The key the functions is mapped to must be defined using its scan code.
+ * @example    Shift & sc020::StickyKey(450, "LShift")
  */
 StickyKey(stickyTimeout := 0, keyName := "") {
     ;; Extract the scan code from the key that called the function.
