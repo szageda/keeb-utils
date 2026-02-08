@@ -122,7 +122,7 @@ KeyHistory 0
 #Include Layers\extend.ahk
 
 ;; Modules
-;; Optional utilities for extended functionality (menus, toggles, etc.)
-;; that do not interfere with core layouts and layers.
+;; Optional utilities for extended functionality that do not
+;; interfere with core layouts and layers.
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk
