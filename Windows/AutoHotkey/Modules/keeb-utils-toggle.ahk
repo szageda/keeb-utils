@@ -1,19 +1,21 @@
 /*
  * File        : keeb-utils-toggle.ahk
- * Description : AutoHotkey state toggle (Keeb Utils)
+ * Description : Global state toggle for Keeb Utils
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a hotkey to toggle between AutoHotkey's suspended and
- * active states using 'Scroll Lock+Q'. AutoHotkey listens for the hotkey even
- * when it's suspended.
+ * This script defines a global hotkey (Scroll Lock + Q) to toggle
+ * between 'Active' and 'Suspended' states. The toggle remains
+ * functional even while the script is suspended.
  */
 
 #Include keeb-utils-icon.ahk
 
-;; Disable Scroll Lock states, so the LED won't light up on your device.
+;; Force Scroll Lock to remain off to prevent the physical LED from toggling.
 SetScrollLockState "AlwaysOff"
 
+;; #SuspendExempt ensures this hotkey is not disabled
+;; when the script is suspended.
 #SuspendExempt
 ScrollLock & sc010::
 {

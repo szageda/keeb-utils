@@ -3,15 +3,19 @@ File        : keeb-utils.kbd
 Description : KMonad keymap configuration file for Keeb Utils
 Copyright   : (c) 2024-2026, Gergely Szabo
 License     : MIT
+
+Documentation:
+  KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
+  KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
 |#
 
 ;;
 ;; KMonad General Configuration
 ;;
-;; The 'defcfg' block defines global configuration options of KMonad. This
-;; includes the input and output devices, and customizing various behaviors.
-;; This block must contain at least one input() and one output() function for
-;; KMonad to work.
+;; The 'defcfg' block defines the global configuration for KMonad.
+;; It specifies the input and output devices and sets global behaviors.
+;; Note: A valid configuration must include at least one 'input()' and
+;; 'output()' function.
 
 (defcfg
   ;; Linux
@@ -26,27 +30,23 @@ License     : MIT
   ;;input  (iokit-name "my-keyboard-product-string")
   ;;output (kext)
 
-  ;; Enable/disable emitting unhandled events; for example: passing input from
-  ;; the source layer to other alphanumeric layers.
+  ;; Enable fallthrough to send unhandled events to the OS.
+  ;; If false, keys not defined in the active layer are suppressed.
   ;; (default true)
   fallthrough true
 
-  ;; Enable/disable command execution; for example: executing a shell command.
-  ;; (default true)
+  ;; Enable or disable shell command execution (e.g., running scripts).
+  ;; Set to 'false' for better security.
   allow-cmd false
 )
 
 ;;
 ;; Keymaps
 ;;
-;; The 'defsrc' block defines the source keyboard layout -- this is the layout
-;; of the host operating system. It's advised to keep it US QWERTY, unless you
-;; have a good reason to use another layout, because the output may produce
-;; unexpected results -- see: https://github.com/kmonad/kmonad/issues/135
-;;
-;; The 'deflayer' block defines custom keymaps; i.e., keyboard layouts and
-;; and layers. The first keymap in the block is loaded by default when KMonad
-;; starts. The various keymaps are made available using aliases ('@').
+;; The 'defsrc' block defines the physical keys to be intercepted by KMonad.
+;; It is recommended to use standard US QWERTY as the source, even if your
+;; physical keycaps differ. Using other source layouts can cause unexpected
+;; character mapping issues; see : https://github.com/kmonad/kmonad/issues/135.
 
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
@@ -58,8 +58,10 @@ License     : MIT
 )
 
 ;; Keyboard Layouts
-;; Keymaps defining the key arrangements and characters produced
-;; when alphanumeric keys are pressed.
+;; The 'deflayer' blocks define custom keymaps (layouts and layers).
+;; KMonad activates the first keymap in the file as the Base Layer on startup.
+;; Access additional layers using layer-toggle or layer-switch aliases
+;; (e.g., @xtn).
 
 ;; Colemak-DH
 ;; Colemak © Shai Coleman -- https://colemak.com
@@ -109,12 +111,12 @@ License     : MIT
 )
 
 ;; Keyboard Layers
-;; Set of key-to-function keymaps that can modify the behavior
-;; of alphanumeric keys when activate.
+;; Sets of keymaps that modify the behavior of alphanumeric keys when
+;; activated. Access these layers using layer-toggle or layer-switch
+;; aliases (e.g., @xtn) defined on the Base Layer.
 
 ;; Extend
-;; Quick access to essential text editing, navigation features,
-;; and other system functions.
+;; Essential text editing, navigation features, and other system functions.
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
@@ -125,7 +127,7 @@ License     : MIT
 )
 
 ;; Symbols
-;; Quick access to commonly used symbols and punctuation marks.
+;; Commonly used symbols and punctuation marks.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -136,8 +138,6 @@ License     : MIT
 )
 
 ;; Shifted Symbols
-;; Quick access to commonly used symbols and punctuation marks
-;; when the Symbols key and Shift are held down.
 (deflayer shifted-symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -148,7 +148,7 @@ License     : MIT
 )
 
 ;; Numpad
-;; Quick access to a numeric keypad and associated symbols for data entry.
+;; Numeric keypad and associated symbols for data entry.
 (deflayer numpad
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -159,7 +159,7 @@ License     : MIT
 )
 
 ;; Keyboard Layout Selection
-;; Allows for selection of the active keyboard layout (Colemak/Dvorak/QWERTY).
+;; Active Base Layer selection (Colemak/Dvorak/QWERTY).
 (deflayer select-layout
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
@@ -172,11 +172,10 @@ License     : MIT
 ;;
 ;; Aliases
 ;;
-;; The 'defalias' block defines aliases -- they are used to identify custom
-;; keymaps, key combinations, and macros. Also, alias definitions can be used
-;; to alter the behavior of keys: for example, do one thing on key tap, do
-;; something else while the key is held. KMonad performs alias lookup whenever
-;; a key name starts with '@'.
+;; The 'defalias' block defines custom actions, such as layer-toggles,
+;; key combinations, and macros. Aliases can also define dual-role behaviors,
+;; such as 'tap-hold' (e.g., tap for Escape, hold for Control).
+;; Use the '@' prefix in your keymaps to reference these aliases.
 
 (defalias
   ;; Layouts
@@ -207,13 +206,12 @@ License     : MIT
 
   ;; Multi-Sticky Keys
   ;;
-  ;; To fix the issue of Ctrl and Shift not combining with 'sticky-key'
-  ;; (see: https://github.com/kmonad/kmonad/discussions/1013), 'multi-tap'
-  ;; creates a single multi-tap sticky key that combines two modifiers. This
-  ;; allows for Ctrl+Shift+S to work as expected.
+  ;; These aliases resolve the limitation where 'sticky-key' modifiers (like
+  ;; Ctrl and Shift) do not combine naturally. Using 'multi-tap' creates
+  ;; a composite sticky key that allows for combinations like Ctrl+Shift+S.
   ;;
-  ;; Important: For this to work, you must compile KMomad from source with the
-  ;; patch from https://github.com/kmonad/kmonad/pull/1014 (commit 21744cc).
+  ;; Note: This requires KMonad to be compiled from source with the patch
+  ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).
 
   ams (multi-tap 175
         (sticky-key 450 lalt)

@@ -1,15 +1,17 @@
 /*
  * File        : symbols.ahk
- * Description : AutoHotkey keyboard layer configuration file (Keeb Utils)
+ * Description : Symbols layer keymap for Keeb Utils
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a new keyboard layer by using AutoHotkey's built-in
- * hotkeys feature: It creates new shortcuts with the F23 virtual key and
- * alphanumeric keys allowing for new key-to-fuction keymaps.
+ * This script implements a dedicated Symbols Layer. It maps the F23
+ * virtual key as a layer-toggle to provide immediate access to
+ * programming symbols, mathematical operators, and typographic marks.
  *
- * The layer keymap stays persistent regardless of the active keyboard layout
- * of the operating system thanks to using scan codes instead of virtual keys:
+ * This layer uses Scan Codes (sc###) rather than Virtual Keys to ensure
+ * the keymap remains consistent across different system keyboard layouts.
+ *
+ * Layer Diagram:
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
  * |   | |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  * `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
@@ -25,22 +27,23 @@
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
- * Keyboard Scan Codes:
- * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
+ * References:
+ *  Designing a Symbol Layer: https://getreuer.info/posts/keyboards/symbol-layer/index.html
  *
- * Virtual Key Codes:
- * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
+ * Documentation:
+ *  AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
+ *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  */
 
-;; Map Left Alt to F23 virtual key.
-;; Note: Alt+Tab's active window switching behavior is lost, but Alt's regular
-;; functionality on key tap is preserved -- this does not impact the Right Alt
-;; (or AltGr) key.
+;; Remap Left Alt to F23 to serve as a 'Symbols' layer-toggle.
 #InputLevel 1
 LAlt::F23
 #InputLevel 0
 
-;; Monitor the physical state of the Left Key using its scan code (sc038).
+;; Dual-role behavior for Left Alt:
+;;  1. Tap: Sends the standard Left Alt key to the OS.
+;;  2. Hold: Acts as the F23 trigger for the Symbol layer.
+;; Uses Scan Code to monitor the physical key state.
 F23::
 {
     Send "{LAlt Down}"

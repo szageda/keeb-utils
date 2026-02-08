@@ -102,28 +102,27 @@ KeyHistory 0
 ;;
 ;; Keeb Utils Configuration
 ;;
-;; Scripts on commented lines (starting with ;;) are not loaded,
-;; therefore remain disabled.
+;; Scripts on commented lines (starting with ;;) are not loaded.
 
 ;; Keyboard Layouts
-;; Keymaps defining the key arrangements and characters produced
-;; when alphanumeric keys are pressed.
+;; Keymaps defining the physical key arrangements and character
+;; output for the primary alphanumeric layer.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
 ;;#Include Layouts\galliope-ansi.ahk
 
 ;; Keyboard Layers
-;; Set of key-to-function keymaps that can modify the behavior
-;; of alphanumeric keys when activate.
+;; Sets of keymaps that modify the default alphanumeric behavior
+;; when a specific layer-toggle is active.
 ;;
-;; Note: The order of layers matters, for
-;; the function maps to work as expected.
+;; Note: The load order of layers is important, because
+;; subsequent keymaps can override the ones before them.
 #Include Layers\symbols.ahk
 #Include Layers\numpad.ahk
 #Include Layers\extend.ahk
 
 ;; Modules
-;; The core functionality of Keeb Utils doesn't depend on any
-;; of the modules, but they provide additional conveniences.
+;; Optional utilities for extended functionality (menus, toggles, etc.)
+;; that do not interfere with core layouts and layers.
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk

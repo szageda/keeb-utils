@@ -1,15 +1,17 @@
 /*
  * File        : numpad.ahk
- * Description : AutoHotkey keyboard layer configuration file (Keeb Utils)
+ * Description : Numpad layer keymap for Keeb Utils
  * Copyright   : (c) 2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a new keyboard layer by using AutoHotkey's built-in
- * hotkeys feature: It creates new shortcuts with the Left Alt, Space, and
- * alphanumeric keys allowing for new key-to-fuction keymaps.
- * 
- * The layer keymap stays persistent regardless of the active keyboard layout
- * of the operating system thanks to using scan codes instead of virtual keys:
+ * This script implements a Numpad layer. It uses a chorded layer-toggle
+ * (Left Alt + Space) to map alphanumeric keys to numeric and mathematical
+ * functions.
+ *
+ * This layer uses Scan Codes (sc###) rather than Virtual Keys to ensure
+ * the keymap remains consistent across different system keyboard layouts.
+ *
+ * Layer Diagram:
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
  * |   | |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  * `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
@@ -25,16 +27,14 @@
  * | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
- * Keyboard Scan Codes:
- * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
- *
- * Virtual Key Codes:
- * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
+ * Documentation:
+ *  AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
+ *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  */
 
 #HotIf GetKeyState("sc038", "P") && GetKeyState("sc039", "P")
 
-;; Surpress Space when the layer is active.
+;; Suppress the native Spacebar output when the layer is active.
 sc039::return
 
 ;; Function Row
