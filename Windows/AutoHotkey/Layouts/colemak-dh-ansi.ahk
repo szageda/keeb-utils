@@ -83,7 +83,7 @@ sc018::y        ;; QWERTY oO
 sc019::vkBA     ;; QWERTY pP
 sc01A::vkBD     ;; QWERTY [{
 sc01B::vkBB     ;; QWERTY ]}
-sc02D::vkDC     ;; QWERTY \|
+sc02B::vkDC     ;; QWERTY \|
 
 ;; Home Row
 sc01E::a        ;; QWERTY aA
