@@ -15,8 +15,7 @@ Tray := A_TrayMenu
 Tray.Delete()
 
 ;; Primary Actions
-Tray.Add("Enabled", ChangeStatus)
-Tray.Check("Enabled")
+Tray.Add("Active", ChangeStatus)
 Tray.Add()
 Tray.Add("Reload", ReloadScripts)
 
