@@ -152,7 +152,7 @@ Documentation:
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   @dvk XX   @glm XX   XX   XX   XX   XX   XX   ret
+  XX   XX   XX   @dvk XX   XX   XX   XX   XX   XX   XX   XX   ret
   lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
@@ -169,7 +169,6 @@ Documentation:
   ;; Layouts
   cmk (layer-switch colemak-dh-ansi)
   dvk (layer-switch dvorak-ansi)
-  glm (layer-switch galliope-ansi)
   qwe (layer-switch qwerty)
 
   ;; Layers
@@ -190,7 +189,7 @@ Documentation:
   dbz #(0 0)
 
   ;; Sticky Keys
-  ssk (sticky-key 450 lsft)
+  ssk (sticky-key 280 lsft)
 
   ;; Multi-Sticky Keys
   ;;
