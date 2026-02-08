@@ -1,15 +1,17 @@
 /*
  * File        : extend.ahk
- * Description : AutoHotkey keyboard layer configuration file (Keeb Utils)
+ * Description : Extend layer keymap for Keeb Utils
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a new keyboard layer by using AutoHotkey's built-in
- * hotkeys feature: It creates new shortcuts with the F24 virtual key and
- * alphanumeric keys allowing for new key-to-fuction keymaps.
+ * This script implements the Extend layer concept. It maps the F24
+ * virtual key as a layer-toggle to transform alphanumeric keys into
+ * functional tools (navigation, media, and editing).
  *
- * The layer keymap stays persistent regardless of the active keyboard layout
- * of the operating system thanks to using scan codes instead of virtual keys:
+ * This layer uses Scan Codes (sc###) rather than Virtual Keys to ensure
+ * the keymap remains consistent across different system keyboard layouts.
+ *
+ * Layer Diagram:
  * ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
  * |   | |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  * `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
@@ -25,22 +27,23 @@
  * | Ctrl |Win|Alt | Shift                | Alt|Win|Menu| Ctrl |
  * `------'---'----'----------------------'----'---'----'------'
  *
- * Keyboard Scan Codes:
- * https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
+ * References:
+ *  DreymaR's Extend Layer: https://dreymar.colemak.org/layers-extend.html
  *
- * Virtual Key Codes:
- * https://docs.microsoft.com/en-us/windows/desktop/inputdev/virtual-key-codes
+ * Documentation:
+ *  AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
+ *  Scan Codes: https://www.freepascal.org/docs-html/rtl/keyboard/kbdscancode.html
  */
 
 #Include Lib/multi-sticky.ahk
 #Include Lib/sticky-key.ahk
 
-;; Map Caps Lock to F24 to activate the layer when held.
+;; Remap Caps Lock to F24 to serve as the 'Extend' layer-toggle.
 #InputLevel 1
 CapsLock::F24
 #InputLevel 0
 
-;; Disable Caps Lock states, so the LED won't light up on your device.
+;; Force Caps Lock to remain off to prevent the physical LED from toggling.
 SetCapsLockState "AlwaysOff"
 
 ;; Function Row
