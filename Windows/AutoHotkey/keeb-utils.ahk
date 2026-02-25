@@ -84,7 +84,7 @@ SendMode "Event"
 SetKeyDelay -1, -1
 
 ;;
-;; Debugging Settings
+;; Debug Settings
 ;;
 
 ;; Enables or disables line logging or displays the script
@@ -102,14 +102,12 @@ KeyHistory 0
 ;;
 ;; Keeb Utils Configuration
 ;;
-;; Scripts on commented lines (starting with ;;) are not loaded.
 
 ;; Keyboard Layouts
 ;; Keymaps defining the physical key arrangements and character
 ;; output for the primary alphanumeric layer.
 #Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
-;;#Include Layouts\galliope-ansi.ahk
 
 ;; Keyboard Layers
 ;; Sets of keymaps that modify the default alphanumeric behavior
@@ -122,7 +120,7 @@ KeyHistory 0
 #Include Layers\extend.ahk
 
 ;; Modules
-;; Optional utilities for extended functionality (menus, toggles, etc.)
-;; that do not interfere with core layouts and layers.
+;; Optional utilities for extended functionality that do not
+;; interfere with core layouts and layers.
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk
