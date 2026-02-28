@@ -37,7 +37,7 @@
 
 ;; Remap Left Alt to F23 to serve as a 'Symbols' layer-toggle.
 #InputLevel 1
-LAlt::F23
+sc038::F23
 #InputLevel 0
 
 ;; Dual-role behavior for Left Alt:
@@ -97,30 +97,9 @@ F23 & sc016::Send "{Raw}'"                  ;; QWERTY uU
 F23 & sc017::Send "{Raw}["                  ;; QWERTY iI
 F23 & sc018::Send "{Raw}]"                  ;; QWERTY oO
 F23 & sc019::Send "{Raw}~"                  ;; QWERTY pP
-F23 & sc01A::                               ;; QWERTY [{
-{
-    if GetKeyState("Shift") {
-        Send "{Raw}‘"
-    } else {
-        Send "{Raw}“"
-    }
-}
-F23 & sc01B::                               ;; QWERTY ]}
-{
-    if GetKeyState("Shift") {
-        Send "{Raw}’"
-    } else {
-        Send "{Raw}”"
-    }
-}
-F23 & sc02B::                               ;; QWERTY \|
-{
-    if GetKeyState("Shift") {
-        Send "{Raw}‚"
-    } else {
-        Send "{Raw}„"
-    }
-}
+F23 & sc01A::return                         ;; QWERTY [{
+F23 & sc01B::return                         ;; QWERTY ]}
+F23 & sc02B::return                         ;; QWERTY \|
 
 ;; Home Row
 F23 & sc01E::Send "{Raw}$"                  ;; QWERTY aA
@@ -140,14 +119,8 @@ F23 & sc02C::Send "{Raw}\"                  ;; QWERTY zZ
 F23 & sc02D::Send "{Raw}/"                  ;; QWERTY xX
 F23 & sc02E::Send "{Raw}_"                  ;; QWERTY cC
 F23 & sc02F::Send "{Raw}`""                 ;; QWERTY vV
-F23 & sc030::                               ;; QWERTY bB
-{
-    if GetKeyState("Shift") {
-        Send "{Raw}—"
-    } else {
-        Send "{Raw}–"
-    }
-}
+F23 & sc030::return                         ;; QWERTY bB
+
 F23 & sc031::Send "{Raw}|"                  ;; QWERTY nN
 F23 & sc032::Send "{Raw}&"                  ;; QWERTY mM
 F23 & sc033::Send "{Raw}%"                  ;; QWERTY ,<

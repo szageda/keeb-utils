@@ -40,7 +40,7 @@
 
 ;; Remap Caps Lock to F24 to serve as the 'Extend' layer-toggle.
 #InputLevel 1
-CapsLock::F24
+sc03A::F24
 #InputLevel 0
 
 ;; Force Caps Lock to remain off to prevent the physical LED from toggling.
