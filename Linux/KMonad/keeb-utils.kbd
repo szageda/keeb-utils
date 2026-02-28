@@ -5,8 +5,8 @@ Copyright   : (c) 2024-2026, Gergely Szabo
 License     : MIT
 
 Documentation:
-  KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
-  KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
+- KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
+- KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
 |#
 
 ;;
@@ -119,19 +119,9 @@ Documentation:
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  !    {    }    `    ^    @    '    [    ]    ~    “    ”    „
-  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    –    |    &    %    +    ?    @ssm
-  lctl lmet @sym           @num           ralt cmp  rmet rctl
-)
-
-;; Shifted Symbols
-(deflayer shifted-symbols
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  !    {    }    `    ^    @    '    [    ]    ~    ‘    ’    ‚
-  @xtn $    <    >    =    #    :    -    \(   \)   *    ;    ret
-  @ssm \    /    \_   "    —    |    &    %    +    ?    @ssm
+  tab  !    {    }    `    ^    @    '    [    ]    ~    XX   XX   XX
+  @num $    <    >    =    #    :    -    \(   \)   *    ;    ret
+  lsft \    /    \_   "    XX   |    &    %    +    ?    rsft ;; "
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
@@ -140,10 +130,10 @@ Documentation:
 (deflayer numpad
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  x    d    e    f    %    *    7    8    9    -    XX   XX   XX
-  @xtn .    a    b    c    =    /    4    5    6    +    XX   ret
-  @ssm \    ,    :    \_   ^    0    1    2    3    @dbz @ssm
-  lctl lmet @sym           @num           ralt cmp  rmet rctl
+  tab  x    a    b    c    ^    ,    7    8    9    @dbz XX   XX   XX
+  @num ~    *    -    =    #    +    4    5    6    .    XX   ret
+  lsft d    e    f    :    XX   0    1    2    3    /    rsft
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
 ;; Keyboard Layout Selection

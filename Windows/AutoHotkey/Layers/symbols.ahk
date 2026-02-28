@@ -56,6 +56,10 @@ F23::
     Send "{Alt Up}"
 }
 
+;; Comment this line if you aren't loading numpad.ahk in keeb-utils.ahk,
+;; otherwise expect an error message about 'NumpadMode' being undefined.
+#HotIf (NumpadMode = false)
+
 ;; Function Row
 F23 & sc001::return                         ;; Esc
 F23 & sc03B::return                         ;; F1
@@ -126,3 +130,5 @@ F23 & sc032::Send "{Raw}&"                  ;; QWERTY mM
 F23 & sc033::Send "{Raw}%"                  ;; QWERTY ,<
 F23 & sc034::Send "{Raw}+"                  ;; QWERTY .>
 F23 & sc035::Send "{Raw}?"                  ;; QWERTY /?
+
+#HotIf
