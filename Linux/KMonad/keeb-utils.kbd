@@ -1,22 +1,20 @@
-#|
-File        : keeb-utils.kbd
-Description : KMonad keymap configuration file for Keeb Utils
-Copyright   : (c) 2024-2026, Gergely Szabo
-License     : MIT
+;;;;
+;;;; File        : keeb-utils.kbd
+;;;; Description : KMonad keymap configuration file for Keeb Utils
+;;;; Copyright   : (c) 2024-2026, Gergely Szabo
+;;;; License     : MIT
+;;;;
+;;;;Documentation:
+;;;; - KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
+;;;; - KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
 
-Documentation:
-- KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
-- KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
-|#
+;;;
+;;; KMonad General Configuration
+;;;
 
-;;
-;; KMonad General Configuration
-;;
-;; The 'defcfg' block defines the global configuration for KMonad.
-;; It specifies the input and output devices and sets global behaviors.
-;; Note: A valid configuration must include at least one 'input()' and
-;; 'output()' function.
-
+;; The `defcfg' block defines the global configuration for KMonad. A valid configuration
+;; must contain at least one `inptut' and one `output' block to function -- they define
+;; the input and output devices.
 (defcfg
   ;; Linux
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
@@ -31,23 +29,25 @@ Documentation:
   ;;output (kext)
 
   ;; Enable fallthrough to send unhandled events to the OS.
-  ;; If false, keys not defined in the active layer are suppressed.
+  ;; If `false', keys not defined in the active layer are suppressed.
   ;; (default true)
   fallthrough true
 
   ;; Enable or disable shell command execution (e.g., running scripts).
-  ;; Set to 'false' for better security.
+  ;; Set to `false' for better security.
+  ;; (default true)
   allow-cmd false
 )
 
-;;
-;; Keymaps
-;;
-;; The 'defsrc' block defines the physical keys to be intercepted by KMonad.
-;; It is recommended to use standard US QWERTY as the source, even if your
-;; physical keycaps differ. Using other source layouts can cause unexpected
-;; character mapping issues; see : https://github.com/kmonad/kmonad/issues/135.
+;;;
+;;; Source Layer
+;;;
 
+;; The `defsrc' block defines the physical keys to be intercepted by KMonad.
+;; It is recommended to use the standard US QWERTY layout as the source, even
+;; if your physical keycaps differ.
+;; Using other source layouts can cause unexpected character mapping issues;
+;; see: https://github.com/kmonad/kmonad/issues/135.
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -57,11 +57,13 @@ Documentation:
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
-;; Keyboard Layouts
-;; The 'deflayer' blocks define custom keymaps (layouts and layers).
-;; KMonad activates the first keymap in the file as the Base Layer on startup.
-;; Access additional layers using layer-toggle or layer-switch aliases
-;; (e.g., @xtn).
+;;;
+;;; Base Layer Keymaps
+;;;
+
+;; The `deflayer' blocks define custom keymaps (layouts and layers). KMonad
+;; activates the first keymap in the file as the default Base Layer on startup.
+;; Access additional layers using `layer-toggle' or `layer-switch' aliases.
 
 ;; Colemak-DH
 ;; Colemak © Shai Coleman -- https://colemak.com
@@ -98,9 +100,13 @@ Documentation:
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;; Keyboard Layers
-;; Sets of keymaps that modify the behavior of alphanumeric keys when
-;; activated. Access these layers using layer-toggle or layer-switch
+;;;
+;;; Custom Layer Keymaps
+;;;
+
+;; Similarly to the Base Layer keymaps, these `deflayer' blocks define
+;; additional layers that modify the behavior of alphanumeric keys when
+;; activated. Access these layers using `layer-toggle' or `layer-switch'
 ;; aliases (e.g., @xtn) defined on the Base Layer.
 
 ;; Extend
@@ -147,21 +153,21 @@ Documentation:
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;;
-;; Aliases
-;;
-;; The 'defalias' block defines custom actions, such as layer-toggles,
-;; key combinations, and macros. Aliases can also define dual-role behaviors,
-;; such as 'tap-hold' (e.g., tap for Escape, hold for Control).
-;; Use the '@' prefix in your keymaps to reference these aliases.
+;;;
+;;; Aliases
+;;;
 
+;; The `defalias' block defines custom actions, such as layer switches, special key
+;; combinations, and macros, etc. Aliases can also define dual-role behaviors, such
+;; as `tap-hold' (e.g., tap for Escape, hold for Control). Use the '@' prefix in your
+;; keymaps to reference these aliases.
 (defalias
-  ;; Layouts
+  ;; Base Layouts
   cmk (layer-switch colemak-dh-ansi)
   dvk (layer-switch dvorak-ansi)
   qwe (layer-switch qwerty)
 
-  ;; Layers
+  ;; Custom Layers
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
   sym (tap-next lalt (layer-toggle symbols))
@@ -183,13 +189,12 @@ Documentation:
 
   ;; Multi-Sticky Keys
   ;;
-  ;; These aliases resolve the limitation where 'sticky-key' modifiers (like
-  ;; Ctrl and Shift) do not combine naturally. Using 'multi-tap' creates
-  ;; a composite sticky key that allows for combinations like Ctrl+Shift+S.
+  ;; The aliases below resolve the limitation where separate `sticky-key' definitions (like
+  ;; one for <Ctrl> and one for <Shift>) do not combine (<Ctrl>+<Shift>). Using `multi-tap'
+  ;; creates a composite sticky key that allows for combinations like <Ctrl>+<Shift>+<S>.
   ;;
   ;; Note: This requires KMonad to be compiled from source with the patch
   ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).
-
   ams (multi-tap 120
         (sticky-key 280 lalt)
         (sticky-key 280 A-lsft))
