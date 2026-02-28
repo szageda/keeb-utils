@@ -1,16 +1,16 @@
 /*
  * File        : keeb-utils.ahk
- * Description : Entry-point to AutoHotkey implementation of Keeb Utils
+ * Description : Entry-point to the AutoHotkey implementation of Keeb Utils
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This file configures AutoHotkey and the behavior of scripts. All scripts
- * loaded by this file run with the settings defined here.
+ * This file configures AutoHotkey and the behavior of scripts. All scripts loaded by this
+ * file run with the settings defined here.
  */
 
-;;
+;; ================================================================================================
 ;; AutoHotkey General Settings
-;;
+;; ================================================================================================
 
 ;; Define the AutoHotkey version required to run this script.
 ;; https://www.autohotkey.com/docs/v2/lib/_Requires.htm
@@ -54,9 +54,9 @@ ProcessSetPriority "High"
 ;; (default True)
 Persistent True
 
-;;
+;; ================================================================================================
 ;; Input Settings
-;;
+;; ================================================================================================
 
 ;; Set the interval in seconds before a warning dialog is triggered
 ;; by consecutive hotkey execution; i.e. key spamming.
@@ -83,9 +83,9 @@ SendMode "Event"
 ;; (default 10)
 SetKeyDelay -1, -1
 
-;;
+;; ================================================================================================
 ;; Debug Settings
-;;
+;; ================================================================================================
 
 ;; Enables or disables line logging or displays the script
 ;; lines most recently executed.
@@ -99,9 +99,9 @@ ListLines 0
 ;; (default 40)
 KeyHistory 0
 
-;;
+;; ================================================================================================
 ;; Keeb Utils Configuration
-;;
+;; ================================================================================================
 
 ;; Keyboard Layouts
 ;; Keymaps defining the physical key arrangements and character
