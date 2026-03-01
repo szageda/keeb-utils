@@ -4,8 +4,8 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This file configures AutoHotkey and the behavior of scripts. All scripts loaded by this
- * file run with the settings defined here.
+ * This file configures the AutoHotkey runtime environment, defnes general settings,
+ * and loads the necessary components for Keeb Utils.
  */
 
 ;; ================================================================================================
@@ -119,8 +119,8 @@ KeyHistory 0
 #Include Layers\symbols.ahk
 #Include Layers\extend.ahk
 
-;; Modules
+;; Modular Extensions
 ;; Optional utilities for extended functionality that do not
-;; interfere with core layouts and layers.
+;; interfere with the core keyboard layouts and layers.
 #Include Modules\keeb-utils-menu.ahk
 #Include Modules\keeb-utils-toggle.ahk
