@@ -5,8 +5,8 @@
  * License     : MIT
  *
  * This script defines a global hotkey (Scroll Lock + Q) to toggle
- * between 'Active' and 'Suspended' states. The toggle remains
- * functional even while the script is suspended.
+ * between Active and Suspended states. The toggle remains functional
+ * even while the script is suspended.
  */
 
 #Include keeb-utils-icon.ahk

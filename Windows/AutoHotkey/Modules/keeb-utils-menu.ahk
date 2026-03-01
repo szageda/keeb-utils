@@ -65,18 +65,18 @@ OpenHistory(*)
 
 LineLogging(*)
 {
-    static logLines := 0
+    static logLines := false
 
-    if logLines != 1 {
+    if logLines = false {
         ListLines 1
         KeyHistory 100
 
-        logLines := 1
+        logLines := true
     } else {
         ListLines 0
         KeyHistory 0
 
-        logLines := 0
+        logLines := false
     }
     DebugMenu.ToggleCheck("Line Logging")
 }
