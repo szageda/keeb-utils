@@ -170,7 +170,7 @@
   ;; Custom Layers
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
-  sym (tap-next lalt (layer-toggle symbols))
+  sym (layer-toggle symbols)
   ssm (layer-toggle shifted-symbols)
   num (layer-toggle numpad)
 

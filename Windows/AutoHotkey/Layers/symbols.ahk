@@ -39,21 +39,6 @@
 sc038::F23
 #InputLevel 0
 
-;; Dual-role behavior for Left Alt:
-;; 1. Tap: Triggers the standard Left Alt key.
-;; 2. Hold: Acts as the trigger for the Symbols layer.
-F23::
-{
-    Send "{LAlt Down}"
-
-    if !KeyWait("sc038") {
-        Send "{F23}"
-    }
-
-    KeyWait "sc038"
-    Send "{Alt Up}"
-}
-
 ;; Comment this line if you aren't loading "numpad.ahk" from "keeb-utils.ahk",
 ;; otherwise expect an error message about 'NumpadMode' being undefined.
 #HotIf (NumpadMode = false)
