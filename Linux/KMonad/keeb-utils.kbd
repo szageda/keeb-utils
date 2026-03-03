@@ -171,7 +171,6 @@
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
   sym (layer-toggle symbols)
-  ssm (layer-toggle shifted-symbols)
   num (layer-toggle numpad)
 
   ;; Ctrl Shortcuts
