@@ -107,7 +107,7 @@
 ;; Similarly to the Base Layer keymaps, these `deflayer' blocks define
 ;; additional layers that modify the behavior of alphanumeric keys when
 ;; activated. Access these layers using `layer-toggle' or `layer-switch'
-;; aliases (e.g., @xtn) defined on the Base Layer.
+;; aliases (e.g., `@xtn') defined on the Base Layer.
 
 ;; Extend
 ;; Essential text editing, navigation features, and other system functions.
@@ -158,9 +158,9 @@
 ;;;
 
 ;; The `defalias' block defines custom actions, such as layer switches, special key
-;; combinations, and macros, etc. Aliases can also define dual-role behaviors, such
-;; as `tap-hold' (e.g., tap for Escape, hold for Control). Use the '@' prefix in your
-;; keymaps to reference these aliases.
+;; combinations, macros, etc. Aliases can also define dual-role behaviors, such as
+;; `tap-next' (e.g., tap for <Escape>, hold for <Control>). Use the `@' prefix in
+;; your keymaps to reference these aliases.
 (defalias
   ;; Base Layouts
   cmk (layer-switch colemak-dh-ansi)
