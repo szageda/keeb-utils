@@ -19,7 +19,7 @@
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
  *      | Tab | ! | { | } | ` | ^ | @ | ' | [ | ] | ~ |   |   |     |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      | Caps | $ | < | > | = | # | : | - | ( | ) | * | ; | Enter  |
+ *      | Caps | $ | < | > | = | # | * | - | ( | ) | : | ; | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
  *      |  Shift | \ | / | _ | " |   | | | & | % | + | ? | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
@@ -94,11 +94,11 @@ F23 & sc01F::Send "{Raw}<"  ;; QWERTY sS
 F23 & sc020::Send "{Raw}>"  ;; QWERTY dD
 F23 & sc021::Send "{Raw}="  ;; QWERTY fF
 F23 & sc022::Send "{Raw}#"  ;; QWERTY gG
-F23 & sc023::Send "{Raw}:"  ;; QWERTY hH
+F23 & sc023::Send "{Raw}*"  ;; QWERTY hH
 F23 & sc024::Send "{Raw}-"  ;; QWERTY jJ
 F23 & sc025::Send "{Raw}("  ;; QWERTY kK
 F23 & sc026::Send "{Raw})"  ;; QWERTY lL
-F23 & sc027::Send "{Raw}*"  ;; QWERTY ;:
+F23 & sc027::Send "{Raw}:"  ;; QWERTY ;:
 F23 & sc028::Send "{Raw};"  ;; QWERTY '"
 
 ;; Bottom Row

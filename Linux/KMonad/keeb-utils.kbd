@@ -126,7 +126,7 @@
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
   tab  !    {    }    `    ^    @    '    [    ]    ~    XX   XX   XX
-  @num $    <    >    =    #    :    -    \(   \)   *    ;    ret
+  @num $    <    >    =    #    *    -    \(   \)   :    ;    ret
   lsft \    /    \_   "    XX   |    &    %    +    ?    rsft ;; "
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
