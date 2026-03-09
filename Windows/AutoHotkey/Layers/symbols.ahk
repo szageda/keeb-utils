@@ -39,9 +39,10 @@
 sc038::F23
 #InputLevel 0
 
-;; Comment this line if you aren't loading "numpad.ahk" from "keeb-utils.ahk",
-;; otherwise expect an error message about 'NumpadMode' being undefined.
-#HotIf (NumpadMode = false)
+;; Comment this line if you aren't loading numpad.ahk from keeb-utils.ahk,
+;; otherwise expect an error message about the 'IsNumpadActive' variable
+;; being undefined.
+#HotIf (IsNumpadActive = false)
 
 ;; Function Row
 F23 & sc001::return ;; Esc

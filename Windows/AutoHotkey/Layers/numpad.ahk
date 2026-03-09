@@ -5,7 +5,7 @@
  * License     : MIT
  *
  * This script creates a dedicated Numpad layer. This is a "stepped layer": it is accessed from
- * the Symbols layer (defined in "symbols.ahk") by holding the <Caps Lock> key.
+ * the Symbols layer (defined in symbols.ahk) by holding the <Caps Lock> key.
  * The Numpad layer provides a 3x3 numeric grid, hexadecimal characters, and basic mathematical
  * operators for technical data entry.
  *
@@ -33,24 +33,42 @@
  * - Scan Codes: https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
-NumpadMode := false
+IsNumpadActive := false
 
-;; Make the Numpad layer active (via holding <Caps Lock>)
-;; only when holding <Left Alt>).
+;; Activate the Numpad layer when holding <Left Alt>+<Caps Lock>.
 #HotIf GetKeyState("sc038","P")
 sc03A::
 {
-    global NumpadMode
-    NumpadMode := true
+    global IsNumpadActive
+    IsNumpadActive := true
 }
 sc03A Up::
 {
-    global NumpadMode
-    NumpadMode := false
+    global IsNumpadActive
+    IsNumpadActive := false
 }
 #HotIf
 
-#HotIf (NumpadMode = true)
+;; We also watch for <Left Alt> being released independently, so the
+;; layer never gets stuck if <Left Alt> is released before <Caps Lock>.
+;;
+;; If <Left Alt> is released while <Caps Lock> is still down, make sure
+;; the layer state is cleared. This runs unconditionally (no #HotIf),
+;; so it catches the release event even when <Caps Lock> isn't held.
+;;
+;; The handler is run at 'InputLevel 1' and it's the only 'sc038 Up'
+;; hotkey in the entire script; symbols.ahk relies on it to release
+;; the F23 virtual key to ensure the Symbols layer never gets stuck.
+#InputLevel 1
+~sc038 Up::
+{
+    global IsNumpadActive
+    IsNumpadActive := false
+    Send "{F23 Up}"
+}
+#InputLevel 0
+
+#HotIf (IsNumpadActive = true)
 ;; Function Row
 sc001::return   ;; Esc
 sc03B::return   ;; F1
