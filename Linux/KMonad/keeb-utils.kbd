@@ -46,8 +46,9 @@
 ;; The `defsrc' block defines the physical keys to be intercepted by KMonad.
 ;; It is recommended to use the standard US QWERTY layout as the source, even
 ;; if your physical keycaps differ.
-;; Using other source layouts can cause unexpected character mapping issues;
-;; see: https://github.com/kmonad/kmonad/issues/135.
+;;
+;; Note: Using other source layouts can cause unexpected character mapping
+;; issues; see: https://github.com/kmonad/kmonad/issues/135.
 (defsrc
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq slck
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -136,8 +137,8 @@
 (deflayer numpad
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  x    a    b    c    ^    ,    7    8    9    @dbz XX   XX   XX
-  @num ~    *    -    =    #    +    4    5    6    .    XX   ret
+  tab  x    a    b    c    ^    *    7    8    9    @dbz XX   XX   XX
+  @num ~    ,    .    =    #    +    4    5    6    -    XX   ret
   lsft d    e    f    :    XX   0    1    2    3    /    rsft
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
