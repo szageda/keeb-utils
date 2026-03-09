@@ -4,12 +4,12 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script implements the Extend layer concept. It maps the F24 virtual key to <Caps Lock> to
- * activate the layer. It transforms alphanumeric keys into functional tools (navigation, media,
- * and editing).
+ * This script implements the Extend layer concept. It maps the F24 virtual key
+ * to <Caps Lock> to activate the layer. It transforms the alphanumeric keys
+ * into functional tools (navigation, media, text editing and more).
  *
- * The Extend layer maps the functions to keys using scan codes to ensure the keymap remains
- * consistent across different system keyboard layouts.
+ * The Extend layer maps the functions to keys using scan codes to ensure
+ * the keymap remains consistent across different system keyboard layouts.
  *
  * Layer Diagram:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.

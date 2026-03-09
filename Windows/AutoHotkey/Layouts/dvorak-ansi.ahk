@@ -4,13 +4,15 @@
  * Copyright   : (c) 2024-2025, Gergely Szabo
  * License     : MIT
  *
- * This script implements the Dvorak layout by capturing the scan codes sent by the keyboard
- * and remapping them to the Dvorak layout's key positions.
+ * This script implements the Dvorak layout by capturing the scan codes
+ * sent by the keyboard and remapping them to the Dvorak layout's key
+ * positions.
  *
  * Scan Code Key Remap Logic:
- * - Alphanumeric keys: Remap directly to keys (a-z) to bypass the OS keyboard layout.
- * - Symbol keys: Remap to Virtual Keys (vkXX) to ensure standard character output
- *   while maintaining the physical Dvorak position.
+ * - Alphanumeric keys: Remap directly to keys (a-z) to bypass the OS
+ *   keyboard layout.
+ * - Symbol keys: Remap to Virtual Keys (vkXX) to ensure standard
+ *   character output while maintaining the physical Dvorak position.
  *
  * Layout Diagram when the OS is set to US QWERTY:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.

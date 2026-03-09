@@ -12,9 +12,9 @@
 ;;; KMonad General Configuration
 ;;;
 
-;; The `defcfg' block defines the global configuration for KMonad. A valid configuration
-;; must contain at least one `inptut' and one `output' block to function -- they define
-;; the input and output devices.
+;; The `defcfg' block defines the global configuration for KMonad.
+;; A valid configuration must contain at least one `inptut' and one `output'
+;; block to function -- they define the input and output devices.
 (defcfg
   ;; Linux
   input  (device-file "/dev/input/by-id/usb-Logitech_G512_RGB_MECHANICAL_GAMING_KEYBOARD_026C39743837-event-kbd")
@@ -157,10 +157,11 @@
 ;;; Aliases
 ;;;
 
-;; The `defalias' block defines custom actions, such as layer switches, special key
-;; combinations, macros, etc. Aliases can also define dual-role behaviors, such as
-;; `tap-next' (e.g., tap for <Escape>, hold for <Control>). Use the `@' prefix in
-;; your keymaps to reference these aliases.
+;; The `defalias' block defines custom actions, such as layer switches, special
+;; key combinations, macros, and more. Aliases can also define dual-role
+;; behaviors, such as `tap-next' (e.g., tap for <Escape>, hold for <Control>).
+;; Use the `@' prefix in your keyboard layout and layer keymaps to reference
+;; these aliases.
 (defalias
   ;; Base Layouts
   cmk (layer-switch colemak-dh-ansi)
@@ -188,9 +189,10 @@
 
   ;; Multi-Sticky Keys
   ;;
-  ;; The aliases below resolve the limitation where separate `sticky-key' definitions (like
-  ;; one for <Ctrl> and one for <Shift>) do not combine (<Ctrl>+<Shift>). Using `multi-tap'
-  ;; creates a composite sticky key that allows for combinations like <Ctrl>+<Shift>+<S>.
+  ;; The aliases below resolve the limitation where separate `sticky-key'
+  ;; definitions (like one for <Ctrl> and one for <Shift>) do not combine
+  ;; (<Ctrl>+<Shift>). Using `multi-tap' creates a composite sticky key
+  ;; that allows for combinations like <Ctrl>+<Shift>+<S>.
   ;;
   ;; Note: This requires KMonad to be compiled from source with the patch
   ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).

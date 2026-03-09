@@ -4,11 +4,12 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a dedicated Symbols layer. It maps the F23 virtual key to <Left Alt> to
- * activate the layer. It provides immediate access to programming symbols, mathematical operators.
+ * This script creates a dedicated Symbols layer. It maps the F23 virtual key
+ * to <Left Alt> to activate the layer. It provides immediate access to
+ * programming symbols, mathematical operators.
  *
- * The Symbols layer maps the functions to keys using scan codes to ensure the keymap remains
- * consistent across different system keyboard layouts.
+ * The Symbols layer maps the functions to keys using scan codes to ensure
+ * the keymap remains consistent across different system keyboard layouts.
  *
  * Layer Diagram:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.

@@ -4,13 +4,13 @@
  * Copyright   : (c) 2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a dedicated Numpad layer. This is a "stepped layer": it is accessed from
- * the Symbols layer (defined in symbols.ahk) by holding the <Caps Lock> key.
- * The Numpad layer provides a 3x3 numeric grid, hexadecimal characters, and basic mathematical
- * operators for technical data entry.
+ * This script creates a dedicated Numpad layer as a "stepped layer": It is
+ * accessed from the Symbols layer (defined in symbols.ahk) by holding the
+ * <Caps Lock> key. The Numpad layer provides a 3x3 numeric grid, hexadecimal
+ * characters, and basic mathematical operators for technical data entry.
  *
- * The Numpad layer maps the functions to keys using scan codes (sc###) to ensure the keymap
- * remains consistent across different system keyboard layouts.
+ * The Numpad layer maps the functions to keys using scan codes to ensure
+ * the keymap remains consistent across different system keyboard layouts.
  *
  * Layer Diagram:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
