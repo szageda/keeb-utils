@@ -21,9 +21,9 @@
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
  *      | Tab | x | a | b | c | ^ | * | 7 | 8 | 9 | 00|   |   |     |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      | $Num | ~ | , | . | = | # | + | 4 | 5 | 6 | - |   | Enter  |
+ *      | $Num | % | , | . | = | # | + | 4 | 5 | 6 | - |   | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | d | e | f | : |   | 0 | 1 | 2 | 3 | / | Shift    |
+ *      |  Shift | d | e | f | : | ~ | 0 | 1 | 2 | 3 | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -115,7 +115,7 @@ sc01B::return           ;; QWERTY ]}
 sc02B::return           ;; QWERTY \|
 
 ;; Home Row
-sc01E::Send "{Raw}~"    ;; QWERTY aA
+sc01E::Send "{Raw}%"    ;; QWERTY aA
 sc01F::Send "{Raw},"    ;; QWERTY sS
 sc020::Send "{Raw}."    ;; QWERTY dD
 sc021::Send "{Raw}="    ;; QWERTY fF
@@ -132,7 +132,7 @@ sc02C::Send "{Raw}d"    ;; QWERTY zZ
 sc02D::Send "{Raw}e"    ;; QWERTY xX
 sc02E::Send "{Raw}f"    ;; QWERTY cC
 sc02F::Send "{Raw}:"    ;; QWERTY vV
-sc030::return           ;; QWERTY bB
+sc030::Send "{Raw}~"    ;; QWERTY bB
 sc031::Send "{Raw}0"    ;; QWERTY nN
 sc032::Send "{Raw}1"    ;; QWERTY mM
 sc033::Send "{Raw}2"    ;; QWERTY ,<
