@@ -59,34 +59,27 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 | ![Navigation keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Navigation keys |
 | ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/extend-green.png) | Ctrl shortcuts |
 | ![Modifiers](Assets/Images/Keyboard%20Layers/extend-orange.png) | Modifiers |
-| ![Sticky keys](Assets/Images/Keyboard%20Layers/extend-sticky.png) | Sticky keys (see below this table) |
-| ![Multi-Sticky keys](Assets/Images/Keyboard%20Layers/extend-multi-sticky.png) | Sticky keys combined with multi-tap (see below this table) |
+| ![One-Shift Modifier Key](Assets/Images/Keyboard%20Layers/extend-osm.png) | One-Shot Modifier (see below this table) |
+| ![Multi-Sticky keys](Assets/Images/Keyboard%20Layers/extend-mtm.png) | Multi-Timed Modifiers (see below this table) |
 | ![Text manipulation keys](Assets/Images/Keyboard%20Layers/extend-red.png) | Text manipulation |
 | ![Multimedia keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Multimedia keys |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys |
 
-#### Advanced Modifiers (Sticky Keys)
+#### Advanced Modifiers
 
-**Shift Key**:
-- **Tap**: Activates <kbd>Shift</kbd> for the next key press only. It expires after 450 ms if no key is pressed.
-- **Hold**: Acts like a normal <kbd>Shift</kbd> key.
+**One-Shot Modifier** (also known as “sticky key”):
+- **Tap**: Activates a modifier key (<kbd>Shift</kbd> for example) for the next key press. It expires after 280 ms if no key is pressed.
+- **Hold**: Acts like a normal modifier key.
 
-**Multi-Modifier Combinations** (Ctrl/Alt and Shift):  
-You can combine modifiers by tapping them quickly (within 175 ms).
+**Multi-Timed Modifiers**: Combines two modifiers into a single key by tapping them quickly (within 120 ms).
 
-**Using Ctrl**:
-- **Single Tap**: Activates <kbd>Ctrl</kbd> for the next key press.
-- **Single Tap & Hold**: Holds <kbd>Ctrl</kbd> down continuously.
-- **Double Tap**: Activates both <kbd>Ctrl</kbd> and <kbd>Shift</kbd> for the next key press.
-- **Double Tap & Hold**: Holds both <kbd>Ctrl</kbd> and <kbd>Shift</kbd> down continuously.
+**Example — Using Ctrl and Shift**:
+- **Single Tap**: Activates the primary modifier key for the next key press.
+- **Single Tap & Hold**: Holds the primary modifier key continuously.
+- **Double Tap**: Activates both the primary and secondary modifier keys for the next key press.
+- **Double Tap & Hold**: Holds both modifier keys continuously.
 
-**Using Alt**:
-- **Single Tap**: Activates <kbd>Alt</kbd> for the next key press.
-- **Single Tap & Hold**: Holds <kbd>Alt</kbd> down continuously.
-- **Double Tap**: Activates both <kbd>Alt</kbd> and <kbd>Shift</kbd> for the next key press.
-- **Double Tap & Hold**: Holds both <kbd>Alt</kbd> and <kbd>Shift</kbd> down continuously.
-
-**Why this is used**: KMonad doesn't combine multiple sticky modifiers. This implementation ensures that combinations like <kbd>Ctrl</kbd>+<kbd>Shift</kbd> work reliably across all applications.
+*Rational*: KMonad doesn't combine multiple one-shot modifiers. This implementation ensures that combinations like <kbd>Ctrl</kbd>+<kbd>Shift</kbd> work reliably across all applications.
 
 ### Symbols Layer
 
@@ -107,7 +100,9 @@ The Symbols layer provides quick access to commonly used symbols and punctuation
 
 ### Numpad Layer
 
-The Numpad layer provides comfortable access to a numpad-like layer for data entry without the need to reach to the top row or across the keyboard. It is accessed by a defined key combo (<kbd>Left Alt</kbd>+<kbd>Space</kbd> by default).
+The Numpad layer provides comfortable access to a numpad-like layer for technical/IT data entry without the need to reach to the top row or across the keyboard. It is accessed by a defined key combo (<kbd>Left Alt</kbd>+<kbd>Caps Lock</kbd> by default).
+
+*Disclaimer*: The Numpad layer is stepped layer. This means the layer depends on and it is accessed from the Symbols layer: <kbd>Left Alt</kbd> (Symbols layer) → <kbd>Left Alt</kbd>+<kbd>Caps Lock</kbd> (Numpad layer).
 
 <div align="center">
 
