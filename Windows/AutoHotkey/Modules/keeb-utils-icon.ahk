@@ -12,7 +12,8 @@
 TraySetIcon("Icons\active.ico",, false)
 A_IconTip := "Keeb Utils is active"
 
-UpdateIcon() {
+UpdateIcon()
+{
     if A_IsSuspended = 1 {
         TraySetIcon("Icons\suspended.ico",, true)
         A_IconTip := "Keeb Utils is disabled"

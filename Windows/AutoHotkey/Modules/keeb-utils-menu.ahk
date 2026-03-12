@@ -32,7 +32,8 @@ Tray.Add()
 Tray.Add("Help", OpenHelp)
 Tray.Add("Exit", CloseAHK)
 
-ChangeStatus(*) {
+ChangeStatus(*)
+{
     static oldName := "", newName := ""
 
     ;; Switch between AutoHotkey states on item clicks.
@@ -52,32 +53,36 @@ ChangeStatus(*) {
     Tray.Rename(oldName, newName)
 }
 
-ReloadScripts(*) {
+ReloadScripts(*)
+{
     Reload
 }
 
-OpenHistory(*) {
+OpenHistory(*)
+{
     KeyHistory
 }
 
-LineLogging(*) {
-    static logLines := 0
+LineLogging(*)
+{
+    static logLines := false
 
-    if logLines != 1 {
+    if logLines = false {
         ListLines 1
         KeyHistory 100
 
-        logLines := 1
+        logLines := true
     } else {
         ListLines 0
         KeyHistory 0
 
-        logLines := 0
+        logLines := false
     }
     DebugMenu.ToggleCheck("Line Logging")
 }
 
-OpenHelp(*) {
+OpenHelp(*)
+{
     if DirExist("C:\Users\" . A_Username . "\AppData\Local\Programs\AutoHotkey") {
         Run 'hh.exe "C:\Users\' A_Username '\AppData\Local\Programs\AutoHotkey\v2\AutoHotkey.chm" href'
     } else {
@@ -85,11 +90,12 @@ OpenHelp(*) {
     }
 }
 
-CloseAHK(*) {
+CloseAHK(*)
+{
     ExitApp
 }
 
 ;; Set activating/suspending AutoHotkey as the default option
-;; when user double clicks the tray icon.
+;; when double clicking the tray icon.
 CurrentDefault := Tray.Default
 Tray.Default := "Active"
