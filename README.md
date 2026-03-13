@@ -8,23 +8,27 @@
 
 # Keeb Utils
 
-Keeb Utils, “Keyboard Utilities,” is a collection of my custom keyboard layout and layers to improve keyboard ergonomics and productivity. The project was inspired by the work of others in the alternative keyboard layouts community.
+Keeb-Utils, “Keyboard Utilities,” is a modular suite of keyboard layout and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of an optimized Colemak-DH layout with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
 
-Keeb Utils adheres to these key principles:
-- **Keep it functional and minimal**: don't implement flashy, rarely used features that will require extra maintenance in the future.
-- **Implement cross-platform solutions without sacrificing essential features**: make sure a feature provided by one software solution is possible to implement in another.
-- **Maintain high modularity**: functions are declared in modules wherever possible allowing for swapping them out easily for customization.
+## Design Principles
 
-Keeb Utils employs technics provided by third-party software to remap the keys of your keyboard on the operating system level:
-- On **Linux** via **KMonad**
-- On **Windows** via **AutoHotkey**
+Keeb-Utils adheres to the following core principles:
+- **Functionality and Minimalism**: Avoids high-maintenance features in favor of reliable, essential tools.
+- **Cross-Platform Parity**: Ensures features are functionally identical across different software implementations.
+- **High Modularity**: Uses a modular architecture to allow for easy customization and component swapping.
+
+## Supported Platforms
+
+Keeb-Utils leverages third-party software to remap keys at the operating system level:
+- **Linux**: Managed via [KMonad](https://github.com/kmonad/kmonad).
+- **Windows**: Managed via [AutoHotkey v2](https://www.autohotkey.com/).
 
 ## Keyboard Layout
 
-I use the Colemak-DH keyboard layout. Colemak was created in 2006 for the English language. In 2015, the DH ergonomic modification improved the layout. This change swapped the D and H keys to reduce side-to-side finger movement.
+This project utilizes the **Colemak-DH** layout. Colemak-DH is an ergonomic modification of the original 2006 Colemak layout, designed to reduce lateral finger movement by relocating the <kbd>D</kbd> and <kbd>H</kbd> keys to more natural positions.
 
-More information on Colemak: https://colemak.com/  
-More information on the DH ergo mod: https://colemakmods.github.io/mod-dh
+- [Learn more about Colemak](https://colemak.com/)
+- [Learn more about the DH Mod](https://colemakmods.github.io/mod-dh/)
 
 <div align="center">
 
@@ -33,19 +37,18 @@ More information on the DH ergo mod: https://colemakmods.github.io/mod-dh
 
 </div>
 
-## Keyboard Layers
+## Functional Layers
 
-To extend the functionality or make certain functions more accessible, Keeb Utils implements extra keyboard layers which can be used by special key combinations. Similarly to using <kbd>Ctrl</kbd>+<kbd>C</kbd> to copy text, <kbd>Alt</kbd>+<kbd>Tab</kbd> to switch between the active window, and so on.
+Keeb-Utils uses layers to provide immediate access to navigation, symbols, and numeric entry without requiring significant hand movement.
 
 ### Extend Layer
 
-The Extend layer is designed for a keyboard-focused workflow in mind by providing quick access to essential text editing and navigation features. Activating this layer with a designated key (<kbd>Caps Lock</kbd> by default) allows you to perform these tasks directly from the alphanumeric keys.
+The Extend layer optimizes text editing and navigation. Activating this layer (default: <kbd>Caps Lock</kbd>) maps essential functions to the home row.
 
-**Advantages to using Extend**:
-- **Stay on the home row**: Keep your hands in the typing position. This reduces wrist movement and fatigue.
-- **Faster navigation**: Use <kbd>U</kbd>, <kbd>N</kbd>, <kbd>E</kbd>, and <kbd>I</kbd> as arrow keys (QWERTY <kbd>I</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, and <kbd>L</kbd>).
-- **Power editing**: Access <kbd>Home</kbd>, <kbd>End</kbd>, <kbd>PgUp</kbd>, <kbd>PgDn</kbd>, <kbd>Del</kbd>, and <kbd>Backspace</kbd> without reaching across the keyboard.
-- **Integrated shortcuts**: Perform complex actions like "Select Next Word" or "Close Tab" using home row modifiers or tap dance actions.
+**Key Benefits**:
+- **Home Row Retention**: Minimizes wrist fatigue by keeping hands in the primary typing position.
+- **Optimized Navigation**: Maps arrow keys to the <kbd>U</kbd> <kbd>N</kbd> <kbd>E</kbd> and <kbd>I</kbd> keys (Standard QWERTY <kbd>I</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd>).
+- **Integrated Shortcuts**: Accesses common actions like “Select Next Word” or “Close Tab” via home-row modifiers.
 
 <div align="center">
 
@@ -57,21 +60,21 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 | Key Category  | Description |
 | :-----------: | ----------- |
 | ![Navigation keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Navigation keys |
-| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/extend-green.png) | Ctrl shortcuts |
-| ![Modifiers](Assets/Images/Keyboard%20Layers/extend-orange.png) | Modifiers |
+| ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/extend-green.png) | Common Ctrl-based shortcuts |
+| ![Modifiers](Assets/Images/Keyboard%20Layers/extend-orange.png) | Modifier key access |
 | ![One-Shift Modifier Key](Assets/Images/Keyboard%20Layers/extend-osm.png) | One-Shot Modifier (see below this table) |
 | ![Multi-Sticky keys](Assets/Images/Keyboard%20Layers/extend-mtm.png) | Multi-Timed Modifiers (see below this table) |
 | ![Text manipulation keys](Assets/Images/Keyboard%20Layers/extend-red.png) | Text manipulation |
 | ![Multimedia keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Multimedia keys |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys |
 
-#### Advanced Modifiers
+#### Advanced Modifier Logic
 
 **One-Shot Modifier** (also known as “sticky key”):
 - **Tap**: Activates a modifier key (<kbd>Shift</kbd> for example) for the next key press. It expires after 280 ms if no key is pressed.
 - **Hold**: Acts like a normal modifier key.
 
-**Multi-Timed Modifiers**: Combines two modifiers into a single key by tapping them quickly (within 120 ms).
+**Multi-Timed Modifiers**: Combines two modifiers into a single key via a rapid double tap (within 120 ms).
 
 **Example — Using Ctrl and Shift**:
 - **Single Tap**: Activates the primary modifier key for the next key press.
@@ -83,13 +86,10 @@ The Extend layer is designed for a keyboard-focused workflow in mind by providin
 
 ### Symbols Layer
 
-The Symbols layer provides quick access to commonly used symbols and punctuation marks by holding a designated key (<kbd>Left Alt</kbd> by default) improving typing ergonomics and reducing errors.
+The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to punctuation and mathematical operators.
 
-**Advantages to using Symbols**:
-- **Reduces finger travel**: You can access symbols like `<`, `-`, `>`, and `( )` without leaving the home row.
-- **Balanced workflow**: Symbols are distributed across both hands to prevent “one-handed” strain.
-- **Ergonomic placement**: Brackets and math operators are grouped logically, making them easier to remember than the standard Shift+Number combinations.
-- **Fewer errors**: Because your hands stay in the home position, you are less likely to lose your place or make a typo when switching between text and code.
+- **Balanced Distribution**: Spreads symbols across both hands to prevent strain.
+- **Logical Grouping**: Brackets and operators are grouped to improve muscle memory.
 
 <div align="center">
 
@@ -100,9 +100,7 @@ The Symbols layer provides quick access to commonly used symbols and punctuation
 
 ### Numpad Layer
 
-The Numpad layer provides comfortable access to a numpad-like layer for technical/IT data entry without the need to reach to the top row or across the keyboard. It is accessed by a defined key combo (<kbd>Left Alt</kbd>+<kbd>Caps Lock</kbd> by default).
-
-*Disclaimer*: The Numpad layer is stepped layer. This means the layer depends on and it is accessed from the Symbols layer: <kbd>Left Alt</kbd> (Symbols layer) → <kbd>Left Alt</kbd>+<kbd>Caps Lock</kbd> (Numpad layer).
+The Numpad layer enables efficient technical data entry. This is a stepped layer, accessed through the Symbols layer (<kbd>Left Alt</kbd> → <kbd>Caps Lock</kbd>).
 
 <div align="center">
 
@@ -118,20 +116,18 @@ The Numpad layer provides comfortable access to a numpad-like layer for technica
 | ![Math symbols](Assets/Images/Keyboard%20Layers/extend-red.png) | Math symbols and operators |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. keys |
 
-## Credits and Inspiration
+## Acknowledgments
 
-**Shai Coleman** – *[Colemak keyboard layout](https://colemak.com)*  
-**Steve “stevep99” P** – *[Seniply](https://stevep99.github.io/seniply/)*, *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
-**Øystein “DreymaR” Bech-Aase** – *[The Big Bag Theory](https://dreymar.colemak.org/)*  
-**Manna Harbour** – *[Miryoku](https://github.com/manna-harbour/miryoku)*  
-**Precondition** – *[Home Row Mods](https://precondition.github.io/home-row-mods)*  
-**Pascal Getreuer** – *[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
+**Shai Coleman**: *[Colemak keyboard layout](https://colemak.com)*  
+**Steve “stevep99” P**: *[Seniply](https://stevep99.github.io/seniply/)* and *[Mod-DH](https://colemakmods.github.io/mod-dh/)*  
+**Øystein “DreymaR” Bech-Aase**: *[The Big Bag Theory](https://dreymar.colemak.org/)*  
+**Manna Harbour**: *[Miryoku](https://github.com/manna-harbour/miryoku)*  
+**Precondition**: *[Home Row Mods](https://precondition.github.io/home-row-mods)*  
+**Pascal Getreuer**: *[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
 
 ## License
 
-All files under the `Assets` directory without a specified license are Public Domain, the rest are licensed under the MIT license – refer to `LICENSE` in the root directory.
-
-You may change and/or distribute all files contained in this repository under their license requirements.
+Code is licensed under the **MIT License**. Assets without a specified license are in the **Public Domain**. See `LICENSE` for the full legal text.
 
 **Disclaimer:**  
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
