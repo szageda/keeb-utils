@@ -1,0 +1,45 @@
+name: Lint and Validate
+on: [push, pull_request]
+
+jobs:
+  validate-autohotkey-config:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install AutoHotkey v2
+        shell: powershell
+        run: |
+          # Install AutoHotkey v2 securely with Scoop.
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
+          scoop bucket add extras
+          scoop install autohotkey-v2
+
+      - name: AutoHotkey Syntax Check
+        shell: powershell
+        run: |
+          # Validate the scripts with the '/i' flag.
+          Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
+            Write-Host "Checking: $($_.FullName)"
+            Start-Process "AutoHotkey64.exe" -ArgumentList "/i", "`"$($_.FullName)`"" -Wait
+          }
+
+
+  validate-kmonad-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download the KMonad Binary
+        run: |
+          # Fetch the static KMonad binary.
+          curl -L https://github.com/kmonad/kmonad/releases/download/v0.4.4/kmonad -o kmonad
+          chmod +x kmonad
+
+      - name: KMonad Syntax Check
+        run: |
+          # Validate the configuration with the '-d' flag.
+          find . -name "*.kbd" -exec ./kmonad -d {} +
