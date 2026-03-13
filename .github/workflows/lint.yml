@@ -20,14 +20,22 @@ jobs:
       - name: AutoHotkey Syntax Check
         shell: powershell
         run: |
-          # Ask Scoop exactly where the executable is.
-          $ahkPath = (Get-Command autohotkey).Source
-          Write-Host "Detected AHK at: $ahkPath"
-
-          # Validate the files using the ''/i'' flag.
+          # 1. Install Scoop and AutoHotkey in the current session.
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
+          scoop bucket add extras
+          scoop install extras/autohotkey
+          
+          # 2. Force the current session to see the new Scoop path.
+          $env:PATH += ";$env:USERPROFILE\scoop\shims"
+          
+          # 3. Verify it works.
+          autohotkey.exe /version
+          
+          # 4. Run the check using the '/i' flag.
           Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
             Write-Host "Checking: $($_.FullName)"
-            & $ahkPath /i "$($_.FullName)"
+            & autohotkey.exe /i "$($_.FullName)"
           }
 
   validate-kmonad-config:
