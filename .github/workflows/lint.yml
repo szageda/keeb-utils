@@ -20,14 +20,14 @@ jobs:
       - name: AutoHotkey Syntax Check
         shell: powershell
         run: |
-          # Use the explicit path to the Scoop shim.
-          $ahkPath = "$env:USERPROFILE\scoop\shims\AutoHotkey64.exe"
+          # Ask Scoop exactly where the executable is.
+          $ahkPath = (Get-Command autohotkey).Source
+          Write-Host "Detected AHK at: $ahkPath"
 
           # Validate the files using the ''/i'' flag.
           Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
             Write-Host "Checking: $($_.FullName)"
-            # Use the full path variable here
-            Start-Process $ahkPath -ArgumentList "/i", "`"$($_.FullName)`"" -Wait
+            & $ahkPath /i "$($_.FullName)"
           }
 
   validate-kmonad-config:
