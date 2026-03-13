@@ -1,0 +1,56 @@
+name: Lint and Validate
+on: [pull_request]
+
+jobs:
+  validate-autohotkey-config:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install AutoHotkey v2
+        shell: powershell
+        run: |
+          # Install AutoHotkey v2 using Scoop.
+          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+          irm get.scoop.sh | iex
+          scoop bucket add extras
+          scoop install autohotkey
+
+      - name: AutoHotkey Syntax Check
+        shell: powershell
+        run: |
+          # 1. Install Scoop.
+          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+
+          # 2. Define the exact paths we need.
+          $scoopPath = "$env:USERPROFILE\scoop"
+          $ahkExe = "$scoopPath\apps\autohotkey\current\v2\AutoHotkey64.exe"
+
+          # 3. Use the full path to Scoop's binary to install AutoHotkey.
+          # We call the scoop.ps1 script directly to bypass path issues
+          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" bucket add extras
+          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" install extras/autohotkey
+
+          # 4. Run the check using the absolute path to the AutoHotkey binary.
+          Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
+            Write-Host "Checking: $($_.FullName)"
+            & $ahkExe /i "$($_.FullName)"
+          }
+
+  validate-kmonad-config:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Download the KMonad Binary
+        run: |
+          # Fetch the static KMonad binary.
+          curl -L "https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad" -o kmonad
+          chmod +x kmonad
+
+      - name: KMonad Syntax Check
+        run: |
+          # Validate the configuration with the '-d' flag.
+          find . -name "*.kbd" -exec ./kmonad -d {} +

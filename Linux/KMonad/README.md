@@ -7,34 +7,51 @@
 <a href="https://github.com/kmonad/kmonad/blob/master/kmonad.svg" title="kmonad logo">KMonad logo created by eepykate (CC-BY-SA 4.0)</a>
 </div>
 
-# Keeb Utils – KMonad
+# Keeb Utils: KMonad
 
 > *KMonad offers advanced customization features such as layers, multi-tap, tap-hold, and much more. These features are usually available at the hardware level on the QMK-firmware enabled keyboards. However, KMonad allows you to enjoy such features in virtually any keyboard by low-level system manipulations.*
 
 — *README.md*, KMonad, [link](https://github.com/kmonad/kmonad)
 
-## Requirements
+## Prerequisites
 
-- **KMonad 0.4.2+**: Ensure you have the latest version installed. The minimal required version is 0.4.2.
-- **Linux (Debian 12+, Ubuntu 22.04+, Fedora 42+ etc.)**: The configuration file is tested on modern Linux distributions.
-- **Windows 10+**: I view KMonad as a “Linux first” solution; while running it on Windows is possible, make sure you download the Windows binary.
+To use Keeb-Utils with KMonad, your system must meet the following requirements:
+- **KMonad v0.4.2 or later**: Ensure you are using a modern build of KMonad.
+- **Operating System**:
+    - _Linux_: Tested on Debian 12+, Ubuntu 22.04+, and Fedora 42+.
+    - _Windows_: While KMonad is “Linux-first,” it can run on Windows 10+ using the official Windows binary. For a native Windows experience, see the [AutoHotkey implementation](/Windows/AutoHotkey/README.md).
+    - _Permissions_: Your user must have read/write access to `/dev/uinput` and the relevant event devices (typically handled by the `input` and `uinput` groups).
 
 ## Installation
 
-1. **Download the scripts**: Clone or download this repository to your computer.
-```shell
+1. **Clone the repository**:
+
+```Bash
 git clone https://github.com/szageda/keeb-utils
 ```
-2. **Launch KMonad**: Start KMonad with the configuration file.
-```shell
-kmonad ~/Downloads/keeb-utils-main/Linux/KMonad/keeb-utils.kbd
+
+2. **Identify your keyboard device**:
+Before launching, you must locate your keyboard's event file (e.g., `/dev/input/eventX` or a path in `/dev/input/by-id/`). Refer to the [KMonad FAQ](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard) for help identifying the correct device.
+
+3. **Configure the input source**:
+Open `keeb-utils.kbd` and update the input field with your device path:
+
+```Lisp
+(defcfg
+  input  (device-file "/dev/input/by-id/your-device-here")
+  output (uinput-sink "KMonad Output")
+)
 ```
 
-> [!WARNING]
-> **You must configure your input device before KMonad can start: Change the value of `input (device-file "value")` following the KMonad [instructions](https://github.com/kmonad/kmonad/blob/master/doc/faq.md#q-how-do-i-know-which-event-file-corresponds-to-my-keyboard).**
+4. **Start KMonad by pointing to the configuration file**:
 
-## Usage
+```Bash
+kmonad ~/path/to/keeb-utils/Linux/KMonad/keeb-utils.kbd
+```
 
-To keep KMonad running in the background, use one of the following methods:
-- Run KMonad inside a [tmux](https://github.com/tmux/tmux) session.
-- Run KMonad as a [systemd service](https://github.com/kmonad/kmonad/blob/master/startup/kmonad%40.service).
+## Usage and Automation
+
+To maintain the KMonad process in the background, choose one of the following methods:
+- **Systemd**: Use the official KMonad systemd service for a persistent, boot-level daemon.
+- **Terminal Multiplexer**: Run KMonad inside a tmux session for easy monitoring and manual restarts.
+- **Manual Stop**: Use <kbd>Ctrl+C</kbd> in the terminal to terminate the process and return your keyboard to its standard hardware behavior.
