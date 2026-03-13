@@ -11,11 +11,11 @@ jobs:
       - name: Install AutoHotkey v2
         shell: powershell
         run: |
-          # Install AutoHotkey v2 securely with Scoop.
+          # Install AutoHotkey v2 using Scoop.
           Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
           irm get.scoop.sh | iex
           scoop bucket add extras
-          scoop install autohotkey-v2
+          scoop install autohotkey
 
       - name: AutoHotkey Syntax Check
         shell: powershell
@@ -26,7 +26,6 @@ jobs:
             Start-Process "AutoHotkey64.exe" -ArgumentList "/i", "`"$($_.FullName)`"" -Wait
           }
 
-
   validate-kmonad-config:
     runs-on: ubuntu-latest
     steps:
@@ -36,7 +35,7 @@ jobs:
       - name: Download the KMonad Binary
         run: |
           # Fetch the static KMonad binary.
-          curl -L https://github.com/kmonad/kmonad/releases/download/v0.4.4/kmonad -o kmonad
+          curl -L "https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad" -o kmonad
           chmod +x kmonad
 
       - name: KMonad Syntax Check
