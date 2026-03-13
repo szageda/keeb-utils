@@ -20,22 +20,22 @@ jobs:
       - name: AutoHotkey Syntax Check
         shell: powershell
         run: |
-          # 1. Install Scoop and AutoHotkey in the current session.
-          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-          irm get.scoop.sh | iex
-          scoop bucket add extras
-          scoop install extras/autohotkey
-          
-          # 2. Force the current session to see the new Scoop path.
-          $env:PATH += ";$env:USERPROFILE\scoop\shims"
-          
-          # 3. Verify it works.
-          autohotkey.exe /version
-          
-          # 4. Run the check using the '/i' flag.
+          # 1. Install Scoop.
+          iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+
+          # 2. Define the exact paths we need.
+          $scoopPath = "$env:USERPROFILE\scoop"
+          $ahkExe = "$scoopPath\apps\autohotkey\current\v2\AutoHotkey64.exe"
+
+          # 3. Use the full path to Scoop's binary to install AutoHotkey.
+          # We call the scoop.ps1 script directly to bypass path issues
+          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" bucket add extras
+          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" install extras/autohotkey
+
+          # 4. Run the check using the absolute path to the AutoHotkey binary.
           Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
             Write-Host "Checking: $($_.FullName)"
-            & autohotkey.exe /i "$($_.FullName)"
+            & $ahkExe /i "$($_.FullName)"
           }
 
   validate-kmonad-config:
