@@ -8,18 +8,18 @@
 
 # Keeb Utils
 
-Keeb-Utils, “Keyboard Utilities,” is a modular suite of keyboard layout and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of an optimized Colemak-DH layout with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
+Keeb Utils, “Keyboard Utilities,” is a modular suite of keyboard layout and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of an optimized Colemak-DH layout with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
 
 ## Design Principles
 
-Keeb-Utils adheres to the following core principles:
+Keeb Utils adheres to the following core principles:
 - **Functionality and Minimalism**: Avoids high-maintenance features in favor of reliable, essential tools.
 - **Cross-Platform Parity**: Ensures features are functionally identical across different software implementations.
 - **High Modularity**: Uses a modular architecture to allow for easy customization and component swapping.
 
 ## Supported Platforms
 
-Keeb-Utils leverages third-party software to remap keys at the operating system level:
+Keeb Utils leverages third-party software to remap keys at the operating system level:
 - **Linux**: Managed via [KMonad](https://github.com/kmonad/kmonad).
 - **Windows**: Managed via [AutoHotkey v2](https://www.autohotkey.com/).
 
@@ -39,7 +39,7 @@ This project utilizes the **Colemak-DH** layout. Colemak-DH is an ergonomic modi
 
 ## Functional Layers
 
-Keeb-Utils uses layers to provide immediate access to navigation, symbols, and numeric entry without requiring significant hand movement.
+Keeb Utils uses layers to provide immediate access to navigation, symbols, and numeric entry without requiring significant hand movement.
 
 ### Extend Layer
 

@@ -15,7 +15,7 @@
 
 ## Prerequisites
 
-To use Keeb-Utils with KMonad, your system must meet the following requirements:
+To use Keeb Utils with KMonad, your system must meet the following requirements:
 - **KMonad v0.4.2 or later**: Ensure you are using a modern build of KMonad.
 - **Operating System**:
     - _Linux_: Tested on Debian 12+, Ubuntu 22.04+, and Fedora 42+.

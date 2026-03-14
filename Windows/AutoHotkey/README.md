@@ -18,7 +18,7 @@
 
 ## Prerequisites
 
-To run these scripts, your system must meet the following requirements:
+To use Keeb Utils with AutoHotkey, your system must meet the following requirements:
 * **AutoHotkey v2.0 or later**: These scripts are optimized for v2.0. Using v1.1 or earlier may result in syntax errors or unexpected behavior.
 * **Windows 10 or 11**: While Windows 7 and 8 are likely compatible, these scripts are tested primarily on modern Windows environments.
 
@@ -30,8 +30,8 @@ To run these scripts, your system must meet the following requirements:
 
 ## Usage
 
-Keeb-Utils runs as a background process. 
+Keeb Utils runs as a background process.
 
-* **System Tray**: Look for the Keeb-Utils icon in the system tray to confirm the script is active.
+* **System Tray**: Look for the Keeb Utils icon in the system tray to confirm the script is active.
 * **Exit**: Right-click the system tray icon and select **Exit** to stop the script.
 * **Administrator Privileges**: To ensure the script functions in all windows (including Task Manager or installers), **run AutoHotkey as Administrator**. Without elevated privileges, the script cannot intercept keys in applications that have higher permission levels than the script itself.
