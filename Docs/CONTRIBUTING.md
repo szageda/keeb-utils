@@ -1,6 +1,6 @@
-# Contributing to Keeb-Utils
+# Contributing to Keeb Utils
 
-Thank you for your interest in improving Keeb-Utils. To maintain consistency across KMonad and AutoHotkey configurations, please adhere to the following guidelines.
+Thank you for your interest in improving Keeb Utils. To maintain consistency across KMonad and AutoHotkey configurations, please adhere to the following guidelines.
 
 ## Style Standards
 
@@ -48,5 +48,5 @@ We use **Semantic Commit Messages** to track the history of the repository. Ever
 
 ## Documentation Tone
 
-* **Use the Imperative**: Write instructions as commands (e.g., "Install the driver" instead of "The driver should be installed").
-* **Be Direct**: Avoid "I" or "we." Focus on the action the user or the software performs.
+* **Use the Imperative**: Write instructions as commands (e.g., “Install the driver” instead of “The driver should be installed”).
+* **Be Direct**: Avoid “I” or “we.” Focus on the action the user or the software performs.
