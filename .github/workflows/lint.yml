@@ -8,33 +8,38 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Install AutoHotkey v2
+      - name: Install AutoHotkey and Validate the Syntax
         shell: powershell
         run: |
-          # Install AutoHotkey v2 using Scoop.
-          Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
-          irm get.scoop.sh | iex
-          scoop bucket add extras
-          scoop install autohotkey
-
-      - name: AutoHotkey Syntax Check
-        shell: powershell
-        run: |
-          # 1. Install Scoop.
+          # 1. Bootstrap Scoop
+          #
+          # We use a non-interactive install.
+          # If Scoop is already present, this verifies the shim setup.
           iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
 
-          # 2. Define the exact paths we need.
+          # 2. Define Absolute Paths
+          #
+          # Windows runners often fail to refresh '$env:PATH' mid-job.
+          # We bypass this by pointing directly to the known Scoop
+          # installation directory.
           $scoopPath = "$env:USERPROFILE\scoop"
-          $ahkExe = "$scoopPath\apps\autohotkey\current\v2\AutoHotkey64.exe"
+          $scoopBin  = "$scoopPath\apps\scoop\current\bin\scoop.ps1"
+          $ahkExe    = "$scoopPath\apps\autohotkey\current\v2\AutoHotkey64.exe"
 
-          # 3. Use the full path to Scoop's binary to install AutoHotkey.
-          # We call the scoop.ps1 script directly to bypass path issues
-          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" bucket add extras
-          & "$scoopPath\apps\scoop\current\bin\scoop.ps1" install extras/autohotkey
+          # 3. Provision Dependencies
+          #
+          # We call the scoop.ps1 script directly to ensure the command works
+          # regardless of the PATH state.
+          Write-Host "Installing/Verifying AutoHotkey via Scoop..."
+          & $scoopBin bucket add extras
+          & $scoopBin install extras/autohotkey
 
-          # 4. Run the check using the absolute path to the AutoHotkey binary.
+          # 4. Syntax Verification
+          #
+          # Loop through all .ahk files and use the '/i' flag to check
+          # for syntax errors.
           Get-ChildItem -Recurse -Filter "*.ahk" | ForEach-Object {
-            Write-Host "Checking: $($_.FullName)"
+            Write-Host "Checking syntax: $($_.FullName)"
             & $ahkExe /i "$($_.FullName)"
           }
 
@@ -50,7 +55,7 @@ jobs:
           curl -L "https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad" -o kmonad
           chmod +x kmonad
 
-      - name: KMonad Syntax Check
+      - name: KMonad Configuration Validation
         run: |
           # Validate the configuration with the '-d' flag.
           find . -name "*.kbd" -exec ./kmonad -d {} +
