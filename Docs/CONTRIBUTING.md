@@ -6,17 +6,17 @@ Thank you for your interest in improving Keeb Utils. To maintain consistency acr
 
 This project follows the [**Google Developer Documentation Style Guide**](https://developers.google.com/style) for general prose and the [**Red Hat Supplementary Style Guide**](https://redhat-documentation.github.io/supplementary-style-guide/) for technical specifications not covered by Google.
 
-### KMonad (Lisp Style)
+## KMonad (Lisp Style)
 
 * Follow the [Lisp Style Guide](https://lisp-lang.org/style-guide).
 * **Exception**: Because KMonad interprets a single `;` as the `<kbd>;:</kbd>` key, use double semicolons (`;;`) for all comments.
 
-### AutoHotkey
+## AutoHotkey
 
 * Use the **K&R indentation style**.
 * Limit lines to a maximum of **100 characters**.
 
-### Commenting (All Languages)
+## Commenting (All Languages)
 
 Based on the [_Rust Style Guide_](https://doc.rust-lang.org/beta/style-guide/index.html), comments should be treated as professional documentation:
 * **Sentences**: Use complete sentences. Start with a capital letter and end with a period.
