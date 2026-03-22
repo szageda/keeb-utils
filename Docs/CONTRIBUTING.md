@@ -46,6 +46,23 @@ We use **Semantic Commit Messages** to track the history of the repository. Ever
 
 **Example**: fix(numpad): resolve stuck Alt key state on release
 
+## Branching & Commit Policy
+
+To maintain a stable production environment, this repository follows a strict branching strategy:
+
+### Direct Commits to Main
+
+Direct commits to the `main` branch are **restricted to non-functional changes** only. This includes:
+* **Documentation**: Fixing typos, updating `README.md`, or clarifying instructions.
+* **Metadata**: Small adjustments to `.gitignore` or project metadata.
+
+### Feature & Refactor Branches
+
+All functional changes (scripts, CI/CD workflow updates, or configuration logic) **must** be developed on a separate branch.
+1. **Branch Naming**: Use descriptive prefixes like `feature/`, `fix/`, or `refactor/` (e.g., `feature/add-num-layer`).
+2. **Pull Requests**: Changes must be submitted via a Pull Request (PR) to `main`.
+3. **Validation**: PRs will only be merged after review and all automated GitHub Action checks have passed.
+
 ## Documentation Tone
 
 * **Use the Imperative**: Write instructions as commands (e.g., “Install the driver” instead of “The driver should be installed”).
