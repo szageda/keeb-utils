@@ -15,7 +15,7 @@ Keeb Utils, “Keyboard Utilities,” is a modular suite of keyboard layout and 
 Keeb Utils adheres to the following core principles:
 - **Functionality and Minimalism**: Avoids high-maintenance features in favor of reliable, essential tools.
 - **Cross-Platform Parity**: Ensures features are functionally identical across different software implementations.
-- **High Modularity**: Uses a modular architecture to allow for easy customization and component swapping.
+- **High Modularity**: Allows for easy customization and component swapping.
 
 ## Supported Platforms
 
