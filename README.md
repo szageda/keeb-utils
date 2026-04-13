@@ -76,7 +76,7 @@ The Extend layer optimizes text editing and navigation. Activating this layer (d
 
 **Multi-Timed Modifiers**: Combines two modifiers into a single key via a rapid double tap (within 120 ms).
 
-**Example — Using Ctrl and Shift**:
+**Example – Using Ctrl and Shift**:
 - **Single Tap**: Activates the primary modifier key for the next key press.
 - **Single Tap & Hold**: Holds the primary modifier key continuously.
 - **Double Tap**: Activates both the primary and secondary modifier keys for the next key press.
