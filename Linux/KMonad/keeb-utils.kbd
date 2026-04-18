@@ -4,7 +4,7 @@
 ;;;; Copyright   : (c) 2024-2026, Gergely Szabo
 ;;;; License     : MIT
 ;;;;
-;;;;Documentation:
+;;;; Documentation:
 ;;;; - KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
 ;;;; - KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
 
@@ -116,9 +116,9 @@
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  bspc
   tab  ins  spc  vold volu mute pgup home up   end  ssrq nlck slck XX
-  @xtn lmet tab  @ams @cms pp   pgdn left down rght ret  caps ret
+  @xtn lmet @ams @ssk @cms pp   pgdn left down rght ret  caps ret
   lsft @udo @cut @cpy @pst @rdo esc  bspc del  prev next rsft
-  lctl lmet lalt           @ssk           ralt cmp  rmet rctl
+  lctl lmet lalt           tab            ralt cmp  rmet rctl
 )
 
 ;; Symbols
