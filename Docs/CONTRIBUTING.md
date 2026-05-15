@@ -8,20 +8,20 @@ This project follows the [**Google Developer Documentation Style Guide**](https:
 
 ## KMonad (Lisp Style)
 
-* Follow the [Lisp Style Guide](https://lisp-lang.org/style-guide).
-* **Exception**: Because KMonad interprets a single `;` as the `<kbd>;:</kbd>` key, use double semicolons (`;;`) for all comments.
+- Follow the [Lisp Style Guide](https://lisp-lang.org/style-guide).
+- **Exception**: Because KMonad interprets a single `;` as the `<kbd>;:</kbd>` key, use double semicolons (`;;`) for all comments.
 
 ## AutoHotkey
 
-* Use the **K&R indentation style**.
-* Limit lines to a maximum of **100 characters**.
+- Use the **K&R indentation style**.
+- Limit lines to a maximum of **100 characters**.
 
 ## Commenting (All Languages)
 
 Based on the [_Rust Style Guide_](https://doc.rust-lang.org/beta/style-guide/index.html), comments should be treated as professional documentation:
-* **Sentences**: Use complete sentences. Start with a capital letter and end with a period.
-* **Inline Notes**: Brief inline comments may be written as notes without punctuation.
-* **Line Length**: Comments on their own lines should not exceed **80 characters** or the current indentation limit, whichever is smaller.
+- **Sentences**: Use complete sentences. Start with a capital letter and end with a period.
+- **Inline Notes**: Brief inline comments may be written as notes without punctuation.
+- **Line Length**: Comments on their own lines should not exceed **80 characters** or the current indentation limit, whichever is smaller.
 
 ## Commit Message Guidelines
 
@@ -53,8 +53,8 @@ To maintain a stable production environment, this repository follows a strict br
 ### Direct Commits to Main
 
 Direct commits to the `main` branch are **restricted to non-functional changes** only. This includes:
-* **Documentation**: Fixing typos, updating `README.md`, or clarifying instructions.
-* **Metadata**: Small adjustments to `.gitignore` or project metadata.
+- **Documentation**: Fixing typos, updating `README.md`, or clarifying instructions.
+- **Metadata**: Small adjustments to `.gitignore` or project metadata.
 
 ### Feature & Refactor Branches
 
@@ -65,5 +65,5 @@ All functional changes (scripts, CI/CD workflow updates, or configuration logic)
 
 ## Documentation Tone
 
-* **Use the Imperative**: Write instructions as commands (e.g., “Install the driver” instead of “The driver should be installed”).
-* **Be Direct**: Avoid “I” or “we.” Focus on the action the user or the software performs.
+- **Use the Imperative**: Write instructions as commands (e.g., “Install the driver” instead of “The driver should be installed”).
+- **Be Direct**: Avoid “I” or “we.” Focus on the action the user or the software performs.
