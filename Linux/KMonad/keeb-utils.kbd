@@ -190,13 +190,13 @@
 
   ;; Multi-Sticky Keys
   ;;
-  ;; The aliases below resolve the limitation where separate `sticky-key'
-  ;; definitions (like one for <Ctrl> and one for <Shift>) do not combine
-  ;; (<Ctrl>+<Shift>). Using `multi-tap' creates a composite sticky key
-  ;; that allows for combinations like <Ctrl>+<Shift>+<S>.
+  ;; These aliases resolve the limitation where separate `sticky-key'
+  ;; definitions, `sticky-key 100 lctl' and `sticky-key 100 lsft' do not
+  ;; combine to <Ctrl>+<Shift> when pressed together. Using `multi-tap'
+  ;; creates a composite sticky key allowing for triple-key combinations
+  ;; (two modifiers + a regular key) such as <Ctrl>+<Shift>+<S> to work.
   ;;
-  ;; Note: This requires KMonad to be compiled from source with the patch
-  ;; from https://github.com/kmonad/kmonad/discussions/1013 (commit 21744cc).
+  ;; See the related discussion in https://github.com/kmonad/kmonad/discussions/1013.
   ams (multi-tap 120
         (sticky-key 280 lalt)
         (sticky-key 280 A-lsft))
