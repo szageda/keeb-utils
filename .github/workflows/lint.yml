@@ -37,7 +37,7 @@ jobs:
 
       - name: Install KMonad
         run: |
-          curl -L "https://github.com/kmonad/kmonad/releases/download/0.4.4/kmonad" -o kmonad
+          curl -L "https://github.com/kmonad/kmonad/releases/download/0.4.5/kmonad" -o kmonad
           chmod +x kmonad
 
       - name: Validate the KMonad syntax
