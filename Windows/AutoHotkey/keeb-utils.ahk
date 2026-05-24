@@ -115,7 +115,6 @@ KeyHistory 0
 ;;
 ;; Note: The load order of layers is important, because
 ;; subsequent keymaps can override the ones before them.
-#Include Layers\numpad.ahk
 #Include Layers\symbols.ahk
 #Include Layers\extend.ahk
 

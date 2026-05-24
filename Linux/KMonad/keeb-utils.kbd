@@ -121,26 +121,13 @@
   lctl lmet lalt           tab            ralt cmp  rmet rctl
 )
 
-;; Symbols
-;; Commonly used symbols and punctuation marks.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  !    {    }    `    ^    @    '    [    ]    ~    XX   XX   XX
-  @num $    <    >    =    #    *    -    \(   \)   :    ;    ret
-  lsft \    /    \_   "    XX   |    &    %    +    ?    rsft ;; "
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
-)
-
-;; Numpad
-;; Numeric keypad and associated symbols for data entry.
-(deflayer numpad
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  x    a    b    c    ^    *    7    8    9    @dbz XX   XX   XX
-  @num %    ,    .    =    #    +    4    5    6    0    XX   ret
-  lsft d    e    f    :    ~    -    1    2    3    /    rsft
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
+  `    ,    .    {    }    \_   ?    "    '    €    §    ¬    ¦    bspc
+  tab  !    $    <    >    %    :    7    8    9    @dbz *    @    ^
+  @xtn +    -    \(   \)   #    |    4    5    6    0    ;    ret
+  lsft \    /    [    ]    ~    &    1    2    3    =    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
 ;; Keyboard Layout Selection
