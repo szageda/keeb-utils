@@ -123,7 +123,7 @@
 
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  `    ,    .    {    }    \_   ?    "    '    €    §    ¬    ¦    bspc
+  `    ,    .    {    }    \_   ?    "    '    €    §    ¬    ¦    bspc ;; "
   tab  !    $    <    >    %    :    7    8    9    @dbz *    @    ^
   @xtn +    -    \(   \)   #    |    4    5    6    0    ;    ret
   lsft \    /    [    ]    ~    &    1    2    3    =    rsft
