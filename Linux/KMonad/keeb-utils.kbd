@@ -121,6 +121,8 @@
   lctl lmet lalt           tab            ralt cmp  rmet rctl
 )
 
+;; Symbols
+;; Immediate access to math operators, programming symbols, and numbers.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   `    ,    .    {    }    \_   ?    "    '    €    §    ¬    ¦    bspc ;; "
@@ -160,7 +162,6 @@
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
   sym (layer-toggle symbols)
-  num (layer-toggle numpad)
 
   ;; Ctrl Shortcuts
   cpy C-c
@@ -169,7 +170,7 @@
   rdo C-y ;; Linux: C-S-z in some desktop environments.
   udo C-z
 
-  ;; Numpad Layer Tricks
+  ;; Symbols Layer Tricks
   dbz #(0 0)
 
   ;; Sticky Keys
