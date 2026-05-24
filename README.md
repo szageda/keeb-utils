@@ -96,6 +96,8 @@ The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to ma
 ![Symbols layer](Assets/Images/Keyboard%20Layers/symbols.png)  
 *Symbols layer keymap for ANSI 101/104-key keyboards*
 
+</div>
+
 | Key Category  | Description |
 | :-----------: | ----------- |
 | ![Numpad keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numpad keys |
@@ -103,8 +105,6 @@ The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to ma
 | ![Additional math symbols](Assets/Images/Keyboard%20Layers/extend-orange.png) | Additional math symbols |
 | ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Math operators |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. symbols |
-
-</div>
 
 ## Acknowledgments
 
