@@ -106,24 +106,6 @@ The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to ma
 
 </div>
 
-### Numpad Layer
-
-The Numpad layer enables efficient technical data entry. This is a stepped layer, accessed through the Symbols layer (<kbd>Left Alt</kbd> → <kbd>Caps Lock</kbd>).
-
-<div align="center">
-
-![Numpad layer](Assets/Images/Keyboard%20Layers/numpad.png)  
-*Numpad layer keymap for ANSI 101/104-key keyboards*
-
-</div>
-
-| Key Category  | Description |
-| :-----------: | ----------- |
-| ![Numerals](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numeric keys |
-| ![Letters](Assets/Images/Keyboard%20Layers/extend-orange.png) | Letter keys for hexadecimal numbers and error codes |
-| ![Math symbols](Assets/Images/Keyboard%20Layers/extend-red.png) | Math symbols and operators |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. keys |
-
 ## Acknowledgments
 
 **Shai Coleman**: *[Colemak keyboard layout](https://colemak.com)*  
