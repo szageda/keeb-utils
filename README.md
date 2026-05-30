@@ -86,9 +86,9 @@ The Extend layer optimizes text editing and navigation. Activating this layer (d
 
 ### Symbols Layer
 
-The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to punctuation and mathematical operators.
+The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to math operators, programming symbols, and numbers.
 
-- **Balanced Distribution**: Spreads symbols across both hands to prevent strain.
+- **Balanced Distribution**: Spreads numerals and symbols across both hands to balance hand use.
 - **Logical Grouping**: Brackets and operators are grouped to improve muscle memory.
 
 <div align="center">
@@ -98,23 +98,13 @@ The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to pu
 
 </div>
 
-### Numpad Layer
-
-The Numpad layer enables efficient technical data entry. This is a stepped layer, accessed through the Symbols layer (<kbd>Left Alt</kbd> → <kbd>Caps Lock</kbd>).
-
-<div align="center">
-
-![Numpad layer](Assets/Images/Keyboard%20Layers/numpad.png)  
-*Numpad layer keymap for ANSI 101/104-key keyboards*
-
-</div>
-
 | Key Category  | Description |
 | :-----------: | ----------- |
-| ![Numerals](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numeric keys |
-| ![Letters](Assets/Images/Keyboard%20Layers/extend-orange.png) | Letter keys for hexadecimal numbers and error codes |
-| ![Math symbols](Assets/Images/Keyboard%20Layers/extend-red.png) | Math symbols and operators |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. keys |
+| ![Numpad keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numpad keys |
+| ![Programming keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Common programming symbols |
+| ![Additional math symbols](Assets/Images/Keyboard%20Layers/extend-orange.png) | Additional math symbols |
+| ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Math operators |
+| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. symbols |
 
 ## Acknowledgments
 

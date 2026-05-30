@@ -122,25 +122,14 @@
 )
 
 ;; Symbols
-;; Commonly used symbols and punctuation marks.
+;; Immediate access to math operators, programming symbols, and numbers.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  !    {    }    `    ^    @    '    [    ]    ~    XX   XX   XX
-  @num $    <    >    =    #    *    -    \(   \)   :    ;    ret
-  lsft \    /    \_   "    XX   |    &    %    +    ?    rsft ;; "
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
-)
-
-;; Numpad
-;; Numeric keypad and associated symbols for data entry.
-(deflayer numpad
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
-  XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  x    a    b    c    ^    *    7    8    9    @dbz XX   XX   XX
-  @num %    ,    .    =    #    +    4    5    6    0    XX   ret
-  lsft d    e    f    :    ~    -    1    2    3    /    rsft
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
+  `    ,    .    {    }    \_   ?    '    "    €    §    ¬    ¦    bspc ;; "
+  tab  !    $    <    >    %    :    7    8    9    @dbz *    @    ^
+  @xtn +    -    \(   \)   #    |    4    5    6    0    ;    ret
+  lsft \    /    [    ]    ~    &    1    2    3    =    rsft
+  lctl lmet lalt           spc            ralt rmet cmp  rctl
 )
 
 ;; Keyboard Layout Selection
@@ -173,7 +162,6 @@
   xtn (layer-toggle extend)
   sel (layer-toggle select-layout)
   sym (layer-toggle symbols)
-  num (layer-toggle numpad)
 
   ;; Ctrl Shortcuts
   cpy C-c
@@ -182,7 +170,7 @@
   rdo C-y ;; Linux: C-S-z in some desktop environments.
   udo C-z
 
-  ;; Numpad Layer Tricks
+  ;; Symbols Layer Tricks
   dbz #(0 0)
 
   ;; Sticky Keys
