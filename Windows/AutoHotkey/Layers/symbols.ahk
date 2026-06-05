@@ -16,7 +16,7 @@
  *      |   | |   |   |   |   |  |   |   |   |   |  |   |   |   |   |
  *      `---' `---'---'---'---'  `---'---'---'---'  `---'---'---'---'
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
- *      | ` | , | . | { | } | ! | ? | ' | " | € | § | ¬ | ¦ |Backspc|
+ *      | ` | , | . | " | € | ! | ? | ' | { | } | § | ¬ | ¦ |Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
  *      | Tab | * | $ | < | > | % | # | 7 | 8 | 9 | 00| ; | @ | ^   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
@@ -59,13 +59,13 @@ F23 & sc058::return ;; F12
 F23 & sc029::Send "{Raw}``" ;; QWERTY `~
 F23 & sc002::Send "{Raw},"  ;; QWERTY 1!
 F23 & sc003::Send "{Raw}."  ;; QWERTY 2@
-F23 & sc004::Send "{Raw}{"  ;; QWERTY 3#
-F23 & sc005::Send "{Raw}}"  ;; QWERTY 4$
+F23 & sc004::Send "{Raw}`"" ;; QWERTY 3#
+F23 & sc005::Send "{Raw}€"  ;; QWERTY 4$
 F23 & sc006::Send "{Raw}!"  ;; QWERTY 5%
 F23 & sc007::Send "{Raw}?"  ;; QWERTY 6^
 F23 & sc008::Send "{Raw}'"  ;; QWERTY 7&
-F23 & sc009::Send "{Raw}`"" ;; QWERTY 8*
-F23 & sc00A::Send "{Raw}€"  ;; QWERTY 9(
+F23 & sc009::Send "{Raw}{"  ;; QWERTY 8*
+F23 & sc00A::Send "{Raw}}"  ;; QWERTY 9(
 F23 & sc00B::Send "{Raw}§"  ;; QWERTY 0)
 F23 & sc00C::Send "{Raw}¬"  ;; QWERTY -_
 F23 & sc00D::Send "{Raw}¦"  ;; QWERTY =+
