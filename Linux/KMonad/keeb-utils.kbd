@@ -126,8 +126,8 @@
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
   `    ,    .    {    }    !    ?    '    "    €    §    ¬    ¦    bspc ;; "
-  tab  \_   $    <    >    %    :    7    8    9    @dbz *    @    ^
-  @xtn +    -    \(   \)   #    |    4    5    6    0    ;    ret
+  tab  *    $    <    >    %    :    7    8    9    @dbz ;    @    ^
+  @xtn +    -    \(   \)   #    |    4    5    6    0    \_   ret
   lsft \    /    [    ]    ~    &    1    2    3    =    rsft
   lctl lmet lalt           spc            ralt rmet cmp  rctl
 )

@@ -18,13 +18,13 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      | ` | , | . | { | } | ! | ? | ' | " | € | § | ¬ | ¦ |Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab | _ | $ | < | > | % | : | 7 | 8 | 9 | 00| * | @ | ^   |
+ *      | Tab | * | $ | < | > | % | : | 7 | 8 | 9 | 00| ; | @ | ^   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      | Caps | + | - | ( | ) | # | | | 4 | 5 | 6 | 0 | ; | Enter  |
+ *      | Caps | + | - | ( | ) | # | | | 4 | 5 | 6 | 0 | _ | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
  *      |  Shift | \ | / | [ | ] | ~ | & | 1 | 2 | 3 | = | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
- *      | Ctrl |Win|$Chr| Space                | Alt|Win|Menu| Ctrl |
+ *      | Ctrl |Win|$Sym| Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
  *
  * References:
@@ -71,7 +71,7 @@ F23 & sc00C::Send "{Raw}¬"  ;; QWERTY -_
 F23 & sc00D::Send "{Raw}¦"  ;; QWERTY =+
 
 ;; Top Row
-F23 & sc010::Send "{Raw}_"  ;; QWERTY qQ
+F23 & sc010::Send "{Raw}*"  ;; QWERTY qQ
 F23 & sc011::Send "{Raw}$"  ;; QWERTY wW
 F23 & sc012::Send "{Raw}<"  ;; QWERTY eE
 F23 & sc013::Send "{Raw}>"  ;; QWERTY rR
@@ -81,7 +81,7 @@ F23 & sc016::Send "{Raw}7"  ;; QWERTY uU
 F23 & sc017::Send "{Raw}8"  ;; QWERTY iI
 F23 & sc018::Send "{Raw}9"  ;; QWERTY oO
 F23 & sc019::Send "{Raw}00" ;; QWERTY pP
-F23 & sc01A::Send "{Raw}*"  ;; QWERTY [{
+F23 & sc01A::Send "{Raw};"  ;; QWERTY [{
 F23 & sc01B::Send "{Raw}@"  ;; QWERTY ]}
 F23 & sc02B::Send "{Raw}^"  ;; QWERTY \|
 
@@ -96,7 +96,7 @@ F23 & sc024::Send "{Raw}4"  ;; QWERTY jJ
 F23 & sc025::Send "{Raw}5"  ;; QWERTY kK
 F23 & sc026::Send "{Raw}6"  ;; QWERTY lL
 F23 & sc027::Send "{Raw}0"  ;; QWERTY ;:
-F23 & sc028::Send "{Raw};"  ;; QWERTY '"
+F23 & sc028::Send "{Raw}_"  ;; QWERTY '"
 
 ;; Bottom Row
 F23 & sc02C::Send "{Raw}\"  ;; QWERTY zZ
