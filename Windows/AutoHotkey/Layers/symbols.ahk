@@ -4,12 +4,13 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script creates a dedicated Symbols layer. It maps the F23 virtual key
- * to <Left Alt> to activate the layer. It provides immediate access to math
- * operators, programming symbols, and numbers.
+ * This script intercepts the physical <Left Alt> key and maps it to the F23
+ * virtual key to activate a dedicated keyboard layer for math operators,
+ * programming symbols, and numbers.
  *
- * The Symbols layer maps the functions to keys using scan codes to ensure
- * the keymap remains consistent across different system keyboard layouts.
+ * The Symbols layer maps functions to physical keys using scan codes. This
+ * abstraction ensures that the keymap remains consistent across different
+ * system keyboard layouts (e.g., QWERTY, QWERTZ, AZERTY).
  *
  * Layer Diagram:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
@@ -28,14 +29,16 @@
  *      `------'---'----'----------------------'----'---'----'------'
  *
  * References:
- * - Designing a Symbol Layer: https://getreuer.info/posts/keyboards/symbol-layer/index.html
+ * - Designing a Symbol Layer:
+ *      https://getreuer.info/posts/keyboards/symbol-layer/index.html
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
- * - Scan Codes: https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
+ * - AutoHotkey v2 Quick Reference:
+ *      https://autohotkey.com/docs/v2/
+ * - Scan Codes:
+ *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
-;; Remap <Left Alt>.
 #InputLevel 1
 sc038::F23
 #InputLevel 0
@@ -76,7 +79,7 @@ F23 & sc011::Send "{Raw}$"  ;; QWERTY wW
 F23 & sc012::Send "{Raw}<"  ;; QWERTY eE
 F23 & sc013::Send "{Raw}>"  ;; QWERTY rR
 F23 & sc014::Send "{Raw}%"  ;; QWERTY tT
-F23 & sc015::send "{Raw}#"  ;; QWERTY yY
+F23 & sc015::Send "{Raw}#"  ;; QWERTY yY
 F23 & sc016::Send "{Raw}7"  ;; QWERTY uU
 F23 & sc017::Send "{Raw}8"  ;; QWERTY iI
 F23 & sc018::Send "{Raw}9"  ;; QWERTY oO

@@ -6,12 +6,14 @@
  *
  * This function provides dual-role behavior for modifier keys:
  * - Tap: Keeps the modifier active for a defined timeout
- *   (also called a "sticky key").
+ *      (also called a "sticky key").
  * - Hold: Acts as a standard modifier.
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
- * - Scan Codes: https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
+ * - AutoHotkey v2 Quick Reference:
+ *      https://autohotkey.com/docs/v2/
+ * - Scan Codes:
+ *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
 /**
