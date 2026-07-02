@@ -4,12 +4,13 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script implements the Extend layer concept. It maps the F24 virtual key
- * to <Caps Lock> to activate the layer. It transforms the alphanumeric keys
- * into functional tools (navigation, media, text editing and more).
+ * This script intercepts the physical <Caps Lock> key and maps it to the F24
+ * virtual key to activate a dedicated keyboard layer for functional tools:
+ * navigation, media, text editing, and more.
  *
- * The Extend layer maps the functions to keys using scan codes to ensure
- * the keymap remains consistent across different system keyboard layouts.
+ * The Extend layer maps functions to physical keys using scan codes. This
+ * abstraction ensures that the keymap remains consistent across different
+ * system keyboard layouts (e.g., QWERTY, QWERTZ, AZERTY).
  *
  * Layer Diagram:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
@@ -28,17 +29,19 @@
  *      `------'---'----'----------------------'----'---'----'------'
  *
  * References:
- * - DreymaR's Extend Layer: https://dreymar.colemak.org/layers-extend.html
+ * - DreymaR's Extend Layer:
+ *      https://dreymar.colemak.org/layers-extend.html
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
- * - Scan Codes: https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
+ * - AutoHotkey v2 Quick Reference:
+ *      https://autohotkey.com/docs/v2/
+ * - Scan Codes:
+ *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
 #Include Lib/multi-timed-mods.ahk
 #Include Lib/one-shot-timed-mod.ahk
 
-;; Remap <Caps Lock>.
 #InputLevel 1
 sc03A::F24
 #InputLevel 0

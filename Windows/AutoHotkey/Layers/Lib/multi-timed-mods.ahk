@@ -7,14 +7,16 @@
  * This function provides dual-role behavior for modifier keys on
  * single and double taps:
  * - Single Tap: Activate the primary modifier
- *   (e.g., Ctrl).
+ *      (for example, Ctrl).
  * - Double Tap: Activate the primary and secondary modifiers
- *   (e.g., Ctrl+Shift).
+ *      (for example, Ctrl+Shift).
  * - Hold: Function as a standard modifier or modifier pair.
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference: https://autohotkey.com/docs/v2/
- * - Scan Codes: https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
+ * - AutoHotkey v2 Quick Reference:
+ *      https://autohotkey.com/docs/v2/
+ * - Scan Codes:
+ *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
 /**
