@@ -19,11 +19,11 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab |Ins|Spc|VlD|VlU|Mut|PgU|Hom| Up|End|PSc|NLk|SLk|     |
+ *      | Tab |MMu|Mut|VlD|VlU|NLk|PgU|Hom| Up|End|PSc|Prv|Nxt| ScLk|
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
  *      | $Xtn |Win|Alt|Sht|Ctl| PP|PgD|Lft|Dwn|Rht|Ent|Cps| Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Prv|Nxt| Shift    |
+ *      |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Spc|Ins| Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Tab                  | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -81,8 +81,8 @@ F24 & sc00C::Send "{Blind}{F11}"    ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"    ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{Blind}{Insert}" ;; QWERTY qQ
-F24 & sc011::Send "{Blind}{Space}"  ;; QWERTY wW
+F24 & sc010::Send "{SoundSetMute}"  ;; EXPERMINTAL FEATURE: MAY NOT WORK! - QWERTY qQ
+F24 & sc011::Send "{Volume_Mute}"   ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"   ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"     ;; QWERTY rR
 F24 & sc014::Send "{Volume_Mute}"   ;; QWERTY tT
@@ -91,9 +91,9 @@ F24 & sc016::Send "{Blind}{Home}"   ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"     ;; QWERTY iI
 F24 & sc018::Send "{Bind}{End}"     ;; QWERTY oO
 F24 & sc019::PrintScreen            ;; QWERTY pP
-F24 & sc01A::NumLock                ;; QWERTY [{
-F24 & sc01B::ScrollLock             ;; QWERTY ]}
-F24 & sc02B::return                 ;; QWERTY \|
+F24 & sc01A::"{Media_Prev}"         ;; QWERTY [{
+F24 & sc01B::"{Media_Next}"         ;; QWERTY ]}
+F24 & sc02B::ScrollLock             ;; QWERTY \|
 
 ;; Home Row
 F24 & sc01E::Send "{Blind}{LWin Down}"                  ;; QWERTY aA
@@ -123,8 +123,8 @@ F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Escape}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
 F24 & sc033::Send "{Blind}{Delete}"         ;; QWERTY ,<
-F24 & sc034::Send "{Media_Prev}"            ;; QWERTY .>
-F24 & sc035::Send "{Media_Next}"            ;; QWERTY /?
+F24 & sc034::Send "{Blind}{Space}"          ;; QWERTY .>
+F24 & sc035::Send "{Blind}{Insert}"         ;; QWERTY /?
 
 ;; Misc. Keys
 F24 & sc039::Send "{Blind}{Tab}"    ;; Space
