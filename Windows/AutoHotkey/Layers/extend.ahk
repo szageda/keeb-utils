@@ -39,6 +39,7 @@
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
+#Include Lib/mic-mute-toggle.ahk
 #Include Lib/multi-timed-mods.ahk
 #Include Lib/one-shot-timed-mod.ahk
 
@@ -81,7 +82,7 @@ F24 & sc00C::Send "{Blind}{F11}"    ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"    ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{SoundSetMute}"  ;; QWERTY qQ
+F24 & sc010::MicMuteToggle()        ;; QWERTY qQ
 F24 & sc011::Send "{Volume_Mute}"   ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"   ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"     ;; QWERTY rR
