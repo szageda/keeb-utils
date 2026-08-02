@@ -13,7 +13,6 @@
  * Documentation:
  * - AutoHotkey v2 ComCall:
  *      https://www.autohotkey.com/docs/v2/lib/ComCall.htm
- * 
  * - AutoHotkey v2 ComObject:
  *      https://www.autohotkey.com/docs/v2/lib/ComObject.htm
  */
