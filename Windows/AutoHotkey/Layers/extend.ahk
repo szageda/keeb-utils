@@ -81,18 +81,18 @@ F24 & sc00C::Send "{Blind}{F11}"    ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"    ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{SoundSetMute}"  ;; EXPERMINTAL FEATURE: MAY NOT WORK! - QWERTY qQ
+F24 & sc010::Send "{SoundSetMute}"  ;; QWERTY qQ
 F24 & sc011::Send "{Volume_Mute}"   ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"   ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"     ;; QWERTY rR
-F24 & sc014::Send "{Volume_Mute}"   ;; QWERTY tT
+F24 & sc014::NumLock                ;; QWERTY tT
 F24 & sc015::Send "{Blind}{PgUp}"   ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"   ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"     ;; QWERTY iI
-F24 & sc018::Send "{Bind}{End}"     ;; QWERTY oO
+F24 & sc018::Send "{Blind}{End}"    ;; QWERTY oO
 F24 & sc019::PrintScreen            ;; QWERTY pP
-F24 & sc01A::"{Media_Prev}"         ;; QWERTY [{
-F24 & sc01B::"{Media_Next}"         ;; QWERTY ]}
+F24 & sc01A::Send "{Media_Prev}"    ;; QWERTY [{
+F24 & sc01B::Send "{Media_Next}"    ;; QWERTY ]}
 F24 & sc02B::ScrollLock             ;; QWERTY \|
 
 ;; Home Row
