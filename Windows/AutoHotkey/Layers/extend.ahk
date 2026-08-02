@@ -97,8 +97,7 @@ F24 & sc01B::Send "{Media_Next}"    ;; QWERTY ]}
 F24 & sc02B::ScrollLock             ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Blind}{LWin Down}"                  ;; QWERTY aA
-F24 & sc01E Up::Send "{Blind}{LWin Up}"
+F24 & sc01E::OneShotTimedMod(280, "LWin")               ;; QWERTY aA
 F24 & sc01F::MultiTimedMods(120, 280, "Alt", "Shift")   ;; QWERTY sS
 F24 & sc020::OneShotTimedMod(280, "Shift")              ;; QWERTY dD
 F24 & sc021::MultiTimedMods(120, 280, "Ctrl", "Shift")  ;; QWERTY fF
