@@ -19,11 +19,11 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      |Esc| F1| F2| F3| F4| F5| F6| F7| F8| F9|F10|F11|F12|Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab |Ins|Spc|VlD|VlU|Mut|PgU|Hom| Up|End|PSc|NLk|SLk|     |
+ *      | Tab |MMu|Mut|VlD|VlU|NLk|PgU|Hom| Up|End|PSc|Prv|Nxt| ScLk|
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
  *      | $Xtn |Win|Alt|Sht|Ctl| PP|PgD|Lft|Dwn|Rht|Ent|Cps| Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Prv|Nxt| Shift    |
+ *      |  Shift | ^Z| ^X| ^C| ^V| ^Y|Esc|Bsp|Del|Spc|Ins| Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Tab                  | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -33,12 +33,13 @@
  *      https://dreymar.colemak.org/layers-extend.html
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference:
- *      https://autohotkey.com/docs/v2/
+ * - AutoHotkey v2 How to Send Keystrokes:
+ *      https://www.autohotkey.com/docs/v2/howto/SendKeys.htm
  * - Scan Codes:
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
+#Include Lib/mic-mute-toggle.ahk
 #Include Lib/multi-timed-mods.ahk
 #Include Lib/one-shot-timed-mod.ahk
 
@@ -81,23 +82,22 @@ F24 & sc00C::Send "{Blind}{F11}"    ;; QWERTY -_
 F24 & sc00D::Send "{Blind}{F12}"    ;; QWERTY =+
 
 ;; Top Row
-F24 & sc010::Send "{Blind}{Insert}" ;; QWERTY qQ
-F24 & sc011::Send "{Blind}{Space}"  ;; QWERTY wW
+F24 & sc010::MicMuteToggle()        ;; QWERTY qQ
+F24 & sc011::Send "{Volume_Mute}"   ;; QWERTY wW
 F24 & sc012::Send "{Volume_Down}"   ;; QWERTY eE
 F24 & sc013::Send "{Volume_Up}"     ;; QWERTY rR
-F24 & sc014::Send "{Volume_Mute}"   ;; QWERTY tT
+F24 & sc014::NumLock                ;; QWERTY tT
 F24 & sc015::Send "{Blind}{PgUp}"   ;; QWERTY yY
 F24 & sc016::Send "{Blind}{Home}"   ;; QWERTY uU
 F24 & sc017::Send "{Blind}{Up}"     ;; QWERTY iI
-F24 & sc018::Send "{Bind}{End}"     ;; QWERTY oO
+F24 & sc018::Send "{Blind}{End}"    ;; QWERTY oO
 F24 & sc019::PrintScreen            ;; QWERTY pP
-F24 & sc01A::NumLock                ;; QWERTY [{
-F24 & sc01B::ScrollLock             ;; QWERTY ]}
-F24 & sc02B::return                 ;; QWERTY \|
+F24 & sc01A::Send "{Media_Prev}"    ;; QWERTY [{
+F24 & sc01B::Send "{Media_Next}"    ;; QWERTY ]}
+F24 & sc02B::ScrollLock             ;; QWERTY \|
 
 ;; Home Row
-F24 & sc01E::Send "{Blind}{LWin Down}"                  ;; QWERTY aA
-F24 & sc01E Up::Send "{Blind}{LWin Up}"
+F24 & sc01E::OneShotTimedMod(280, "LWin")               ;; QWERTY aA
 F24 & sc01F::MultiTimedMods(120, 280, "Alt", "Shift")   ;; QWERTY sS
 F24 & sc020::OneShotTimedMod(280, "Shift")              ;; QWERTY dD
 F24 & sc021::MultiTimedMods(120, 280, "Ctrl", "Shift")  ;; QWERTY fF
@@ -123,8 +123,8 @@ F24 & sc030::Send "{Ctrl Down}{y}{Ctrl Up}" ;; QWERTY bB
 F24 & sc031::Send "{Blind}{Escape}"         ;; QWERTY nN
 F24 & sc032::Send "{Blind}{Backspace}"      ;; QWERTY mM
 F24 & sc033::Send "{Blind}{Delete}"         ;; QWERTY ,<
-F24 & sc034::Send "{Media_Prev}"            ;; QWERTY .>
-F24 & sc035::Send "{Media_Next}"            ;; QWERTY /?
+F24 & sc034::Send "{Blind}{Space}"          ;; QWERTY .>
+F24 & sc035::Send "{Blind}{Insert}"         ;; QWERTY /?
 
 ;; Misc. Keys
 F24 & sc039::Send "{Blind}{Tab}"    ;; Space
