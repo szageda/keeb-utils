@@ -22,7 +22,8 @@
  * @var {int} isMuted   Local receiver for resulting mute state (0 unmuted, 1 muted).
  * @example Shift & sc020::MicMuteToggle()
  */
-MicMuteToggle() {
+MicMuteToggle()
+{
     if TryToggleDefaultCapture(&isMuted) {
         return
     }
@@ -30,13 +31,14 @@ MicMuteToggle() {
     /**
      * @brief   Resolves the default capture endpoint for common roles and toggles its mute state.
      * @param {int} muteState   ByRef output. Receives resulting mute state (0 unmuted, 1 muted).
-     * @var {ComObject} enumerator  IMMDeviceEnumerator COM instance.
-     * @var {Buffer|false} iidBuffer  GUID buffer for IAudioEndpointVolume or false on failure.
+     * @var {ComObject} enumerator  `IMMDeviceEnumerator` COM instance.
+     * @var {Buffer|false} iidBuffer  GUID buffer for `IAudioEndpointVolume` or false on failure.
      * @var {int} role  Endpoint role to probe (2 communications, 1 multimedia, 0 console).
      * @var {int} hr    HRESULT from COM calls (0 indicates success).
      * @returns {bool}  True when endpoint activation and mute toggle succeed, otherwise false.
      */
-    TryToggleDefaultCapture(&muteState) {
+    TryToggleDefaultCapture(&muteState)
+    {
         static CLSID_MMDeviceEnumerator := "{BCDE0395-E52F-467C-8E3D-C4579291692E}"
         static IID_IMMDeviceEnumerator := "{A95664D2-9614-4F35-A746-DE8DB63617E6}"
         static IID_IAudioEndpointVolume := "{5CDF2C82-841E-4546-9722-0CF74078229A}"
@@ -89,7 +91,8 @@ MicMuteToggle() {
      * @var {int} hr    `HRESULT` from COM calls (0 indicates success).
      * @returns {bool}  True when all COM calls succeed, otherwise false.
      */
-    ToggleEndpointMute(endpointVolume, &muteState) {
+    ToggleEndpointMute(endpointVolume, &muteState)
+    {
         current := 0
         hr := ComCall(15, endpointVolume, "int*", &current, "int")
         if (hr != 0) {
@@ -117,7 +120,8 @@ MicMuteToggle() {
      * @param {string} guidString   GUID in canonical form, e.g. `{xxxxxxxx-....}`.
      * @returns {Buffer|false}  16-byte GUID buffer, or false when parsing fails.
      */
-    StringToGuidBuffer(guidString) {
+    StringToGuidBuffer(guidString)
+    {
         guid := Buffer(16, 0)
         if (DllCall("ole32\CLSIDFromString", "wstr", guidString, "ptr", guid.Ptr, "int") != 0) {
             return false

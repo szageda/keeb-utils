@@ -33,8 +33,8 @@
  *      https://getreuer.info/posts/keyboards/symbol-layer/index.html
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference:
- *      https://autohotkey.com/docs/v2/
+ * - AutoHotkey v2 How to Send Keystrokes:
+ *      https://www.autohotkey.com/docs/v2/howto/SendKeys.htm
  * - Scan Codes:
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */

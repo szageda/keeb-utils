@@ -10,8 +10,10 @@
  * - Hold: Acts as a standard modifier.
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference:
- *      https://autohotkey.com/docs/v2/
+ * - AutoHotkey v2 KeyWait:
+ *      https://www.autohotkey.com/docs/v2/lib/KeyWait.htm
+ * - AutoHotkey v2 Send:
+ *      https://www.autohotkey.com/docs/v2/lib/Send.htm
  * - Scan Codes:
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */

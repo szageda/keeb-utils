@@ -35,8 +35,8 @@
  *      https://dvorak-keyboard.com
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference:
- *      https://autohotkey.com/docs/v2/
+ * - AutoHotkey v2 Hotkeys:
+ *      https://www.autohotkey.com/docs/v2/Hotkeys.htm
  * - Scan Codes:
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  * - Virtual Keys:

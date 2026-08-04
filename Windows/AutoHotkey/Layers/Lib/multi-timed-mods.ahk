@@ -13,8 +13,10 @@
  * - Hold: Function as a standard modifier or modifier pair.
  *
  * Documentation:
- * - AutoHotkey v2 Quick Reference:
- *      https://autohotkey.com/docs/v2/
+ * - AutoHotkey v2 KeyWait:
+ *      https://www.autohotkey.com/docs/v2/lib/KeyWait.htm
+ * - AutoHotkey v2 Send:
+ *      https://www.autohotkey.com/docs/v2/lib/Send.htm
  * - Scan Codes:
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
@@ -45,7 +47,8 @@ MultiTimedMods(tapTimeout := 0, modTimeout := 0,
     SetTimer ProcessTaps, -tapTimeout
 
     ;; Key State Handling
-    ProcessTaps() {
+    ProcessTaps()
+    {
         if (tapCount = 1) {
             Send "{Blind}{" primaryModifier " Down}"
             Sleep modTimeout
