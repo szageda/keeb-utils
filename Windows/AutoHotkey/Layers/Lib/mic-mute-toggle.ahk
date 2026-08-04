@@ -4,12 +4,6 @@
  * Copyright   : (c) 2026, Gergely Szabo
  * License     : MIT
  *
- * This function provides a toggle for the microphone mute state.
- *
- * The toggle targets the current default recording endpoint in Windows using
- * Core Audio COM interfaces. This avoids depending on endpoint names, which
- * can vary across drivers and devices.
- *
  * Documentation:
  * - AutoHotkey v2 ComCall:
  *      https://www.autohotkey.com/docs/v2/lib/ComCall.htm

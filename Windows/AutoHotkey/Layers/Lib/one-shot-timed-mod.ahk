@@ -4,11 +4,6 @@
  * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  *
- * This function provides dual-role behavior for modifier keys:
- * - Tap: Keeps the modifier active for a defined timeout
- *      (also called a "sticky key").
- * - Hold: Acts as a standard modifier.
- *
  * Documentation:
  * - AutoHotkey v2 KeyWait:
  *      https://www.autohotkey.com/docs/v2/lib/KeyWait.htm

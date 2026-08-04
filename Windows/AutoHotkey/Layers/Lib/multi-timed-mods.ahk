@@ -4,14 +4,6 @@
  * Copyright   : (c) 2025-2026, Gergely Szabo
  * License     : MIT
  *
- * This function provides dual-role behavior for modifier keys on
- * single and double taps:
- * - Single Tap: Activate the primary modifier
- *      (for example, Ctrl).
- * - Double Tap: Activate the primary and secondary modifiers
- *      (for example, Ctrl+Shift).
- * - Hold: Function as a standard modifier or modifier pair.
- *
  * Documentation:
  * - AutoHotkey v2 KeyWait:
  *      https://www.autohotkey.com/docs/v2/lib/KeyWait.htm
