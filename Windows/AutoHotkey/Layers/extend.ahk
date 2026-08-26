@@ -4,7 +4,7 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script intercepts the physical <Caps Lock> key and maps it to the F24
+ * This script intercepts the physical Caps Lock key and maps it to the F24
  * virtual key to activate a dedicated keyboard layer for functional tools:
  * navigation, media, text editing, and more.
  *

@@ -4,7 +4,7 @@
  * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
- * This script intercepts the physical <Left Alt> key and maps it to the F23
+ * This script intercepts the physical Left Alt key and maps it to the F23
  * virtual key to activate a dedicated keyboard layer for math operators,
  * programming symbols, and numbers.
  *
