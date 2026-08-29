@@ -101,9 +101,9 @@ The Symbols layer (default: <kbd>Left Alt</kbd>) provides ergonomic access to ma
 | Key Category  | Description |
 | :-----------: | ----------- |
 | ![Numpad keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numpad keys |
-| ![Programming keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Common programming symbols |
-| ![Additional math symbols](Assets/Images/Keyboard%20Layers/extend-orange.png) | Additional math symbols |
-| ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Math operators |
+| ![Programming keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Programming symbols |
+| ![Additional math symbols](Assets/Images/Keyboard%20Layers/extend-orange.png) | Math operators |
+| ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Symbol pairs |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. symbols |
 
 ## Acknowledgments
