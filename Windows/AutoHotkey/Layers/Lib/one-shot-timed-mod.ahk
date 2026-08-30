@@ -14,6 +14,10 @@
  */
 
 /**
+ * Holds a modifier for a short time after the hotkey is tapped.
+ * This keeps the action feeling like a one-shot modifier without leaving the
+ * key stuck until the user physically releases it.
+ *
  * @param {int} modTimeout    Duration (ms) the modifier remains active after a tap.
  * @param {string} modifierKey    Name of the modifier key to sticky or hold (e.g., "Ctrl").
  * @var {string} triggerKey    Scan code of the key that called the function.
@@ -21,11 +25,9 @@
  */
 OneShotTimedMod(modTimeout := 0, modifierKey := "")
 {
-    ;; Function Caller Scan Code Extraction
     RegExMatch(A_ThisHotkey, "i)sc[0-9A-Fa-f]+", &match)
     triggerKey := match[0]
 
-    ;; One-Shot Modifier Logic
     Send "{Blind}{" modifierKey " Down}"
     Sleep modTimeout
 

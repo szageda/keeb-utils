@@ -14,22 +14,25 @@
  */
 
 /**
+ * Treats a single key as a tap-timeout modifier: one tap holds the primary
+ * modifier, while a second tap adds the secondary modifier.
+ * The short timeout lets the user decide between a single tap and a double tap
+ * without the key feeling sticky or delayed.
+ *
  * @param {int} tapTimeout    Max ms between taps to increment count.
  * @param {string} primaryModifier    Primary modifier key to sticky or hold (e.g., "Ctrl").
  * @param {int} modTimeout    Duration (ms) the modifier(s) remain(s) active after a tap.
  * @param {string} secondaryModifier    Modifier added on double tap (e.g., "Shift").
  * @var {string} triggerKey    Scan code of the key that called the function.
- * @var {int} tapCount    Stores the number of taps detected within `tapTimeout`.
+ * @var {int} tapCount    Number of taps seen within the timeout window.
  * @example    Shift & sc020::MultiTimedMods(175, 450, "Ctrl", "Shift")
  */
 MultiTimedMods(tapTimeout := 0, modTimeout := 0,
                primaryModifier := "", secondaryModifier := "")
 {
-    ;; Function Caller Scan Code Extraction
     RegExMatch(A_ThisHotkey, "i)sc[0-9A-Fa-f]+", &match)
     triggerKey := match[0]
 
-    ;; Tapping Logic Implementation
     static tapCount := 0
     if (tapCount > 0) {
         tapCount += 1
@@ -38,7 +41,6 @@ MultiTimedMods(tapTimeout := 0, modTimeout := 0,
     tapCount := 1
     SetTimer ProcessTaps, -tapTimeout
 
-    ;; Key State Handling
     ProcessTaps()
     {
         if (tapCount = 1) {

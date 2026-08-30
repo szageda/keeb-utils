@@ -12,7 +12,11 @@
  */
 
 /**
- * @brief   Toggles the mute state of the default capture (recording) endpoint.
+ * Toggles the default capture device mute state.
+ * This is intentionally resilient to Windows endpoint role differences, so the
+ * hotkey still works even when the active microphone is not the default
+ * communications device.
+ *
  * @var {int} isMuted   Local receiver for resulting mute state (0 unmuted, 1 muted).
  * @example Shift & sc020::MicMuteToggle()
  */
@@ -23,7 +27,10 @@ MicMuteToggle()
     }
 
     /**
-     * @brief   Resolves the default capture endpoint for common roles and toggles its mute state.
+     * Finds the first usable default capture endpoint and flips its mute bit.
+     * Communications devices are checked first because they are the most common
+     * place Windows exposes a mic used for calls or voice input.
+     *
      * @param {int} muteState   ByRef output. Receives resulting mute state (0 unmuted, 1 muted).
      * @var {ComObject} enumerator  `IMMDeviceEnumerator` COM instance.
      * @var {Buffer|false} iidBuffer  GUID buffer for `IAudioEndpointVolume` or false on failure.
@@ -49,7 +56,8 @@ MicMuteToggle()
             return false
         }
 
-        ;; Prefer communications, then multimedia, then console role.
+        ;; Prefer communications, then multimedia, then console role; this keeps the
+        ;; hotkey working on systems where the active mic is not the default endpoint.
         for role in [2, 1, 0] {
             devicePtr := 0
             hr := ComCall(4, enumerator, "int", eCapture, "int", role, "ptr*", &devicePtr, "int")
@@ -75,13 +83,15 @@ MicMuteToggle()
         return false
     }
 
-     /**
-     * @brief   Reads current endpoint mute state, flips it, writes it back, and verifies result.
+    /**
+     * Reads the current endpoint state, inverts it, and verifies the result.
+     * The extra read-back protects against stale state or a silent COM failure.
+     *
      * @param {ComValue} endpointVolume `IAudioEndpointVolume` interface pointer wrapper.
      * @param {int} muteState   ByRef output. Receives resulting mute state (0 unmuted, 1 muted).
      * @var {int} current   Current mute state before toggle.
      * @var {int} next  Inverted mute state to apply.
-     * @var {int} after Mute state after applying the toggle.
+     * @var {int} after   Mute state after applying the toggle.
      * @var {int} hr    `HRESULT` from COM calls (0 indicates success).
      * @returns {bool}  True when all COM calls succeed, otherwise false.
      */
@@ -110,7 +120,9 @@ MicMuteToggle()
     }
 
     /**
-     * @brief   Converts a GUID string to a 16-byte binary buffer for COM method calls.
+     * Converts the COM interface GUID to the binary blob required by AutoHotkey's
+     * ComCall API.
+     *
      * @param {string} guidString   GUID in canonical form, e.g. `{xxxxxxxx-....}`.
      * @returns {Buffer|false}  16-byte GUID buffer, or false when parsing fails.
      */
