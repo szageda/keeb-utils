@@ -108,7 +108,7 @@
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  q    l    c    m    k    -    f    o    u    y    ;    =    \
   @xtn n    r    s    t    g    p    h    a    e    i    ,    ret
-  lsft j    x    z    w    v    b    d    '    .    /    rsft
+  lsft j    x    v    w    z    b    d    '    .    /    rsft
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 
