@@ -25,7 +25,7 @@
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
  *      |CapsLk| N | R | S | T | G | Y | H | E | A | I | , | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | J | X | V | W | Z | P | K | ' | . | / | Shift    |
+ *      |  Shift | J | X | V | W | Z | K | P | ' | . | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -107,8 +107,8 @@ sc02D::x        ;; QWERTY xX
 sc02E::v        ;; QWERTY cC
 sc02F::w        ;; QWERTY vV
 sc030::z        ;; QWERTY bB
-sc031::p        ;; QWERTY nN
-sc032::k        ;; QWERTY mM
+sc031::k        ;; QWERTY nN
+sc032::p        ;; QWERTY mM
 sc033::vkDE     ;; QWERTY ,<
 sc034::vkBE     ;; QWERTY .>
 sc035::vkBF     ;; QWERTY /?
