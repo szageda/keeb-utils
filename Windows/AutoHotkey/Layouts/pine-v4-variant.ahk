@@ -21,9 +21,9 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      | ` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] |Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab | Q | L | C | M | K | - | F | O | U | Y | ; | = | \   |
+ *      | Tab | Q | L | C | M | K | - | F | U | O | Y | ; | = | \   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      |CapsLk| N | R | S | T | G | P | H | A | E | I | , | Enter  |
+ *      |CapsLk| N | R | S | T | G | P | H | E | A | I | , | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
  *      |  Shift | J | X | V | W | Z | B | D | ' | . | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
@@ -81,8 +81,8 @@ sc013::m        ;; QWERTY rR
 sc014::k        ;; QWERTY tT
 sc015::vkBD     ;; QWERTY yY
 sc016::f        ;; QWERTY uU
-sc017::o        ;; QWERTY iI
-sc018::u        ;; QWERTY oO
+sc017::u        ;; QWERTY iI
+sc018::o        ;; QWERTY oO
 sc019::y        ;; QWERTY pP
 sc01A::vkBA     ;; QWERTY [{
 sc01B::vkBB     ;; QWERTY ]}
@@ -96,8 +96,8 @@ sc021::t        ;; QWERTY fF
 sc022::g        ;; QWERTY gG
 sc023::p        ;; QWERTY hH
 sc024::h        ;; QWERTY jJ
-sc025::a        ;; QWERTY kK
-sc026::e        ;; QWERTY lL
+sc025::e        ;; QWERTY kK
+sc026::a        ;; QWERTY lL
 sc027::i        ;; QWERTY ;:
 sc028::vkBC     ;; QWERTY '"
 
