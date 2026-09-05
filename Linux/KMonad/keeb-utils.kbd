@@ -106,9 +106,9 @@
 (deflayer pine-v4-variant
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-  tab  q    l    c    m    k    -    f    u    o    y    ;    =    \
-  @xtn n    r    s    t    g    p    h    e    a    i    ,    ret
-  lsft j    x    v    w    z    b    d    '    .    /    rsft
+  tab  b    l    c    m    k    -    f    u    o    q    ;    =    \
+  @xtn n    r    s    t    g    y    h    e    a    i    ,    ret
+  lsft j    x    v    w    z    p    d    '    .    /    rsft
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 

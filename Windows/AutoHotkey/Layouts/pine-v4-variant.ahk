@@ -21,11 +21,11 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      | ` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] |Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab | Q | L | C | M | K | - | F | U | O | Y | ; | = | \   |
+ *      | Tab | B | L | C | M | K | - | F | U | O | Q | ; | = | \   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      |CapsLk| N | R | S | T | G | P | H | E | A | I | , | Enter  |
+ *      |CapsLk| N | R | S | T | G | Y | H | E | A | I | , | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | J | X | V | W | Z | B | D | ' | . | / | Shift    |
+ *      |  Shift | J | X | V | W | Z | P | D | ' | . | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -74,7 +74,7 @@ sc00C::vkDB     ;; QWERTY -_
 sc00D::vkDD     ;; QWERTY =+
 
 ;; Top Row
-sc010::q        ;; QWERTY qQ
+sc010::b        ;; QWERTY qQ
 sc011::l        ;; QWERTY wW
 sc012::c        ;; QWERTY eE
 sc013::m        ;; QWERTY rR
@@ -83,7 +83,7 @@ sc015::vkBD     ;; QWERTY yY
 sc016::f        ;; QWERTY uU
 sc017::u        ;; QWERTY iI
 sc018::o        ;; QWERTY oO
-sc019::y        ;; QWERTY pP
+sc019::q        ;; QWERTY pP
 sc01A::vkBA     ;; QWERTY [{
 sc01B::vkBB     ;; QWERTY ]}
 sc02B::vkDC     ;; QWERTY \|
@@ -94,7 +94,7 @@ sc01F::r        ;; QWERTY sS
 sc020::s        ;; QWERTY dD
 sc021::t        ;; QWERTY fF
 sc022::g        ;; QWERTY gG
-sc023::p        ;; QWERTY hH
+sc023::y        ;; QWERTY hH
 sc024::h        ;; QWERTY jJ
 sc025::e        ;; QWERTY kK
 sc026::a        ;; QWERTY lL
@@ -107,7 +107,7 @@ sc02D::x        ;; QWERTY xX
 sc02E::v        ;; QWERTY cC
 sc02F::w        ;; QWERTY vV
 sc030::z        ;; QWERTY bB
-sc031::b        ;; QWERTY nN
+sc031::p        ;; QWERTY nN
 sc032::d        ;; QWERTY mM
 sc033::vkDE     ;; QWERTY ,<
 sc034::vkBE     ;; QWERTY .>
