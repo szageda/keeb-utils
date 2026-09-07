@@ -5,14 +5,17 @@
 ;;;; License     : MIT
 ;;;;
 ;;;; Documentation:
-;;;; - KMonad Guided tour: https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
-;;;; - KMonad Quick Reference Guide: https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
+;;;; - KMonad Guided tour:
+;;;;      https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
+;;;; - KMonad Quick Reference Guide:
+;;;;      https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
 
 ;;;
 ;;; KMonad General Configuration
 ;;;
 
 ;; The `defcfg' block defines the global configuration for KMonad.
+;;
 ;; A valid configuration must contain at least one `inptut' and one `output'
 ;; block to function -- they define the input and output devices.
 (defcfg
@@ -29,11 +32,13 @@
   ;;output (kext)
 
   ;; Enable fallthrough to send unhandled events to the OS.
+  ;;
   ;; If `false', keys not defined in the active layer are suppressed.
   ;; (default true)
   fallthrough true
 
   ;; Enable or disable shell command execution (e.g., running scripts).
+  ;;
   ;; Set to `false' for better security.
   ;; (default true)
   allow-cmd false
@@ -64,11 +69,32 @@
 
 ;; The `deflayer' blocks define custom keymaps (layouts and layers). KMonad
 ;; activates the first keymap in the file as the default Base Layer on startup.
-;; Access additional layers using `layer-toggle' or `layer-switch' aliases.
+;;
+;; Access to additional layers is provided by aliases (keys starting with `@').
+
+;; Flint
+;;
+;; References:
+;; - Pine v4 (c) ClemenPine:
+;;      https://github.com/ClemenPine/pine
+;; - Grapite (c) Richard Davidson:
+;;      https://github.com/rdavison/graphite-layout
+(deflayer flint-ansi
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
+  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
+  tab  b    l    c    m    v    -    f    u    o    q    ;    =    \
+  @xtn n    r    s    t    g    y    h    e    a    i    ,    ret
+  lsft j    x    d    w    z    k    p    '    .    /    rsft
+  lctl lmet @sym           spc            ralt cmp  rmet rctl
+)
 
 ;; Colemak-DH
-;; Colemak (c) Shai Coleman -- https://colemak.com
-;; Mod-DH (c) stevep99 -- https://colemakmods.github.io/mod-dh
+;;
+;; References:
+;; - Colemak (c) Shai Coleman:
+;;      https://colemak.com
+;; - Mod-DH (c) stevep99:
+;;      https://colemakmods.github.io/mod-dh
 (deflayer colemak-dh-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
@@ -79,7 +105,11 @@
 )
 
 ;; Dvorak
-;; https://dvorak-keyboard.com
+;;
+;; References:
+;; - The Dvorak Keyboard:
+;;      https://dvorak-keyboard.com
+;;
 ;; For testing purposes only.
 (deflayer dvorak-ansi
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
@@ -91,7 +121,8 @@
 )
 
 ;; US QWERTY
-;; For games and if somebody needs to use my PC.
+;;
+;; For gaming and if somebody needs to use my PC.
 (deflayer qwerty
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    -    =    bspc
@@ -101,27 +132,19 @@
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
 
-;; Pine v4 Variant (EXPERIMENTAL)
-;; Pine v4 (c) ClemenPine -- https://github.com/ClemenPine/pine
-(deflayer pine-v4-variant
-  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
-  `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
-  tab  b    l    c    m    v    -    f    u    o    q    ;    =    \
-  @xtn n    r    s    t    g    y    h    e    a    i    ,    ret
-  lsft j    x    d    w    z    k    p    '    .    /    rsft
-  lctl lmet @sym           spc            ralt cmp  rmet rctl
-)
-
 ;;;
 ;;; Custom Layer Keymaps
 ;;;
 
 ;; Similarly to the Base Layer keymaps, these `deflayer' blocks define
 ;; additional layers that modify the behavior of alphanumeric keys when
-;; activated. Access these layers using `layer-toggle' or `layer-switch'
-;; aliases (e.g., `@xtn') defined on the Base Layer.
+;; activated.
+;;
+;; Access to these layers is achieved using aliases (for example, `@xtn')
+;; defined on the Base Layers.
 
 ;; Extend
+;;
 ;; Essential text editing, navigation features, and other system functions.
 (deflayer extend
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -133,6 +156,7 @@
 )
 
 ;; Symbols
+;;
 ;; Immediate access to math operators, programming symbols, and numbers.
 (deflayer symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -144,6 +168,7 @@
 )
 
 ;; Shift-Symbols
+;;
 ;; 2nd layer to the Symbols layer.
 (deflayer shift-symbols
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
@@ -155,12 +180,13 @@
 )
 
 ;; Keyboard Layout Selection
+;;
 ;; Active Base Layer selection (Colemak/Dvorak/QWERTY).
 (deflayer select-layout
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   @sel
   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   bspc
-  tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   @pne XX   XX   XX
-  XX   XX   XX   @dvk XX   XX   XX   XX   XX   XX   XX   XX   ret
+  tab  @qwe XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX   XX
+  XX   XX   XX   @dvk @flt XX   XX   XX   XX   XX   XX   XX   ret
   lsft XX   XX   @cmk XX   XX   XX   XX   XX   XX   XX   rsft
   lctl lmet lalt           spc            ralt cmp  rmet rctl
 )
@@ -171,15 +197,15 @@
 
 ;; The `defalias' block defines custom actions, such as layer switches, special
 ;; key combinations, macros, and more. Aliases can also define dual-role
-;; behaviors, such as `tap-next' (e.g., tap for <Escape>, hold for <Control>).
-;; Use the `@' prefix in your keyboard layout and layer keymaps to reference
-;; these aliases.
+;; behaviors; for example, tap for Esc, hold for Ctrl.
+;;
+;; Use the `@' prefix in your `deflayer' blocks to reference these aliases.
 (defalias
   ;; Base Layouts
   cmk (layer-switch colemak-dh-ansi)
   dvk (layer-switch dvorak-ansi)
   qwe (layer-switch qwerty)
-  pne (layer-switch pine-v4-variant)
+  flt (layer-switch flint-ansi)
 
   ;; Custom Layers
   xtn (layer-toggle extend)
@@ -208,9 +234,9 @@
   ;;
   ;; These aliases resolve the limitation where separate `sticky-key'
   ;; definitions, `sticky-key 100 lctl' and `sticky-key 100 lsft' do not
-  ;; combine to <Ctrl>+<Shift> when pressed together. Using `multi-tap'
+  ;; combine to Ctrl+Shift when pressed together. Using `multi-tap'
   ;; creates a composite sticky key allowing for triple-key combinations
-  ;; (two modifiers + a regular key) such as <Ctrl>+<Shift>+<S> to work.
+  ;; (two modifiers + a regular key) such as Ctrl+Shift+S to work.
   ;;
   ;; See the related discussion in https://github.com/kmonad/kmonad/discussions/1013.
   ams (multi-tap 120

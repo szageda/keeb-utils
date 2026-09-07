@@ -1,18 +1,17 @@
 /*
- * File        : pine-v4-variant.ahk
- * Description : Pine v4 Variant (ANSI) layout for Keeb Utils
+ * File        : flint-ansi.ahk
+ * Description : Flint (ANSI) layout for Keeb Utils
  * Copyright   : (c) 2026, Gergely Szabo
  * License     : MIT
  *
- * This script implements a Pine v4 Variant layout by intercepting the scan
- * codes sent by the physical keyboard and remapping them to the layout's key
- * positions.
+ * This script implements the Flint layout by intercepting the scan codes sent
+ * by the physical keyboard and remapping them to the layout's key positions.
  *
  * Scan Code Key Remap Logic:
  * - Alphanumeric keys: Remap directly to keys (a-z) to bypass the OS
  *   keyboard layout.
  * - Symbol keys: Remap to Virtual Keys (vkXX) to ensure standard
- *   character output while maintaining the physical Pine v4 Variant position.
+ *   character output while maintaining the physical Flint position.
  *
  * Layout diagram when the OS is set to US QWERTY:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
@@ -31,8 +30,12 @@
  *      `------'---'----'----------------------'----'---'----'------'
  *
  * References:
- * - Pine v4 (c) ClemenPine
+ * - Pine v4 (c) ClemenPine:
  *      https://github.com/ClemenPine/pine
+ * - Grapite (c) Richard Davidson:
+ *      https://github.com/rdavison/graphite-layout
+ * - Colemak-DH (c) stevep99:
+ *      https://colemakmods.github.io/mod-dh
  *
  * Documentation:
  * - AutoHotkey v2 Hotkeys:

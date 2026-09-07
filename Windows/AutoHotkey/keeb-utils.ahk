@@ -106,8 +106,9 @@ KeyHistory 0
 ;; Keyboard Layouts
 ;; Keymaps defining the physical key arrangements and character
 ;; output for the primary alphanumeric layer.
-#Include Layouts\colemak-dh-ansi.ahk
+;;#Include Layouts\colemak-dh-ansi.ahk
 ;;#Include Layouts\dvorak-ansi.ahk
+#Include Layouts\flint-ansi.ahk
 
 ;; Keyboard Layers
 ;; Sets of keymaps that modify the default alphanumeric behavior
