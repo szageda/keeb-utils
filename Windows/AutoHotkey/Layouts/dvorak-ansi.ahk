@@ -31,7 +31,7 @@
  *      `------'---'----'----------------------'----'---'----'------'
  *
  * References:
- * - Dvorak Keyboard Layout:
+ * - The Dvorak Keyboard:
  *      https://dvorak-keyboard.com
  *
  * Documentation:
