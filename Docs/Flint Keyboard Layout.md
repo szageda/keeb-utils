@@ -21,7 +21,7 @@ Thus, Flint was born.
 
 Flint wasn't built in a vacuum, nor was it generated purely by running an algorithm on an English text corpus. It was born out of a specific set of constraints: **I needed a single layout that comfortably handles English, Polish, and Hungarian without turning high-frequency key transitions into an obstacle course.**
 
-Most modern layout analyzers optimize aggressively for a single language (usually English). However, when you introduce Polish digraphs (*sz*, *cz*, *rz*) and Hungarian's high vowel density into the mix, pure single-corpus layouts quickly reveal their friction points, causing awkward same-finger stutters, lateral reaches, or unnatural hand balances.
+Most modern layout analyzers optimize aggressively for a single language (usually English). However, when you introduce Polish digraphs (_sz_, _cz_, _rz_) and Hungarian's high vowel density into the mix, pure single-corpus layouts quickly reveal their friction points, causing awkward same-finger stutters, lateral reaches, or unnatural hand balances.
 
 Flint synthesizes the key breakthroughs of three distinct layout philosophies into a single, cohesive engine:
 
@@ -32,10 +32,18 @@ Flint synthesizes the key breakthroughs of three distinct layout philosophies in
 ### Design Principles
 
 1. **Ergonomic Harmony Over Peak Stats:** Rather than chasing #1 benchmark rankings on single-language leaderboards, Flint prioritizes overall finger travel reduction, low SFB counts, and high alternation across three languages.
-2. **Preservation of System Flow:** The alpha cluster was designed to fit seamlessly around a long-standing, battle-tested `Extend` and `Symbols` layer ecosystem. Navigation and shortcut patterns remain entirely undisturbed.
+2. **Preservation of System Flow:** The alpha cluster was designed to fit seamlessly around a long-standing, battle-tested Extend and Symbols layer ecosystem. Navigation and shortcut patterns remain entirely undisturbed.
 3. **Personal Corpus Optimization:** Key placements prioritize actual daily vocabulary and typing patterns, granting high-value index-finger real estate to heavy hitters across all three target languages.
 
-_Note:_ Flint is supposed to be typed on using angle cheat.
+_Note:_ Flint's left hand bottom row was arranged with angle cheat in mind.
+
+### Weaknesses
+
+No keyboard layout is perfect, and Flint is no exception. The main challenge stems from optimizing for three distinct languages – a process where compromises were inevitable. My typical daily usage is roughly 60%+ English, with the remainder split between Polish and Hungarian. Consequently, the design primarily targets English ergonomics while strategically reserving comfortable, high-metric placements (such as low SFBs and high hand alternation) for Polish and Hungarian.
+
+* **Finger Workload Allocation:** Flint inherits Pine's and Colemak's higher index and middle finger load, deliberately favoring stronger central fingers over Graphite's heavier ring and pinky usage.
+* **Right Middle-Finger SFBs:** Flint inherits Graphite's right-middle cluster dynamics, making bigrams like _ph_, _fy_, _py_, and _pk_ same-finger bigrams.
+* **Left Home-Row Trade-offs:** By preserving Pine's left-hand home row (<kbd>N</kbd><kbd>R</kbd><kbd>S</kbd><kbd>T</kbd>) to maintain strong-finger engagement for English, certain secondary language bigrams yield higher-than-ideal SFBs—notably Polish and Hungarian patterns like _cs_, _ść_, _gd_, _wd_, and _dz_.
 
 ## Key Layout Mechanics
 
