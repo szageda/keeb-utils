@@ -20,11 +20,11 @@
  *      ,---,---,---,---,---,---,---,---,---,---,---,---,---,-------.
  *      | ` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | [ | ] |Backspc|
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
- *      | Tab | B | L | C | M | V | - | F | U | O | Q | ; | = | \   |
+ *      | Tab | B | L | C | M | Z | - | F | U | O | Q | ; | = | \   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
  *      |CapsLk| N | R | S | T | G | Y | H | E | A | I | , | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | J | X | D | W | Z | K | P | ' | . | / | Shift    |
+ *      |  Shift | J | V | D | W | X | K | P | ' | . | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -81,7 +81,7 @@ sc010::b        ;; QWERTY qQ
 sc011::l        ;; QWERTY wW
 sc012::c        ;; QWERTY eE
 sc013::m        ;; QWERTY rR
-sc014::v        ;; QWERTY tT
+sc014::z        ;; QWERTY tT
 sc015::vkBD     ;; QWERTY yY
 sc016::f        ;; QWERTY uU
 sc017::u        ;; QWERTY iI
@@ -106,10 +106,10 @@ sc028::vkBC     ;; QWERTY '"
 
 ;; Bottom Row
 sc02C::j        ;; QWERTY zZ
-sc02D::x        ;; QWERTY xX
+sc02D::v        ;; QWERTY xX
 sc02E::d        ;; QWERTY cC
 sc02F::w        ;; QWERTY vV
-sc030::z        ;; QWERTY bB
+sc030::x        ;; QWERTY bB
 sc031::k        ;; QWERTY nN
 sc032::p        ;; QWERTY mM
 sc033::vkDE     ;; QWERTY ,<
