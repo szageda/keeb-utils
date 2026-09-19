@@ -83,8 +83,8 @@
   esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  ssrq @sel
   `    1    2    3    4    5    6    7    8    9    0    [    ]    bspc
   tab  b    l    c    d    z    -    f    u    o    q    ;    =    \
-  @xtn n    r    s    t    g    y    h    e    a    i    ,    ret
-  lsft j    v    m    w    x    k    p    '    .    /    rsft
+  @xtn n    r    s    t    m    y    h    e    a    i    ,    ret
+  lsft j    v    g    w    x    k    p    '    .    /    rsft
   lctl lmet @sym           spc            ralt cmp  rmet rctl
 )
 

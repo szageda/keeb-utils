@@ -22,9 +22,9 @@
  *      |---'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-----|
  *      | Tab | B | L | C | D | Z | - | F | U | O | Q | ; | = | \   |
  *      |-----',--',--',--',--',--',--',--',--',--',--',--',--'-----|
- *      |CapsLk| N | R | S | T | G | Y | H | E | A | I | , | Enter  |
+ *      |CapsLk| N | R | S | T | M | Y | H | E | A | I | , | Enter  |
  *      |------'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'-,-'--------|
- *      |  Shift | J | V | M | W | X | K | P | ' | . | / | Shift    |
+ *      |  Shift | J | V | G | W | X | K | P | ' | . | / | Shift    |
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
@@ -96,7 +96,7 @@ sc01E::n        ;; QWERTY aA
 sc01F::r        ;; QWERTY sS
 sc020::s        ;; QWERTY dD
 sc021::t        ;; QWERTY fF
-sc022::g        ;; QWERTY gG
+sc022::m        ;; QWERTY gG
 sc023::y        ;; QWERTY hH
 sc024::h        ;; QWERTY jJ
 sc025::e        ;; QWERTY kK
@@ -107,7 +107,7 @@ sc028::vkBC     ;; QWERTY '"
 ;; Bottom Row
 sc02C::j        ;; QWERTY zZ
 sc02D::v        ;; QWERTY xX
-sc02E::m        ;; QWERTY cC
+sc02E::g        ;; QWERTY cC
 sc02F::w        ;; QWERTY vV
 sc030::x        ;; QWERTY bB
 sc031::k        ;; QWERTY nN
