@@ -28,10 +28,6 @@
  *      | Ctrl |Win|$Sym| Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
  *
- * References:
- * - Designing a Symbol Layer:
- *      https://getreuer.info/posts/keyboards/symbol-layer/index.html
- *
  * Documentation:
  * - AutoHotkey v2 How to Send Keystrokes:
  *      https://www.autohotkey.com/docs/v2/howto/SendKeys.htm

@@ -28,10 +28,6 @@
  *      | Ctrl |Win|Alt | Tab                  | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
  *
- * References:
- * - DreymaR's Extend Layer:
- *      https://dreymar.colemak.org/layers-extend.html
- *
  * Documentation:
  * - AutoHotkey v2 How to Send Keystrokes:
  *      https://www.autohotkey.com/docs/v2/howto/SendKeys.htm

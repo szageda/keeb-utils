@@ -224,7 +224,6 @@
   mmu micmute
 
   ;; Symbols Layer Shorthands
-  tgr #(` ` `)
   dbz #(0 0)
 
   ;; Sticky Keys

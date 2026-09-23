@@ -8,10 +8,9 @@
  * by the physical keyboard and remapping them to the layout's key positions.
  *
  * Scan Code Key Remap Logic:
- * - Alphanumeric keys: Remap directly to keys (a-z) to bypass the OS
- *   keyboard layout.
- * - Symbol keys: Remap to Virtual Keys (vkXX) to ensure standard
- *   character output while maintaining the physical Flint position.
+ * - Alphanumeric keys: Direct key remapping (a-z) bypassing OS layout rules.
+ * - Symbol keys: Remapped via Virtual Keys (vkXX) to preserve standard
+ *                character outputs at physical Flint coordinates.
  *
  * Layout diagram when the OS is set to US QWERTY:
  *      ,---. ,---,---,---,---.  ,---,---,---,---.  ,---,---,---,---.
@@ -28,14 +27,6 @@
  *      |------,-'-,-'--,'---'---'---'---'---'-,-'--,'--,'---,------|
  *      | Ctrl |Win|Alt | Space                | Alt|Win|Menu| Ctrl |
  *      `------'---'----'----------------------'----'---'----'------'
- *
- * References:
- * - Pine v4 (c) ClemenPine:
- *      https://github.com/ClemenPine/pine
- * - Grapite (c) Richard Davidson:
- *      https://github.com/rdavison/graphite-layout
- * - Colemak-DH (c) stevep99:
- *      https://colemakmods.github.io/mod-dh
  *
  * Documentation:
  * - AutoHotkey v2 Hotkeys:
