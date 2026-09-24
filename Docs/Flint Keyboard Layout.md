@@ -5,7 +5,7 @@
 <div align="center">
 
 ![Flint keyboard layout](../Assets/Images/Keyboard%20Layouts/flint-ansi.png)  
-*Flint keymap for ANSI 101/104-key keyboards*
+_Flint keymap for ANSI 101/104-key keyboards_
 
 </div>
 

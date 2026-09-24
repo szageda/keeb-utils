@@ -8,7 +8,7 @@
 
 # Keeb Utils
 
-Keeb Utils (“Keyboard Utilities”) is a modular suite of keyboard layouts and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of a few alternative keyboard layouts as well as traditional QWERTY with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
+Keeb Utils ("Keyboard Utilities") is a modular suite of keyboard layouts and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of a few alternative keyboard layouts as well as traditional QWERTY with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
 
 ## Design Principles
 
@@ -29,14 +29,14 @@ Keeb Utils leverages third-party software to remap keys at the operating system 
 
 This project utilizes the **Flint** layout. Flint is a custom, trilingual-optimized keyboard layout designed to maximize hand alternation, lower finger fatigue, and eliminate same-finger bigrams across English, Polish, and Hungarian.
 
-Further reading:
+_Further reading:_
 
-* [Learn more about Flint](Docs/Flint%20Keyboard%20Layout.md)
+* Learn more about Flint: [Flint Keyboard Layout](Docs/Flint%20Keyboard%20Layout.md)
 
 <div align="center">
 
 ![Flint keyboard layout](/Assets/Images/Keyboard%20Layouts/flint-ansi.png)  
-*Flint keymap for ANSI 101/104-key keyboards*
+_Flint keymap for ANSI 101/104-key keyboards_
 
 </div>
 
@@ -51,13 +51,13 @@ The Extend layer optimizes text editing and navigation. Activating this layer (a
 **Key Benefits:**
 
 * **Home Row Retention:** Minimizes wrist fatigue by keeping hands in the primary typing position.
-* **Optimized Navigation:** Maps arrow keys to the <kbd>U</kbd> <kbd>N</kbd> <kbd>E</kbd> and <kbd>I</kbd> keys (Standard QWERTY <kbd>I</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd>).
-* **Integrated Shortcuts:** Accesses common actions like “Select Next Word” or “Close Tab” via home-row modifiers.
+* **Optimized Navigation:** Maps arrow keys to the <kbd>U</kbd> <kbd>H</kbd> <kbd>E</kbd> and <kbd>A</kbd> keys (QWERTY <kbd>I</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd>).
+* **Integrated Shortcuts:** Accesses common actions like "Select Next Word" (<kbd>Ctrl+Shift+Right</kbd>), "Switch to Next Tab" (<kbd>Ctrl+Tab</kbd>), or "Go to Previous Page" (<kbd>Alt+Left</kbd>) via home-row modifiers.
 
 <div align="center">
 
 ![Extend layer](Assets/Images/Keyboard%20Layers/extend.png)  
-*Extend layer keymap for ANSI 101/104-key keyboards*
+_Extend layer keymap for ANSI 101/104-key keyboards_
 
 </div>
 
@@ -74,7 +74,7 @@ The Extend layer optimizes text editing and navigation. Activating this layer (a
 
 #### Advanced Modifier Logic
 
-**One-Shot Modifier** (also known as a “sticky key”):
+**One-Shot Modifier** (also known as a "sticky key"):
 
 * **Tap:** Activates a modifier key (<kbd>Shift</kbd> for example) for the next key press. It expires after some time if no key is pressed.
 * **Hold:** Acts like a normal modifier key.
@@ -88,7 +88,13 @@ The Extend layer optimizes text editing and navigation. Activating this layer (a
 * **Double Tap:** Activates both the primary and secondary modifier keys for the next key press.
 * **Double Tap & Hold:** Holds both modifier keys continuously.
 
-*Rational:* KMonad doesn't combine multiple one-shot modifiers. This implementation ensures that combinations like <kbd>Ctrl+Shift</kbd> work reliably across all applications.
+_Rational:_ KMonad doesn't combine multiple one-shot modifiers. This implementation ensures that combinations like <kbd>Ctrl+Shift</kbd> work reliably across all applications.
+
+_References & Inspirations:_
+
+* Øystein "DreymaR" Bech-Aase – [Extend Extra Extreme](https://dreymar.colemak.org/layers-extend.html)
+* Steve "stevep99" P – [Seniply](https://stevep99.github.io/seniply/)
+* Manna Harbour – [Miryoku](https://github.com/manna-harbour/miryoku)
 
 ### Symbols Layer
 
@@ -100,7 +106,7 @@ The Symbols layer (activated by holding <kbd>Left Alt</kbd>) provides ergonomic 
 <div align="center">
 
 ![Symbols layer](Assets/Images/Keyboard%20Layers/symbols.png)  
-*Symbols layer keymap for ANSI 101/104-key keyboards*
+_Symbols layer keymap for ANSI 101/104-key keyboards_
 
 </div>
 
@@ -112,17 +118,9 @@ The Symbols layer (activated by holding <kbd>Left Alt</kbd>) provides ergonomic 
 | ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Symbol pairs |
 | ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. symbols |
 
-## Acknowledgments & Inspirations
+_References & Inspirations:_
 
-Øystein “DreymaR” Bech-Aase – *[Extend Extra Extreme](https://dreymar.colemak.org/layers-extend.html)*
-
-Steve “stevep99” P – *[Seniply](https://stevep99.github.io/seniply/)*
-
-Manna Harbour – *[Miryoku](https://github.com/manna-harbour/miryoku)*
-
-Precondition – *[Home Row Mods](https://precondition.github.io/home-row-mods)*
-
-Pascal Getreuer – *[Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)*
+* Pascal Getreuer – [Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)
 
 ## License & Disclaimers
 
