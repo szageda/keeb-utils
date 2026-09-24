@@ -1,7 +1,7 @@
 /*
  * File        : keeb-utils.ahk
  * Description : Entry-point to the AutoHotkey implementation of Keeb Utils
- * Copyright   : (c) 2024-2025, Gergely Szabo
+ * Copyright   : (c) 2024-2026, Gergely Szabo
  * License     : MIT
  *
  * This file configures the AutoHotkey runtime environment, defines general
@@ -67,7 +67,7 @@ A_HotkeyInterval := 0
 ;; (default 70)
 A_MaxHotkeysPerInterval := 70
 
-;; Default command sending mode, makes 'Send' synonymous
+;; Default command sending mode, makes `Send` synonymous
 ;; with `SendEvent` or `SendPlay`. If `SendMode` is
 ;; `Input` (the default), Windows might ignore remapped
 ;; keys if the CPU speed is too slow.
@@ -106,8 +106,6 @@ KeyHistory 0
 ;; Keyboard Layouts
 ;; Keymaps defining the physical key arrangements and character
 ;; output for the primary alphanumeric layer.
-;;#Include Layouts\colemak-dh-ansi.ahk
-;;#Include Layouts\dvorak-ansi.ahk
 #Include Layouts\flint-ansi.ahk
 
 ;; Keyboard Layers
