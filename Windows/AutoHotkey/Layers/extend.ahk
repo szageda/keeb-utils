@@ -35,6 +35,7 @@
  *      https://sharktastica.co.uk/topics/keyboard-scancodes#HostConnXT
  */
 
+#Include Lib/caps-lock-toggle.ahk
 #Include Lib/mic-mute-toggle.ahk
 #Include Lib/multi-timed-mods.ahk
 #Include Lib/one-shot-timed-mod.ahk
@@ -103,12 +104,7 @@ F24 & sc024::Send "{Blind}{Left}"                       ;; QWERTY jJ
 F24 & sc025::Send "{Blind}{Down}"                       ;; QWERTY kK
 F24 & sc026::Send "{Blind}{Right}"                      ;; QWERTY lL
 F24 & sc027::Send "{Blind}{Enter}"                      ;; QWERTY ;:
-F24 & sc028::                                           ;; QWERTY '"
-{
-    SetCapsLockState GetKeyState("CapsLock", "T")
-    ? "AlwaysOff"
-    : "AlwaysOn"
-}
+F24 & sc028::CapsLockToggle()                           ;; QWERTY '"
 
 ;; Bottom Row
 F24 & sc02C::Send "{Ctrl Down}{z}{Ctrl Up}" ;; QWERTY zZ
