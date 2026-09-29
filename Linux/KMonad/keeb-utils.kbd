@@ -9,6 +9,8 @@
 ;;;;      https://github.com/kmonad/kmonad/blob/master/keymap/tutorial.kbd
 ;;;; - KMonad Quick Reference Guide:
 ;;;;      https://github.com/kmonad/kmonad/blob/master/doc/quick-reference.md
+;;;; - KMonad.Keyboard.Keycode:
+;;;;      https://hackage-content.haskell.org/package/kmonad-0.4.5/docs/KMonad-Keyboard-Keycode.html
 
 ;;;
 ;;; KMonad General Configuration
@@ -163,7 +165,7 @@
 ;; key combinations, macros, and more. Aliases can also define dual-role
 ;; behaviors; for example, tap for Esc, hold for Ctrl.
 ;;
-;; Use the `@' prefix in your `deflayer' blocks to reference these aliases.
+;; Use the `@' prefix in `deflayer' blocks to reference these aliases.
 (defalias
   ;; Base Layouts
   flt (layer-switch flint-ansi)
@@ -175,15 +177,13 @@
   sym (layer-toggle symbols)
   ssm (layer-toggle shift-symbols)
 
-  ;; Ctrl Shortcuts
+  ;; Extend Layer Shorthands
   cpy C-c
   cut C-x
+  mmu micmute
   pst C-v
   rdo C-y ;; Linux: C-S-z in some desktop environments.
   udo C-z
-
-  ;; Extend Layer Shorthands
-  mmu micmute
 
   ;; Symbols Layer Shorthands
   dbz #(0 0)
@@ -197,7 +197,7 @@
   ;; definitions, `sticky-key 100 lctl' and `sticky-key 100 lsft' do not
   ;; combine to Ctrl+Shift when pressed together. Using `multi-tap'
   ;; creates a composite sticky key allowing for triple-key combinations
-  ;; (two modifiers + a regular key) such as Ctrl+Shift+S to work.
+  ;; (two modifiers and a regular key) such as Ctrl+Shift+S to work.
   ;;
   ;; See the related discussion in https://github.com/kmonad/kmonad/discussions/1013.
   ams (multi-tap 120
