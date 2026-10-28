@@ -1,6 +1,6 @@
 # Flint Keyboard Layout
 
-## Keyboard Diagram
+## Keyboard diagram
 
 <div align="center">
 
@@ -11,53 +11,53 @@ _Flint keymap for ANSI 101/104-key keyboards_
 
 ## Background
 
-After roughly a decade on Colemak-DH, I decided to re-evaluate my typing setup. The Alternative Keyboard Layout (AKL) community has made massive strides in recent years, refining ergonomic metrics, movement models, and optimization philosophies well beyond Colemak's original design goals.
+After roughly a decade using Colemak-DH, I decided to re-evaluate my typing setup. The alternative keyboard layout (AKL) community has made huge strides in recent years, refining ergonomic metrics, movement models, and design philosophies well beyond Colemak’s original goals.
 
-Looking into modern designs created over the last five years, I found several brilliant layouts with sound logic, but none that felt completely natural or suited to my specific typing needs and muscle memory. 
+I looked at several brilliant layouts created over the past five years. They all had sound logic, but none felt completely natural or suited to my typing needs and muscle memory.
 
 Thus, **Flint** was born.
 
-## Design Philosophy
+## Design philosophy
 
-Flint was created to solve a specific multi-lingual challenge: **a single layout optimized to handle English, Polish, and Hungarian seamlessly, without turning high-frequency cross-language transitions into an obstacle course.**
+I created Flint to solve a specific multilingual challenge: **one layout optimized for English, Polish, and Hungarian, without making frequent transitions between languages feel like an obstacle course.**
 
-Most layout generators optimize aggressively for a single language (typically English). When you introduce Polish consonant clusters and Hungarian's high vowel density, pure single-corpus layouts quickly reveal friction points—causing awkward same-finger bigrams (SFBs), heavy lateral reaches, or off-balance hand engine stalling.
+Most layout generators optimize heavily for a single language, typically English. Add Polish consonant clusters and Hungarian’s high vowel density, and layouts based on a single corpus can quickly develop friction: awkward same-finger bigrams (SFBs), long lateral reaches, or unbalanced hand use that can stall alternation.
 
-Flint synthesizes breakthroughs from three distinct layout designs:
+Flint brings together ideas from three layouts:
 
-* **Pine v4 (Structural Base & Fluid Rolls):** Utilizes Pine’s base structure as a foundation, re-engineering the alpha cluster to handle multi-lingual letter frequencies based on practical usage rather than single-corpus benchmarks.
-* **Graphite (Hand Alternation & Rhythm):** Incorporates Graphite’s philosophy of isolating primary vowels and high-frequency consonants onto opposing hands, creating a balanced, rhythmic typing cadence across all three languages.
-* **Colemak-DH (Tactile Familiarity & Low Strain):** Respects a decade of hardwired muscle memory by maintaining strong index and middle finger engagement while avoiding uncomfortable lateral inner-column stretches.
+- **Pine v4 (structural base and fluid rolls):** I used Pine’s structure as a foundation, then reworked the letter keys to account for practical letter use across multiple languages rather than single-corpus benchmarks.
+- **Graphite (hand alternation and rhythm):** I drew on Graphite’s approach of placing primary vowels and frequent consonants on opposite hands, aiming for a balanced typing rhythm across all three languages.
+- **Colemak-DH (tactile familiarity and low strain):** After a decade of muscle memory, I wanted to keep strong index- and middle-finger engagement while avoiding uncomfortable lateral reaches between inner columns.
 
-### Key Principles
+### Key principles
 
-1. **Ergonomic Harmony Over Single-Language Benchmarks:** Rather than chasing top spot on English-only leaderboards, Flint prioritizes overall finger travel reduction, low total SFB counts, and high hand alternation across all three target languages.
-2. **Trilingual Corpus Balancing:** Placement logic accounts for real-world vocabulary across English (~60%), Polish, and Hungarian, ensuring prime home-row real estate for heavy hitters in each language.
+1. **Ergonomic balance over single-language benchmarks:** Rather than chase the top spot on English-only leaderboards, I prioritize reduced finger travel, fewer SFBs, and more hand alternation across all three languages.
+2. **Trilingual corpus balance:** The layout reflects real-world vocabulary, weighted roughly 60% English, with Polish and Hungarian making up the rest. This gives frequently used letters in each language access to the home row.
 
-_Note:_ The left-hand bottom row is arranged with the angle mod / angle cheat in mind.
+*Note:* I arranged the left-hand bottom row with the angle mod (or angle cheat) in mind.
 
-### Row Breakdown
+### Row breakdown
 
-* **Home Row:** Retains strong familiarity from Colemak-DH and Pine v4 on the left side (<kbd>N</kbd><kbd>R</kbd><kbd>S</kbd><kbd>T</kbd>), while the right side (<kbd>H</kbd><kbd>E</kbd><kbd>A</kbd><kbd>I</kbd>) adopts Graphite's vowel block structure.
-* **Top Row:** Uses the widely respected "boulevard" alpha setup on the left hand (<kbd>B</kbd><kbd>L</kbd><kbd>C</kbd><kbd>D</kbd><kbd>Z</kbd> / <kbd>B</kbd><kbd>L</kbd><kbd>C</kbd><kbd>D</kbd><kbd>V</kbd> / <kbd>B</kbd><kbd>L</kbd><kbd>C</kbd><kbd>D</kbd><kbd>W</kbd>). Placing <kbd>V</kbd> on the top row eliminates top-bottom scissor jumps on common English sequences (_involve_, _resolve_), while relying on slight alternate fingering to handle Polish/Hungarian _s_/_z_ combinations without SFB stalling.
-* **Bottom Row:** Infrequently used keys are relegated to pinky/ring/middle extensions, while keeping index fingers slightly curled for lower strain.
+- **Home row:** I kept much of the familiar Colemak-DH and Pine v4 arrangement on the left (<kbd>N</kbd> <kbd>R</kbd> <kbd>S</kbd> <kbd>T</kbd>). On the right, <kbd>H</kbd> <kbd>E</kbd> <kbd>A</kbd> <kbd>I</kbd> follows Graphite’s vowel-block structure.
+- **Top row:** I used the widely respected “boulevard” arrangement on the left hand: <kbd>B</kbd> <kbd>L</kbd> <kbd>C</kbd> <kbd>D</kbd> followed by <kbd>V</kbd>. Putting <kbd>V</kbd> on the top row avoids top-to-bottom scissor jumps in common English *lv* sequences such as *involve* and *resolve*. Polish and Hungarian *cz*, *cs*, *sz* combinations rely on some alternate fingering to avoid SFBs.
+- **Bottom row:** I moved less frequently used keys to pinky, ring, and middle-finger extensions, while keeping the index fingers slightly curled to reduce strain.
 
-## Multi-Language Mechanics
+## Multilingual mechanics
 
-* **English:** High-frequency consonants (_t_, _n_, _r_, _s_, _d_) are balanced with right-hand vowel isolation (_e_, _a_, _i_, _o_, _u_).
-* **Polish:** High reliance on digraphs (_sz_, _cz_, _rz_, _dz_, _gd_) is managed via comfortable hand alternation and accessible finger movement.
-* **Hungarian:** Exceptionally high vowel density (_e_, _a_, _i_, _o_) is isolated on the right hand, while elevated placement of _z_ prevents left-hand stalling.
+- **English:** Frequent consonants (*t*, *n*, *r*, *s*, *d*) are balanced with vowels (*e*, *a*, *i*, *o*, *u*) on the right hand.
+- **Polish:** Frequent digraphs (*sz*, *cz*, *rz*, *dz*, *gd*) rely on subjectively acceptable alternate fingering.
+- **Hungarian:** The high vowel density (*e*, *a*, *i*, *o*) is concentrated on the right hand, and placing consonants on the left hand helps prevent hand stalling.
 
-## Trade-offs & Known Weaknesses
+## Trade-offs and known weaknesses
 
 No layout is without compromises, especially when balancing three languages:
 
-* **Central Finger Load:** Flint inherits higher index and middle finger involvement from Pine and Colemak, favoring stronger central digits over Graphite’s heavier ring and pinky utilization.
-* **Right Index SFBs:** Retains Graphite's right-index dynamics, leaving bigrams like _ph_, _fy_, _py_, and _pk_ as same-finger movements.
-* **Secondary Language SFBs:** Preserving Pine's left home row (<kbd>N</kbd><kbd>R</kbd><kbd>S</kbd><kbd>T</kbd>) creates minor friction on specific Polish and Hungarian sequences (such as _cs_, _ść_, _cz_, or _wd_), which are mitigated through alternate fingering techniques.
+- **Central finger load:** Flint inherits Pine’s and Colemak’s heavier use of the index and middle fingers, favoring those stronger central fingers over Graphite’s greater reliance on the ring and pinky fingers.
+- **Right-index SFBs:** Flint retains Graphite’s right-index dynamics, so bigrams such as *ph*, *fy*, *py*, and *pk* remain same-finger movements.
+- **SFBs in the other languages:** Keeping Pine’s left-hand home row (<kbd>N</kbd> <kbd>R</kbd> <kbd>S</kbd> <kbd>T</kbd>) creates some friction in Polish and Hungarian sequences such as *cs*, *ść*, *cz*, and *wd*. Alternate fingering can help mitigate it.
 
-## Lineage & Acknowledgments
+## Lineage and acknowledgments
 
-* **ClemenPine** – [Pine v4 Layout](https://github.com/ClemenPine/pine): Alpha cluster and structural base.
-* **Richard Davison** – [Graphite Layout](https://github.com/rdavison/graphite-layout): Hand alternation philosophy and vowel isolation.
-* **Steve "stevep99" P** – [Colemak Mod-DH](https://colemakmods.github.io/mod-dh/): Home-row ergonomics and finger-reach principles.
+- ClemenPine – [Pine v4 layout](https://github.com/ClemenPine/pine): letter-key arrangement and structural base.
+- Richard Davison – [Graphite layout](https://github.com/rdavison/graphite-layout): hand-alternation philosophy and vowel isolation.
+- Steve “stevep99” P – [Colemak Mod-DH](https://colemakmods.github.io/mod-dh/): home-row ergonomics and finger-reach principles.

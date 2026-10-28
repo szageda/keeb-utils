@@ -1,6 +1,6 @@
 <div align="center">
 
-![Project avatar](/Assets/Images/Meta/avatar-128.png)
+![Project avatar](Assets/Images/Meta/avatar-128.png)
 
 <a href="https://www.flaticon.com/free-icons/computer-hardware" title="computer hardware icons">Computer hardware icons created by Rian Maulana - Flaticon (CC-BY-SA 4.0)</a>
 <a href="https://www.flaticon.com/free-icons/settings" title="settings icons">Settings icons created by Freepik - Flaticon (CC-BY-SA 4.0)</a>
@@ -8,122 +8,125 @@
 
 # Keeb Utils
 
-Keeb Utils ("Keyboard Utilities") is a modular suite of keyboard layouts and layer configurations designed to enhance typing ergonomics and productivity. This project provides a cross-platform implementation of a few alternative keyboard layouts as well as traditional QWERTY with advanced functional layers inspired by the work of others in the Alternative Keyboard Layouts community.
+Keeb Utils (“Keyboard Utilities”) is a modular suite of keyboard layouts and layer configurations designed to improve typing ergonomics and productivity. It provides cross-platform configurations for the Flint alternative keyboard layout and traditional QWERTY, with functional layers inspired by work from the alternative keyboard layout community.
 
-## Design Principles
+## Design principles
 
-Keeb Utils adheres to the following core principles:
+Keeb Utils follows these core principles:
 
-* **Functionality and Minimalism:** Avoids high-maintenance features in favor of reliable, essential tools.
-* **Cross-Platform Parity:** Ensures features are functionally identical across different software implementations.
-* **High Modularity:** Allows for easy customization and component swapping.
+- **Functionality and minimalism:** Favors reliable, essential tools over high-maintenance features.
+- **Cross-platform parity:** Keeps behavior consistent across software implementations.
+- **Modularity:** Makes components easy to customize and replace.
 
-## Supported Platforms
+## Supported platforms
 
-Keeb Utils leverages third-party software to remap keys at the operating system level:
+Keeb Utils uses third-party software to remap keys at the operating system level:
 
-* **Linux** via **[KMonad](https://github.com/kmonad/kmonad)**
-* **Windows:** via **[AutoHotkey v2](https://www.autohotkey.com/)**
+- **Linux:** [KMonad](https://github.com/kmonad/kmonad)
+- **Windows:** [AutoHotkey v2](https://www.autohotkey.com/)
 
-## Keyboard Layout
+## Keyboard layout
 
-This project utilizes the **Flint** layout. Flint is a custom, trilingual-optimized keyboard layout designed to maximize hand alternation, lower finger fatigue, and eliminate same-finger bigrams across English, Polish, and Hungarian.
+This project includes Flint, a custom keyboard layout designed for English, Polish, and Hungarian. It aims to promote hand alternation, reduce finger fatigue, and minimize same-finger bigrams.
 
-_Further reading:_
+*Further reading:*
 
-* Learn more about Flint: [Flint Keyboard Layout](Docs/Flint%20Keyboard%20Layout.md)
-
-<div align="center">
-
-![Flint keyboard layout](/Assets/Images/Keyboard%20Layouts/flint-ansi.png)  
-_Flint keymap for ANSI 101/104-key keyboards_
-
-</div>
-
-## Functional Layers
-
-Keeb Utils uses layers to provide immediate access to navigation, symbols, and numeric entry without requiring significant hand movement.
-
-### Extend Layer
-
-The Extend layer optimizes text editing and navigation. Activating this layer (activated by holding <kbd>Caps Lock</kbd>) maps essential functions to the home row.
-
-**Key Benefits:**
-
-* **Home Row Retention:** Minimizes wrist fatigue by keeping hands in the primary typing position.
-* **Optimized Navigation:** Maps arrow keys to the <kbd>U</kbd> <kbd>H</kbd> <kbd>E</kbd> and <kbd>A</kbd> keys (QWERTY <kbd>I</kbd> <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd>).
-* **Integrated Shortcuts:** Accesses common actions like "Select Next Word" (<kbd>Ctrl+Shift+Right</kbd>), "Switch to Next Tab" (<kbd>Ctrl+Tab</kbd>), or "Go to Previous Page" (<kbd>Alt+Left</kbd>) via home-row modifiers.
+- Learn more about Flint: [Flint Keyboard Layout](Docs/Flint%20Keyboard%20Layout.md)
 
 <div align="center">
 
-![Extend layer](Assets/Images/Keyboard%20Layers/extend.png)  
-_Extend layer keymap for ANSI 101/104-key keyboards_
+![Flint keyboard layout](Assets/Images/Keyboard%20Layouts/flint-ansi.png)
+
+*Flint keymap for ANSI 101/104-key keyboards*
 
 </div>
 
-| Key Category  | Description |
-| :-----------: | ----------- |
+## Functional layers
+
+Keeb Utils uses layers to provide access to navigation, symbols, and numeric entry without requiring significant hand movement.
+
+### Extend layer
+
+The Extend layer supports text editing and navigation. Hold <kbd>Caps Lock</kbd> to activate it and access essential functions from the home row.
+
+**Key benefits:**
+
+- **Home row retention:** Keeps your hands in the primary typing position to help reduce wrist fatigue.
+- **Optimized navigation:** Maps arrow keys to <kbd>U</kbd>, <kbd>H</kbd>, <kbd>E</kbd>, and <kbd>A</kbd> (QWERTY <kbd>I</kbd>, <kbd>J</kbd>, <kbd>K</kbd>, and <kbd>L</kbd>).
+- **Integrated shortcuts:** Provides common actions through home-row modifiers, such as *select next word* (<kbd>Ctrl+Shift+Right</kbd>), *switch to next tab* (<kbd>Ctrl+Tab</kbd>), and *go to previous page* (<kbd>Alt+Left</kbd>).
+
+<div align="center">
+
+![Extend layer](Assets/Images/Keyboard%20Layers/extend.png)
+
+*Extend layer keymap for ANSI 101/104-key keyboards*
+
+</div>
+
+| Key category | Description |
+| :----------: | ----------- |
 | ![Navigation keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Navigation keys |
 | ![Ctrl shortcuts](Assets/Images/Keyboard%20Layers/extend-green.png) | Common Ctrl-based shortcuts |
 | ![Modifiers](Assets/Images/Keyboard%20Layers/extend-orange.png) | Modifier key access |
-| ![One-Shift Modifier Key](Assets/Images/Keyboard%20Layers/extend-osm.png) | One-Shot Modifier (see below this table) |
-| ![Multi-Sticky keys](Assets/Images/Keyboard%20Layers/extend-mtm.png) | Multi-Timed Modifiers (see below this table) |
+| ![One-shot modifier key](Assets/Images/Keyboard%20Layers/extend-osm.png) | One-shot modifier (see [Advanced modifier logic](#advanced-modifier-logic)) |
+| ![Multi-timed modifier keys](Assets/Images/Keyboard%20Layers/extend-mtm.png) | Multi-timed modifiers (see [Advanced modifier logic](#advanced-modifier-logic)) |
 | ![Text manipulation keys](Assets/Images/Keyboard%20Layers/extend-red.png) | Text manipulation |
 | ![Multimedia keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Multimedia keys |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and misc. keys |
+| ![Miscellaneous keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Function and miscellaneous keys |
 
-#### Advanced Modifier Logic
+#### Advanced modifier logic
 
-**One-Shot Modifier** (also known as a "sticky key"):
+**One-shot modifier** (also known as a sticky key):
 
-* **Tap:** Activates a modifier key (<kbd>Shift</kbd> for example) for the next key press. It expires after some time if no key is pressed.
-* **Hold:** Acts like a normal modifier key.
+- **Tap:** Applies a modifier, such as <kbd>Shift</kbd>, to the next key press. It expires after a timeout if no key is pressed.
+- **Hold:** Acts like a normal modifier key.
 
-**Multi-Timed Modifiers:** Combines two modifiers into a single key via a rapid double tap.
+**Multi-timed modifiers:** A rapid double tap activates a second modifier alongside the primary modifier.
 
-**Example – Using Ctrl and Shift:**
+**Example: using Ctrl and Shift**
 
-* **Single Tap:** Activates the primary modifier key for the next key press.
-* **Single Tap & Hold:** Holds the primary modifier key continuously.
-* **Double Tap:** Activates both the primary and secondary modifier keys for the next key press.
-* **Double Tap & Hold:** Holds both modifier keys continuously.
+- **Single tap:** Applies the primary modifier to the next key press.
+- **Single tap and hold:** Holds the primary modifier.
+- **Double tap:** Applies both the primary and secondary modifiers to the next key press.
+- **Double tap and hold:** Holds both modifiers.
 
-_Rational:_ KMonad doesn't combine multiple one-shot modifiers. This implementation ensures that combinations like <kbd>Ctrl+Shift</kbd> work reliably across all applications.
+*Rationale:* KMonad does not combine multiple one-shot modifiers. This implementation allows combinations such as <kbd>Ctrl+Shift</kbd> to work across applications.
 
-_References & Inspirations:_
+*References and inspirations:*
 
-* Øystein "DreymaR" Bech-Aase – [Extend Extra Extreme](https://dreymar.colemak.org/layers-extend.html)
-* Steve "stevep99" P – [Seniply](https://stevep99.github.io/seniply/)
-* Manna Harbour – [Miryoku](https://github.com/manna-harbour/miryoku)
+- Øystein “DreymaR” Bech-Aase – [Extend Extra Extreme](https://dreymar.colemak.org/layers-extend.html)
+- Steve “stevep99” P – [Seniply](https://stevep99.github.io/seniply/)
+- Manna Harbour – [Miryoku](https://github.com/manna-harbour/miryoku)
 
-### Symbols Layer
+### Symbols layer
 
-The Symbols layer (activated by holding <kbd>Left Alt</kbd>) provides ergonomic access to math operators, programming symbols, and numbers.
+The Symbols layer provides ergonomic access to mathematical operators, programming symbols, and numbers. Hold <kbd>Left Alt</kbd> to activate it.
 
-* **Balanced Distribution:** Spreads numerals and symbols across both hands to balance hand use.
-* **Logical Grouping:** Brackets and operators are grouped to improve muscle memory.
+- **Balanced distribution:** Spreads numerals and symbols across both hands.
+- **Logical grouping:** Groups brackets and operators to support muscle memory.
 
 <div align="center">
 
-![Symbols layer](Assets/Images/Keyboard%20Layers/symbols.png)  
-_Symbols layer keymap for ANSI 101/104-key keyboards_
+![Symbols layer](Assets/Images/Keyboard%20Layers/symbols.png)
+
+*Symbols layer keymap for ANSI 101/104-key keyboards*
 
 </div>
 
-| Key Category  | Description |
-| :-----------: | ----------- |
+| Key category | Description |
+| :----------: | ----------- |
 | ![Numpad keys](Assets/Images/Keyboard%20Layers/extend-blue.png) | Numpad keys |
 | ![Programming keys](Assets/Images/Keyboard%20Layers/extend-light-green.png) | Programming symbols |
 | ![Additional math symbols](Assets/Images/Keyboard%20Layers/extend-orange.png) | Math operators |
 | ![Math operators](Assets/Images/Keyboard%20Layers/extend-red.png) | Symbol pairs |
-| ![Misc. keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Misc. symbols |
+| ![Miscellaneous keys](Assets/Images/Keyboard%20Layers/extend-grey.png) | Miscellaneous symbols |
 
-_References & Inspirations:_
+*References and inspirations:*
 
-* Pascal Getreuer – [Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)
+- Pascal Getreuer – [Designing a Symbol Layer](https://getreuer.info/posts/keyboards/symbol-layer/index.html)
 
-## License & Disclaimers
+## License and disclaimers
 
-Code is licensed under the **MIT License**. Assets without a specified license are in the **Public Domain**. See `LICENSE` for the full legal text.
+Code is licensed under the **MIT License**. Assets without a specified license are in the **public domain**. See `LICENSE` for the full legal text.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
